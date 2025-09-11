@@ -1,0 +1,2 @@
+preprocess/data/final_trips.csv filter=lfs diff=lfs merge=lfs -text
+preprocess/output/network.osm filter=lfs diff=lfs merge=lfs -text
