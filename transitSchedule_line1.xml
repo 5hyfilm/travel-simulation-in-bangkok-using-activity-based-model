@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE transitSchedule SYSTEM "http://www.matsim.org/files/dtd/transitSchedule_v2.dtd">
+
+<transitSchedule>
+
+	<transitStops>
+		<stopFacility id="stop1" x="665634.4880449255" y="1518961.47709388" linkRefId="4613810000010f" name="Stop1" isBlocking="false"/>
+		<stopFacility id="stop10" x="665772.7911920127" y="1519397.384786522" linkRefId="319732680008f" name="Stop10" isBlocking="false"/>
+		<stopFacility id="stop11" x="665744.6921238152" y="1519227.4627269472" linkRefId="7071002130007f" name="Stop11" isBlocking="false"/>
+		<stopFacility id="stop12" x="665634.4880449255" y="1518961.47709388" linkRefId="4613810000010f" name="Stop12" isBlocking="false"/>
+		<stopFacility id="stop2" x="665798.5718049173" y="1518873.7479718248" linkRefId="319733200010f" name="Stop2" isBlocking="false"/>
+		<stopFacility id="stop3" x="665938.9023734964" y="1519420.733732506" linkRefId="12559725350004f" name="Stop3" isBlocking="false"/>
+		<stopFacility id="stop4" x="665977.4675597142" y="1519691.0776853564" linkRefId="12559725350009f" name="Stop4" isBlocking="false"/>
+		<stopFacility id="stop5" x="666027.9763185389" y="1520020.0447322815" linkRefId="12559725350016f" name="Stop5" isBlocking="false"/>
+		<stopFacility id="stop6" x="665701.8397732871" y="1520141.7230622314" linkRefId="330586580005f" name="Stop6" isBlocking="false"/>
+		<stopFacility id="stop7" x="665477.739840239" y="1519885.7341024522" linkRefId="7531697530001f" name="Stop7" isBlocking="false"/>
+		<stopFacility id="stop8" x="665432.9995995465" y="1519556.6728078383" linkRefId="10863805120003f" name="Stop8" isBlocking="false"/>
+		<stopFacility id="stop9" x="665518.7042982717" y="1519448.2437784644" linkRefId="319732680008f" name="Stop9" isBlocking="false"/>
+	</transitStops>
+	<transitLine id="CU_BUS_1">
+		<transitRoute id="route1">
+			<transportMode>bus</transportMode>
+			<routeProfile>
+				<stop refId="stop1" arrivalOffset="00:00:00" departureOffset="00:00:20" awaitDeparture="true"/>
+				<stop refId="stop2" arrivalOffset="00:02:20" departureOffset="00:02:40" awaitDeparture="true"/>
+				<stop refId="stop3" arrivalOffset="00:04:40" departureOffset="00:05:00" awaitDeparture="true"/>
+				<stop refId="stop4" arrivalOffset="00:07:00" departureOffset="00:07:20" awaitDeparture="true"/>
+				<stop refId="stop5" arrivalOffset="00:09:20" departureOffset="00:09:40" awaitDeparture="true"/>
+				<stop refId="stop6" arrivalOffset="00:11:40" departureOffset="00:12:00" awaitDeparture="true"/>
+				<stop refId="stop7" arrivalOffset="00:14:00" departureOffset="00:14:20" awaitDeparture="true"/>
+				<stop refId="stop8" arrivalOffset="00:16:20" departureOffset="00:16:40" awaitDeparture="true"/>
+				<stop refId="stop9" arrivalOffset="00:18:40" departureOffset="00:19:00" awaitDeparture="true"/>
+				<stop refId="stop10" arrivalOffset="00:21:00" departureOffset="00:21:20" awaitDeparture="true"/>
+				<stop refId="stop11" arrivalOffset="00:23:20" departureOffset="00:23:40" awaitDeparture="true"/>
+				<stop refId="stop12" arrivalOffset="00:25:40" departureOffset="00:26:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="4613810000010f"/>
+				<link refId="319733200010r"/>
+				<link refId="319733200010r"/>
+				<link refId="246786860003f"/>
+				<link refId="246786860006f"/>
+				<link refId="12559725340000f"/>
+				<link refId="12559725320000f"/>
+				<link refId="12559725320002f"/>
+				<link refId="12559725350003f"/>
+				<link refId="12559725350010f"/>
+				<link refId="12559725350012f"/>
+				<link refId="12559725350013f"/>
+				<link refId="1569853870003f"/>
+				<link refId="1569853870007f"/>
+				<link refId="7832332690007f"/>
+				<link refId="13811570610001f"/>
+				<link refId="330586580007f"/>
+				<link refId="10251002020000f"/>
+				<link refId="11684861280000f"/>
+				<link refId="11684861260000f"/>
+				<link refId="11684861240000f"/>
+				<link refId="11684861300000f"/>
+				<link refId="4640325510000f"/>
+				<link refId="10251002010000f"/>
+				<link refId="3008034730002f"/>
+				<link refId="3008034730003f"/>
+				<link refId="3008034730004f"/>
+				<link refId="11321276030000f"/>
+				<link refId="10863805120004f"/>
+				<link refId="10863805120005f"/>
+				<link refId="11513394530002f"/>
+				<link refId="319732780011f"/>
+				<link refId="10863805140002f"/>
+				<link refId="10863805170001f"/>
+				<link refId="7071002120003f"/>
+				<link refId="319733600003f"/>
+				<link refId="11513423310000f"/>
+				<link refId="11513394520006f"/>
+				<link refId="10859842840000f"/>
+				<link refId="7071002110002f"/>
+				<link refId="7071002110003f"/>
+				<link refId="7071002110005f"/>
+				<link refId="10863805140002f"/>
+				<link refId="319733490001f"/>
+				<link refId="320519480000f"/>
+				<link refId="320519480005f"/>
+				<link refId="10863805150000f"/>
+				<link refId="4613810000010f"/>
+			</route>
+			<departures>
+				<departure id="d1" departureTime="07:00:00" vehicleRefId="bus_1"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+</transitSchedule>
