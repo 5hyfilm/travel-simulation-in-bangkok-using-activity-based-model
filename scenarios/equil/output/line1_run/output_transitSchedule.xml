@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE transitSchedule SYSTEM "http://www.matsim.org/files/dtd/transitSchedule_v2.dtd">
+
+<transitSchedule>
+	<attributes>
+		<attribute name="coordinateReferenceSystem" class="java.lang.String">Atlantis</attribute>
+	</attributes>
+
+	<transitStops>
+		<stopFacility id="stop0" x="665870.9036279863" y="1518860.2459576207" linkRefId="51" isBlocking="false"/>
+		<stopFacility id="stop1" x="665905.8498277667" y="1519121.7933388448" linkRefId="106" isBlocking="false"/>
+		<stopFacility id="stop10" x="665655.9581621843" y="1519218.3138905847" linkRefId="277" isBlocking="false"/>
+		<stopFacility id="stop2" x="665989.4582434155" y="1519717.0420621044" linkRefId="120" isBlocking="false"/>
+		<stopFacility id="stop3" x="666003.7021859778" y="1519810.3518365966" linkRefId="121" isBlocking="false"/>
+		<stopFacility id="stop4" x="665982.6080069119" y="1520101.601863159" linkRefId="393" isBlocking="false"/>
+		<stopFacility id="stop5" x="665607.4910322903" y="1520162.3095478772" linkRefId="166" isBlocking="false"/>
+		<stopFacility id="stop6" x="665457.3851747996" y="1519802.4203950332" linkRefId="507" isBlocking="false"/>
+		<stopFacility id="stop7" x="665418.3642403041" y="1519519.5955569427" linkRefId="275" isBlocking="false"/>
+		<stopFacility id="stop8" x="665773.0365653657" y="1519380.902100068" linkRefId="133" isBlocking="false"/>
+		<stopFacility id="stop9" x="665694.4470756529" y="1519211.831931222" linkRefId="144" isBlocking="false"/>
+	</transitStops>
+	<transitLine id="Line1">
+		<transitRoute id="Route1">
+			<transportMode>bus</transportMode>
+			<routeProfile>
+				<stop refId="stop0" arrivalOffset="00:00:00" departureOffset="00:00:30" awaitDeparture="false"/>
+				<stop refId="stop1" arrivalOffset="00:02:30" departureOffset="00:03:00" awaitDeparture="false"/>
+				<stop refId="stop2" arrivalOffset="00:05:00" departureOffset="00:05:30" awaitDeparture="false"/>
+				<stop refId="stop3" arrivalOffset="00:07:30" departureOffset="00:08:00" awaitDeparture="false"/>
+				<stop refId="stop4" arrivalOffset="00:10:00" departureOffset="00:10:30" awaitDeparture="false"/>
+				<stop refId="stop5" arrivalOffset="00:12:30" departureOffset="00:13:00" awaitDeparture="false"/>
+				<stop refId="stop6" arrivalOffset="00:15:00" departureOffset="00:15:30" awaitDeparture="false"/>
+				<stop refId="stop7" arrivalOffset="00:17:30" departureOffset="00:18:00" awaitDeparture="false"/>
+				<stop refId="stop8" arrivalOffset="00:20:00" departureOffset="00:20:30" awaitDeparture="false"/>
+				<stop refId="stop9" arrivalOffset="00:22:30" departureOffset="00:23:00" awaitDeparture="false"/>
+				<stop refId="stop10" arrivalOffset="00:25:00" departureOffset="00:25:30" awaitDeparture="false"/>
+			</routeProfile>
+			<route>
+				<link refId="51"/>
+				<link refId="106"/>
+				<link refId="107"/>
+				<link refId="116"/>
+				<link refId="112"/>
+				<link refId="113"/>
+				<link refId="118"/>
+				<link refId="119"/>
+				<link refId="120"/>
+				<link refId="121"/>
+				<link refId="122"/>
+				<link refId="123"/>
+				<link refId="124"/>
+				<link refId="393"/>
+				<link refId="395"/>
+				<link refId="84"/>
+				<link refId="164"/>
+				<link refId="166"/>
+				<link refId="167"/>
+				<link refId="363"/>
+				<link refId="358"/>
+				<link refId="179"/>
+				<link refId="147"/>
+				<link refId="148"/>
+				<link refId="149"/>
+				<link refId="507"/>
+				<link refId="5"/>
+				<link refId="274"/>
+				<link refId="275"/>
+				<link refId="276"/>
+				<link refId="267"/>
+				<link refId="133"/>
+				<link refId="144"/>
+				<link refId="277"/>
+				<link refId="2"/>
+				<link refId="237"/>
+				<link refId="239"/>
+				<link refId="278"/>
+				<link refId="4"/>
+			</route>
+			<departures>
+				<departure id="dep_06_30" departureTime="06:30:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_06_36" departureTime="06:36:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_06_42" departureTime="06:42:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_06_48" departureTime="06:48:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_06_54" departureTime="06:54:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_07_00" departureTime="07:00:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_07_06" departureTime="07:06:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_07_12" departureTime="07:12:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_07_18" departureTime="07:18:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_07_21" departureTime="07:21:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_07_24" departureTime="07:24:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_07_30" departureTime="07:30:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_07_36" departureTime="07:36:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_07_42" departureTime="07:42:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_07_45" departureTime="07:45:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_07_48" departureTime="07:48:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_07_54" departureTime="07:54:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_08_00" departureTime="08:00:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_08_06" departureTime="08:06:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_08_09" departureTime="08:09:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_08_12" departureTime="08:12:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_08_18" departureTime="08:18:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_08_24" departureTime="08:24:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_08_30" departureTime="08:30:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_08_33" departureTime="08:33:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_08_36" departureTime="08:36:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_08_42" departureTime="08:42:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_08_48" departureTime="08:48:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_08_54" departureTime="08:54:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_09_00" departureTime="09:00:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_09_09" departureTime="09:09:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_09_18" departureTime="09:18:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_09_27" departureTime="09:27:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_09_36" departureTime="09:36:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_09_45" departureTime="09:45:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_09_54" departureTime="09:54:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_10_00" departureTime="10:00:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_10_09" departureTime="10:09:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_10_18" departureTime="10:18:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_10_27" departureTime="10:27:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_10_36" departureTime="10:36:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_10_45" departureTime="10:45:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_10_54" departureTime="10:54:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_11_00" departureTime="11:00:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_11_09" departureTime="11:09:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_11_18" departureTime="11:18:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_11_27" departureTime="11:27:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_11_36" departureTime="11:36:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_11_45" departureTime="11:45:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_11_54" departureTime="11:54:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_12_00" departureTime="12:00:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_12_06" departureTime="12:06:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_12_12" departureTime="12:12:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_12_18" departureTime="12:18:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_12_24" departureTime="12:24:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_12_30" departureTime="12:30:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_12_36" departureTime="12:36:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_12_42" departureTime="12:42:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_12_48" departureTime="12:48:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_12_54" departureTime="12:54:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_13_00" departureTime="13:00:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_13_09" departureTime="13:09:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_13_18" departureTime="13:18:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_13_27" departureTime="13:27:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_13_36" departureTime="13:36:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_13_45" departureTime="13:45:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_13_54" departureTime="13:54:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_14_00" departureTime="14:00:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_14_09" departureTime="14:09:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_14_18" departureTime="14:18:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_14_27" departureTime="14:27:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_14_36" departureTime="14:36:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_14_45" departureTime="14:45:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_14_54" departureTime="14:54:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_15_00" departureTime="15:00:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_15_09" departureTime="15:09:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_15_18" departureTime="15:18:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_15_27" departureTime="15:27:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_15_36" departureTime="15:36:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_15_45" departureTime="15:45:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_15_54" departureTime="15:54:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_16_00" departureTime="16:00:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_16_06" departureTime="16:06:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_16_12" departureTime="16:12:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_16_18" departureTime="16:18:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_16_24" departureTime="16:24:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_16_30" departureTime="16:30:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_16_36" departureTime="16:36:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_16_42" departureTime="16:42:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_16_48" departureTime="16:48:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_16_54" departureTime="16:54:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_17_00" departureTime="17:00:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_17_06" departureTime="17:06:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_17_12" departureTime="17:12:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_17_18" departureTime="17:18:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_17_24" departureTime="17:24:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_17_30" departureTime="17:30:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_17_36" departureTime="17:36:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_17_42" departureTime="17:42:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_17_48" departureTime="17:48:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_17_54" departureTime="17:54:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_18_00" departureTime="18:00:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_18_06" departureTime="18:06:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_18_12" departureTime="18:12:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_18_18" departureTime="18:18:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_18_24" departureTime="18:24:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_18_30" departureTime="18:30:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_18_36" departureTime="18:36:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_18_42" departureTime="18:42:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_18_48" departureTime="18:48:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_18_54" departureTime="18:54:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_19_00" departureTime="19:00:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_19_15" departureTime="19:15:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_19_45" departureTime="19:45:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_20_15" departureTime="20:15:00" vehicleRefId="bus_line1_1"/>
+				<departure id="dep_20_45" departureTime="20:45:00" vehicleRefId="bus_line1_2"/>
+				<departure id="dep_21_15" departureTime="21:15:00" vehicleRefId="bus_line1_3"/>
+				<departure id="dep_21_45" departureTime="21:45:00" vehicleRefId="bus_line1_1"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+</transitSchedule>

@@ -24,6 +24,10 @@ import org.matsim.application.MATSimApplication;
 import org.matsim.core.config.Config;
 import org.matsim.core.controler.Controler;
 import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
+import org.matsim.contrib.otfvis.OTFVisLiveModule;
+import org.matsim.vis.otfvis.OTFVisConfigGroup;
+import org.matsim.core.config.ConfigUtils;
+
 
 /**
  * @author nagel
@@ -45,9 +49,10 @@ public class RunMatsimApplication extends MATSimApplication {
 
 		config.controller().setOverwriteFileSetting( OverwriteFileSetting.deleteDirectoryIfExists );
 
-		// possibly modify config here
+        OTFVisConfigGroup otf = ConfigUtils.addOrGetModule(config, OTFVisConfigGroup.class);
 
-		// ---
+         //otf.setDrawLinkWidth(false);      // draw thin center lines
+         otf.setLinkWidth(0.1f);           // or keep width but thinner
 
 		return config;
 	}
@@ -55,21 +60,36 @@ public class RunMatsimApplication extends MATSimApplication {
 	@Override
 	protected void prepareScenario(Scenario scenario) {
 
-		// possibly modify scenario here
+        scenario.getNetwork().getLinks().values().forEach(l -> {
+            double dx = l.getToNode().getCoord().getX() - l.getFromNode().getCoord().getX();
+            double dy = l.getToNode().getCoord().getY() - l.getFromNode().getCoord().getY();
+            double straight = Math.hypot(dx, dy);
 
-		// ---
+            // Enforce a reasonable minimum to avoid near-zero links
+            double minLen = 15.0; // try 15–25 m for urban meshes
+            double newLen = Math.max(straight, minLen);
+
+            l.setLength(newLen);
+        });
+
+        // 2) Scale down freespeeds (m/s). Start with 0.3–0.5; calibrate later.
+        double speedFactor = 0.5;  // try 0.3 if still too fast
+        scenario.getNetwork().getLinks().values().forEach(l ->
+                l.setFreespeed(l.getFreespeed() * speedFactor)
+        );
+
+        // 3) (optional) Also reduce capacity to create congestion delays
+        // scenario.getNetwork().getLinks().values().forEach(l ->
+        //     l.setCapacity(l.getCapacity() * 0.7)
+        // );
 
 	}
 
 	@Override
 	protected void prepareControler(Controler controler) {
 
-		// possibly modify controler here
-
-//		controler.addOverridingModule( new OTFVisLiveModule() ) ;
+		controler.addOverridingModule( new OTFVisLiveModule() ) ;
 //		controler.addOverridingModule( new SimWrapperModule() ) ;
 
-
-		// ---
 	}
 }

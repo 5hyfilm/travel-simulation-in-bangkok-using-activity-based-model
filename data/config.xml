@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">
+
+<config>
+
+	<!-- Network -->
+	<module name="network">
+		<param name="inputNetworkFile" value="processed/network_clean_tuned.xml"/>
+	</module>
+
+	<!-- Transit settings -->
+	<module name="transit">
+		<param name="useTransit" value="true"/>
+		<param name="transitScheduleFile" value="processed/transitSchedule_line1.xml"/>
+		<param name="vehiclesFile" value="processed/transitVehicles.xml"/>
+	</module>
+
+	<!-- Controller -->
+	<module name="controller">
+		<param name="lastIteration" value="0"/>
+		<param name="outputDirectory" value="output/visualize"/>
+		<param name="overwriteFiles" value="deleteDirectoryIfExists"/>
+	</module>
+
+	<!-- Visualization -->
+	<module name="qsim">
+		<param name="endTime" value="36:00:00"/> <!-- เผื่อ simulation ยาวๆ -->
+	</module>
+
+</config>
