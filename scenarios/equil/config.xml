@@ -4,16 +4,20 @@
 
 	<module name="global">
 		<param name="randomSeed" value="4711" />
-		<param name="coordinateSystem" value="Atlantis" />
+		<param name="coordinateSystem" value="EPSG:32647" />
 	</module>
 
 	<module name="network">
-		<param name="inputNetworkFile" value="network.xml" />
+		<param name="inputNetworkFile" value="../../data/processed/network_utm47.speeds_lanes_cap.xml.gz" />
 	</module>
 
 	<module name="plans">
-		<param name="inputPlansFile" value="plans100.xml" />
+		<param name="inputPlansFile" value="../../data/processed/plans.fromFacilities.xml.gz" />
 	</module>
+
+    <module name="facilities">
+        <param name="inputFacilitiesFile" value="../../data/processed/facilities.xml.gz"/>
+    </module>
 
 	<module name="controller">
 		<param name="outputDirectory" value="./output" />
@@ -24,17 +28,21 @@
 		<param name="lateArrival" value="-18" />
 		<param name="performing" value="+6" />
 		<parameterset type="activityParams" >
-			<param name="activityType"            value="h" />
+			<param name="activityType"            value="home" />
 			<param name="typicalDuration" value="12:00:00" />
 		</parameterset>
 		<parameterset type="activityParams" >
-			<param name="activityType"            value="w" />
+			<param name="activityType"            value="work" />
 			<param name="typicalDuration" value="08:00:00" />
 			<param name="openingTime"     value="07:00:00" />
 			<param name="closingTime"     value="18:00:00" />
 		</parameterset>
+        <parameterset type="activityParams" >
+            <param name="activityType"            value="shop" />
+            <param name="typicalDuration" value="11:00:00" />
+        </parameterset>
 	</module>
-	
+
 	<module name="replanning">
 		<parameterset type="strategysettings" >
 			<param name="strategyName" value="BestScore" />
@@ -45,5 +53,35 @@
 			<param name="weight" value="0.1" />
 		</parameterset>
 	</module>
+
+    <module name="qsim">
+        <param name="flowCapacityFactor" value="1.0"/>
+        <param name="storageCapacityFactor" value="1.0"/>
+        <param name="stuckTime" value="3600"/>
+        <!-- other qsim params as you like -->
+    </module>
+
+    <!-- rename 'strategy' -> 'replanning' -->
+    <module name="replanning">
+        <param name="maxAgentPlanMemorySize" value="5"/>
+
+        <parameterset type="strategysettings">
+            <param name="strategyName" value="ChangeExpBeta"/>
+            <param name="weight" value="0.9"/>
+        </parameterset>
+
+        <parameterset type="strategysettings">
+            <param name="strategyName" value="ReRoute"/>
+            <param name="weight" value="0.1"/>
+        </parameterset>
+
+        <!-- optional -->
+        <parameterset type="strategysettings">
+            <param name="strategyName" value="TimeAllocationMutator"/>
+            <param name="weight" value="0.05"/>
+        </parameterset>
+    </module>
+
+
 
 </config>
