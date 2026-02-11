@@ -1,0 +1,4 @@
+osmnx==2.0.6
+pandas
+requests
+matplotlib
