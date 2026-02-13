@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
-import h3  # pip install h3
+import h3
+import re
 
 def classify_facilities(input_csv, output_csv, h3_resolution=8):
     """
     Read raw CSV file, classify Activity Types, 
-    create H3 Grid Index, and prepare WGS84 coordinates (x, y) for MATSim.
+    clean names for MATSim compatibility,
+    create H3 Grid Index, and prepare WGS84 coordinates (x, y).
     
     Parameters:
     - h3_resolution: Grid resolution (9 = ~0.1 sq km, 8 = ~0.7 sq km)
@@ -18,6 +20,26 @@ def classify_facilities(input_csv, output_csv, h3_resolution=8):
     except Exception as e:
         print(f"!!! Cannot open file: {e}")
         return
+
+    # --- Helper: Name Cleaning Function ---
+    def clean_name_for_matsim(name):
+        if pd.isna(name):
+            return name
+        name = str(name)
+        
+        # 1. Replace common symbols that have meaning
+        name = name.replace('&', ' and ')
+        name = name.replace('@', ' at ')
+        name = name.replace('+', ' plus ')
+        
+        # 2. Remove XML breaking characters and other confusing symbols
+        # Remove: " ' < > / \ | ? * ; :
+        name = re.sub(r'["\'<>/\\|?*;:]', '', name)
+        
+        # 3. Remove non-printable characters or excessive whitespace
+        name = re.sub(r'\s+', ' ', name).strip()
+        
+        return name
 
     # --- 1. Classification Logic ---
     def get_type(row):
@@ -60,16 +82,22 @@ def classify_facilities(input_csv, output_csv, h3_resolution=8):
         
         return 'other'
 
+    print("Classifying activities...")
     df['activity_type'] = df.apply(get_type, axis=1)
 
-    # Handle ID and Name
+    # --- Handle ID and Name ---
     if 'osmid' not in df.columns:
         df['osmid'] = range(1, len(df) + 1)
     
+    # Fill missing names
     df['name'] = df.apply(
         lambda x: x['name'] if pd.notna(x['name']) else f"Unnamed_{x['activity_type']}_{x['osmid']}", 
         axis=1
     )
+
+    # Apply Cleaning to Names
+    print("Cleaning facility names for MATSim compatibility...")
+    df['name'] = df['name'].apply(clean_name_for_matsim)
 
     # --- 2. Coordinate Preparation for MATSim & H3 ---
     print(f"Processing coordinates (WGS84) and H3 Grid (Res {h3_resolution})...")
@@ -79,7 +107,6 @@ def classify_facilities(input_csv, output_csv, h3_resolution=8):
     df['y'] = df['latitude']
 
     # 2.2 Add coordinate tuple column (Longitude, Latitude) or (x, y)
-    # This column explicitly indicates 'wgs84_coords'
     df['wgs84_coords'] = list(zip(df['x'], df['y']))
 
     # 2.3 Create H3 Index
@@ -103,10 +130,10 @@ def classify_facilities(input_csv, output_csv, h3_resolution=8):
     final_df = df[final_cols]
     
     final_df.to_csv(output_csv, index=False, encoding='utf-8-sig')
-    print(f"✅ Successfully saved data to: {output_csv}")
+    print(f"✅ Successfully saved cleaned data to: {output_csv}")
     print("-" * 30)
     
-    # Use to_string instead of to_markdown to reduce dependency
+    # Use to_string instead of to_markdown
     print(final_df[['name', 'activity_type', 'x', 'y', 'wgs84_coords']].head().to_string(index=False)) 
     print("-" * 30)
     print(final_df['activity_type'].value_counts())
