@@ -2,20 +2,20 @@ import os
 import time
 from get_osm_network import download_osm_for_matsim
 from get_facilities import extract_poi_to_csv
-from process_facilities import classify_facilities  # <--- เพิ่มบรรทัดนี้
+from process_facilities import classify_facilities 
 
 def main():
     print("=== Starting MATSim data preparation process ===")
 
     config = {
-        "north": 13.7480,
-        "south": 13.7440,
-        "east":  100.5370,
-        "west":  100.5330,
+        "north": 13.78264,
+        "south": 13.71056,
+        "east":  100.57110,
+        "west":  100.49690,
         "output_folder": "output",
         "osm_filename": "network.osm",
-        "raw_csv_filename": "facilities_raw.csv",       # เปลี่ยนชื่อเป็น raw เพื่อกันสับสน
-        "clean_csv_filename": "facilities_cleaned.csv"  # ไฟล์ผลลัพธ์สุดท้าย
+        "raw_csv_filename": "facilities_raw.csv",       
+        "clean_csv_filename": "facilities_cleaned.csv" 
     }
 
     if not os.path.exists(config["output_folder"]):

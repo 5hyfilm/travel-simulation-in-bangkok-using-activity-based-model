@@ -1,0 +1,61 @@
+flowchart TD
+    Start([Start: รับข้อมูล Facility 1 แถว]) --> Step1
+
+    %% 1. Shopping
+    Step1{"มี Tag 'shop' หรือไม่?"}
+    Step1 -- Yes --> Res1[🛍️ Assign: shopping]
+    Step1 -- No --> Step2
+
+    %% 2. Dining
+    Step2{"Amenity คือ<br/>restaurant, cafe, bar, etc.?"}
+    Step2 -- Yes --> Res2[🍽️ Assign: dining]
+    Step2 -- No --> Step3
+
+    %% 3. Park
+    Step3{"Leisure คือ<br/>park, garden, playground?"}
+    Step3 -- Yes --> Res3[🌳 Assign: park]
+    Step3 -- No --> Step4
+
+    %% 4. Leisure
+    Step4{"มี Tag 'leisure' อื่นๆ<br/>หรือ Amenity คือ cinema, museum?"}
+    Step4 -- Yes --> Res4[🎬 Assign: leisure]
+    Step4 -- No --> Step5
+
+    %% 5. Education
+    Step5{"Amenity/Building คือ<br/>school, university, library?"}
+    Step5 -- Yes --> Res5[🎓 Assign: education]
+    Step5 -- No --> Step6
+
+    %% 6. Religion
+    Step6{"Building/Amenity คือ<br/>temple, church, mosque?"}
+    Step6 -- Yes --> Res6[🕌 Assign: religion]
+    Step6 -- No --> Step7
+
+    %% 7. Public Service
+    Step7{"Building=government<br/>หรือ Amenity=bank, hospital, police?"}
+    Step7 -- Yes --> Res7[🏥 Assign: public_service]
+    Step7 -- No --> Step8
+
+    %% 8. Work
+    Step8{"มี Tag 'office'<br/>หรือ Building=commercial, office?"}
+    Step8 -- Yes --> Res8[💼 Assign: work]
+    Step8 -- No --> Step9
+
+    %% 9. Home (Fix: ใส่ quotes รอบข้อความที่มีวงเล็บ)
+    Step9{"Building คือ residential/house<br/>OR<br/>(Building='yes' AND ไม่มีชื่อ)?"}
+    Step9 -- Yes --> Res9[🏠 Assign: home]
+    Step9 -- No --> Step10
+
+    %% 10. Transit
+    Step10{"Amenity คือ<br/>bus_station, parking?"}
+    Step10 -- Yes --> Res10[🚌 Assign: transit]
+    Step10 -- No --> ResOther
+
+    %% Fallback
+    ResOther[❓ Assign: other]
+
+    %% Styling
+    classDef decision fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef result fill:#bbf,stroke:#333,stroke-width:2px;
+    class Step1,Step2,Step3,Step4,Step5,Step6,Step7,Step8,Step9,Step10 decision;
+    class Res1,Res2,Res3,Res4,Res5,Res6,Res7,Res8,Res9,Res10,ResOther result;
