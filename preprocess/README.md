@@ -25,6 +25,8 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
+---
+
 # How to Run
 
 1. Open `main.py` and ensure the **Bounding Box (Coordinates)** matches your area of interest (Default is Siam/Pathum Wan, Bangkok).
@@ -53,7 +55,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📂 Output Files
+# Output Files
 
 All results are saved in the `output/` folder:
 
