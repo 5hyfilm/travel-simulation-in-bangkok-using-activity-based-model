@@ -1,18 +1,21 @@
 import pandas as pd
 import numpy as np
-import h3  # pip install h3
+import h3
 
 def classify_facilities(input_csv, output_csv, h3_resolution=9):
     """
-    อ่านไฟล์ CSV ดิบ, จัดกลุ่ม (Activity Types), 
-    สร้าง H3 Grid Index และเตรียมพิกัด WGS84 (x, y) สำหรับ MATSim
+    Read raw CSV file, classify Activity Types, 
+    create H3 Grid Index, and prepare WGS84 coordinates (x, y) for MATSim.
+    
+    Parameters:
+    - h3_resolution: Grid resolution (9 = ~0.1 sq km, 8 = ~0.7 sq km)
     """
-    print(f"กำลังประมวลผลข้อมูลจาก: {input_csv}...")
+    print(f"Processing data from: {input_csv}...")
     
     try:
         df = pd.read_csv(input_csv)
     except Exception as e:
-        print(f"!!! ไม่สามารถเปิดไฟล์ได้: {e}")
+        print(f"!!! Cannot open file: {e}")
         return
 
     # --- 1. Classification Logic ---
@@ -58,7 +61,7 @@ def classify_facilities(input_csv, output_csv, h3_resolution=9):
 
     df['activity_type'] = df.apply(get_type, axis=1)
 
-    # จัดการ ID และ ชื่อ
+    # Handle ID and Name
     if 'osmid' not in df.columns:
         df['osmid'] = range(1, len(df) + 1)
     
@@ -70,15 +73,15 @@ def classify_facilities(input_csv, output_csv, h3_resolution=9):
     # --- 2. Coordinate Preparation for MATSim & H3 ---
     print(f"Processing coordinates (WGS84) and H3 Grid (Res {h3_resolution})...")
 
-    # 2.1 เพิ่ม column x, y (MATSim Standard: x=longitude, y=latitude)
+    # 2.1 Add x, y columns (MATSim Standard: x=longitude, y=latitude)
     df['x'] = df['longitude']
     df['y'] = df['latitude']
 
-    # 2.2 เพิ่ม column พิกัดแบบ Tuple (Longitude, Latitude) หรือ (x, y)
-    # คอลัมน์นี้ระบุว่าเป็น 'wgs84_coords' ชัดเจน
+    # 2.2 Add coordinate tuple column (Longitude, Latitude) or (x, y)
+    # This column explicitly indicates 'wgs84_coords'
     df['wgs84_coords'] = list(zip(df['x'], df['y']))
 
-    # 2.3 สร้าง H3 Index
+    # 2.3 Create H3 Index
     def get_h3(row):
         try:
             return h3.latlng_to_cell(row['y'], row['x'], h3_resolution)
@@ -87,21 +90,22 @@ def classify_facilities(input_csv, output_csv, h3_resolution=9):
             
     df['h3_index'] = df.apply(get_h3, axis=1)
 
-    # เลือก Column ที่จะบันทึก (เพิ่ม x, y และ wgs84_coords)
+    # Select columns to save
     final_cols = [
         'osmid', 'name', 'activity_type', 
-        'x', 'y',               # พิกัดแยก (สำหรับ MATSim XML)
-        'wgs84_coords',         # พิกัดรวม (Tuple)
+        'x', 'y',               # Separate coordinates (for MATSim XML)
+        'wgs84_coords',         # Combined coordinates (Tuple)
         'h3_index',             # H3 Grid
-        'latitude', 'longitude' # เก็บตัวเดิมไว้ด้วยเผื่อใช้
+        'latitude', 'longitude' # Keep original columns for reference
     ]
     
     final_df = df[final_cols]
     
     final_df.to_csv(output_csv, index=False, encoding='utf-8-sig')
-    print(f"✅ บันทึกข้อมูลเรียบร้อยแล้วไปที่: {output_csv}")
+    print(f"✅ Successfully saved data to: {output_csv}")
     print("-" * 30)
-    # ใช้ to_string แทน to_markdown เพื่อลด dependency
+    
+    # Use to_string instead of to_markdown to reduce dependency
     print(final_df[['name', 'activity_type', 'x', 'y', 'wgs84_coords']].head().to_string(index=False)) 
     print("-" * 30)
     print(final_df['activity_type'].value_counts())
