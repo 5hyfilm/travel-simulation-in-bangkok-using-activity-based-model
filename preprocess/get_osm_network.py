@@ -3,27 +3,32 @@ import requests
 def download_osm_for_matsim(north, south, east, west, filename="map_data.osm"):
     """
     Download Raw OSM (XML) data from Overpass API for use with MATSim
+    Updated: Uses specific query for highway, building, and landuse only.
     """
     
     # URL of Overpass API (Public Server)
     api_url = "https://overpass-api.de/api/interpreter"
 
     # Create Overpass QL Query
-    # This query fetches all Nodes, Ways, and Relations within the bounding box
-    # and includes all related components (recursion) for a complete XML output.
+    # Logic:
+    # 1. Select ways that are highways, buildings, or landuse within bbox.
+    # 2. Output the ways (out body).
+    # 3. Recurse down (>;) to get the nodes used by those ways.
+    # 4. Output nodes as skeleton (out skel qt) to save space.
     query = f"""
     [out:xml][timeout:180];
     (
-      node({south},{west},{north},{east});
-      way({south},{west},{north},{east});
-      relation({south},{west},{north},{east});
+      way["highway"]({south},{west},{north},{east});
+      way["building"]({south},{west},{north},{east});
+      way["landuse"]({south},{west},{north},{east});
     );
-    (._;>;);
-    out meta;
+    out body;
+    >;
+    out skel qt;
     """
 
-    print(f"Downloading .osm data for coordinates: N={north}, S={south}, E={east}, W={west}...")
-    print("This may take a moment depending on the area size...")
+    print(f"Downloading optimized .osm data for coordinates: N={north}, S={south}, E={east}, W={west}...")
+    print("Querying for: Highway, Building, Landuse...")
 
     try:
         # Send Request to API
@@ -32,7 +37,6 @@ def download_osm_for_matsim(north, south, east, west, filename="map_data.osm"):
         # Check if successful (Status 200 = OK)
         if response.status_code == 200:
             # Save content as .osm file
-            # Write in binary mode (wb) to correctly handle UTF-8 XML encoding
             with open(filename, 'wb') as file:
                 file.write(response.content)
             print(f"Success! File saved at: {filename}")
@@ -43,3 +47,7 @@ def download_osm_for_matsim(north, south, east, west, filename="map_data.osm"):
 
     except Exception as e:
         print(f"Connection Error: {e}")
+
+# Test run (optional)
+if __name__ == "__main__":
+    download_osm_for_matsim(13.7480, 13.7440, 100.5370, 100.5330)

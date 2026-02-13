@@ -1,14 +1,15 @@
 import pandas as pd
 import numpy as np
-import h3
+import h3  # pip install h3
 
-def classify_facilities(input_csv, output_csv, h3_resolution=9):
+def classify_facilities(input_csv, output_csv, h3_resolution=8):
     """
     Read raw CSV file, classify Activity Types, 
     create H3 Grid Index, and prepare WGS84 coordinates (x, y) for MATSim.
     
     Parameters:
     - h3_resolution: Grid resolution (9 = ~0.1 sq km, 8 = ~0.7 sq km)
+      ** Default set to 8 **
     """
     print(f"Processing data from: {input_csv}...")
     
@@ -111,4 +112,4 @@ def classify_facilities(input_csv, output_csv, h3_resolution=9):
     print(final_df['activity_type'].value_counts())
 
 if __name__ == "__main__":
-    classify_facilities('facilities_raw.csv', 'facilities_cleaned_h3.csv', h3_resolution=9)
+    classify_facilities('facilities_raw.csv', 'facilities_cleaned_h3.csv', h3_resolution=8)
