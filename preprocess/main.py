@@ -42,7 +42,7 @@ def main():
         osm_file_path=osm_path
     )
 
-    # Step 3: Classify Facilities (ขั้นตอนใหม่)
+    # Step 3: Classify Facilities
     print(f"\n[Step 3/3] Classifying activities and saving to: {clean_csv_path}")
     classify_facilities(raw_csv_path, clean_csv_path)
 
