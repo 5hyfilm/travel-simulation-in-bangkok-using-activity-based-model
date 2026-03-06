@@ -3,19 +3,19 @@ graph LR
         A[main.py: Set Bounding Box Coordinates] --> B{Create Output Directory}
     end
 
-    subgraph Step1 [Step 1: Network Download]
+    subgraph Step1 [Step 1: Network & Land Use Acquisition]
         B --> C[get_osm_network.py: download_osm_for_matsim]
         C --> D[Query Overpass API: Highway, Building, Landuse]
         D --> E[(network.osm)]
     end
 
-    subgraph Step2 [Step 2: POI Extraction]
+    subgraph Step2 [Step 2: Spatial Feature Extraction]
         E --> F[get_facilities.py: extract_poi_to_csv]
         F --> G[OSMnx: Extract Features & Calculate Centroids]
         G --> H[(facilities_raw.csv)]
     end
 
-    subgraph Step3 [Step 3: Processing]
+    subgraph Step3 [Step 3: Data Refinement & Indexing]
         H --> I[process_facilities.py: classify_facilities]
         I --> J[Clean Names / Classify Activities / Apply H3 Index]
         J --> K[(facilities_cleaned.csv)]
