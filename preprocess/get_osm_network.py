@@ -21,10 +21,10 @@ def download_osm_for_matsim(north, south, east, west, filename="map_data.osm"):
       way["highway"]({south},{west},{north},{east});
       way["building"]({south},{west},{north},{east});
       way["landuse"]({south},{west},{north},{east});
+      node["highway"="traffic_signals"]({south},{west},{north},{east});
     );
-    out body;
-    >;
-    out skel qt;
+    (._; >;);
+    out body qt; 
     """
 
     print(f"Downloading optimized .osm data for coordinates: N={north}, S={south}, E={east}, W={west}...")
