@@ -159,6 +159,12 @@
 		<!--Dependencies from where stated above to here are added as a service; they can be removed if you don't need them-->
 
 		<dependency>
+			<groupId>org.matsim.contrib</groupId>
+			<artifactId>signals</artifactId>
+			<version>${matsim.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.uber</groupId>
 			<artifactId>h3</artifactId>
 			<version>4.1.1</version>
