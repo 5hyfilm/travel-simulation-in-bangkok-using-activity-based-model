@@ -54,7 +54,7 @@ public class SignalsModule extends AbstractModule {
             }
             
             bind(SignalSystemsManager.class).toProvider(FromDataBuilder.class).in(Singleton.class);
-            addMobsimListenerBinding().to(QSimSignalEngine.class);
+            addMobsimListenerBinding().to(ThrottledSignalEngine.class);
             // bind(SignalEvents2ViaCSVWriter.class).asEagerSingleton();
             // addControlerListenerBinding().to(SignalEvents2ViaCSVWriter.class);
             // addEventHandlerBinding().to(SignalEvents2ViaCSVWriter.class);
