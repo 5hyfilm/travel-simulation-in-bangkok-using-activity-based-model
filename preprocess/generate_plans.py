@@ -31,13 +31,17 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000):
     # ==============================
     random.seed(RANDOM_SEED)
     unique_persons = df["person_id"].unique()
-    if len(unique_persons) < sample_size:
-        print(f"Warning: มีคนแค่ {len(unique_persons)} คนในไฟล์ทริป")
-        sample_size = len(unique_persons)
+    selected_persons = set(unique_persons)
+    if sample_size is not None and sample_size != -1:
+        if len(unique_persons) < sample_size:
+            print(f"Warning: มีคนแค่ {len(unique_persons)} คนในไฟล์ทริป")
+            sample_size = len(unique_persons)
+        selected_persons = set(random.sample(list(unique_persons), sample_size))
+        print(f"Generating CAR-only plan for {len(selected_persons)} persons (Sample)...")
+    else:
+        print(f"Generating CAR-only plan for ALL {len(selected_persons)} persons...")
     
-    selected_persons = set(random.sample(list(unique_persons), sample_size))
     df = df[df["person_id"].isin(selected_persons)]
-    print(f"Generating CAR-only plan for {len(selected_persons)} persons...")
 
     # ==============================
     # TIME FORMATTER
