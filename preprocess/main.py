@@ -21,9 +21,7 @@ def main():
         "trips_filename": "trips.csv", # Input from behavior layer (User should provide this)
         "final_trips_filename": "final_trips.csv",
         "plans_filename": "plan_20k.xml",
-        "sample_size": 20000,
-        "iterations": 1,
-        "throttling_interval": 5
+        "sample_size": 20000 
     }
 
     if not os.path.exists(config["output_folder"]):
@@ -38,19 +36,18 @@ def main():
     trips_path = config["trips_filename"] 
     final_trips_path = os.path.join(config["output_folder"], config["final_trips_filename"])
     plans_path = os.path.join(config["output_folder"], config["plans_filename"])
-    sim_props_path = os.path.join(config["output_folder"], "simulation.properties")
 
     start_time = time.time()
 
     # Step 1: Download Map
-    print(f"\n[Step 1/6] Downloading map network to: {osm_path}")
+    print(f"\n[Step 1/5] Downloading map network to: {osm_path}")
     download_osm_for_matsim(
         config["north"], config["south"], config["east"], config["west"], 
         osm_path
     )
 
     # Step 2: Extract Raw Facilities
-    print(f"\n[Step 2/6] Extracting raw facilities data to: {raw_csv_path}")
+    print(f"\n[Step 2/5] Extracting raw facilities data to: {raw_csv_path}")
     extract_poi_to_csv(
         config["north"], config["south"], config["east"], config["west"], 
         raw_csv_path,
@@ -58,11 +55,11 @@ def main():
     )
 
     # Step 3: Classify Facilities
-    print(f"\n[Step 3/6] Classifying activities and saving to: {clean_csv_path}")
+    print(f"\n[Step 3/5] Classifying activities and saving to: {clean_csv_path}")
     classify_facilities(raw_csv_path, clean_csv_path)
 
     # Step 4: Assign Locations
-    print(f"\n[Step 4/6] Assigning locations to facilities indices: {final_trips_path}")
+    print(f"\n[Step 4/5] Assigning locations to facilities indices: {final_trips_path}")
     if os.path.exists(trips_path):
         assign_facility_locations(trips_path, clean_csv_path, final_trips_path)
     else:
@@ -73,14 +70,8 @@ def main():
         return
 
     # Step 5: Generate MATSim Plans
-    print(f"\n[Step 5/6] Generating MATSim XML plans: {plans_path}")
+    print(f"\n[Step 5/5] Generating MATSim XML plans: {plans_path}")
     generate_matsim_plans(final_trips_path, plans_path, sample_size=config["sample_size"])
-
-    # Step 6: Write Simulation Properties
-    print(f"\n[Step 6/6] Writing simulation properties to: {sim_props_path}")
-    with open(sim_props_path, "w") as f:
-        f.write(f"lastIteration={config['iterations']}\n")
-        f.write(f"throttlingInterval={config['throttling_interval']}\n")
 
     end_time = time.time()
     print(f"\n=== Completed! Total time: {end_time - start_time:.2f} seconds ===")
