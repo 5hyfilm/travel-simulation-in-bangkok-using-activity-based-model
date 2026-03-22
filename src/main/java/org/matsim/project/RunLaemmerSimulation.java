@@ -24,6 +24,9 @@ import org.matsim.contrib.signals.data.signalsystems.v20.SignalSystemData;
 import org.matsim.contrib.signals.data.signalsystems.v20.SignalData;
 import org.matsim.contrib.signals.data.signalgroups.v20.SignalGroupData;
 
+import java.util.Properties;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -40,10 +43,26 @@ public class RunLaemmerSimulation {
         Config config = ConfigUtils.createConfig();
         
         String baseDir = System.getProperty("user.dir") + "/";
+        
+        // Load dynamic settings from Python preprocessing
+        int lastIteration = 0;
+        int throttlingInterval = 5;
+        try {
+            Properties simProps = new Properties();
+            simProps.load(new FileInputStream(baseDir + "preprocess/output/simulation.properties"));
+            lastIteration = Integer.parseInt(simProps.getProperty("lastIteration", "0"));
+            throttlingInterval = Integer.parseInt(simProps.getProperty("throttlingInterval", "5"));
+            System.out.println("Loaded Simulation Settings: lastIteration=" + lastIteration + ", throttlingInterval=" + throttlingInterval);
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Could not load simulation.properties, using defaults (lastIteration=0, throttlingInterval=5)");
+        }
+
         config.network().setInputFile(baseDir + "data/processed/network.cleaned.xml.gz");
         config.plans().setInputFile(baseDir + "preprocess/output/plan_20k.xml");
         config.controller().setOutputDirectory(baseDir + "output/laemmer_simulation");
-        config.controller().setLastIteration(0); // Set to 0 for a fast, clean Simwrapper run
+        config.controller().setLastIteration(lastIteration); 
+        ThrottledSignalEngine.updateInterval = throttlingInterval;
+
         config.controller().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.overwriteExistingFiles);
         
         config.routing().setNetworkRouteConsistencyCheck(RoutingConfigGroup.NetworkRouteConsistencyCheck.disable);
