@@ -41,7 +41,7 @@ public class RunLaemmerSimulation {
         
         String baseDir = System.getProperty("user.dir") + "/";
         config.network().setInputFile(baseDir + "data/processed/network.cleaned.xml.gz");
-        config.plans().setInputFile(baseDir + "data/processed/plan_20k.xml");
+        config.plans().setInputFile(baseDir + "preprocess/output/plan_20k.xml");
         config.controller().setOutputDirectory(baseDir + "output/laemmer_simulation");
         config.controller().setLastIteration(0); // Set to 0 for a fast, clean Simwrapper run
         config.controller().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.overwriteExistingFiles);

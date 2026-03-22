@@ -43,7 +43,7 @@ public class ConvertOSM {
                 "EPSG:32647"
         );
 
-        String in = "data/raw/pathumwan_M.osm";
+        String in = "preprocess/output/network.osm";
         String outDir = "data/processed";
         new File(outDir).mkdirs();
 
