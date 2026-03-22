@@ -47,9 +47,12 @@ pip install -r requirements.txt
        "trips_filename": "trips.csv", # Input from behavior layer (User should provide this)
        "final_trips_filename": "final_trips.csv",
        "plans_filename": "plan_20k.xml",
-       "sample_size": 20000 
+       "sample_size": 20000 # Use -1 or None to select ALL persons
    }
    ```
+
+   > [!TIP]
+   > Setting `"sample_size": -1` or `None` will skip sampling and include **all unique persons** from the `trips.csv` file in the generated MATSim plans.
 
 2. Run the main script:
 
