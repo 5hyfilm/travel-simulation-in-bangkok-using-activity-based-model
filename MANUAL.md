@@ -62,6 +62,8 @@ Outputs are located in `output/laemmer_simulation/`.
 - **Events**: `output_events.xml.gz` (Detailed movement logs).
 - **Analysis**: Check the `analysis/` folder for CSV stats (stuck agents, mode share).
 - **Visualization**: Drag the entire output folder into [SimWrapper](https://vsp.berlin/simwrapper/).
+    - > [!IMPORTANT]
+    - > When using **SimWrapper**, ensure you set the coordinate system to **`EPSG:32647`** (WGS 84 / UTM zone 47N) to correctly align the simulation results with the map of Bangkok.
 
 ---
 **Branch**: `film-laemmer`
