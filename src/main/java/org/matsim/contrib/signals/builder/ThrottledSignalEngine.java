@@ -13,7 +13,7 @@ import org.matsim.core.mobsim.framework.listeners.MobsimInitializedListener;
  */
 public class ThrottledSignalEngine implements MobsimBeforeSimStepListener, MobsimInitializedListener {
     private final QSimSignalEngine delegate;
-    private final int updateInterval = 5; // Configurable update interval (seconds)
+    public static int updateInterval = 5; // Configurable update interval (seconds)
 
     @Inject
     public ThrottledSignalEngine(SignalSystemsManager manager) {
