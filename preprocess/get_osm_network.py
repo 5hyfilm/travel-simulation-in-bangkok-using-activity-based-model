@@ -11,23 +11,24 @@ def download_osm_for_matsim(north, south, east, west, filename="map_data.osm"):
 
     # Create Overpass QL Query
     # Logic:
-    # 1. Select ways that are purely major drivable roads (motorway, trunk, primary, secondary, tertiary and their links)
-    # 2. Select traffic signal nodes.
-    # 3. Output the ways and nodes.
-    # 4. Recurse down (>;) to get the nodes used by those ways.
-    # **REMOVED buildings, landuse, and minor alleys to avoid MATSim junction simplification freezing**
+    # 1. Select ways that are highways, buildings, or landuse within bbox.
+    # 2. Output the ways (out body).
+    # 3. Recurse down (>;) to get the nodes used by those ways.
+    # 4. Output nodes as skeleton (out skel qt) to save space.
     query = f"""
     [out:xml][timeout:180];
     (
-      way["highway"~"^(motorway|trunk|primary|secondary|tertiary)(_link)?$"]({south},{west},{north},{east});
-      node["highway"="traffic_signals"]({south},{west},{north},{east});
+      way["highway"]({south},{west},{north},{east});
+      way["building"]({south},{west},{north},{east});
+      way["landuse"]({south},{west},{north},{east});
     );
-    (._; >;);
-    out body qt; 
+    out body;
+    >;
+    out skel qt;
     """
 
     print(f"Downloading optimized .osm data for coordinates: N={north}, S={south}, E={east}, W={west}...")
-    print("Querying for: Major Highways and Traffic Signals ONLY...")
+    print("Querying for: Highway, Building, Landuse...")
 
     try:
         # Send Request to API
