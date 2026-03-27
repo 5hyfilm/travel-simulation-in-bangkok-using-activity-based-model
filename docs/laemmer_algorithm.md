@@ -161,6 +161,6 @@ ThrottledSignalEngine.setUpdateInterval(5); // ปรับได้ใน RunLa
 ## 9. อ่านเพิ่มเติม
 
 - Paper ต้นฉบับ: `paper/Implementing an adaptive traffic signal.pdf`
-- โค้ดวางสัญญาณ: `signal_placement.md`
+- โค้ดวางสัญญาณ: `docs/signal_placement.md`
 - คู่มือการรัน: `MANUAL.md`
 - MATSim Signals contrib: `org.matsim.contrib.signals.controller.laemmerFix`
