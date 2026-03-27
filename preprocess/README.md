@@ -60,12 +60,13 @@ pip install -r requirements.txt
    python main.py
    ```
 
-3. The script will execute the following **5 steps** automatically:
-   - **[Step 1/5]:** Download `.osm` network file (Swiss Mirror).
-   - **[Step 2/5]:** Extract raw facilities/POIs to CSV.
-   - **[Step 3/5]:** Clean names, classify activities (Home/Work/Study/Shop etc.).
-   - **[Step 4/5]:** **Location Assignment**: Maps `trips.csv` to specific coordinates.
-   - **[Step 5/5]:** **Plan Generation**: Creates `plan_20k.xml` ready for MATSim.
+3. The script will execute the following **6 steps** automatically:
+   - **[Step 1/6]:** Download `.osm` network file (Swiss Mirror).
+   - **[Step 2/6]:** Extract raw facilities/POIs to CSV.
+   - **[Step 3/6]:** Clean names, classify activities (Home/Work/Study/Shop etc.).
+   - **[Step 4/6]:** **Location Assignment**: Maps `trips.csv` to specific coordinates.
+   - **[Step 5/6]:** **Plan Generation**: Creates `plan_20k.xml` ready for MATSim.
+   - **[Step 6/6]:** **Signal Export**: Exports signal junction coordinates to CSV and GeoJSON (skipped if Java signal files are not yet generated).
 
 ---
 
@@ -80,4 +81,6 @@ All results are saved in the `output/` folder:
 | **`facilities_cleaned.csv`**| Filtered and classified POIs with MATSim activity types.                                                       |
 | **`final_trips.csv`**       | Intermediate file: Trips mapping actual facilities for each activity.                                          |
 | **`plan_20k.xml`**          | **Final MATSim Plan**. Ready to be used for simulation! (XML v6).                                              |
+| **`signal_locations.csv`**  | Signal junction coordinates (node_id, UTM x/y, lat/lon, num_signals). Generated after Java steps are run.     |
+| **`signal_locations.geojson`** | GeoJSON PointFeatureCollection of signal junctions. Drag into QGIS or kepler.gl to visualize on a map.     |
 
