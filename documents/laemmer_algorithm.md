@@ -160,27 +160,10 @@ ThrottledSignalEngine.setUpdateInterval(5); // ปรับได้ใน RunLa
 
 ---
 
-## 10. QSim vs Hermes
-
-| คุณสมบัติ | QSim | Hermes |
-|-----------|------|--------|
-| **ประเภท** | Queue-based simulation | Event-driven simulation |
-| **ความเร็ว** | ช้ากว่า | เร็วกว่า (เหมาะกับ agent จำนวนมาก) |
-| **หน่วยความจำ** | ใช้มากกว่า | ประหยัดกว่า |
-| **Traffic dynamics** | Queue / Kinematic waves | Queue เท่านั้น |
-| **Signals contrib** | รองรับ ✅ | ไม่รองรับ ❌ |
-| **Lämmer** | ใช้ได้ ✅ | ใช้ไม่ได้ ❌ |
-| **Lanes** | รองรับ ✅ | ไม่รองรับ ❌ |
-| **Public transit** | รองรับ ✅ | รองรับ ✅ |
-| **เหมาะกับ** | simulation ที่ต้องการ signal / lane | simulation ขนาดใหญ่ที่เน้นความเร็ว |
-
-> โปรเจกต์นี้ใช้ **QSim** เพราะต้องการระบบสัญญาณไฟ Lämmer
-
----
-
 ## 9. อ่านเพิ่มเติม
 
 - Paper ต้นฉบับ: `paper/Implementing an adaptive traffic signal.pdf`
 - โค้ดวางสัญญาณ: `docs/signal_placement.md`
 - คู่มือการรัน: `MANUAL.md`
 - MATSim Signals contrib: `org.matsim.contrib.signals.controller.laemmerFix`
+- เปรียบเทียบ engine: `documents/qsim_vs_hermes.md`
