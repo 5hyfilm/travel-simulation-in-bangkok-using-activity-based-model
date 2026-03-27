@@ -45,8 +45,14 @@ Removes disconnected road islands to prevent simulation crashes.
 ---
 
 ## 🚀 Phase 3: Run the Simulation (Java)
-Executes the final simulation with **Adaptive Signal Control**.
 
+### Option A: Without signals (standard MATSim)
+Use `RunMatsim` if you want to run a basic simulation without any traffic signal control. Note that this requires a `config.xml` file pointing to your network and plans.
+```bash
+./mvnw exec:java -Dexec.mainClass="org.matsim.project.RunMatsim"
+```
+
+### Option B: With Lämmer Adaptive Signal Control
 ```bash
 ./mvnw exec:java -Dexec.mainClass="org.matsim.project.RunLaemmerSimulation"
 ```
