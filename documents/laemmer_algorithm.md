@@ -156,6 +156,8 @@ ThrottledSignalEngine.setUpdateInterval(5); // ปรับได้ใน RunLa
 
 3. **Simulation time ≠ Real time** — ใน simulation รถวิ่งได้สมบูรณ์แบบตาม shortest path ไม่มีพฤติกรรมเสี่ยง ผลลัพธ์จึงดีกว่าความเป็นจริง
 
+4. **ใช้ได้กับ QSim เท่านั้น** — `LaemmerSignalController` อ่านข้อมูล queue จาก `QSimSignalEngine` โดยตรง และ `ThrottledSignalEngine` ก็ wrap `QSimSignalEngine` อยู่ ดังนั้น **ไม่สามารถใช้ร่วมกับ Hermes** (simulation engine ทางเลือกที่เร็วกว่า) ได้ เพราะ MATSim signals contrib ทั้งหมดถูก design มาสำหรับ QSim เท่านั้น หากต้องการใช้ Hermes จะต้องปิดระบบสัญญาณไฟออกไปด้วย
+
 ---
 
 ## 9. อ่านเพิ่มเติม
