@@ -2,9 +2,10 @@ import os
 import time
 from get_osm_network import download_osm_for_matsim
 from get_facilities import extract_poi_to_csv
-from process_facilities import classify_facilities 
+from process_facilities import classify_facilities
 from assign_locations import assign_facility_locations
 from generate_plans import generate_matsim_plans
+from export_signal_locations import main as export_signal_locations
 
 def main():
     print("=== Starting MATSim data preparation process ===")
@@ -72,6 +73,16 @@ def main():
     # Step 5: Generate MATSim Plans
     print(f"\n[Step 5/5] Generating MATSim XML plans: {plans_path}")
     generate_matsim_plans(final_trips_path, plans_path, sample_size=config["sample_size"])
+
+    # Step 6: Export signal locations (requires Java steps to have been run first)
+    signal_systems_path = "../data/processed/signalSystems.xml"
+    network_cleaned_path = "../data/processed/network.cleaned.xml.gz"
+    if os.path.exists(signal_systems_path) and os.path.exists(network_cleaned_path):
+        print(f"\n[Step 6/6] Exporting signal junction locations...")
+        export_signal_locations()
+    else:
+        print(f"\n[Step 6/6] Skipping signal export — signal files not found.")
+        print(f"  Run ConvertOSM and RunNetworkCleaner (Java) first, then re-run main.py to export signal locations.")
 
     end_time = time.time()
     print(f"\n=== Completed! Total time: {end_time - start_time:.2f} seconds ===")
