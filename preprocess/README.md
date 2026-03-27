@@ -82,5 +82,5 @@ All results are saved in the `output/` folder:
 | **`final_trips.csv`**       | Intermediate file: Trips mapping actual facilities for each activity.                                          |
 | **`plan_20k.xml`**          | **Final MATSim Plan**. Ready to be used for simulation! (XML v6).                                              |
 | **`signal_locations.csv`**  | Signal junction coordinates (node_id, UTM x/y, lat/lon, num_signals). Generated after Java steps are run.     |
-| **`signal_locations.geojson`** | GeoJSON PointFeatureCollection of signal junctions. Drag into QGIS or kepler.gl to visualize on a map.     |
+| **`signal_locations.geojson`** | GeoJSON PointFeatureCollection of signal junctions. Open in QGIS: drag the file into the Layers panel, then add OpenStreetMap basemap via XYZ Tiles for context. |
 
