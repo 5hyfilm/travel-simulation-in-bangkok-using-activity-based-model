@@ -60,13 +60,42 @@ pip install -r requirements.txt
    python main.py
    ```
 
-3. The script will execute the following **6 steps** automatically:
-   - **[Step 1/6]:** Download `.osm` network file (Swiss Mirror).
-   - **[Step 2/6]:** Extract raw facilities/POIs to CSV.
-   - **[Step 3/6]:** Clean names, classify activities (Home/Work/Study/Shop etc.).
-   - **[Step 4/6]:** **Location Assignment**: Maps `trips.csv` to specific coordinates.
-   - **[Step 5/6]:** **Plan Generation**: Creates `plan_20k.xml` ready for MATSim.
-   - **[Step 6/6]:** **Signal Export**: Exports signal junction coordinates to CSV and GeoJSON (skipped if Java signal files are not yet generated).
+3. The script will execute the following **5 steps** automatically:
+   - **[Step 1/5]:** Download `.osm` network file (Swiss Mirror).
+   - **[Step 2/5]:** Extract raw facilities/POIs to CSV.
+   - **[Step 3/5]:** Clean names, classify activities (Home/Work/Study/Shop etc.).
+   - **[Step 4/5]:** **Location Assignment**: Maps `trips.csv` to specific coordinates.
+   - **[Step 5/5]:** **Plan Generation**: Creates `plan_20k.xml` ready for MATSim.
+
+---
+
+# Export Signal Locations
+
+Signal location export is a separate post-processing step. It is **not** part of `python main.py`, because it depends on Java-generated network and signal files.
+
+Run the full flow in this order:
+
+1. Run the Python preprocess pipeline:
+
+   ```bash
+   python main.py
+   ```
+
+2. Run the Java network and signal generation steps:
+
+   ```bash
+   # run these Java classes using your usual MATSim/IDE workflow
+   org.matsim.project.ConvertOSM
+   org.matsim.project.RunNetworkCleaner
+   ```
+
+3. Export signal locations for QGIS or inspection:
+
+   ```bash
+   python export_signal_locations.py
+   ```
+
+`signal_locations.csv` and `signal_locations.geojson` are optional post-processing outputs generated only after the Java steps are complete.
 
 ---
 
@@ -81,6 +110,5 @@ All results are saved in the `output/` folder:
 | **`facilities_cleaned.csv`**| Filtered and classified POIs with MATSim activity types.                                                       |
 | **`final_trips.csv`**       | Intermediate file: Trips mapping actual facilities for each activity.                                          |
 | **`plan_20k.xml`**          | **Final MATSim Plan**. Ready to be used for simulation! (XML v6).                                              |
-| **`signal_locations.csv`**  | Signal junction coordinates (node_id, UTM x/y, lat/lon, num_signals). Generated after Java steps are run.     |
-| **`signal_locations.geojson`** | GeoJSON PointFeatureCollection of signal junctions. Open in QGIS: drag the file into the Layers panel, then add OpenStreetMap basemap via XYZ Tiles for context. |
-
+| **`signal_locations.csv`**  | Optional post-processing output: signal junction coordinates (node_id, UTM x/y, lat/lon, num_signals). Generated only after the Java signal steps are run and `export_signal_locations.py` is executed. |
+| **`signal_locations.geojson`** | Optional post-processing output: GeoJSON PointFeatureCollection of signal junctions. Open in QGIS: drag the file into the Layers panel, then add OpenStreetMap basemap via XYZ Tiles for context. |
