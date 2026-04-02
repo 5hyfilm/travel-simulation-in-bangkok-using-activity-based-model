@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Set;
 
 public class ConvertOSM {
-    private static final double CLUSTER_RADIUS_METERS = 80.0;
+    private static final double CLUSTER_RADIUS_METERS = 500.0;
     private static final Set<String> MAIN_ROAD_TYPES = Set.of(
             "trunk",
             "primary"

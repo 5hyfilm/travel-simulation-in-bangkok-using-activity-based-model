@@ -19,8 +19,8 @@ def main():
         "clean_csv_filename": "facilities_cleaned.csv",
         "trips_filename": "trips.csv", # Input from behavior layer (User should provide this)
         "final_trips_filename": "final_trips.csv",
-        "plans_filename": "plan_20k.xml",
-        "sample_size": 20000 
+        "plans_filename": "plan_300k.xml",
+        "sample_size": 300000 
     }
 
     if not os.path.exists(config["output_folder"]):
