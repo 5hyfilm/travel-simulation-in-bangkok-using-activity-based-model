@@ -38,15 +38,15 @@ public class RunLaemmerSimulation {
         System.setProperty("matsim.qsim.usingFastCapacityUpdate", "false");
         
         // --- Adjust Signal Update Frequency here (seconds) ---
-        org.matsim.contrib.signals.builder.ThrottledSignalEngine.setUpdateInterval(5); 
+        org.matsim.contrib.signals.builder.ThrottledSignalEngine.setUpdateInterval(10); 
 
         Config config = ConfigUtils.createConfig();
         
         String baseDir = System.getProperty("user.dir") + "/";
         config.network().setInputFile(baseDir + "data/processed/network.cleaned.xml.gz");
-        config.plans().setInputFile(baseDir + "preprocess/output/plan_20k.xml");
+        config.plans().setInputFile(baseDir + "preprocess/output/plan_300k.xml");
         config.controller().setOutputDirectory(baseDir + "output/laemmer_simulation");
-        config.controller().setLastIteration(0); // Set to 0 for a fast, clean Simwrapper run
+        config.controller().setLastIteration(100); // Set to 0 for a fast, clean Simwrapper run
         config.controller().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.overwriteExistingFiles);
         
         config.routing().setNetworkRouteConsistencyCheck(RoutingConfigGroup.NetworkRouteConsistencyCheck.disable);
