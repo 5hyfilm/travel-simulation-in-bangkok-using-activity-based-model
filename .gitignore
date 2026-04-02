@@ -28,6 +28,9 @@ hs_err_pid*
 # macOS
 .DS_Store
 
+# Claude Code internal files
+.claude/worktrees/
+
 # Python
 __pycache__/
 *.pyc
