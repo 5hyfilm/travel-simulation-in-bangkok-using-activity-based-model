@@ -24,3 +24,16 @@ hs_err_pid*
 # IntelliJ
 /.idea/
 *.iml
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated output files
+preprocess/output/
+preprocess/trips.csv
+data/processed/
