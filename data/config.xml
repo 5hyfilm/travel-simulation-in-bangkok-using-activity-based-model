@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config SYSTEM "https://www.matsim.org/files/dtd/config_v2.dtd">
+<config>
+
+    <!-- ============================================================
+         GLOBAL
+         14700HX: 20 cores (8P + 12E), 28 threads
+         Use 24 threads — leave 4 for OS + JVM GC
+         ============================================================ -->
+    <module name="global">
+        <param name="coordinateSystem" value="EPSG:32647"/>
+        <param name="numberOfThreads" value="24"/>
+    </module>
+
+    <!-- ============================================================
+         CONTROLLER
+         - Back to 30 iterations — 32GB can handle full convergence
+         - Write only at last iteration to minimize I/O
+         ============================================================ -->
+    <module name="controller">
+        <param name="outputDirectory" value="output"/>
+        <param name="lastIteration" value="80"/>
+        <param name="writeEventsInterval" value="30"/>
+        <param name="writePlansInterval" value="30"/>
+        <param name="mobsim" value="hermes"/>
+    </module>
+
+    <!-- ============================================================
+         NETWORK
+         ============================================================ -->
+    <module name="network">
+        <param name="inputNetworkFile" value="processed/network.xml.gz"/>
+    </module>
+
+    <!-- ============================================================
+         PLANS
+         ============================================================ -->
+    <module name="plans">
+        <param name="inputPlansFile" value="plan_100k.xml"/>
+    </module>
+
+    <!-- ============================================================
+         QSIM
+         - numberOfThreads: 16 — sweet spot for 14700HX
+         - usingFastCapacityUpdate: true for performance
+         - stuckTime: 3600 fine for Bangkok-scale network
+         ============================================================ -->
+<!--    <module name="qsim">-->
+<!--        <param name="mainMode" value="car"/>-->
+<!--        <param name="flowCapacityFactor" value="1.0"/>-->
+<!--        <param name="storageCapacityFactor" value="1.0"/>-->
+<!--        <param name="stuckTime" value="3600"/>-->
+<!--        <param name="numberOfThreads" value="16"/>-->
+<!--        <param name="usingFastCapacityUpdate" value="true"/>-->
+<!--    </module>-->
+    <!-- ============================================================
+         HERMES (replaces qsim entirely)
+         - Hermes is single-threaded internally, uses global threads
+           for routing and scoring
+         - Same capacity/stuckTime semantics as QSim
+         ============================================================ -->
+    <module name="hermes">
+        <param name="mainMode" value="car"/>
+        <param name="flowCapacityFactor" value="1.0"/>
+        <param name="storageCapacityFactor" value="1.0"/>
+        <param name="stuckTime" value="1200"/>
+    </module>
+
+    <!-- ============================================================
+         ROUTING
+         ============================================================ -->
+    <module name="routing">
+        <param name="clearDefaultTeleportedModeParams" value="true"/>
+
+        <parameterset type="teleportedModeParameters">
+            <param name="mode" value="pt"/>
+            <param name="teleportedModeSpeed" value="8.0"/>
+        </parameterset>
+
+        <parameterset type="teleportedModeParameters">
+            <param name="mode" value="walk"/>
+            <param name="teleportedModeSpeed" value="1.34"/>
+        </parameterset>
+    </module>
+
+    <!-- ============================================================
+         SCORING
+         ============================================================ -->
+    <module name="scoring">
+
+        <!-- HOME: 12 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="home"/>
+            <param name="typicalDuration" value="43200"/>
+        </parameterset>
+
+        <!-- WORK: 8 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="work"/>
+            <param name="typicalDuration" value="28800"/>
+        </parameterset>
+
+        <!-- EDUCATION: 6 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="education"/>
+            <param name="typicalDuration" value="21600"/>
+        </parameterset>
+
+        <!-- SHOPPING: 2 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="shopping"/>
+            <param name="typicalDuration" value="7200"/>
+        </parameterset>
+
+        <!-- DINING: 1.5 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="dining"/>
+            <param name="typicalDuration" value="5400"/>
+        </parameterset>
+
+        <!-- LEISURE: 3 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="leisure"/>
+            <param name="typicalDuration" value="10800"/>
+        </parameterset>
+
+        <!-- RELIGION: 2 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="religion"/>
+            <param name="typicalDuration" value="7200"/>
+        </parameterset>
+
+        <!-- PUBLIC SERVICE: 2 hours -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="public_service"/>
+            <param name="typicalDuration" value="7200"/>
+        </parameterset>
+
+        <!-- OTHER: 1 hour -->
+        <parameterset type="activityParams">
+            <param name="activityType" value="other"/>
+            <param name="typicalDuration" value="3600"/>
+        </parameterset>
+
+    </module>
+
+    <!-- ============================================================
+         REPLANNING
+         - maxAgentPlanMemorySize 5: good balance
+         - ReRoute 0.15: 32GB RAM can handle more rerouting
+         - disableAfterIteration 20: freeze routing for last 10 iters
+         ============================================================ -->
+    <module name="replanning">
+        <param name="maxAgentPlanMemorySize" value="5"/>
+
+        <parameterset type="strategysettings">
+            <param name="strategyName" value="ChangeExpBeta"/>
+            <param name="weight" value="0.85"/>
+        </parameterset>
+
+        <parameterset type="strategysettings">
+            <param name="strategyName" value="ReRoute"/>
+            <param name="weight" value="0.05"/>
+            <param name="disableAfterIteration" value="15"/>
+        </parameterset>
+
+    </module>
+
+</config>
