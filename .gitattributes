@@ -1,6 +1,6 @@
 data/plan.xml filter=lfs diff=lfs merge=lfs -text
 data/plan_500k.xml filter=lfs diff=lfs merge=lfs -text
 data/processed/res8/trips.csv filter=lfs diff=lfs merge=lfs -text
-data/network.osm filter=lfs diff=lfs merge=lfs -text
 data/processed/final_trips.csv filter=lfs diff=lfs merge=lfs -text
+data/network.osm filter=lfs diff=lfs merge=lfs -text
 data/plan_all.xml filter=lfs diff=lfs merge=lfs -text
