@@ -36,7 +36,7 @@
          PLANS
          ============================================================ -->
     <module name="plans">
-        <param name="inputPlansFile" value="plan_100k.xml"/>
+        <param name="inputPlansFile" value="plan_all.xml"/>
     </module>
 
     <!-- ============================================================
