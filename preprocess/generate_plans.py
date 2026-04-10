@@ -11,6 +11,22 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000):
     """
     RANDOM_SEED = 42
 
+    # ActivitySim purpose → MATSim activity type
+    # Must match activity types declared in MATSim config scoring params
+    PURPOSE_TO_ACTTYPE = {
+        "home":     "home",
+        "work":     "work",
+        "atwork":   "work",
+        "school":   "education",
+        "univ":     "education",
+        "shopping": "shopping",
+        "eatout":   "dining",
+        "social":   "leisure",
+        "othdiscr": "leisure",
+        "escort":   "home",
+        "othmaint": "other",
+    }
+
     # ==============================
     # LOAD DATA
     # ==============================
@@ -47,7 +63,8 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000):
     # TIME FORMATTER
     # ==============================
     def to_hhmmss(t):
-        total_sec = round(t * 60)
+        # depart is in hours (e.g. 7 = 07:00, 18 = 18:00)
+        total_sec = round(t * 3600)
         h = total_sec // 3600
         m = (total_sec % 3600) // 60
         s = total_sec % 60
@@ -86,8 +103,9 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000):
         for i, row in enumerate(rows):
             etree.SubElement(plan_elem, "leg", mode="car")
             x, y = transformer.transform(row["dest_lon"], row["dest_lat"])
+            act_type = PURPOSE_TO_ACTTYPE.get(str(row["purpose"]), "other")
             attrs = {
-                "type": str(row["purpose"]),
+                "type": act_type,
                 "x": f"{x:.2f}",
                 "y": f"{y:.2f}",
             }

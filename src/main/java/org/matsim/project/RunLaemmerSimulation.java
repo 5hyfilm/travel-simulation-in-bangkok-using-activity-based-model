@@ -44,14 +44,16 @@ public class RunLaemmerSimulation {
         
         String baseDir = System.getProperty("user.dir") + "/";
         config.network().setInputFile(baseDir + "data/processed/network.cleaned.xml.gz");
-        config.plans().setInputFile(baseDir + "preprocess/output/plan_300k.xml");
+        config.plans().setInputFile(baseDir + "preprocess/output/plan_all.xml");
         config.controller().setOutputDirectory(baseDir + "output/laemmer_simulation");
-        config.controller().setLastIteration(100); // Set to 0 for a fast, clean Simwrapper run
+        config.controller().setLastIteration(0); // Set to 0 for a fast, clean Simwrapper run
         config.controller().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.overwriteExistingFiles);
         
         config.routing().setNetworkRouteConsistencyCheck(RoutingConfigGroup.NetworkRouteConsistencyCheck.disable);
         config.qsim().setTrafficDynamics(org.matsim.core.config.groups.QSimConfigGroup.TrafficDynamics.queue);
         config.qsim().setUsingFastCapacityUpdate(false);
+        config.qsim().setNumberOfThreads(8);      // parallel QSim (8 จาก 24 cores)
+        config.global().setNumberOfThreads(16);   // routing + scoring threads
         
         // Register activity types and set basic replanning to allow future iterations
         String[] activityTypes = {"home", "work", "education", "shopping", "leisure", "dining", "religion", "public_service", "other"};
@@ -69,7 +71,7 @@ public class RunLaemmerSimulation {
         config.replanning().addStrategySettings(strategySettings);
         
         SignalSystemsConfigGroup signalsConfig = ConfigUtils.addOrGetModule(config, SignalSystemsConfigGroup.GROUP_NAME, SignalSystemsConfigGroup.class);
-        signalsConfig.setUseSignalSystems(false); 
+        signalsConfig.setUseSignalSystems(true);
         signalsConfig.setSignalSystemFile(baseDir + "data/processed/signalSystems.xml");
         signalsConfig.setSignalGroupsFile(baseDir + "data/processed/signalGroups.xml");
         signalsConfig.setSignalControlFile(baseDir + "data/processed/signalControl.xml");
