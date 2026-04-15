@@ -10,20 +10,20 @@ def main():
     print("=== Starting MATSim data preparation process ===")
 
     config = {
-        # Bounding box covering all 180 subdistricts of Bangkok
-        "north": 13.96,
-        "south": 13.49,
-        "east":  100.96,
-        "west":  100.33,
+        # Bounding box for Inner Bangkok (Phra Nakhon, Pathum Wan, Sathon)
+        "north": 13.78264,
+        "south": 13.71056,
+        "east":  100.57110,
+        "west":  100.49690,
         "output_folder": "output",
         "osm_filename": "network.osm",
         "raw_csv_filename": "facilities_raw.csv",
         "clean_csv_filename": "facilities_cleaned.csv",
-        "trips_filename": "data/final_trips.csv",          # ActivitySim output with TAZ origin/destination
-        "subdistricts_filename": "data/subdistricts_180.geojson",  # TAZ boundaries
+        "trips_filename": "data/final_trips.csv",
+        "subdistricts_filename": "data/subdistricts_180.geojson",
         "final_trips_filename": "final_trips.csv",
         "plans_filename": "plan_all.xml",
-        "sample_size": -1  # -1 = use all persons in input
+        "sample_size": 500000  # Target population with cloning
     }
 
     if not os.path.exists(config["output_folder"]):
@@ -70,7 +70,12 @@ def main():
 
     # Step 5: Generate MATSim Plans
     print(f"\n[Step 5/5] Generating MATSim XML plans: {plans_path}")
-    generate_matsim_plans(final_trips_path, plans_path, sample_size=config["sample_size"])
+    generate_matsim_plans(
+        final_trips_path, 
+        plans_path, 
+        sample_size=config["sample_size"],
+        bbox=(config["north"], config["south"], config["east"], config["west"])
+    )
 
     end_time = time.time()
     print(f"\n=== Completed! Total time: {end_time - start_time:.2f} seconds ===")

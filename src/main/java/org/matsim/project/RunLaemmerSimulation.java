@@ -38,7 +38,7 @@ public class RunLaemmerSimulation {
         System.setProperty("matsim.qsim.usingFastCapacityUpdate", "false");
         
         // --- Adjust Signal Update Frequency here (seconds) ---
-        org.matsim.contrib.signals.builder.ThrottledSignalEngine.setUpdateInterval(10); 
+        org.matsim.contrib.signals.builder.ThrottledSignalEngine.setUpdateInterval(600); 
 
         Config config = ConfigUtils.createConfig();
         
