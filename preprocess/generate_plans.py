@@ -5,14 +5,16 @@ from lxml import etree
 from tqdm import tqdm
 import os
 
-def generate_matsim_plans(input_file, output_file, sample_size=50000):
+def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None):
     """
     Generate MATSim XML plans from trip data.
+    - sample_size: Total agents target (will clone if original data is less)
+    - bbox: (north, south, east, west)
     """
     RANDOM_SEED = 42
+    random.seed(RANDOM_SEED)
 
     # ActivitySim purpose → MATSim activity type
-    # Must match activity types declared in MATSim config scoring params
     PURPOSE_TO_ACTTYPE = {
         "home":     "home",
         "work":     "work",
@@ -43,21 +45,66 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000):
     df = df[df["mode"] == "car"]
 
     # ==============================
-    # SAMPLE PERSONS
+    # BBOX FILTER (INNER BANGKOK)
     # ==============================
-    random.seed(RANDOM_SEED)
+    if bbox is not None:
+        north, south, east, west = bbox
+        # Keep only people who have at least ONE trip activity inside the CBD box
+        in_bbox = df[
+            ((df["origin_lat"] <= north) & (df["origin_lat"] >= south) & 
+             (df["origin_lon"] <= east) & (df["origin_lon"] >= west)) |
+            ((df["dest_lat"] <= north) & (df["dest_lat"] >= south) & 
+             (df["dest_lon"] <= east) & (df["dest_lon"] >= west))
+        ]
+        cbd_persons = in_bbox["person_id"].unique()
+        df = df[df["person_id"].isin(cbd_persons)]
+        print(f"Filtered to {len(cbd_persons)} persons touching the CBD area.")
+    
+    # ==============================
+    # SAMPLE OR UPSCALE (CLONE)
+    # ==============================
     unique_persons = df["person_id"].unique()
-    selected_persons = set(unique_persons)
+    
     if sample_size is not None and sample_size != -1:
         if len(unique_persons) < sample_size:
-            print(f"Warning: มีคนแค่ {len(unique_persons)} คนในไฟล์ทริป")
-            sample_size = len(unique_persons)
-        selected_persons = set(random.sample(list(unique_persons), sample_size))
-        print(f"Generating CAR-only plan for {len(selected_persons)} persons (Sample)...")
-    else:
-        print(f"Generating CAR-only plan for ALL {len(selected_persons)} persons...")
+            # --- UPSCALING (CLONE) ---
+            needed = sample_size - len(unique_persons)
+            print(f"Upscaling: Cloning {needed} agents to reach target of {sample_size}...")
+            
+            # Draw random samples from unique persons to clone
+            clones_to_make = random.choices(unique_persons, k=needed)
+            
+            # We will create a list of dataframes to concat later
+            upscaled_dfs = [df]
+            
+            # Group by person to make duplication easier
+            grouped = df.groupby("person_id")
+            
+            # Simple clone counter
+            clone_id_map = {} # person_id -> count
+            
+            for pid in tqdm(clones_to_make, desc="Cloning agents"):
+                clone_df = grouped.get_group(pid).copy()
+                
+                # Assign new ID
+                clone_id_map[pid] = clone_id_map.get(pid, 0) + 1
+                new_id = f"{pid}_clone{clone_id_map[pid]}"
+                clone_df["person_id"] = new_id
+                
+                # Apply random jitter to departure time (+/- 10 mins = 0.16 hours)
+                jitter = random.uniform(-0.16, 0.16)
+                clone_df["depart"] = clone_df["depart"] + jitter
+                
+                upscaled_dfs.append(clone_df)
+                
+            df = pd.concat(upscaled_dfs)
+        else:
+            # --- DOWN-SAMPLING ---
+            selected_persons = random.sample(list(unique_persons), sample_size)
+            df = df[df["person_id"].isin(selected_persons)]
+            print(f"Sampling: Selected {sample_size} agents out of {len(unique_persons)}.")
     
-    df = df[df["person_id"].isin(selected_persons)]
+    print(f"Final plan generation for {df['person_id'].nunique()} agents...")
 
     # ==============================
     # TIME FORMATTER
