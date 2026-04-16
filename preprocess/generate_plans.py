@@ -111,7 +111,14 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
     # ==============================
     def to_hhmmss(t):
         # depart is in hours (e.g. 7 = 07:00, 18 = 18:00)
-        total_sec = round(t * 3600)
+        # Adding a random jitter of up to +/- 30 minutes (1800 seconds) to distribute peak loads
+        jitter_seconds = random.randint(-1800, 1800) 
+        
+        total_sec = round(t * 3600) + jitter_seconds
+        
+        # Ensure time doesn't go negative or beyond 24h
+        total_sec = max(0, min(86399, total_sec))
+        
         h = total_sec // 3600
         m = (total_sec % 3600) // 60
         s = total_sec % 60
