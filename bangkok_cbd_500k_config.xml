@@ -39,9 +39,10 @@
          ====================================================================== -->
     <module name="hermes">
         <param name="mainMode" value="car"/>
-        <param name="flowCapacityFactor" value="1.0"/>
-        <param name="storageCapacityFactor" value="1.0"/>
-        <param name="stuckTime" value="1200"/>
+        <param name="flowCapacityFactor" value="2.0"/>
+        <param name="storageCapacityFactor" value="2.0"/>
+        <param name="stuckTime" value="600"/>
+        <param name="endTime" value="30:00:00"/>
     </module>
 
     <!-- ======================================================================
