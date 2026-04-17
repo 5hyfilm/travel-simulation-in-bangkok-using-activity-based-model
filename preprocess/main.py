@@ -1,5 +1,7 @@
 import os
 import time
+import json
+import subprocess
 from get_osm_network import download_osm_for_matsim
 from get_facilities import extract_poi_to_csv
 from process_facilities import classify_facilities
@@ -9,25 +11,17 @@ from generate_plans import generate_matsim_plans
 def main():
     print("=== Starting MATSim data preparation process ===")
 
-    input_config = {
-        # Bounding box for Greater Bangkok
-        "north": 13.96,
-        "south": 13.49,
-        "east":  100.96,
-        "west":  100.33,
-        "trips_filename": "data/final_trips.csv",
-        "subdistricts_filename": "data/subdistricts_180.geojson",
-        "sample_size": 500000  # Target population with cloning
-    }
+    # Load configuration from JSON
+    config_path = "config.json"
+    if not os.path.exists(config_path):
+        print(f"Error: Configuration file '{config_path}' not found!")
+        return
 
-    output_config = {
-        "output_folder": "output",
-        "osm_filename": "network.osm",
-        "raw_csv_filename": "facilities_raw.csv",
-        "clean_csv_filename": "facilities_cleaned.csv",
-        "final_trips_filename": "final_trips.csv",
-        "plans_filename": "plan_all.xml",
-    }
+    with open(config_path, 'r', encoding='utf-8') as f:
+        config = json.load(f)
+
+    input_config = config["input"]
+    output_config = config["output"]
 
     if not os.path.exists(output_config["output_folder"]):
         os.makedirs(output_config["output_folder"], exist_ok=True)
@@ -81,8 +75,37 @@ def main():
     )
 
     end_time = time.time()
-    print(f"\n=== Completed! Total time: {end_time - start_time:.2f} seconds ===")
+    print(f"\n=== Preprocessing Completed! Total time: {end_time - start_time:.2f} seconds ===")
     print(f"Final output file: {plans_path}")
+
+    # ==========================================
+    # AUTO-EXECUTION MODULE (MATSim)
+    # ==========================================
+    exec_config = config.get("execution", {})
+    if exec_config.get("run_simulation_automatically", False):
+        print("\n=== Starting Automatic MATSim Execution ===")
+        
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        maven_opts = exec_config.get("maven_opts", "-Xmx10G")
+        matsim_config = exec_config.get("matsim_config_file", "bangkok_cbd_500k_config.xml")
+        
+        # Define the environment with custom MAVEN_OPTS
+        env = os.environ.copy()
+        env["MAVEN_OPTS"] = maven_opts
+
+        # Step 6: Convert OSM
+        print("\n[Step 6] Converting OSM to MATSim Network...")
+        subprocess.run(["./mvnw", "exec:java", "-Dexec.mainClass=org.matsim.project.ConvertOSM"], cwd=project_root, env=env, check=True)
+
+        # Step 7: Clean Network
+        print("\n[Step 7] Cleaning Network...")
+        subprocess.run(["./mvnw", "exec:java", "-Dexec.mainClass=org.matsim.project.RunNetworkCleaner"], cwd=project_root, env=env, check=True)
+
+        # Step 8: Run MATSim
+        print(f"\n[Step 8] Running MATSim with config: {matsim_config}...")
+        subprocess.run(["./mvnw", "exec:java", "-Dexec.mainClass=org.matsim.project.RunMatsim", f"-Dexec.args={matsim_config}"], cwd=project_root, env=env, check=True)
+
+        print("\n=== All processes completed successfully! ===")
 
 if __name__ == "__main__":
     main()
