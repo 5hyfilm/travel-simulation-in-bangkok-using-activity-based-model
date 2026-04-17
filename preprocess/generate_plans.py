@@ -59,22 +59,9 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
             
             # Identify "CBD Persons" to use as cloning candidates
             # (People who have at least one activity inside the BBox)
-            if bbox is not None:
-                north, south, east, west = bbox
-                in_bbox = df[
-                    ((df["origin_lat"] <= north) & (df["origin_lat"] >= south) & 
-                     (df["origin_lon"] <= east) & (df["origin_lon"] >= west)) |
-                    ((df["dest_lat"] <= north) & (df["dest_lat"] >= south) & 
-                     (df["dest_lon"] <= east) & (df["dest_lon"] >= west))
-                ]
-                cloning_pool = in_bbox["person_id"].unique()
-                if len(cloning_pool) == 0:
-                    cloning_pool = unique_persons # Fallback if no one in bbox
-                print(f"Upscaling: Found {len(cloning_pool)} CBD candidates to clone from.")
-            else:
-                cloning_pool = unique_persons
-
-            print(f"Upscaling: Cloning {needed} agents from CBD pool to reach target of {sample_size}...")
+            # Use all unique agents as cloning candidates (Global Random Scaling)
+            cloning_pool = unique_persons
+            print(f"Upscaling: Cloning {needed} agents from the entire population pool to reach target of {sample_size}...")
             
             # Draw random samples from the CBD pool to clone
             clones_to_make = random.choices(cloning_pool, k=needed)
