@@ -47,19 +47,6 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
     # ==============================
     # BBOX FILTER (INNER BANGKOK)
     # ==============================
-    if bbox is not None:
-        north, south, east, west = bbox
-        # Keep only people who have at least ONE trip activity inside the CBD box
-        in_bbox = df[
-            ((df["origin_lat"] <= north) & (df["origin_lat"] >= south) & 
-             (df["origin_lon"] <= east) & (df["origin_lon"] >= west)) |
-            ((df["dest_lat"] <= north) & (df["dest_lat"] >= south) & 
-             (df["dest_lon"] <= east) & (df["dest_lon"] >= west))
-        ]
-        cbd_persons = in_bbox["person_id"].unique()
-        df = df[df["person_id"].isin(cbd_persons)]
-        print(f"Filtered to {len(cbd_persons)} persons touching the CBD area.")
-    
     # ==============================
     # SAMPLE OR UPSCALE (CLONE)
     # ==============================
@@ -69,10 +56,28 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
         if len(unique_persons) < sample_size:
             # --- UPSCALING (CLONE) ---
             needed = sample_size - len(unique_persons)
-            print(f"Upscaling: Cloning {needed} agents to reach target of {sample_size}...")
             
-            # Draw random samples from unique persons to clone
-            clones_to_make = random.choices(unique_persons, k=needed)
+            # Identify "CBD Persons" to use as cloning candidates
+            # (People who have at least one activity inside the BBox)
+            if bbox is not None:
+                north, south, east, west = bbox
+                in_bbox = df[
+                    ((df["origin_lat"] <= north) & (df["origin_lat"] >= south) & 
+                     (df["origin_lon"] <= east) & (df["origin_lon"] >= west)) |
+                    ((df["dest_lat"] <= north) & (df["dest_lat"] >= south) & 
+                     (df["dest_lon"] <= east) & (df["dest_lon"] >= west))
+                ]
+                cloning_pool = in_bbox["person_id"].unique()
+                if len(cloning_pool) == 0:
+                    cloning_pool = unique_persons # Fallback if no one in bbox
+                print(f"Upscaling: Found {len(cloning_pool)} CBD candidates to clone from.")
+            else:
+                cloning_pool = unique_persons
+
+            print(f"Upscaling: Cloning {needed} agents from CBD pool to reach target of {sample_size}...")
+            
+            # Draw random samples from the CBD pool to clone
+            clones_to_make = random.choices(cloning_pool, k=needed)
             
             # We will create a list of dataframes to concat later
             upscaled_dfs = [df]
@@ -91,9 +96,8 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
                 new_id = f"{pid}_clone{clone_id_map[pid]}"
                 clone_df["person_id"] = new_id
                 
-                # Apply random jitter to departure time (+/- 10 mins = 0.16 hours)
-                jitter = random.uniform(-0.16, 0.16)
-                clone_df["depart"] = clone_df["depart"] + jitter
+                # Use to_hhmmss logic later or apply jitter here? 
+                # Note: Jitter is now handled in to_hhmmss function
                 
                 upscaled_dfs.append(clone_df)
                 
@@ -111,8 +115,9 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
     # ==============================
     def to_hhmmss(t):
         # depart is in hours (e.g. 7 = 07:00, 18 = 18:00)
-        # Adding a random jitter of up to +/- 30 minutes (1800 seconds) to distribute peak loads
-        jitter_seconds = random.randint(-1800, 1800) 
+        # Adding a random jitter of up to +/- 30 minutes (distributed by seconds)
+        # This is MUCH faster for MATSim to process than minute-level clumping.
+        jitter_seconds = random.randint(-1800, 1800)
         
         total_sec = round(t * 3600) + jitter_seconds
         

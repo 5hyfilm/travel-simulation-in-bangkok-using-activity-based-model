@@ -10,11 +10,11 @@ def main():
     print("=== Starting MATSim data preparation process ===")
 
     config = {
-        # Bounding box for Inner Bangkok (Phra Nakhon, Pathum Wan, Sathon)
-        "north": 13.78264,
-        "south": 13.71056,
-        "east":  100.57110,
-        "west":  100.49690,
+        # Bounding box for Greater Bangkok
+        "north": 13.96,
+        "south": 13.49,
+        "east":  100.96,
+        "west":  100.33,
         "output_folder": "output",
         "osm_filename": "network.osm",
         "raw_csv_filename": "facilities_raw.csv",
