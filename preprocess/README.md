@@ -33,39 +33,44 @@ pip install -r requirements.txt
    - Place your **`trips.csv`** file in the `preprocess/` directory (This is required for Step 4 & 5).
    - The script will automatically detect and process it.
 
-2. **Configure (Optional)**: Open `main.py` to adjust coordinates or sample size. The current default is a wide area of Bangkok:
-   ```python
-   config = {
-       "north": 13.78264,
-       "south": 13.71056,
-       "east":  100.57110,
-       "west":  100.49690,
-       "output_folder": "output",
-       "osm_filename": "network.osm",
-       "raw_csv_filename": "facilities_raw.csv",       
-       "clean_csv_filename": "facilities_cleaned.csv",
-       "trips_filename": "trips.csv", # Input from behavior layer (User should provide this)
-       "final_trips_filename": "final_trips.csv",
-       "plans_filename": "plan_20k.xml",
-       "sample_size": 20000 # Use -1 or None to select ALL persons
+2. **Configure (Optional)**: Open `config.json` in the root directory to adjust coordinates or sample size. The current default is a wide area of Greater Bangkok:
+   ```json
+   {
+       "input": {
+           "north": 13.96,
+           "south": 13.49,
+           "east": 100.96,
+           "west": 100.33,
+           "trips_filename": "data/final_trips.csv",
+           "subdistricts_filename": "data/subdistricts_180.geojson",
+           "sample_size": 500000
+       },
+       "execution": {
+           "run_simulation_automatically": true
+       }
    }
    ```
 
    > [!TIP]
    > Setting `"sample_size": -1` or `None` will skip sampling and include **all unique persons** from the `trips.csv` file in the generated MATSim plans.
 
-2. Run the main script:
+3. Run the pipeline:
 
+   **Option A: One-Click Runner (Recommended)**
+   Run the full pipeline (Environment Activation -> Preprocess -> MATSim Java Simulation) from the project root:
    ```bash
+   ./run.sh
+   ```
+
+   **Option B: Manual Python Execution**
+   ```bash
+   cd preprocess
    python main.py
    ```
 
-3. The script will execute the following **5 steps** automatically:
-   - **[Step 1/5]:** Download `.osm` network file (Swiss Mirror).
-   - **[Step 2/5]:** Extract raw facilities/POIs to CSV.
-   - **[Step 3/5]:** Clean names, classify activities (Home/Work/Study/Shop etc.).
-   - **[Step 4/5]:** **Location Assignment**: Maps `trips.csv` to specific coordinates.
-   - **[Step 5/5]:** **Plan Generation**: Creates `plan_20k.xml` ready for MATSim.
+4. The script will execute the following steps automatically:
+   - **[Step 1-5]:** Preprocessing (Download OSM, Extract POIs, Clean, Assign Locations, Generate `plan_all.xml`).
+   - **[Step 6-8]:** MATSim Execution (Convert OSM, Clean Network, Run Simulation) - *if enabled in config.json*.
 
 ---
 
