@@ -12,7 +12,7 @@ def main():
     print("=== Starting MATSim data preparation process ===")
 
     # Load configuration from JSON
-    config_path = "config.json"
+    config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "config.json"))
     if not os.path.exists(config_path):
         print(f"Error: Configuration file '{config_path}' not found!")
         return
