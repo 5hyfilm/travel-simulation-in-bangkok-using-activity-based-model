@@ -81,6 +81,8 @@ def main():
     # ==========================================
     # AUTO-EXECUTION MODULE (MATSim)
     # ==========================================
+    import platform
+    
     exec_config = config.get("execution", {})
     if exec_config.get("run_simulation_automatically", False):
         print("\n=== Starting Automatic MATSim Execution ===")
@@ -92,18 +94,21 @@ def main():
         # Define the environment with custom MAVEN_OPTS
         env = os.environ.copy()
         env["MAVEN_OPTS"] = maven_opts
+        
+        # Detect OS for Maven Wrapper command
+        maven_cmd = "mvnw.cmd" if platform.system() == "Windows" else "./mvnw"
 
         # Step 6: Convert OSM
         print("\n[Step 6] Converting OSM to MATSim Network...")
-        subprocess.run(["./mvnw", "exec:java", "-Dexec.mainClass=org.matsim.project.ConvertOSM"], cwd=project_root, env=env, check=True)
+        subprocess.run([maven_cmd, "exec:java", "-Dexec.mainClass=org.matsim.project.ConvertOSM"], cwd=project_root, env=env, check=True)
 
         # Step 7: Clean Network
         print("\n[Step 7] Cleaning Network...")
-        subprocess.run(["./mvnw", "exec:java", "-Dexec.mainClass=org.matsim.project.RunNetworkCleaner"], cwd=project_root, env=env, check=True)
+        subprocess.run([maven_cmd, "exec:java", "-Dexec.mainClass=org.matsim.project.RunNetworkCleaner"], cwd=project_root, env=env, check=True)
 
         # Step 8: Run MATSim
         print(f"\n[Step 8] Running MATSim with config: {matsim_config}...")
-        subprocess.run(["./mvnw", "exec:java", "-Dexec.mainClass=org.matsim.project.RunMatsim", f"-Dexec.args={matsim_config}"], cwd=project_root, env=env, check=True)
+        subprocess.run([maven_cmd, "exec:java", "-Dexec.mainClass=org.matsim.project.RunMatsim", f"-Dexec.args={matsim_config}"], cwd=project_root, env=env, check=True)
 
         print("\n=== All processes completed successfully! ===")
 
