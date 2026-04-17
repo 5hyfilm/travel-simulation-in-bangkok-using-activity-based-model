@@ -1,0 +1,24 @@
+{
+    "input": {
+        "north": 13.96,
+        "south": 13.49,
+        "east": 100.96,
+        "west": 100.33,
+        "trips_filename": "data/final_trips.csv",
+        "subdistricts_filename": "data/subdistricts_180.geojson",
+        "sample_size": 500000
+    },
+    "output": {
+        "output_folder": "output",
+        "osm_filename": "network.osm",
+        "raw_csv_filename": "facilities_raw.csv",
+        "clean_csv_filename": "facilities_cleaned.csv",
+        "final_trips_filename": "final_trips.csv",
+        "plans_filename": "plan_all.xml"
+    },
+    "execution": {
+        "run_simulation_automatically": true,
+        "maven_opts": "-Xmx4G",
+        "matsim_config_file": "bangkok_cbd_500k_config.xml"
+    }
+}
