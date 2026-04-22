@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "name": "LATPHRAO_SHORT",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32647"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "LATPHRAO_SHORT",
+        "corridor_name": "Lat Phrao Rd short straight segment",
+        "sequence": 0,
+        "link_id": "8413",
+        "from_node": "1692859519",
+        "to_node": "558895624",
+        "origid": "43948432"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669033.4392476196,
+            1524928.2603863743
+          ],
+          [
+            669065.1508844458,
+            1524303.7686794768
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "LATPHRAO_SHORT",
+        "corridor_name": "Lat Phrao Rd short straight segment",
+        "sequence": 1,
+        "link_id": "7082",
+        "from_node": "558895624",
+        "to_node": "12656809531",
+        "origid": "157048056"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669065.1508844458,
+            1524303.7686794768
+          ],
+          [
+            669238.5985080966,
+            1524331.350239895
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "LATPHRAO_SHORT",
+        "corridor_name": "Lat Phrao Rd short straight segment",
+        "sequence": 2,
+        "link_id": "7084",
+        "from_node": "12656809531",
+        "to_node": "282887047",
+        "origid": "157048056"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669238.5985080966,
+            1524331.350239895
+          ],
+          [
+            669413.1998927718,
+            1524361.0536430848
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "LATPHRAO_SHORT",
+        "corridor_name": "Lat Phrao Rd short straight segment",
+        "sequence": 3,
+        "link_id": "19365",
+        "from_node": "282887047",
+        "to_node": "282887274",
+        "origid": "25933839"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669413.1998927718,
+            1524361.0536430848
+          ],
+          [
+            669392.294546654,
+            1525006.8139866379
+          ]
+        ]
+      }
+    }
+  ]
+}

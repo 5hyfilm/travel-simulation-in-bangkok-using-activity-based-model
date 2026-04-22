@@ -1,0 +1,362 @@
+{
+  "type": "FeatureCollection",
+  "name": "PHAYA_THAI_SHORT",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32647"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 0,
+        "link_id": "9551",
+        "from_node": "957806356",
+        "to_node": "957806333",
+        "origid": "314428561"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666251.419405065,
+            1522224.601404684
+          ],
+          [
+            666249.4572326248,
+            1522233.8267262245
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 1,
+        "link_id": "16795",
+        "from_node": "957806333",
+        "to_node": "957806344",
+        "origid": "680647038"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666249.4572326248,
+            1522233.8267262245
+          ],
+          [
+            666272.2358101723,
+            1522305.9058157098
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 2,
+        "link_id": "15217",
+        "from_node": "957806344",
+        "to_node": "957806337",
+        "origid": "1024938030"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666272.2358101723,
+            1522305.9058157098
+          ],
+          [
+            666288.2799528876,
+            1522318.3217766539
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 3,
+        "link_id": "15221",
+        "from_node": "957806337",
+        "to_node": "2327064629",
+        "origid": "1024938029"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666288.2799528876,
+            1522318.3217766539
+          ],
+          [
+            666309.290186551,
+            1522335.4160705488
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 4,
+        "link_id": "11509",
+        "from_node": "2327064629",
+        "to_node": "358931163",
+        "origid": "32007064"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666309.290186551,
+            1522335.4160705488
+          ],
+          [
+            666351.4601393044,
+            1522364.8152635025
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 5,
+        "link_id": "14798",
+        "from_node": "358931163",
+        "to_node": "2327064772",
+        "origid": "125742326"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666351.4601393044,
+            1522364.8152635025
+          ],
+          [
+            666360.4251185431,
+            1522374.9180507737
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 6,
+        "link_id": "20578",
+        "from_node": "2327064772",
+        "to_node": "5919575282",
+        "origid": "627055039"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666360.4251185431,
+            1522374.9180507737
+          ],
+          [
+            666366.3205718261,
+            1522384.768889989
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 7,
+        "link_id": "20577",
+        "from_node": "5919575282",
+        "to_node": "358931164",
+        "origid": "627055038"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666366.3205718261,
+            1522384.768889989
+          ],
+          [
+            666393.3180905669,
+            1522437.9236704234
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 8,
+        "link_id": "9947",
+        "from_node": "358931164",
+        "to_node": "9863958366",
+        "origid": "1075535639"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666393.3180905669,
+            1522437.9236704234
+          ],
+          [
+            666404.8547704713,
+            1522460.1683080236
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 9,
+        "link_id": "14374",
+        "from_node": "9863958366",
+        "to_node": "358931166",
+        "origid": "124874080"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666404.8547704713,
+            1522460.1683080236
+          ],
+          [
+            666417.4169888612,
+            1522484.3777174647
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 10,
+        "link_id": "14375",
+        "from_node": "358931166",
+        "to_node": "1685125148",
+        "origid": "124874080"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666417.4169888612,
+            1522484.3777174647
+          ],
+          [
+            666501.3374402164,
+            1522642.400806023
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 11,
+        "link_id": "14376",
+        "from_node": "1685125148",
+        "to_node": "6659551925",
+        "origid": "124874080"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666501.3374402164,
+            1522642.400806023
+          ],
+          [
+            666539.1930043536,
+            1522713.8797680747
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 12,
+        "link_id": "14377",
+        "from_node": "6659551925",
+        "to_node": "5915349890",
+        "origid": "124874080"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666539.1930043536,
+            1522713.8797680747
+          ],
+          [
+            666615.1805696338,
+            1522865.9116343095
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "PHAYA_THAI_SHORT",
+        "corridor_name": "Phaya Thai Rd: Victory Monument short straight",
+        "sequence": 13,
+        "link_id": "14378",
+        "from_node": "5915349890",
+        "to_node": "5915349778",
+        "origid": "124874080"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            666615.1805696338,
+            1522865.9116343095
+          ],
+          [
+            666635.5507208542,
+            1522922.0557058714
+          ]
+        ]
+      }
+    }
+  ]
+}

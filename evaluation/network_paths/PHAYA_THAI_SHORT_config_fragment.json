@@ -1,0 +1,24 @@
+{
+  "corridor_id": "PHAYA_THAI_SHORT",
+  "name": "Phaya Thai Rd: Victory Monument short straight",
+  "origin_lat": 13.7645,
+  "origin_lng": 100.538,
+  "destination_lat": 13.7708,
+  "destination_lng": 100.5418,
+  "link_ids": [
+    "9551",
+    "16795",
+    "15217",
+    "15221",
+    "11509",
+    "14798",
+    "20578",
+    "20577",
+    "9947",
+    "14374",
+    "14375",
+    "14376",
+    "14377",
+    "14378"
+  ]
+}

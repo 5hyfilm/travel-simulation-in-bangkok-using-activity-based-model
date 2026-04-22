@@ -1,0 +1,14 @@
+{
+  "corridor_id": "LATPHRAO_SHORT",
+  "name": "Lat Phrao Rd short straight segment",
+  "origin_lat": 13.8095,
+  "origin_lng": 100.5595,
+  "destination_lat": 13.8152,
+  "destination_lng": 100.5652,
+  "link_ids": [
+    "8413",
+    "7082",
+    "7084",
+    "19365"
+  ]
+}

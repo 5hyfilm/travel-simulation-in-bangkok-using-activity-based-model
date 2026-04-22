@@ -24,7 +24,7 @@ public class ConvertOSM {
                 );
 
         // 3) Read OSM and write MATSim network
-        String in = "data/raw/pathumwan_M.osm";
+        String in = "data/raw/network.osm";
         String out = "data/processed/network.xml.gz";
         OsmNetworkReader onr = new OsmNetworkReader(network, ct);
         onr.parse(in);

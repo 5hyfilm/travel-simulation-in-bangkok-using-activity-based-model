@@ -1,0 +1,4 @@
+time_label,mean_relative_travel_time_error,mean_congestion_index_error,mean_speed_relative_error,avg_matsim_observations,pass_count,pass_partial_count,fail_count,sample_count
+AM_PEAK,1.6164314678213028,6.713215442940623,0.6431036346064428,8.4,0,0,10,10
+PM_PEAK,0.4262408904998191,1.8048763956206686,0.5992132268044283,5.5,0,0,10,10
+ALL,0.9221536310504374,3.8500176653373157,0.6175008967219344,6.95,0,0,20,20

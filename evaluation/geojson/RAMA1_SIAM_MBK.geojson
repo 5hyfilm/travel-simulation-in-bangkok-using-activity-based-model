@@ -1,0 +1,412 @@
+{
+  "type": "FeatureCollection",
+  "name": "RAMA1_SIAM_MBK",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32647"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 0,
+        "link_id": "9634",
+        "from_node": "1699259284",
+        "to_node": "297713237",
+        "origid": "783233269"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665893.1536745208,
+            1520117.748966389
+          ],
+          [
+            665746.5212649578,
+            1520144.2087460137
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 1,
+        "link_id": "8265",
+        "from_node": "297713237",
+        "to_node": "373084735",
+        "origid": "1381157061"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665746.5212649578,
+            1520144.2087460137
+          ],
+          [
+            665726.4693412364,
+            1520147.8316854583
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 2,
+        "link_id": "15587",
+        "from_node": "373084735",
+        "to_node": "297713361",
+        "origid": "33058658"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665726.4693412364,
+            1520147.8316854583
+          ],
+          [
+            665607.4910322903,
+            1520162.3095478772
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 3,
+        "link_id": "15588",
+        "from_node": "297713361",
+        "to_node": "358231148",
+        "origid": "33058658"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665607.4910322903,
+            1520162.3095478772
+          ],
+          [
+            665570.0893140745,
+            1520168.1124638896
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 4,
+        "link_id": "17855",
+        "from_node": "358231148",
+        "to_node": "10867043908",
+        "origid": "1025100202"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665570.0893140745,
+            1520168.1124638896
+          ],
+          [
+            665529.3982519221,
+            1520174.182185564
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 5,
+        "link_id": "14635",
+        "from_node": "10867043908",
+        "to_node": "10867043907",
+        "origid": "1168486128"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665529.3982519221,
+            1520174.182185564
+          ],
+          [
+            665513.5827190912,
+            1520176.582041122
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 6,
+        "link_id": "14629",
+        "from_node": "10867043907",
+        "to_node": "2078129008",
+        "origid": "1168486126"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665513.5827190912,
+            1520176.582041122
+          ],
+          [
+            665509.7284119029,
+            1520177.254549885
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 7,
+        "link_id": "14624",
+        "from_node": "2078129008",
+        "to_node": "10867043906",
+        "origid": "1168486124"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665509.7284119029,
+            1520177.254549885
+          ],
+          [
+            665509.1756982629,
+            1520174.0316353464
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 8,
+        "link_id": "14636",
+        "from_node": "10867043906",
+        "to_node": "10867043905",
+        "origid": "1168486130"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665509.1756982629,
+            1520174.0316353464
+          ],
+          [
+            665507.4598400327,
+            1520161.5303343877
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 9,
+        "link_id": "2815",
+        "from_node": "10867043905",
+        "to_node": "1698402246",
+        "origid": "464032551"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665507.4598400327,
+            1520161.5303343877
+          ],
+          [
+            665505.3486315447,
+            1520146.5704827956
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 10,
+        "link_id": "17851",
+        "from_node": "1698402246",
+        "to_node": "358231211",
+        "origid": "1025100201"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665505.3486315447,
+            1520146.5704827956
+          ],
+          [
+            665501.8697182094,
+            1520118.7796455573
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 11,
+        "link_id": "17820",
+        "from_node": "358231211",
+        "to_node": "280761215",
+        "origid": "300803473"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665501.8697182094,
+            1520118.7796455573
+          ],
+          [
+            665489.5319063411,
+            1520036.733728185
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 12,
+        "link_id": "17821",
+        "from_node": "280761215",
+        "to_node": "358217937",
+        "origid": "300803473"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665489.5319063411,
+            1520036.733728185
+          ],
+          [
+            665479.2926021856,
+            1519963.1202799245
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 13,
+        "link_id": "17822",
+        "from_node": "358217937",
+        "to_node": "3048907615",
+        "origid": "300803473"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665479.2926021856,
+            1519963.1202799245
+          ],
+          [
+            665474.2366819121,
+            1519928.194717103
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 14,
+        "link_id": "8061",
+        "from_node": "3048907615",
+        "to_node": "1726990194",
+        "origid": "753169753"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665474.2366819121,
+            1519928.194717103
+          ],
+          [
+            665457.3851747996,
+            1519802.4203950332
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "RAMA1_SIAM_MBK",
+        "corridor_name": "Rama I Rd: Siam Square to MBK (straight short)",
+        "sequence": 15,
+        "link_id": "13017",
+        "from_node": "1726990194",
+        "to_node": "358203825",
+        "origid": "1132127603"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            665457.3851747996,
+            1519802.4203950332
+          ],
+          [
+            665457.0140378027,
+            1519797.8489211476
+          ]
+        ]
+      }
+    }
+  ]
+}

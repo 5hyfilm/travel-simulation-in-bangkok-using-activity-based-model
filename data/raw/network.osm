@@ -1,0 +1,4287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.62.11 87bfad18">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2026-04-06T12:54:15Z"/>
+
+  <way id="9019480">
+    <nd ref="12352011073"/>
+    <nd ref="9363513681"/>
+    <nd ref="2999801337"/>
+    <nd ref="5936230903"/>
+    <nd ref="5216447313"/>
+    <nd ref="5216447306"/>
+    <nd ref="5216447303"/>
+    <nd ref="8666394908"/>
+    <nd ref="1692209248"/>
+    <tag k="alt_name:en" v="Thanon Rama I;Rama 1 Road"/>
+    <tag k="alt_name:th" v="ถนนพระราม 1;พระราม 1"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนพระรามที่ 1"/>
+    <tag k="name:en" v="Rama I Road"/>
+    <tag k="name:etymology:wikidata" v="Q310992"/>
+    <tag k="name:ja" v="ラーマ1世通り"/>
+    <tag k="name:th" v="ถนนพระรามที่ 1"/>
+    <tag k="official_name:th" v="ถนนพระรามที่ ๑"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="short_name:th" v="พระรามที่ 1"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q4924292"/>
+  </way>
+  <way id="25292913">
+    <nd ref="1692209248"/>
+    <nd ref="373084151"/>
+    <nd ref="12695904080"/>
+    <nd ref="5936137328"/>
+    <nd ref="8609458521"/>
+    <nd ref="1843015077"/>
+    <nd ref="1843014895"/>
+    <nd ref="6436020999"/>
+    <nd ref="6436020989"/>
+    <nd ref="1843014916"/>
+    <nd ref="4410699242"/>
+    <nd ref="6497135326"/>
+    <nd ref="3246252674"/>
+    <nd ref="359242801"/>
+    <tag k="alt_name:en" v="Thanon Rama I;Rama 1 Road"/>
+    <tag k="alt_name:th" v="ถนนพระราม 1;พระราม 1"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:backward" v="2"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนพระรามที่ 1"/>
+    <tag k="name:en" v="Rama I Road"/>
+    <tag k="name:etymology:wikidata" v="Q310992"/>
+    <tag k="name:ja" v="ラーマ1世通り"/>
+    <tag k="name:th" v="ถนนพระรามที่ 1"/>
+    <tag k="official_name:th" v="ถนนพระรามที่ ๑"/>
+    <tag k="short_name:th" v="พระรามที่ 1"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q4924292"/>
+  </way>
+  <way id="25701334">
+    <nd ref="280205412"/>
+    <nd ref="13049402886"/>
+    <nd ref="1697073509"/>
+    <nd ref="13049402887"/>
+    <nd ref="280205443"/>
+    <nd ref="1700279896"/>
+    <nd ref="1700280020"/>
+    <nd ref="12094002578"/>
+    <nd ref="1700279938"/>
+    <nd ref="1697066016"/>
+    <nd ref="280205414"/>
+    <nd ref="1697030035"/>
+    <nd ref="1697030008"/>
+    <nd ref="1696969150"/>
+    <nd ref="1697066034"/>
+    <nd ref="280205444"/>
+    <nd ref="1714885684"/>
+    <nd ref="1714885688"/>
+    <nd ref="1714885691"/>
+    <nd ref="280205412"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:housenumber" v="979"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:street" v="ถนนพระรามที่ 1"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="alt_name:ja" v="サイアム・ディスカバリー"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="6"/>
+    <tag k="name" v="Siam Center"/>
+    <tag k="name:en" v="Siam Center"/>
+    <tag k="name:ja" v="サイアム・センター"/>
+    <tag k="name:ko" v="싸얌 센터"/>
+    <tag k="name:th" v="สยามเซ็นเตอร์"/>
+    <tag k="name:zh-Hant" v="暹羅購物中心"/>
+    <tag k="opening_hours" v="Mo-Su 10:00-22:00"/>
+    <tag k="operator" v="บริษัท สยามพิวรรธน์ จำกัด"/>
+    <tag k="phone" v="+66 2 658 1000"/>
+    <tag k="shop" v="mall"/>
+    <tag k="start_date" v="1973"/>
+    <tag k="toilets:wheelchair" v="yes"/>
+    <tag k="website" v="https://www.siamcenter.co.th/"/>
+    <tag k="wheelchair" v="yes"/>
+    <tag k="wikidata" v="Q913929"/>
+    <tag k="wikipedia" v="en:Siam Center"/>
+    <tag k="wikipedia:th" v="สยามเซ็นเตอร์"/>
+  </way>
+  <way id="25745751">
+    <nd ref="358218302"/>
+    <nd ref="11986732085"/>
+    <nd ref="297713362"/>
+    <nd ref="7975317653"/>
+    <nd ref="11986732088"/>
+    <nd ref="1756129249"/>
+    <nd ref="1700280401"/>
+    <nd ref="7975317645"/>
+    <nd ref="1756129244"/>
+    <nd ref="11986732092"/>
+    <nd ref="297713109"/>
+    <nd ref="11986732098"/>
+    <nd ref="6375832663"/>
+    <nd ref="1700280210"/>
+    <nd ref="6375832664"/>
+    <nd ref="297713246"/>
+    <nd ref="358218263"/>
+    <nd ref="7975317644"/>
+    <nd ref="10872902352"/>
+    <nd ref="1700280576"/>
+    <nd ref="7975317635"/>
+    <nd ref="10872902349"/>
+    <nd ref="358217793"/>
+    <nd ref="358218106"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="motor_vehicle:conditional" v="yes @ (00:00-10:59)"/>
+    <tag k="motorcycle" v="yes @ (00:00-10:59)"/>
+    <tag k="name" v="สยามสแควร์ซอย 7"/>
+    <tag k="name:en" v="Siam Square Soi 7"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 7"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="31972872">
+    <nd ref="358203633"/>
+    <nd ref="6138497494"/>
+    <nd ref="6138497496"/>
+    <nd ref="9870591931"/>
+    <nd ref="358205940"/>
+    <nd ref="358205941"/>
+    <nd ref="358205942"/>
+    <nd ref="358205943"/>
+    <nd ref="9870591932"/>
+    <nd ref="11986732056"/>
+    <nd ref="11986732064"/>
+    <nd ref="11986732057"/>
+    <nd ref="268268829"/>
+    <nd ref="268268826"/>
+    <nd ref="2666981208"/>
+    <nd ref="2666981210"/>
+    <nd ref="358181255"/>
+    <nd ref="358181254"/>
+    <nd ref="358203633"/>
+    <tag k="landuse" v="retail"/>
+    <tag k="name" v="สยามสแควร์"/>
+    <tag k="name:en" v="Siam Square"/>
+    <tag k="name:ja" v="サイアムスクエア"/>
+    <tag k="name:pt" v="Praça Siam"/>
+    <tag k="name:th" v="สยามสแควร์"/>
+    <tag k="name:vi" v="Quảng trường Siam"/>
+    <tag k="name:zh" v="暹羅廣場"/>
+    <tag k="wikidata" v="Q1856401"/>
+    <tag k="wikipedia" v="en:Siam Square"/>
+  </way>
+  <way id="31973447">
+    <nd ref="277941518"/>
+    <nd ref="277942023"/>
+    <tag k="foot" v="no"/>
+    <tag k="highway" v="tertiary_link"/>
+    <tag k="lanes" v="2"/>
+    <tag k="oneway" v="no"/>
+    <tag k="sidewalk" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="31973452">
+    <nd ref="358218133"/>
+    <nd ref="1700279818"/>
+    <nd ref="9963653765"/>
+    <nd ref="11986732039"/>
+    <nd ref="358218106"/>
+    <tag k="access" v="customers"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="maxspeed" v="20"/>
+    <tag k="name" v="สยามสแควร์ซอย 8"/>
+    <tag k="name:en" v="Siam Square Soi 8"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 8"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="31973453">
+    <nd ref="358218263"/>
+    <nd ref="9963653761"/>
+    <nd ref="358218162"/>
+    <tag k="access" v="customers"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="สยามสแควร์ซอย 9"/>
+    <tag k="name:en" v="Siam Square Soi 9"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 9"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="33070807">
+    <nd ref="373097786"/>
+    <nd ref="373097787"/>
+    <nd ref="1697066017"/>
+    <nd ref="373097788"/>
+    <nd ref="1714885687"/>
+    <nd ref="1714885690"/>
+    <nd ref="1714885692"/>
+    <nd ref="373097789"/>
+    <nd ref="1697073504"/>
+    <nd ref="1697147568"/>
+    <nd ref="1697073511"/>
+    <nd ref="373097786"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="amenity" v="parking"/>
+    <tag k="building" v="yes"/>
+    <tag k="parking" v="multi-storey"/>
+  </way>
+  <way id="33071531">
+    <nd ref="373103636"/>
+    <nd ref="373103639"/>
+    <nd ref="373103641"/>
+    <tag k="access" v="customers"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="maxspeed" v="20"/>
+    <tag k="name" v="ซอยโนโวเท็ล"/>
+    <tag k="name:en" v="Novotel Way"/>
+    <tag k="name:th" v="ซอยโนโวเท็ล"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="33646459">
+    <nd ref="1692209248"/>
+    <nd ref="13527824421"/>
+    <nd ref="9363513516"/>
+    <nd ref="5936117948"/>
+    <nd ref="277942023"/>
+    <nd ref="5936117950"/>
+    <nd ref="11676312799"/>
+    <nd ref="1589665573"/>
+    <nd ref="5941968385"/>
+    <nd ref="277942022"/>
+    <nd ref="11676312795"/>
+    <nd ref="2666981111"/>
+    <nd ref="358199243"/>
+    <nd ref="13449407931"/>
+    <nd ref="9363513818"/>
+    <nd ref="11676312716"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxheight" v="default"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนอังรีดูนังต์"/>
+    <tag k="name:en" v="Henri Dunant Road"/>
+    <tag k="name:etymology:wikidata" v="Q12091"/>
+    <tag k="name:ja" v="アンリデュナン通り"/>
+    <tag k="name:ko" v="수왕 거리"/>
+    <tag k="name:th" v="ถนนอังรีดูนังต์"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q13015298"/>
+    <tag k="wikipedia" v="en:Henri Dunant Road"/>
+  </way>
+  <way id="37873297">
+    <nd ref="358218619"/>
+    <nd ref="358218689"/>
+    <nd ref="358218688"/>
+    <nd ref="1359716975"/>
+    <nd ref="4694328132"/>
+    <nd ref="4694328133"/>
+    <nd ref="1359716959"/>
+    <nd ref="4332679735"/>
+    <nd ref="1359716961"/>
+    <nd ref="4694328135"/>
+    <nd ref="1359716963"/>
+    <nd ref="13049402869"/>
+    <nd ref="11140776309"/>
+    <nd ref="358218687"/>
+    <nd ref="13049402870"/>
+    <nd ref="444431853"/>
+    <nd ref="13049402871"/>
+    <nd ref="10867019671"/>
+    <nd ref="444431856"/>
+    <nd ref="444431858"/>
+    <nd ref="358218619"/>
+    <tag k="landuse" v="retail"/>
+    <tag k="website" v="https://onesiam.com/"/>
+  </way>
+  <way id="40007276">
+    <nd ref="480774964"/>
+    <nd ref="2460247780"/>
+    <nd ref="2460247770"/>
+    <nd ref="480774965"/>
+    <nd ref="2460247766"/>
+    <nd ref="2460247764"/>
+    <nd ref="2460247731"/>
+    <nd ref="480774966"/>
+    <nd ref="2460247732"/>
+    <nd ref="2460247742"/>
+    <nd ref="480774967"/>
+    <nd ref="2460247747"/>
+    <nd ref="2460247752"/>
+    <nd ref="1697030016"/>
+    <nd ref="1697030023"/>
+    <nd ref="480774964"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="train_station"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="สถานีสยาม"/>
+    <tag k="name:en" v="Siam BTS Station"/>
+  </way>
+  <way id="156263262">
+    <nd ref="268242740"/>
+    <nd ref="1697073512"/>
+    <nd ref="1697066006"/>
+    <nd ref="11873842746"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="156985387">
+    <nd ref="1692209232"/>
+    <nd ref="9363513514"/>
+    <nd ref="1697233660"/>
+    <nd ref="1700279968"/>
+    <nd ref="358217824"/>
+    <nd ref="7314496291"/>
+    <nd ref="1699259295"/>
+    <nd ref="358217810"/>
+    <nd ref="1699259284"/>
+    <tag k="alt_name:en" v="Thanon Rama I;Rama 1 Road"/>
+    <tag k="alt_name:th" v="ถนนพระราม 1;พระราม 1"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนพระรามที่ 1"/>
+    <tag k="name:en" v="Rama I Road"/>
+    <tag k="name:etymology:wikidata" v="Q310992"/>
+    <tag k="name:ja" v="ラーマ1世通り"/>
+    <tag k="name:th" v="ถนนพระรามที่ 1"/>
+    <tag k="official_name:th" v="ถนนพระรามที่ ๑"/>
+    <tag k="oneway" v="no"/>
+    <tag k="short_name:th" v="พระรามที่ 1"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q4924292"/>
+  </way>
+  <way id="157484178">
+    <nd ref="2460247780"/>
+    <nd ref="2460247779"/>
+    <nd ref="2460247777"/>
+    <nd ref="2460247776"/>
+    <nd ref="2460247775"/>
+    <nd ref="2460247778"/>
+    <nd ref="1697030023"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="157484180">
+    <nd ref="1699259323"/>
+    <nd ref="5936117956"/>
+    <nd ref="1697030051"/>
+    <nd ref="1699259291"/>
+    <tag k="handrail" v="no"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="down"/>
+    <tag k="ramp" v="no"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="157484181">
+    <nd ref="1699259271"/>
+    <nd ref="1697030016"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="157484183">
+    <nd ref="1697030021"/>
+    <nd ref="2460247750"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="157486891">
+    <nd ref="10867019666"/>
+    <nd ref="1697066034"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="157486892">
+    <nd ref="10867019667"/>
+    <nd ref="1697066012"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157486893">
+    <nd ref="10867019672"/>
+    <nd ref="1697065988"/>
+    <nd ref="1697066018"/>
+    <nd ref="10867019670"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="157486894">
+    <nd ref="1685237086"/>
+    <nd ref="1697147543"/>
+    <nd ref="1697066041"/>
+    <nd ref="10867019669"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="157486895">
+    <nd ref="1697065988"/>
+    <nd ref="1697066039"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="157486897">
+    <nd ref="10867019665"/>
+    <nd ref="1697065985"/>
+    <nd ref="11873201044"/>
+    <nd ref="11873201045"/>
+    <nd ref="1697066044"/>
+    <tag k="highway" v="service"/>
+    <tag k="lanes" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="building_passage"/>
+    <tag k="turn:lanes" v="through"/>
+  </way>
+  <way id="157486898">
+    <nd ref="1697066003"/>
+    <nd ref="9870593361"/>
+    <nd ref="1697066014"/>
+    <nd ref="1697066029"/>
+    <nd ref="1700280505"/>
+    <nd ref="1697066043"/>
+    <nd ref="1700280518"/>
+    <nd ref="1697066003"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:housename" v="อาคารสยามกิตติ์"/>
+    <tag k="addr:housenumber" v="448"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:street" v="ถนนพระรามที่ 1"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="10"/>
+  </way>
+  <way id="157486899">
+    <nd ref="1697066039"/>
+    <nd ref="1697065982"/>
+    <tag k="cutting" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="157486900">
+    <nd ref="1697066017"/>
+    <nd ref="10867019668"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="157488747">
+    <nd ref="1685237095"/>
+    <nd ref="1685237087"/>
+    <nd ref="1685237086"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="157491486">
+    <nd ref="1697233649"/>
+    <nd ref="1697233630"/>
+    <nd ref="1697233660"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491488">
+    <nd ref="1697233612"/>
+    <nd ref="1697233610"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491491">
+    <nd ref="1843014969"/>
+    <nd ref="1843015030"/>
+    <nd ref="1697233614"/>
+    <nd ref="1697233646"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="157491493">
+    <nd ref="1685237089"/>
+    <nd ref="13179512600"/>
+    <nd ref="5933551090"/>
+    <nd ref="5933551089"/>
+    <nd ref="5933551088"/>
+    <nd ref="5933551087"/>
+    <nd ref="5933551086"/>
+    <nd ref="5933551085"/>
+    <nd ref="7051197950"/>
+    <nd ref="7051197949"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491494">
+    <nd ref="8146587836"/>
+    <nd ref="1697233656"/>
+    <nd ref="8146587833"/>
+    <nd ref="1697233658"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491495">
+    <nd ref="1697233625"/>
+    <nd ref="1697233622"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491496">
+    <nd ref="1697233612"/>
+    <nd ref="1697233622"/>
+    <nd ref="1697233649"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="157491497">
+    <nd ref="1697233616"/>
+    <nd ref="1697233649"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491498">
+    <nd ref="1697233626"/>
+    <nd ref="1697233630"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157491501">
+    <nd ref="1697233629"/>
+    <nd ref="1697233623"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="157513682">
+    <nd ref="1697479312"/>
+    <nd ref="1697479120"/>
+    <nd ref="1697479169"/>
+    <nd ref="1697479337"/>
+    <nd ref="1697479315"/>
+    <tag k="bridge" v="viaduct"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="157513683">
+    <nd ref="1697479259"/>
+    <nd ref="1697479262"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="up"/>
+    <tag k="ramp" v="no"/>
+  </way>
+  <way id="157513693">
+    <nd ref="1697479312"/>
+    <nd ref="1697479213"/>
+    <nd ref="1697479163"/>
+    <nd ref="1697017201"/>
+    <nd ref="1697479127"/>
+    <nd ref="1697479259"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+    <tag k="ramp" v="no"/>
+  </way>
+  <way id="157513695">
+    <nd ref="1697479247"/>
+    <nd ref="1697479169"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="conveying" v="forward"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="up"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+  </way>
+  <way id="157513697">
+    <nd ref="1697479120"/>
+    <nd ref="1697479207"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="down"/>
+    <tag k="layer" v="1"/>
+    <tag k="ramp" v="no"/>
+    <tag k="step_count" v="34"/>
+    <tag k="surface" v="concrete"/>
+  </way>
+  <way id="157513703">
+    <nd ref="1697479163"/>
+    <nd ref="1697479205"/>
+    <nd ref="1697479253"/>
+    <nd ref="1697479285"/>
+    <nd ref="2460247729"/>
+    <nd ref="2460247732"/>
+    <tag k="bridge" v="viaduct"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="157513704">
+    <nd ref="1697479337"/>
+    <nd ref="4410699244"/>
+    <nd ref="1697479320"/>
+    <nd ref="1697479228"/>
+    <nd ref="1697479170"/>
+    <nd ref="1697479172"/>
+    <nd ref="1697495932"/>
+    <nd ref="1697479160"/>
+    <nd ref="1697479277"/>
+    <nd ref="1697479239"/>
+    <nd ref="1726159692"/>
+    <nd ref="13626551443"/>
+    <tag k="bridge" v="viaduct"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="157513708">
+    <nd ref="1697479279"/>
+    <nd ref="1697479315"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="up"/>
+    <tag k="layer" v="1"/>
+    <tag k="ramp" v="no"/>
+  </way>
+  <way id="157593031">
+    <nd ref="2460247762"/>
+    <nd ref="1698367059"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="157593032">
+    <nd ref="1697065982"/>
+    <nd ref="280205407"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+    <tag k="layer" v="-1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="yes"/>
+  </way>
+  <way id="157593033">
+    <nd ref="1698367064"/>
+    <nd ref="1698367059"/>
+    <nd ref="1698367050"/>
+    <nd ref="1698367093"/>
+    <nd ref="1698367098"/>
+    <nd ref="6375832674"/>
+    <nd ref="1698367053"/>
+    <nd ref="1698367068"/>
+    <nd ref="6375832666"/>
+    <nd ref="6375832668"/>
+    <nd ref="6375832672"/>
+    <nd ref="6375832675"/>
+    <nd ref="1698367046"/>
+    <nd ref="1698367042"/>
+    <nd ref="1698367064"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="8"/>
+    <tag k="name" v="Center Point Siam Square"/>
+    <tag k="name:en" v="Center Point Siam Square"/>
+    <tag k="name:ko" v="센터 포인트 싸얌 스퀘어"/>
+    <tag k="name:th" v="เซ็นเตอร์พอยต์ สยามสแควร์"/>
+    <tag k="name:zh" v="邏罗广场"/>
+    <tag k="opening_hours" v="Mo-Su 10:00-22:00"/>
+    <tag k="operator" v="สํานักงานจัดการทรัพย์สินจุฬาลงกรณ์มหาวิทยาลัย"/>
+    <tag k="shop" v="mall"/>
+    <tag k="toilets" v="yes"/>
+  </way>
+  <way id="157664314">
+    <nd ref="1699259284"/>
+    <nd ref="1699259287"/>
+    <nd ref="1699259292"/>
+    <nd ref="1699259295"/>
+    <tag k="access" v="no"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="taxi" v="yes"/>
+  </way>
+  <way id="157770864">
+    <nd ref="1700280173"/>
+    <nd ref="1700279872"/>
+    <nd ref="1700280014"/>
+    <nd ref="1700280052"/>
+    <nd ref="1700280173"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="157770866">
+    <nd ref="1700279812"/>
+    <nd ref="1700279875"/>
+    <nd ref="1700279935"/>
+    <nd ref="1700280136"/>
+    <nd ref="1700279812"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="157770872">
+    <nd ref="1700280584"/>
+    <nd ref="5185444386"/>
+    <nd ref="1700280554"/>
+    <nd ref="9963653756"/>
+    <nd ref="5185444384"/>
+    <nd ref="1700280362"/>
+    <nd ref="5185444389"/>
+    <nd ref="1700280346"/>
+    <nd ref="5185444387"/>
+    <nd ref="1700280584"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="brand" v="Novotel"/>
+    <tag k="brand:wikidata" v="Q420545"/>
+    <tag k="building" v="yes"/>
+    <tag k="name" v="Novotel Bangkok"/>
+    <tag k="tourism" v="hotel"/>
+    <tag k="wheelchair" v="limited"/>
+  </way>
+  <way id="157770874">
+    <nd ref="1700280410"/>
+    <nd ref="1700280622"/>
+    <nd ref="1700280125"/>
+    <nd ref="1700280589"/>
+    <nd ref="1700280410"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="157770875">
+    <nd ref="1700280594"/>
+    <nd ref="1700279789"/>
+    <nd ref="1700280486"/>
+    <nd ref="1700280253"/>
+    <nd ref="1700280237"/>
+    <nd ref="1700280526"/>
+    <nd ref="1700280594"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="157770884">
+    <nd ref="1700280484"/>
+    <nd ref="1700280514"/>
+    <nd ref="1700279746"/>
+    <nd ref="1700279800"/>
+    <nd ref="1700280484"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="construction"/>
+  </way>
+  <way id="157770887">
+    <nd ref="1700279968"/>
+    <nd ref="10970063013"/>
+    <nd ref="2118593027"/>
+    <nd ref="1700279958"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="ตรอกบล็อก G"/>
+    <tag k="name:en" v="Block G Path"/>
+    <tag k="name:th" v="ตรอกบล็อก G"/>
+  </way>
+  <way id="157770889">
+    <nd ref="1700279936"/>
+    <nd ref="1700279865"/>
+    <nd ref="1700279971"/>
+    <nd ref="1700279995"/>
+    <nd ref="1700279936"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="157770893">
+    <nd ref="1700280061"/>
+    <nd ref="1700280094"/>
+    <nd ref="1700280056"/>
+    <nd ref="1700279953"/>
+    <nd ref="1700280061"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="157770894">
+    <nd ref="1700280486"/>
+    <nd ref="1700280059"/>
+    <nd ref="1700279879"/>
+    <nd ref="1700280253"/>
+    <nd ref="1700280486"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="157770895">
+    <nd ref="1700280316"/>
+    <nd ref="1700280179"/>
+    <nd ref="1700280141"/>
+    <nd ref="1700279815"/>
+    <nd ref="1700280316"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="commercial"/>
+  </way>
+  <way id="157770906">
+    <nd ref="10970063017"/>
+    <nd ref="2118593027"/>
+    <nd ref="1700280047"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="ตรอกบล็อก G"/>
+    <tag k="name:en" v="Block G Path"/>
+    <tag k="name:th" v="ตรอกบล็อก G"/>
+  </way>
+  <way id="157770907">
+    <nd ref="1700280205"/>
+    <nd ref="1700280539"/>
+    <nd ref="11986732061"/>
+    <nd ref="1700279974"/>
+    <nd ref="1700279740"/>
+    <nd ref="1700280205"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="157770920">
+    <nd ref="1700279863"/>
+    <nd ref="1700279781"/>
+    <nd ref="1700280245"/>
+    <nd ref="1700279844"/>
+    <nd ref="1700279863"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="157770923">
+    <nd ref="1700280203"/>
+    <nd ref="1700280101"/>
+    <nd ref="1700279930"/>
+    <nd ref="1700280530"/>
+    <nd ref="1700280203"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="terrace"/>
+  </way>
+  <way id="159378405">
+    <nd ref="1714885687"/>
+    <nd ref="1714885684"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="164031299">
+    <nd ref="1756930117"/>
+    <nd ref="1756930116"/>
+    <nd ref="1756930120"/>
+    <nd ref="1756930119"/>
+    <nd ref="1756930117"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="238170747">
+    <nd ref="2460247767"/>
+    <nd ref="2460270201"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170748">
+    <nd ref="2460247770"/>
+    <nd ref="2460247769"/>
+    <nd ref="2460247773"/>
+    <nd ref="2460247772"/>
+    <nd ref="2460247771"/>
+    <nd ref="2460247768"/>
+    <nd ref="2460270203"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170749">
+    <nd ref="2460247746"/>
+    <nd ref="2460270199"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170750">
+    <nd ref="2460247738"/>
+    <nd ref="1697017212"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="down"/>
+    <tag k="layer" v="1"/>
+    <tag k="ramp" v="no"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="238170751">
+    <nd ref="1697017221"/>
+    <nd ref="2460247780"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="conveying" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="up"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170752">
+    <nd ref="2460247742"/>
+    <nd ref="1697017186"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="incline" v="down"/>
+    <tag k="layer" v="1"/>
+    <tag k="ramp" v="no"/>
+  </way>
+  <way id="238170753">
+    <nd ref="1697017210"/>
+    <nd ref="2460247770"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="escalator" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170754">
+    <nd ref="2460247760"/>
+    <nd ref="7314496290"/>
+    <nd ref="2460247751"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170755">
+    <nd ref="2460247778"/>
+    <nd ref="1697017224"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="escalator" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170756">
+    <nd ref="2460247736"/>
+    <nd ref="7314496291"/>
+    <nd ref="2460247740"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170757">
+    <nd ref="2460247772"/>
+    <nd ref="7314496289"/>
+    <nd ref="2460247776"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170758">
+    <nd ref="2460247734"/>
+    <nd ref="2460270193"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170759">
+    <nd ref="2460247746"/>
+    <nd ref="2460247754"/>
+    <nd ref="2460247751"/>
+    <nd ref="2460247748"/>
+    <nd ref="2460247745"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170761">
+    <nd ref="2460247742"/>
+    <nd ref="2460247743"/>
+    <nd ref="2460247739"/>
+    <nd ref="2460247740"/>
+    <nd ref="2460247741"/>
+    <nd ref="2460247744"/>
+    <nd ref="2460247752"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170762">
+    <nd ref="2460247769"/>
+    <nd ref="2460247766"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238170764">
+    <nd ref="2460247732"/>
+    <nd ref="2460247733"/>
+    <nd ref="2460247735"/>
+    <nd ref="2460247736"/>
+    <nd ref="2460247737"/>
+    <nd ref="2460247734"/>
+    <nd ref="2460247731"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172948">
+    <nd ref="2460247744"/>
+    <nd ref="2460270197"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172950">
+    <nd ref="2460270199"/>
+    <nd ref="1697017206"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172952">
+    <nd ref="2460270201"/>
+    <nd ref="1697017196"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172953">
+    <nd ref="1697030023"/>
+    <nd ref="1697066016"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172954">
+    <nd ref="2460247745"/>
+    <nd ref="2460270195"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172955">
+    <nd ref="2460270195"/>
+    <nd ref="2460247738"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172957">
+    <nd ref="2460270197"/>
+    <nd ref="1697017190"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172959">
+    <nd ref="2460270203"/>
+    <nd ref="1697017229"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="handrail" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172961">
+    <nd ref="2460270193"/>
+    <nd ref="1697017181"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="steps"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172963">
+    <nd ref="2460247747"/>
+    <nd ref="2460247743"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172965">
+    <nd ref="2460247768"/>
+    <nd ref="2460247764"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172966">
+    <nd ref="2460247731"/>
+    <nd ref="2460247730"/>
+    <nd ref="1697017226"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172968">
+    <nd ref="2460247752"/>
+    <nd ref="2460247756"/>
+    <nd ref="2460247750"/>
+    <nd ref="2460247749"/>
+    <nd ref="2460247747"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172970">
+    <nd ref="1697030016"/>
+    <nd ref="2460247758"/>
+    <nd ref="2460247760"/>
+    <nd ref="2460247763"/>
+    <nd ref="2460247767"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="238172971">
+    <nd ref="2460247766"/>
+    <nd ref="2460247765"/>
+    <nd ref="2460247762"/>
+    <nd ref="2460247761"/>
+    <nd ref="2460247764"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="layer" v="1"/>
+  </way>
+  <way id="241883578">
+    <nd ref="2494606528"/>
+    <nd ref="2494606527"/>
+    <nd ref="2494606522"/>
+    <nd ref="2494606523"/>
+    <nd ref="2494606528"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="241883579">
+    <nd ref="2494606514"/>
+    <nd ref="2494606513"/>
+    <nd ref="2494606505"/>
+    <nd ref="2494606506"/>
+    <nd ref="2494606514"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="man_made" v="tower"/>
+    <tag k="name" v="พระเจดีย์"/>
+    <tag k="name:en" v="Phra Chedi"/>
+    <tag k="name:th" v="พระเจดีย์"/>
+    <tag k="roof:shape" v="pyramidal"/>
+    <tag k="tower:type" v="pagoda"/>
+  </way>
+  <way id="241883580">
+    <nd ref="2494606516"/>
+    <nd ref="2494606515"/>
+    <nd ref="2494606509"/>
+    <nd ref="2494606510"/>
+    <nd ref="2494606516"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+    <tag k="name" v="โพธิฆระ"/>
+    <tag k="name:en" v="Bodhighara"/>
+    <tag k="name:th" v="โพธิฆระ"/>
+  </way>
+  <way id="241883581">
+    <nd ref="2494606530"/>
+    <nd ref="2494606529"/>
+    <nd ref="2494606524"/>
+    <nd ref="2494606525"/>
+    <nd ref="2494606530"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="241883582">
+    <nd ref="2494606518"/>
+    <nd ref="2494606517"/>
+    <nd ref="2494606503"/>
+    <nd ref="2494606504"/>
+    <nd ref="2494606518"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+    <tag k="name" v="วิหาร"/>
+    <tag k="name:en" v="Vihara"/>
+    <tag k="name:th" v="วิหาร"/>
+    <tag k="roof:shape" v="gabled"/>
+  </way>
+  <way id="243728433">
+    <nd ref="2511013608"/>
+    <nd ref="2511013607"/>
+    <nd ref="2511013602"/>
+    <nd ref="2511013603"/>
+    <nd ref="2511013608"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+    <tag k="name" v="ศาลาเฉลิมพระเกียรติ ๘๔ พรรษา พระพี่นางเธอฯ"/>
+  </way>
+  <way id="243728435">
+    <nd ref="2511013596"/>
+    <nd ref="2511013599"/>
+    <nd ref="2511013598"/>
+    <nd ref="2511013595"/>
+    <nd ref="2511013596"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="300835622">
+    <nd ref="1692209248"/>
+    <nd ref="1692209232"/>
+    <tag k="alt_name:en" v="Thanon Rama I;Rama 1 Road"/>
+    <tag k="alt_name:th" v="ถนนพระราม 1;พระราม 1"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="2"/>
+    <tag k="lanes:forward" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนพระรามที่ 1"/>
+    <tag k="name:en" v="Rama I Road"/>
+    <tag k="name:etymology:wikidata" v="Q310992"/>
+    <tag k="name:ja" v="ラーマ1世通り"/>
+    <tag k="name:th" v="ถนนพระรามที่ 1"/>
+    <tag k="official_name:th" v="ถนนพระรามที่ ๑"/>
+    <tag k="oneway" v="no"/>
+    <tag k="short_name:th" v="พระรามที่ 1"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q4924292"/>
+  </way>
+  <way id="332672131">
+    <nd ref="3398165075"/>
+    <nd ref="3398165074"/>
+    <nd ref="3398165068"/>
+    <nd ref="3398165069"/>
+    <nd ref="3398165075"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="government"/>
+  </way>
+  <way id="332672133">
+    <nd ref="3398165040"/>
+    <nd ref="3398165055"/>
+    <nd ref="3398165053"/>
+    <nd ref="3398165039"/>
+    <nd ref="3398165040"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="332672135">
+    <nd ref="3398165065"/>
+    <nd ref="3398165073"/>
+    <nd ref="3398165072"/>
+    <nd ref="5216450758"/>
+    <nd ref="5216450724"/>
+    <nd ref="3398165064"/>
+    <nd ref="3398165065"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="government"/>
+  </way>
+  <way id="332672137">
+    <nd ref="3398165045"/>
+    <nd ref="3398165061"/>
+    <nd ref="3398165060"/>
+    <nd ref="3398165042"/>
+    <nd ref="3398165045"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="government"/>
+  </way>
+  <way id="365999406">
+    <nd ref="3699928240"/>
+    <nd ref="3699928238"/>
+    <nd ref="3699928243"/>
+    <nd ref="3699928245"/>
+    <nd ref="3699928239"/>
+    <nd ref="3699928237"/>
+    <nd ref="3699928244"/>
+    <nd ref="3699928246"/>
+    <nd ref="8037369054"/>
+    <nd ref="10206797049"/>
+    <nd ref="8037369056"/>
+    <nd ref="8037369055"/>
+    <nd ref="8037369059"/>
+    <nd ref="8037369060"/>
+    <nd ref="8037369061"/>
+    <nd ref="8037369058"/>
+    <nd ref="8037369057"/>
+    <nd ref="3699928229"/>
+    <nd ref="3699928230"/>
+    <nd ref="11986731985"/>
+    <nd ref="3699928234"/>
+    <nd ref="3699928236"/>
+    <nd ref="3699928231"/>
+    <nd ref="3699928232"/>
+    <nd ref="3699928235"/>
+    <nd ref="3699928233"/>
+    <nd ref="3699928228"/>
+    <nd ref="11986731988"/>
+    <nd ref="3699928227"/>
+    <nd ref="3699928241"/>
+    <nd ref="3699928242"/>
+    <nd ref="3699928240"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="description" v="สยามสแควร์วัน “Urban Shopping Center” ที่เป็นพื้นที่ทางธุรกิจและวัฒนธรรมร่วมสมัยบนทำเลทองที่ดีที่สุดในแหล่งช้อปปิ้งใจกลางสยามสแควร์ บนพื้นที่ 8 ไร่ เป็นศูนย์รวมและจุดนัดพบที่ได้ออกแบบให้ตอบสนองความต้องการไว้อย่างครบถ้วน ทั้งนวัตกรรม ศิลปะ แฟชั่น อาหาร และ"/>
+    <tag k="name" v="สยามสแควร์วัน"/>
+    <tag k="name:en" v="Siam Square One"/>
+    <tag k="name:ko" v="쌰암스퀘어"/>
+    <tag k="name:th" v="สยามสแควร์วัน"/>
+    <tag k="name:zh" v="暹罗广场一号"/>
+    <tag k="operator" v="สํานักงานจัดการทรัพย์สินจุฬาลงกรณ์มหาวิทยาลัย"/>
+    <tag k="shop" v="mall"/>
+    <tag k="website" v="https://pmcu.co.th/?page_id=9435"/>
+  </way>
+  <way id="452053538">
+    <nd ref="11986732063"/>
+    <nd ref="358217793"/>
+    <nd ref="11986732032"/>
+    <nd ref="10035526819"/>
+    <nd ref="12299671291"/>
+    <nd ref="373103626"/>
+    <nd ref="4488521373"/>
+    <nd ref="11986732064"/>
+    <nd ref="10970063011"/>
+    <nd ref="358217810"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="lit" v="yes"/>
+    <tag k="name" v="สยามสแควร์ซอย 5"/>
+    <tag k="name:en" v="Siam Square Soi 5"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 5"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="452212783">
+    <nd ref="358217813"/>
+    <nd ref="1700280047"/>
+    <nd ref="373103636"/>
+    <nd ref="1700279774"/>
+    <nd ref="10970063012"/>
+    <nd ref="358217824"/>
+    <tag k="access" v="customers"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="maxspeed" v="20"/>
+    <tag k="name" v="สยามสแควร์ซอย 6"/>
+    <tag k="name:en" v="Siam Square Soi 6"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 6"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="475709104">
+    <nd ref="4694328123"/>
+    <nd ref="4694328122"/>
+    <nd ref="4694328121"/>
+    <nd ref="4694328120"/>
+    <nd ref="4694328123"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="475709105">
+    <nd ref="4694328127"/>
+    <nd ref="4694328126"/>
+    <nd ref="4694328125"/>
+    <nd ref="4694328124"/>
+    <nd ref="4694328127"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="475709110">
+    <nd ref="4694328154"/>
+    <nd ref="13253986362"/>
+    <nd ref="13253986363"/>
+    <nd ref="13253986364"/>
+    <nd ref="13253986365"/>
+    <nd ref="13253986366"/>
+    <nd ref="13253986367"/>
+    <nd ref="13253986368"/>
+    <nd ref="13253986369"/>
+    <nd ref="4694328153"/>
+    <nd ref="4694328152"/>
+    <nd ref="4694328151"/>
+    <nd ref="4694328154"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="534768993">
+    <nd ref="5185440682"/>
+    <nd ref="5185440683"/>
+    <nd ref="5185444373"/>
+    <nd ref="5185444368"/>
+    <nd ref="5185440684"/>
+    <nd ref="5185440685"/>
+    <nd ref="5185440686"/>
+    <nd ref="5185440687"/>
+    <nd ref="5185440688"/>
+    <nd ref="5185440689"/>
+    <nd ref="5185440690"/>
+    <nd ref="5185440691"/>
+    <nd ref="5185440692"/>
+    <nd ref="5185440693"/>
+    <nd ref="5185440694"/>
+    <nd ref="5185440695"/>
+    <nd ref="5185440696"/>
+    <nd ref="5185440697"/>
+    <nd ref="5185440698"/>
+    <nd ref="5185440699"/>
+    <nd ref="5185440700"/>
+    <nd ref="5185440701"/>
+    <nd ref="5185440702"/>
+    <nd ref="5185440703"/>
+    <nd ref="5185440704"/>
+    <nd ref="5185440705"/>
+    <nd ref="5185440706"/>
+    <nd ref="5185440707"/>
+    <nd ref="5185440708"/>
+    <nd ref="5185440709"/>
+    <nd ref="5185440710"/>
+    <nd ref="5185440711"/>
+    <nd ref="5185440712"/>
+    <nd ref="5185440713"/>
+    <nd ref="5185440714"/>
+    <nd ref="5185440715"/>
+    <nd ref="5185440716"/>
+    <nd ref="5185440717"/>
+    <nd ref="5185440718"/>
+    <nd ref="5185440719"/>
+    <nd ref="5185440720"/>
+    <nd ref="5185444363"/>
+    <nd ref="5185444364"/>
+    <nd ref="5185444365"/>
+    <nd ref="5185444366"/>
+    <nd ref="5185444367"/>
+    <nd ref="5185444369"/>
+    <nd ref="5185444372"/>
+    <nd ref="5185440682"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="brand" v="Kempinski"/>
+    <tag k="brand:wikidata" v="Q671990"/>
+    <tag k="building" v="hotel"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="สยามเคมปินสกี้"/>
+    <tag k="name:en" v="Siam Kempinski"/>
+    <tag k="name:th" v="สยามเคมปินสกี้"/>
+    <tag k="tourism" v="hotel"/>
+    <tag k="website" v="https://www.kempinski.com/en/bangkok/siam-hotel/"/>
+    <tag k="wheelchair" v="yes"/>
+  </way>
+  <way id="534769334">
+    <nd ref="5185444376"/>
+    <nd ref="5185444377"/>
+    <nd ref="5185444378"/>
+    <nd ref="5185444379"/>
+    <nd ref="5185444380"/>
+    <nd ref="5185444381"/>
+    <nd ref="5185444382"/>
+    <nd ref="5185444383"/>
+    <nd ref="5185444376"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="30"/>
+  </way>
+  <way id="534769336">
+    <nd ref="5185444384"/>
+    <nd ref="9963653766"/>
+    <nd ref="5185444385"/>
+    <nd ref="5185444386"/>
+    <nd ref="1700280584"/>
+    <nd ref="5185444387"/>
+    <nd ref="5185444388"/>
+    <nd ref="5185444389"/>
+    <nd ref="1700280362"/>
+    <nd ref="5185444384"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="building:levels" v="20"/>
+  </way>
+  <way id="539022369">
+    <nd ref="5216447283"/>
+    <nd ref="5216447284"/>
+    <nd ref="5216447285"/>
+    <nd ref="5216447286"/>
+    <nd ref="5216447283"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539022372">
+    <nd ref="5216447295"/>
+    <nd ref="5216447296"/>
+    <nd ref="5216447297"/>
+    <nd ref="5216447298"/>
+    <nd ref="5216447295"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539022373">
+    <nd ref="5216447299"/>
+    <nd ref="5216447300"/>
+    <nd ref="5216447301"/>
+    <nd ref="5216447302"/>
+    <nd ref="5216447299"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="government"/>
+  </way>
+  <way id="539022377">
+    <nd ref="5216447304"/>
+    <nd ref="5216450756"/>
+    <nd ref="5216450726"/>
+    <nd ref="5216447314"/>
+    <nd ref="6102277108"/>
+    <nd ref="5936230922"/>
+    <nd ref="5216447315"/>
+    <nd ref="5936230929"/>
+    <nd ref="5936230928"/>
+    <nd ref="5936230927"/>
+    <nd ref="5936230926"/>
+    <nd ref="5936230925"/>
+    <tag k="access" v="yes"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="539022380">
+    <nd ref="9343065295"/>
+    <nd ref="5216450725"/>
+    <tag k="highway" v="service"/>
+    <tag k="service" v="parking_aisle"/>
+  </way>
+  <way id="539022381">
+    <nd ref="5216450725"/>
+    <nd ref="5216450726"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="539022385">
+    <nd ref="5216450757"/>
+    <nd ref="5936230930"/>
+    <nd ref="5936230889"/>
+    <nd ref="5216450723"/>
+    <nd ref="5941680893"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+    <tag k="service" v="parking_aisle"/>
+  </way>
+  <way id="539268931">
+    <nd ref="5218427119"/>
+    <nd ref="5218427120"/>
+    <nd ref="5218427421"/>
+    <nd ref="5218427422"/>
+    <nd ref="5218427423"/>
+    <nd ref="5218427424"/>
+    <nd ref="5218427425"/>
+    <nd ref="5218427426"/>
+    <nd ref="5218427119"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539268935">
+    <nd ref="5218427439"/>
+    <nd ref="5218427440"/>
+    <nd ref="5218427441"/>
+    <nd ref="5218427442"/>
+    <nd ref="5218427439"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268936">
+    <nd ref="5218427443"/>
+    <nd ref="5218427444"/>
+    <nd ref="5218427445"/>
+    <nd ref="5218427446"/>
+    <nd ref="5218427443"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268939">
+    <nd ref="5218427451"/>
+    <nd ref="5218427452"/>
+    <nd ref="5218427453"/>
+    <nd ref="5218427454"/>
+    <nd ref="5218427451"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268942">
+    <nd ref="5218427455"/>
+    <nd ref="5218427456"/>
+    <nd ref="5218427457"/>
+    <nd ref="5218427458"/>
+    <nd ref="5218427455"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268943">
+    <nd ref="5218427459"/>
+    <nd ref="5218427460"/>
+    <nd ref="5218427461"/>
+    <nd ref="5218427462"/>
+    <nd ref="5218427459"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268945">
+    <nd ref="5218427463"/>
+    <nd ref="5218427464"/>
+    <nd ref="5218427465"/>
+    <nd ref="5218427466"/>
+    <nd ref="5218427463"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+    <tag k="name" v="ศาลาเฉลิมพระเกียรติ 80 พรรษา"/>
+    <tag k="name:en" v="Chaloem Phra Kiat 80 Phansa Pavilion"/>
+    <tag k="name:th" v="ศาลาเฉลิมพระเกียรติ 80 พรรษา"/>
+  </way>
+  <way id="539268960">
+    <nd ref="5218427499"/>
+    <nd ref="5218427500"/>
+    <nd ref="5218427501"/>
+    <nd ref="5218427502"/>
+    <nd ref="5218427499"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539268961">
+    <nd ref="5218427503"/>
+    <nd ref="5218427504"/>
+    <nd ref="5218427505"/>
+    <nd ref="5218427506"/>
+    <nd ref="5218427503"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539268963">
+    <nd ref="5218427507"/>
+    <nd ref="5218427508"/>
+    <nd ref="5218427509"/>
+    <nd ref="5218427510"/>
+    <nd ref="5218427507"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="539268964">
+    <nd ref="5218427511"/>
+    <nd ref="5218427512"/>
+    <nd ref="5218427513"/>
+    <nd ref="5218427514"/>
+    <nd ref="5218427511"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268965">
+    <nd ref="5218427515"/>
+    <nd ref="5218427516"/>
+    <nd ref="5218427517"/>
+    <nd ref="5218427518"/>
+    <nd ref="5218427515"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268966">
+    <nd ref="5218427519"/>
+    <nd ref="5218427520"/>
+    <nd ref="5218427621"/>
+    <nd ref="5218427622"/>
+    <nd ref="5218427519"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268967">
+    <nd ref="5218427623"/>
+    <nd ref="5218427624"/>
+    <nd ref="5218427625"/>
+    <nd ref="5218427626"/>
+    <nd ref="5218427623"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="539268968">
+    <nd ref="5218427627"/>
+    <nd ref="5218427628"/>
+    <nd ref="5218427629"/>
+    <nd ref="5218427630"/>
+    <nd ref="5218427627"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972219">
+    <nd ref="5909883617"/>
+    <nd ref="5909883618"/>
+    <nd ref="5909883619"/>
+    <nd ref="5909883620"/>
+    <nd ref="5909883617"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972220">
+    <nd ref="5909883621"/>
+    <nd ref="5909883622"/>
+    <nd ref="5909883623"/>
+    <nd ref="5909883624"/>
+    <nd ref="5909883621"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972221">
+    <nd ref="5909883625"/>
+    <nd ref="5909883626"/>
+    <nd ref="5909883627"/>
+    <nd ref="5909883628"/>
+    <nd ref="5909883625"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972222">
+    <nd ref="5909883629"/>
+    <nd ref="5909883630"/>
+    <nd ref="5909883631"/>
+    <nd ref="5909883632"/>
+    <nd ref="5909883629"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972223">
+    <nd ref="5909883633"/>
+    <nd ref="5909883634"/>
+    <nd ref="5909883635"/>
+    <nd ref="5909883636"/>
+    <nd ref="5909883637"/>
+    <nd ref="5909883638"/>
+    <nd ref="5909883633"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972224">
+    <nd ref="5909883639"/>
+    <nd ref="5909883640"/>
+    <nd ref="5909883641"/>
+    <nd ref="5909883642"/>
+    <nd ref="5909883639"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="625972225">
+    <nd ref="5909883643"/>
+    <nd ref="5909883644"/>
+    <nd ref="5909883645"/>
+    <nd ref="5909883646"/>
+    <nd ref="5909883643"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="temple"/>
+  </way>
+  <way id="628503405">
+    <nd ref="1697233612"/>
+    <nd ref="1685237089"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="628507849">
+    <nd ref="1697233658"/>
+    <nd ref="5933586924"/>
+    <tag k="highway" v="service"/>
+    <tag k="service" v="parking_aisle"/>
+  </way>
+  <way id="628750594">
+    <nd ref="5936230909"/>
+    <nd ref="5936230908"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="628750595">
+    <nd ref="5936230921"/>
+    <nd ref="5936230920"/>
+    <nd ref="8918460559"/>
+    <tag k="access" v="yes"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="628750596">
+    <nd ref="5936230925"/>
+    <nd ref="5936230924"/>
+    <nd ref="5936230923"/>
+    <nd ref="5936230922"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="629330328">
+    <nd ref="8146587837"/>
+    <nd ref="8146587836"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="629330329">
+    <nd ref="1697233610"/>
+    <nd ref="1685237089"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="650460719">
+    <nd ref="5936230921"/>
+    <nd ref="6102277108"/>
+    <tag k="access" v="yes"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="650460720">
+    <nd ref="5936230921"/>
+    <nd ref="6437928415"/>
+    <nd ref="6437928414"/>
+    <nd ref="5936117948"/>
+    <tag k="access" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="680890152">
+    <nd ref="6375832672"/>
+    <nd ref="6375832668"/>
+    <nd ref="6375832669"/>
+    <nd ref="1700280014"/>
+    <nd ref="1700279872"/>
+    <nd ref="13672341326"/>
+    <nd ref="6375832672"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="air_conditioned" v="no"/>
+    <tag k="amenity" v="food_court"/>
+    <tag k="building" v="roof"/>
+    <tag k="covered" v="yes"/>
+    <tag k="name" v="The Food Corridor"/>
+    <tag k="name:en" v="The Food Corridor"/>
+  </way>
+  <way id="680890153">
+    <nd ref="6375832675"/>
+    <nd ref="6375832674"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="680890154">
+    <nd ref="6375832665"/>
+    <nd ref="10035526818"/>
+    <nd ref="11986732036"/>
+    <nd ref="6375832663"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="680890155">
+    <nd ref="6375832664"/>
+    <nd ref="11986732037"/>
+    <nd ref="10872902371"/>
+    <nd ref="6375832673"/>
+    <nd ref="6375832671"/>
+    <nd ref="1700279804"/>
+    <tag k="fixme" v="This path is not completely surveyed on the south side."/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="สยามสแควร์ซอย 4"/>
+    <tag k="name:en" v="Siam Square Soi 4"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 4"/>
+  </way>
+  <way id="680890156">
+    <nd ref="6375832676"/>
+    <nd ref="13672341326"/>
+    <nd ref="6375832669"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="680890157">
+    <nd ref="10206797047"/>
+    <nd ref="6375832667"/>
+    <nd ref="6375832666"/>
+    <tag k="covered" v="no"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="680890158">
+    <nd ref="6375832669"/>
+    <nd ref="6375832667"/>
+    <nd ref="6375832665"/>
+    <tag k="covered" v="no"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="680890159">
+    <nd ref="11986732100"/>
+    <nd ref="6375832676"/>
+    <nd ref="6375832675"/>
+    <tag k="highway" v="pedestrian"/>
+  </way>
+  <way id="684359995">
+    <nd ref="1700279804"/>
+    <nd ref="1700280596"/>
+    <nd ref="10970063010"/>
+    <nd ref="297713248"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="สยามสแควร์ซอย 4"/>
+    <tag k="name:en" v="Siam Square Soi 4"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 4"/>
+  </way>
+  <way id="754824706">
+    <nd ref="9963653756"/>
+    <nd ref="7051240349"/>
+    <nd ref="9963653766"/>
+    <nd ref="7051240350"/>
+    <nd ref="1700280362"/>
+    <tag k="access" v="destination"/>
+    <tag k="covered" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="service" v="driveway"/>
+  </way>
+  <way id="781138575">
+    <nd ref="2460247774"/>
+    <nd ref="1699259271"/>
+    <nd ref="1697030043"/>
+    <nd ref="1697030040"/>
+    <nd ref="1697030047"/>
+    <nd ref="7293288966"/>
+    <nd ref="1696969140"/>
+    <nd ref="1696969142"/>
+    <nd ref="1696969154"/>
+    <nd ref="1696969162"/>
+    <nd ref="1696969155"/>
+    <nd ref="1696969152"/>
+    <nd ref="1696969165"/>
+    <nd ref="1696969166"/>
+    <nd ref="280205407"/>
+    <nd ref="1700165374"/>
+    <nd ref="280205297"/>
+    <nd ref="1696969145"/>
+    <nd ref="1696969153"/>
+    <nd ref="1696969146"/>
+    <nd ref="280757442"/>
+    <nd ref="1696969148"/>
+    <nd ref="280757441"/>
+    <nd ref="280205406"/>
+    <nd ref="1697233623"/>
+    <nd ref="280205295"/>
+    <nd ref="280205405"/>
+    <nd ref="1696969163"/>
+    <nd ref="1696969151"/>
+    <nd ref="1697233625"/>
+    <nd ref="1697233616"/>
+    <nd ref="1697233626"/>
+    <nd ref="1696969143"/>
+    <nd ref="280205293"/>
+    <nd ref="1696969156"/>
+    <nd ref="1700279731"/>
+    <nd ref="1696969138"/>
+    <nd ref="1697030021"/>
+    <nd ref="1696969157"/>
+    <nd ref="1700280427"/>
+    <nd ref="1696969158"/>
+    <nd ref="1696969164"/>
+    <nd ref="1699259323"/>
+    <nd ref="1699259282"/>
+    <nd ref="2460247774"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:housenumber" v="991"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:street" v="ถนนพระรามที่ 1"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+    <tag k="name" v="Siam Paragon"/>
+    <tag k="name:en" v="Siam Paragon"/>
+    <tag k="name:th" v="สยามพารากอน"/>
+    <tag k="shop" v="mall"/>
+    <tag k="wikidata" v="Q972334"/>
+    <tag k="wikipedia" v="en:Siam Paragon"/>
+  </way>
+  <way id="783233269">
+    <nd ref="1699259284"/>
+    <nd ref="7314496290"/>
+    <nd ref="1697065975"/>
+    <nd ref="11873201042"/>
+    <nd ref="297713248"/>
+    <nd ref="7314496289"/>
+    <nd ref="7314493783"/>
+    <nd ref="7314493782"/>
+    <nd ref="297713237"/>
+    <tag k="alt_name:en" v="Thanon Rama I;Rama 1 Road"/>
+    <tag k="alt_name:th" v="ถนนพระราม 1;พระราม 1"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนพระรามที่ 1"/>
+    <tag k="name:en" v="Rama I Road"/>
+    <tag k="name:etymology:wikidata" v="Q310992"/>
+    <tag k="name:ja" v="ラーマ1世通り"/>
+    <tag k="name:th" v="ถนนพระรามที่ 1"/>
+    <tag k="official_name:th" v="ถนนพระรามที่ ๑"/>
+    <tag k="oneway" v="no"/>
+    <tag k="short_name:th" v="พระรามที่ 1"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q4924292"/>
+  </way>
+  <way id="875208053">
+    <nd ref="8146587835"/>
+    <nd ref="8146587834"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="layer" v="1"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="875208056">
+    <nd ref="12098413764"/>
+    <nd ref="1715021972"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="928076904">
+    <nd ref="12695904086"/>
+    <nd ref="8609458520"/>
+    <nd ref="9723431376"/>
+    <nd ref="8609458519"/>
+    <nd ref="8609458518"/>
+    <nd ref="8609458517"/>
+    <nd ref="9723431175"/>
+    <nd ref="8609439716"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="991842814">
+    <nd ref="9163944892"/>
+    <nd ref="9163944893"/>
+    <nd ref="9163944894"/>
+    <nd ref="9163944895"/>
+    <nd ref="9163944892"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="1058179686">
+    <nd ref="9723431181"/>
+    <nd ref="9723431183"/>
+    <nd ref="9723431177"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="1058179689">
+    <nd ref="9723431177"/>
+    <nd ref="11083758432"/>
+    <nd ref="11083758431"/>
+    <nd ref="9723431186"/>
+    <nd ref="9723431180"/>
+    <nd ref="9723431169"/>
+    <nd ref="9723431171"/>
+    <nd ref="9723431375"/>
+    <nd ref="9723431170"/>
+    <nd ref="9723431182"/>
+    <nd ref="9723431173"/>
+    <nd ref="9723431172"/>
+    <nd ref="9723431176"/>
+    <nd ref="9723431185"/>
+    <nd ref="9723431174"/>
+    <nd ref="9723431177"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="1058179690">
+    <nd ref="9723431172"/>
+    <nd ref="9723431178"/>
+    <nd ref="9723431175"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="1058180637">
+    <nd ref="9723452735"/>
+    <nd ref="9723452733"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1076374378">
+    <nd ref="9963653759"/>
+    <nd ref="11986732051"/>
+    <nd ref="1700280375"/>
+    <nd ref="1700279809"/>
+    <nd ref="10035511614"/>
+    <nd ref="11986732101"/>
+    <nd ref="1756129255"/>
+    <nd ref="1756129252"/>
+    <nd ref="10035511615"/>
+    <nd ref="1700279869"/>
+    <nd ref="1700280249"/>
+    <nd ref="10035511616"/>
+    <nd ref="1756129251"/>
+    <nd ref="1756129247"/>
+    <nd ref="11986732093"/>
+    <nd ref="10035526817"/>
+    <nd ref="11986732099"/>
+    <nd ref="1756930119"/>
+    <nd ref="1756930120"/>
+    <nd ref="10035526818"/>
+    <nd ref="1698367068"/>
+    <nd ref="1698367053"/>
+    <nd ref="10872902371"/>
+    <nd ref="8037369060"/>
+    <nd ref="8037369061"/>
+    <nd ref="8037369058"/>
+    <nd ref="8037369057"/>
+    <nd ref="3699928229"/>
+    <nd ref="3699928230"/>
+    <nd ref="11986731985"/>
+    <nd ref="3699928234"/>
+    <nd ref="11986731986"/>
+    <nd ref="11986731987"/>
+    <nd ref="11986731988"/>
+    <nd ref="3699928227"/>
+    <nd ref="10035526819"/>
+    <nd ref="1700279995"/>
+    <nd ref="1700279971"/>
+    <nd ref="11986732102"/>
+    <nd ref="9963653764"/>
+    <nd ref="9870593361"/>
+    <nd ref="1697066003"/>
+    <nd ref="9963653765"/>
+    <nd ref="11986731989"/>
+    <nd ref="11986731990"/>
+    <nd ref="10872902360"/>
+    <nd ref="10872902373"/>
+    <nd ref="9963653763"/>
+    <nd ref="10872902372"/>
+    <nd ref="10872902357"/>
+    <nd ref="1700280136"/>
+    <nd ref="1700279812"/>
+    <nd ref="9963653761"/>
+    <nd ref="10872902320"/>
+    <nd ref="10872902321"/>
+    <nd ref="13569024283"/>
+    <nd ref="10872902342"/>
+    <nd ref="9963653760"/>
+    <nd ref="1700279886"/>
+    <nd ref="1700280103"/>
+    <nd ref="10872902330"/>
+    <nd ref="9870593356"/>
+    <nd ref="9870593355"/>
+    <nd ref="10872902370"/>
+    <nd ref="10872902369"/>
+    <nd ref="10872902368"/>
+    <nd ref="10872902362"/>
+    <nd ref="11986732048"/>
+    <nd ref="9963653759"/>
+    <tag k="area" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="layer" v="-1"/>
+    <tag k="name" v="ถนนคนเดินสยามสแควร์"/>
+    <tag k="name:en" v="Siam Square Walking Street"/>
+    <tag k="name:th" v="ถนนคนเดินสยามสแควร์"/>
+    <tag k="surface" v="concrete"/>
+  </way>
+  <way id="1115939737">
+    <nd ref="6375832674"/>
+    <nd ref="6375832673"/>
+    <tag k="highway" v="pedestrian"/>
+  </way>
+  <way id="1115939738">
+    <nd ref="1700279804"/>
+    <nd ref="10206797049"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="1115939739">
+    <nd ref="373103639"/>
+    <nd ref="11986732066"/>
+    <nd ref="11986732055"/>
+    <nd ref="373103626"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="lit" v="yes"/>
+    <tag k="name" v="สยามสแควร์ซอย 5/1"/>
+    <tag k="name:en" v="Siam Square Soi 5/1"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 5/1"/>
+    <tag k="oneway" v="no"/>
+    <tag k="surface" v="concrete"/>
+  </way>
+  <way id="1168486094">
+    <nd ref="297713248"/>
+    <nd ref="10867019665"/>
+    <tag k="highway" v="service"/>
+    <tag k="lanes" v="1"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="turn:lanes" v="through"/>
+  </way>
+  <way id="1168486095">
+    <nd ref="1697065985"/>
+    <nd ref="10867019666"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="1168486096">
+    <nd ref="1697066044"/>
+    <nd ref="10867019667"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="1168486097">
+    <nd ref="10867019668"/>
+    <nd ref="1697066010"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="1168486099">
+    <nd ref="10867019669"/>
+    <nd ref="1697066010"/>
+    <nd ref="11873201043"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="1168486101">
+    <nd ref="10867019670"/>
+    <nd ref="1697066008"/>
+    <nd ref="1685237086"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1168486103">
+    <nd ref="1697065975"/>
+    <nd ref="10867019671"/>
+    <nd ref="10867019672"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1169249440">
+    <nd ref="11986732039"/>
+    <nd ref="11986732063"/>
+    <nd ref="11986732042"/>
+    <nd ref="11986732041"/>
+    <nd ref="11986732040"/>
+    <nd ref="9963653761"/>
+    <nd ref="10872902320"/>
+    <nd ref="10872902337"/>
+    <nd ref="13569024284"/>
+    <nd ref="11986732097"/>
+    <nd ref="10872902322"/>
+    <nd ref="11986732089"/>
+    <nd ref="10872902329"/>
+    <nd ref="10872902323"/>
+    <nd ref="11986732087"/>
+    <nd ref="11986732086"/>
+    <nd ref="10872902338"/>
+    <nd ref="11986732048"/>
+    <nd ref="11986732049"/>
+    <nd ref="13001243986"/>
+    <nd ref="11986732050"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="สยามสแควร์ซอย 7"/>
+    <tag k="name:en" v="Siam Square Soi 7"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 7"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1169249453">
+    <nd ref="10872902349"/>
+    <nd ref="11986732042"/>
+    <nd ref="10872902373"/>
+    <nd ref="10872902355"/>
+    <nd ref="10872902350"/>
+    <nd ref="10872902356"/>
+    <nd ref="10872902354"/>
+    <nd ref="10872902351"/>
+    <nd ref="10872902353"/>
+    <nd ref="10872902372"/>
+    <nd ref="11986732041"/>
+    <nd ref="10872902352"/>
+    <tag k="highway" v="service"/>
+    <tag k="service" v="parking_aisle"/>
+  </way>
+  <way id="1169249454">
+    <nd ref="10872902357"/>
+    <nd ref="10872902358"/>
+    <nd ref="10872902359"/>
+    <nd ref="11986731990"/>
+    <nd ref="10872902360"/>
+    <nd ref="10872902373"/>
+    <nd ref="10872902372"/>
+    <nd ref="10872902357"/>
+    <tag k="amenity" v="parking"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="name" v="ลานบล็อก K"/>
+    <tag k="name:en" v="Block K Plaza"/>
+    <tag k="name:th" v="ลานบล็อก K"/>
+  </way>
+  <way id="1181241173">
+    <nd ref="1697017226"/>
+    <nd ref="10970063020"/>
+    <tag k="footway" v="access_aisle"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="1181241174">
+    <nd ref="1697479262"/>
+    <nd ref="10970063021"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1201639576">
+    <nd ref="1685237092"/>
+    <nd ref="11140763370"/>
+    <nd ref="11140763371"/>
+    <nd ref="11140763372"/>
+    <nd ref="11140763373"/>
+    <nd ref="11140763375"/>
+    <nd ref="11140763374"/>
+    <tag k="highway" v="service"/>
+    <tag k="motor_vehicle" v="no"/>
+    <tag k="name" v="ถนนชุมชนหลังวัดปทุมวนาราม"/>
+    <tag k="name:th" v="ถนนชุมชนหลังวัดปทุมวนาราม"/>
+    <tag k="service" v="driveway"/>
+  </way>
+  <way id="1225237203">
+    <nd ref="11362417904"/>
+    <nd ref="11362417905"/>
+    <nd ref="11362417906"/>
+    <nd ref="11362417907"/>
+    <nd ref="11362417904"/>
+    <tag k="landuse" v="construction"/>
+    <tag k="name" v="Gump Siam Life"/>
+    <tag k="name:en" v="Gump Siam Life"/>
+  </way>
+  <way id="1225237204">
+    <nd ref="11362417908"/>
+    <nd ref="1700280484"/>
+    <nd ref="1700280514"/>
+    <nd ref="11362417909"/>
+    <nd ref="11362417910"/>
+    <nd ref="11362417911"/>
+    <nd ref="11362417912"/>
+    <nd ref="11362417913"/>
+    <nd ref="11362417908"/>
+    <tag k="addr:district" v="ปทุมวัน"/>
+    <tag k="addr:postcode" v="10330"/>
+    <tag k="addr:province" v="กรุงเทพมหานคร"/>
+    <tag k="addr:subdistrict" v="ปทุมวัน"/>
+    <tag k="amenity" v="bank"/>
+    <tag k="brand" v="ธนาคารกรุงไทย"/>
+    <tag k="brand:en" v="Krung Thai Bank"/>
+    <tag k="brand:th" v="ธนาคารกรุงไทย"/>
+    <tag k="brand:wikidata" v="Q962865"/>
+    <tag k="building" v="commercial"/>
+    <tag k="name" v="ธนาคารกรุงไทย"/>
+    <tag k="name:en" v="Krung Thai Bank"/>
+    <tag k="name:th" v="ธนาคารกรุงไทย"/>
+  </way>
+  <way id="1255972535">
+    <nd ref="11676312708"/>
+    <nd ref="11676312772"/>
+    <nd ref="11676312720"/>
+    <nd ref="9363513817"/>
+    <nd ref="4526260031"/>
+    <nd ref="358186072"/>
+    <nd ref="5941994875"/>
+    <nd ref="1694509152"/>
+    <nd ref="6209816185"/>
+    <nd ref="11676312794"/>
+    <nd ref="277941519"/>
+    <nd ref="5936118201"/>
+    <nd ref="11676312798"/>
+    <nd ref="358217972"/>
+    <nd ref="277941518"/>
+    <nd ref="1700280019"/>
+    <nd ref="9363513515"/>
+    <nd ref="13527824420"/>
+    <nd ref="1692209232"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="maxheight" v="default"/>
+    <tag k="maxspeed" v="60"/>
+    <tag k="name" v="ถนนอังรีดูนังต์"/>
+    <tag k="name:en" v="Henri Dunant Road"/>
+    <tag k="name:etymology:wikidata" v="Q12091"/>
+    <tag k="name:ja" v="アンリデュナン通り"/>
+    <tag k="name:ko" v="수왕 거리"/>
+    <tag k="name:th" v="ถนนอังรีดูนังต์"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q13015298"/>
+    <tag k="wikipedia" v="en:Henri Dunant Road"/>
+  </way>
+  <way id="1255972538">
+    <nd ref="9363513513"/>
+    <nd ref="10970063013"/>
+    <nd ref="10970063012"/>
+    <nd ref="10970063020"/>
+    <nd ref="10970063011"/>
+    <nd ref="10970063010"/>
+    <nd ref="10970063019"/>
+    <nd ref="11986732095"/>
+    <nd ref="10970063009"/>
+    <nd ref="11986732091"/>
+    <nd ref="10970063008"/>
+    <nd ref="10970063007"/>
+    <nd ref="11986732081"/>
+    <nd ref="10970063006"/>
+    <nd ref="11986732083"/>
+    <nd ref="11986732046"/>
+    <nd ref="6701993386"/>
+    <nd ref="11986732045"/>
+    <nd ref="10970063005"/>
+    <nd ref="10969954104"/>
+    <nd ref="10969954103"/>
+    <nd ref="10969954102"/>
+    <nd ref="10969954101"/>
+    <nd ref="10969954100"/>
+    <nd ref="10969954099"/>
+    <nd ref="1697106329"/>
+    <nd ref="10969954095"/>
+    <nd ref="10969954096"/>
+    <nd ref="10969954097"/>
+    <nd ref="10969954098"/>
+    <nd ref="7314493770"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1255972539">
+    <nd ref="13527824418"/>
+    <nd ref="1697479247"/>
+    <nd ref="13527824417"/>
+    <nd ref="11676312729"/>
+    <nd ref="13527824419"/>
+    <nd ref="11676312728"/>
+    <nd ref="11676312727"/>
+    <nd ref="11676312726"/>
+    <nd ref="11676312730"/>
+    <nd ref="6437928414"/>
+    <nd ref="11676312791"/>
+    <nd ref="11676312797"/>
+    <nd ref="11676312790"/>
+    <nd ref="11676312793"/>
+    <nd ref="11676312788"/>
+    <nd ref="11676312748"/>
+    <nd ref="11676312789"/>
+    <nd ref="11676312782"/>
+    <nd ref="13449407930"/>
+    <nd ref="11676312771"/>
+    <nd ref="11676312725"/>
+    <nd ref="11676312747"/>
+    <nd ref="11676312746"/>
+    <nd ref="11676312745"/>
+    <nd ref="11676312764"/>
+    <nd ref="12032600377"/>
+    <nd ref="11676312744"/>
+    <nd ref="11676312724"/>
+    <nd ref="1698343298"/>
+    <nd ref="11676312739"/>
+    <nd ref="11676312743"/>
+    <nd ref="11676312742"/>
+    <nd ref="12030894712"/>
+    <nd ref="11676312723"/>
+    <nd ref="7313680496"/>
+    <nd ref="7698899762"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="ถนนอังรีดูนังต์"/>
+    <tag k="name:en" v="Henri Dunant Road"/>
+    <tag k="name:ja" v="アンリデュナン通り"/>
+    <tag k="name:th" v="ถนนอังรีดูนังต์"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1255972540">
+    <nd ref="1697479207"/>
+    <nd ref="11676312730"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="1255972550">
+    <nd ref="11676312759"/>
+    <nd ref="11676312792"/>
+    <nd ref="11676312760"/>
+    <nd ref="11676312761"/>
+    <nd ref="11676312796"/>
+    <nd ref="11676312762"/>
+    <nd ref="10970063018"/>
+    <nd ref="10970063017"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="ถนนอังรีดูนังต์"/>
+    <tag k="name:en" v="Henri Dunant Road"/>
+    <tag k="name:ja" v="アンリデュナン通り"/>
+    <tag k="name:th" v="ถนนอังรีดูนังต์"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1255972551">
+    <nd ref="10970063017"/>
+    <nd ref="10970063016"/>
+    <nd ref="10970063015"/>
+    <nd ref="10970063021"/>
+    <nd ref="10970063014"/>
+    <nd ref="9363513513"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="ถนนอังรีดูนังต์"/>
+    <tag k="name:en" v="Henri Dunant Road"/>
+    <tag k="name:ja" v="アンリデュナン通り"/>
+    <tag k="name:th" v="ถนนอังรีดูนังต์"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1278958178">
+    <nd ref="11873201043"/>
+    <nd ref="11873201041"/>
+    <nd ref="11873201048"/>
+    <tag k="highway" v="service"/>
+    <tag k="lanes" v="3"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="tunnel" v="building_passage"/>
+    <tag k="turn:lanes" v="through|through|through"/>
+  </way>
+  <way id="1278958179">
+    <nd ref="11873201043"/>
+    <nd ref="11873201046"/>
+    <nd ref="11873201047"/>
+    <nd ref="1697066044"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1278958180">
+    <nd ref="11873201048"/>
+    <nd ref="11873201042"/>
+    <tag k="highway" v="service"/>
+    <tag k="lanes" v="3"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="turn:lanes" v="left|left;right|right"/>
+  </way>
+  <way id="1279038386">
+    <nd ref="11873842746"/>
+    <nd ref="1697147543"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcar" v="no"/>
+    <tag k="motorcycle" v="yes"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1279038387">
+    <nd ref="11873842746"/>
+    <nd ref="13295854172"/>
+    <nd ref="1685237086"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcar" v="yes"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1292979515">
+    <nd ref="11986732035"/>
+    <nd ref="11986732030"/>
+    <nd ref="11986732096"/>
+    <nd ref="11986732036"/>
+    <nd ref="13569024282"/>
+    <nd ref="11986732037"/>
+    <nd ref="11986732038"/>
+    <nd ref="11986732031"/>
+    <nd ref="11986732032"/>
+    <nd ref="11986732052"/>
+    <nd ref="11986732102"/>
+    <nd ref="11986732053"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="สยามสแควร์ซอย 7"/>
+    <tag k="name:en" v="Siam Square Soi 7"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 7"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1292979519">
+    <nd ref="11986732053"/>
+    <nd ref="11986732054"/>
+    <nd ref="11986732065"/>
+    <nd ref="11986732055"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1292979520">
+    <nd ref="1700279995"/>
+    <nd ref="10035526819"/>
+    <nd ref="3699928227"/>
+    <nd ref="3699928241"/>
+    <nd ref="11986732056"/>
+    <nd ref="11986732064"/>
+    <nd ref="11986732057"/>
+    <nd ref="11986732058"/>
+    <nd ref="11986732059"/>
+    <nd ref="11986732060"/>
+    <nd ref="11986732061"/>
+    <nd ref="11986732066"/>
+    <nd ref="11986732062"/>
+    <nd ref="11986732065"/>
+    <nd ref="1700279865"/>
+    <nd ref="1700279936"/>
+    <nd ref="1700279995"/>
+    <tag k="area" v="yes"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1292979524">
+    <nd ref="11986732095"/>
+    <nd ref="11986732100"/>
+    <nd ref="10206797047"/>
+    <nd ref="11986732099"/>
+    <nd ref="11986732096"/>
+    <nd ref="11986732098"/>
+    <nd ref="11986732097"/>
+    <tag k="footway" v="sidewalk"/>
+    <tag k="highway" v="footway"/>
+    <tag k="name" v="สยามสแควร์ซอย 3"/>
+    <tag k="name:en" v="Siam Square Soi 3"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 3"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1292979526">
+    <nd ref="11986732100"/>
+    <nd ref="1700280278"/>
+    <nd ref="11986732094"/>
+    <tag k="crossing" v="uncontrolled"/>
+    <tag k="crossing:markings" v="yes"/>
+    <tag k="footway" v="crossing"/>
+    <tag k="highway" v="footway"/>
+  </way>
+  <way id="1306312584">
+    <nd ref="1685237096"/>
+    <nd ref="1697233629"/>
+    <nd ref="1697233610"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+  </way>
+  <way id="1306312585">
+    <nd ref="1685237096"/>
+    <nd ref="12098413767"/>
+    <nd ref="12098413766"/>
+    <nd ref="12098413770"/>
+    <nd ref="12098413771"/>
+    <nd ref="12098413772"/>
+    <nd ref="12098413773"/>
+    <nd ref="12098413764"/>
+    <nd ref="1685237095"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1306312586">
+    <nd ref="1685237096"/>
+    <nd ref="12098413778"/>
+    <nd ref="12098413777"/>
+    <nd ref="12098413776"/>
+    <nd ref="12098413775"/>
+    <nd ref="12098413774"/>
+    <nd ref="13439032840"/>
+    <nd ref="12098413769"/>
+    <nd ref="12098413765"/>
+    <nd ref="1697233653"/>
+    <nd ref="1685237095"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1327839084">
+    <nd ref="7051240348"/>
+    <nd ref="9963653756"/>
+    <tag k="access" v="destination"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="service" v="driveway"/>
+  </way>
+  <way id="1327839085">
+    <nd ref="1700280362"/>
+    <nd ref="7051240351"/>
+    <tag k="access" v="destination"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="service" v="driveway"/>
+  </way>
+  <way id="1343979921">
+    <nd ref="358218106"/>
+    <nd ref="9963653764"/>
+    <nd ref="373103641"/>
+    <nd ref="7051240348"/>
+    <nd ref="7051240351"/>
+    <nd ref="358217813"/>
+    <nd ref="1700279958"/>
+    <nd ref="1700279770"/>
+    <nd ref="10970063018"/>
+    <nd ref="277941518"/>
+    <tag k="access" v="customers"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="maxspeed" v="20"/>
+    <tag k="name" v="สยามสแควร์ซอย 7"/>
+    <tag k="name:en" v="Siam Square Soi 7"/>
+    <tag k="name:th" v="สยามสแควร์ซอย 7"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1370788035">
+    <nd ref="9723452735"/>
+    <nd ref="12695904081"/>
+    <nd ref="12695904082"/>
+    <nd ref="12695904083"/>
+    <nd ref="12695904084"/>
+    <nd ref="12695904085"/>
+    <nd ref="9723452735"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1370788036">
+    <nd ref="12695904081"/>
+    <nd ref="12695904086"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1370788037">
+    <nd ref="12695904080"/>
+    <nd ref="12695918099"/>
+    <nd ref="9723452735"/>
+    <tag k="highway" v="service"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1378241060">
+    <nd ref="1685237089"/>
+    <nd ref="8146587837"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1378241061">
+    <nd ref="8146587834"/>
+    <nd ref="1697233612"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1420100388">
+    <nd ref="13049389221"/>
+    <nd ref="13049389238"/>
+    <nd ref="13049389247"/>
+    <nd ref="13049389237"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="1420100392">
+    <nd ref="13049389238"/>
+    <nd ref="13049389239"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+  </way>
+  <way id="1420100393">
+    <nd ref="13049389240"/>
+    <nd ref="13049389241"/>
+    <nd ref="13049389242"/>
+    <nd ref="13049389243"/>
+    <nd ref="13049389244"/>
+    <nd ref="13049389245"/>
+    <nd ref="13049389246"/>
+    <nd ref="13049389247"/>
+    <tag k="access" v="private"/>
+    <tag k="highway" v="service"/>
+    <tag k="service" v="driveway"/>
+  </way>
+  <way id="1420100399">
+    <nd ref="13049389293"/>
+    <nd ref="13049389294"/>
+    <nd ref="13049389295"/>
+    <nd ref="13049389296"/>
+    <nd ref="13049389297"/>
+    <nd ref="13049389298"/>
+    <nd ref="13049389299"/>
+    <nd ref="13049389300"/>
+    <nd ref="13049402801"/>
+    <nd ref="13049402802"/>
+    <nd ref="13049402803"/>
+    <nd ref="13049402804"/>
+    <nd ref="13049402805"/>
+    <nd ref="13049402806"/>
+    <nd ref="13049402807"/>
+    <nd ref="13049402808"/>
+    <nd ref="13049402809"/>
+    <nd ref="13049402810"/>
+    <nd ref="13049402811"/>
+    <nd ref="13049402812"/>
+    <nd ref="13049402813"/>
+    <nd ref="13049402814"/>
+    <nd ref="13049402815"/>
+    <nd ref="13049402816"/>
+    <nd ref="13049402817"/>
+    <nd ref="13049402818"/>
+    <nd ref="13049402819"/>
+    <nd ref="13049402820"/>
+    <nd ref="13049402821"/>
+    <nd ref="13049402822"/>
+    <nd ref="13049402823"/>
+    <nd ref="13049402824"/>
+    <nd ref="13049402825"/>
+    <nd ref="13049402826"/>
+    <nd ref="13049402827"/>
+    <nd ref="13049402828"/>
+    <nd ref="13049389293"/>
+    <tag k="building" v="yes"/>
+    <tag k="castle_type" v="palace"/>
+    <tag k="historic" v="castle"/>
+    <tag k="name" v="พระตำหนักใหญ่"/>
+    <tag k="name:th" v="พระตำหนักใหญ่"/>
+  </way>
+  <way id="1420100403">
+    <nd ref="13049402845"/>
+    <nd ref="13049402846"/>
+    <nd ref="13049402847"/>
+    <nd ref="13049402848"/>
+    <nd ref="13049402845"/>
+    <tag k="landuse" v="grass"/>
+  </way>
+  <way id="1420100404">
+    <nd ref="13049402849"/>
+    <nd ref="13049402850"/>
+    <nd ref="13049402851"/>
+    <nd ref="13049402852"/>
+    <nd ref="13049402849"/>
+    <tag k="building" v="carport"/>
+  </way>
+  <way id="1420100405">
+    <nd ref="13049402853"/>
+    <nd ref="13049402854"/>
+    <nd ref="13049402855"/>
+    <nd ref="13049402856"/>
+    <nd ref="13049402857"/>
+    <nd ref="13049402858"/>
+    <nd ref="13049402859"/>
+    <nd ref="13049402860"/>
+    <nd ref="13049402861"/>
+    <nd ref="13049402862"/>
+    <nd ref="13049402863"/>
+    <nd ref="13049402864"/>
+    <nd ref="13049402865"/>
+    <nd ref="13049402866"/>
+    <nd ref="13049402867"/>
+    <nd ref="13049402868"/>
+    <nd ref="13049402853"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="1420100406">
+    <nd ref="13049402873"/>
+    <nd ref="13049402874"/>
+    <nd ref="13049402875"/>
+    <nd ref="13049402876"/>
+    <nd ref="13049402877"/>
+    <nd ref="13049402878"/>
+    <nd ref="13049402879"/>
+    <nd ref="13049402880"/>
+    <nd ref="13049402873"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="1449559742">
+    <nd ref="13295854172"/>
+    <nd ref="13295854173"/>
+    <nd ref="12098413764"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1460403063">
+    <nd ref="1685237092"/>
+    <nd ref="5933586917"/>
+    <nd ref="1685237091"/>
+    <nd ref="1685237090"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1460403064">
+    <nd ref="1697233658"/>
+    <nd ref="1685237092"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1460403065">
+    <nd ref="1697233646"/>
+    <nd ref="13233874488"/>
+    <nd ref="1697233611"/>
+    <nd ref="8609464418"/>
+    <tag k="highway" v="service"/>
+    <tag k="service" v="parking_aisle"/>
+  </way>
+  <way id="1460403066">
+    <nd ref="1697233646"/>
+    <nd ref="1697233666"/>
+    <nd ref="1697233662"/>
+    <nd ref="4694335220"/>
+    <nd ref="1697233613"/>
+    <nd ref="8146587835"/>
+    <tag k="highway" v="service"/>
+    <tag k="name" v="ถนนหลังวัดปทุมวนาราม"/>
+    <tag k="name:en" v="Lang Wat Pathum Wanaram Rd."/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="1474602478">
+    <nd ref="13527824422"/>
+    <nd ref="13527824421"/>
+    <nd ref="13527824419"/>
+    <tag k="crossing" v="uncontrolled"/>
+    <tag k="crossing:markings" v="yes"/>
+    <tag k="footway" v="crossing"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1474602479">
+    <nd ref="10970063014"/>
+    <nd ref="13527824420"/>
+    <nd ref="13527824423"/>
+    <tag k="crossing" v="uncontrolled"/>
+    <tag k="crossing:markings" v="yes"/>
+    <tag k="footway" v="crossing"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1474602480">
+    <nd ref="13527824423"/>
+    <nd ref="13527824422"/>
+    <tag k="footway" v="traffic_island"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1474602481">
+    <nd ref="13527824424"/>
+    <nd ref="13527824425"/>
+    <nd ref="13527824426"/>
+    <nd ref="13527824427"/>
+    <nd ref="13527824428"/>
+    <nd ref="13527824429"/>
+    <nd ref="13527824424"/>
+    <tag k="landuse" v="grass"/>
+  </way>
+  <way id="1479145641">
+    <nd ref="13569024283"/>
+    <nd ref="13569828985"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+    <tag k="tunnel" v="building_passage"/>
+  </way>
+  <way id="1479256445">
+    <nd ref="13569024282"/>
+    <nd ref="1700280210"/>
+    <nd ref="13569024284"/>
+    <nd ref="13569024283"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="1479256447">
+    <nd ref="13569828985"/>
+    <nd ref="13569024281"/>
+    <tag k="highway" v="footway"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <node id="280205443" lat="13.7461601" lon="100.5319562"/>
+  <node id="297713362" lat="13.7446756" lon="100.5319672"/>
+  <node id="358181254" lat="13.7440853" lon="100.5310825"/>
+  <node id="358181255" lat="13.7442139" lon="100.5311077"/>
+  <node id="358203633" lat="13.7441540" lon="100.5306046"/>
+  <node id="358205940" lat="13.7455294" lon="100.5307794"/>
+  <node id="358205941" lat="13.7457125" lon="100.5309411"/>
+  <node id="358205942" lat="13.7458792" lon="100.5311299"/>
+  <node id="358205943" lat="13.7460126" lon="100.5314046"/>
+  <node id="358218302" lat="13.7447068" lon="100.5317835"/>
+  <node id="1697106329" lat="13.7457181" lon="100.5309154"/>
+  <node id="1700279809" lat="13.7447643" lon="100.5319170"/>
+  <node id="1700280375" lat="13.7447898" lon="100.5317601"/>
+  <node id="1756129252" lat="13.7447145" lon="100.5322192"/>
+  <node id="1756129255" lat="13.7447410" lon="100.5320665"/>
+  <node id="6138497494" lat="13.7444001" lon="100.5306359"/>
+  <node id="6138497496" lat="13.7448090" lon="100.5306878"/>
+  <node id="6701993386" lat="13.7459420" lon="100.5319411"/>
+  <node id="7314493770" lat="13.7448653" lon="100.5306854"/>
+  <node id="7975317653" lat="13.7446685" lon="100.5320088"/>
+  <node id="9870591931" lat="13.7449327" lon="100.5307035"/>
+  <node id="9870591932" lat="13.7459695" lon="100.5316429"/>
+  <node id="9870593355" lat="13.7445701" lon="100.5320824"/>
+  <node id="9963653759" lat="13.7447120" lon="100.5317531"/>
+  <node id="10035511614" lat="13.7447541" lon="100.5319791"/>
+  <node id="10872902323" lat="13.7445995" lon="100.5320422"/>
+  <node id="10872902338" lat="13.7446422" lon="100.5317722"/>
+  <node id="10872902362" lat="13.7446378" lon="100.5317405"/>
+  <node id="10872902368" lat="13.7446325" lon="100.5317705"/>
+  <node id="10872902369" lat="13.7445866" lon="100.5320302"/>
+  <node id="10872902370" lat="13.7445850" lon="100.5320397"/>
+  <node id="10969954095" lat="13.7456586" lon="100.5308623"/>
+  <node id="10969954096" lat="13.7455901" lon="100.5308133"/>
+  <node id="10969954097" lat="13.7455256" lon="100.5307694"/>
+  <node id="10969954098" lat="13.7454314" lon="100.5307510"/>
+  <node id="10969954099" lat="13.7458262" lon="100.5310503"/>
+  <node id="10969954100" lat="13.7458759" lon="100.5311064"/>
+  <node id="10969954101" lat="13.7459364" lon="100.5312147"/>
+  <node id="10969954102" lat="13.7459929" lon="100.5313414"/>
+  <node id="10969954103" lat="13.7460247" lon="100.5313996"/>
+  <node id="10969954104" lat="13.7460237" lon="100.5314547"/>
+  <node id="10970063005" lat="13.7459732" lon="100.5316973"/>
+  <node id="10970063006" lat="13.7458960" lon="100.5321853"/>
+  <node id="11986732045" lat="13.7459655" lon="100.5317574"/>
+  <node id="11986732046" lat="13.7459215" lon="100.5320489"/>
+  <node id="11986732048" lat="13.7446610" lon="100.5317444"/>
+  <node id="11986732049" lat="13.7446794" lon="100.5317075"/>
+  <node id="11986732050" lat="13.7448211" lon="100.5306794"/>
+  <node id="11986732051" lat="13.7447710" lon="100.5317584"/>
+  <node id="11986732083" lat="13.7459080" lon="100.5321199"/>
+  <node id="11986732085" lat="13.7446868" lon="100.5319008"/>
+  <node id="11986732086" lat="13.7446239" lon="100.5318880"/>
+  <node id="11986732087" lat="13.7446018" lon="100.5320275"/>
+  <node id="11986732088" lat="13.7446634" lon="100.5320386"/>
+  <node id="11986732101" lat="13.7447431" lon="100.5320526"/>
+  <node id="13001243986" lat="13.7446970" lon="100.5315802"/>
+  <node id="268242740" lat="13.7469661" lon="100.5319769"/>
+  <node id="280205412" lat="13.7466640" lon="100.5320469"/>
+  <node id="358218619" lat="13.7472126" lon="100.5310122"/>
+  <node id="373097786" lat="13.7469814" lon="100.5321014"/>
+  <node id="373097789" lat="13.7467045" lon="100.5320522"/>
+  <node id="444431856" lat="13.7462509" lon="100.5313824"/>
+  <node id="444431858" lat="13.7468472" lon="100.5309713"/>
+  <node id="1697066012" lat="13.7466917" lon="100.5319843"/>
+  <node id="1697073504" lat="13.7467400" lon="100.5320585"/>
+  <node id="1697073509" lat="13.7465185" lon="100.5320207"/>
+  <node id="1697073511" lat="13.7469489" lon="100.5320956"/>
+  <node id="1697073512" lat="13.7470031" lon="100.5320945"/>
+  <node id="1697147568" lat="13.7468134" lon="100.5320715"/>
+  <node id="13049402886" lat="13.7465633" lon="100.5320288"/>
+  <node id="13049402887" lat="13.7462245" lon="100.5319678"/>
+  <node id="7313680496" lat="13.7310138" lon="100.5338130"/>
+  <node id="7698899762" lat="13.7309898" lon="100.5338159"/>
+  <node id="11676312723" lat="13.7313679" lon="100.5338600"/>
+  <node id="11676312742" lat="13.7323985" lon="100.5340097"/>
+  <node id="12030894712" lat="13.7320230" lon="100.5339552"/>
+  <node id="358186072" lat="13.7394794" lon="100.5348287"/>
+  <node id="358199243" lat="13.7394578" lon="100.5349710"/>
+  <node id="1698343298" lat="13.7339616" lon="100.5342368"/>
+  <node id="4526260031" lat="13.7387187" lon="100.5347150"/>
+  <node id="9363513817" lat="13.7381667" lon="100.5346329"/>
+  <node id="9363513818" lat="13.7381476" lon="100.5347740"/>
+  <node id="11676312708" lat="13.7381090" lon="100.5346243"/>
+  <node id="11676312716" lat="13.7381215" lon="100.5347675"/>
+  <node id="11676312720" lat="13.7381551" lon="100.5346312"/>
+  <node id="11676312724" lat="13.7348474" lon="100.5343655"/>
+  <node id="11676312725" lat="13.7375052" lon="100.5347531"/>
+  <node id="11676312739" lat="13.7332103" lon="100.5341277"/>
+  <node id="11676312743" lat="13.7331240" lon="100.5341151"/>
+  <node id="11676312744" lat="13.7348810" lon="100.5343701"/>
+  <node id="11676312745" lat="13.7356748" lon="100.5344862"/>
+  <node id="11676312746" lat="13.7365274" lon="100.5346105"/>
+  <node id="11676312747" lat="13.7373153" lon="100.5347254"/>
+  <node id="11676312764" lat="13.7355662" lon="100.5344703"/>
+  <node id="11676312771" lat="13.7381115" lon="100.5348500"/>
+  <node id="11676312772" lat="13.7381382" lon="100.5346287"/>
+  <node id="11676312782" lat="13.7394017" lon="100.5350366"/>
+  <node id="11676312789" lat="13.7394499" lon="100.5350422"/>
+  <node id="12032600377" lat="13.7349033" lon="100.5343733"/>
+  <node id="13449407930" lat="13.7382930" lon="100.5348763"/>
+  <node id="13449407931" lat="13.7383059" lon="100.5347972"/>
+  <node id="268268826" lat="13.7434761" lon="100.5353565"/>
+  <node id="268268829" lat="13.7452463" lon="100.5356437"/>
+  <node id="277941518" lat="13.7440642" lon="100.5355515"/>
+  <node id="277941519" lat="13.7419602" lon="100.5352089"/>
+  <node id="277942022" lat="13.7419412" lon="100.5353572"/>
+  <node id="277942023" lat="13.7440273" lon="100.5357044"/>
+  <node id="280205293" lat="13.7456509" lon="100.5355114"/>
+  <node id="280205414" lat="13.7458894" lon="100.5335488"/>
+  <node id="297713109" lat="13.7445408" lon="100.5327613"/>
+  <node id="297713237" lat="13.7458353" lon="100.5329877"/>
+  <node id="297713246" lat="13.7444302" lon="100.5334111"/>
+  <node id="297713248" lat="13.7457155" lon="100.5336430"/>
+  <node id="358217793" lat="13.7442950" lon="100.5342064"/>
+  <node id="358217810" lat="13.7455757" lon="100.5344038"/>
+  <node id="358217813" lat="13.7441718" lon="100.5349398"/>
+  <node id="358217824" lat="13.7454366" lon="100.5351682"/>
+  <node id="358217972" lat="13.7435238" lon="100.5354635"/>
+  <node id="358218106" lat="13.7442731" lon="100.5343350"/>
+  <node id="358218133" lat="13.7437388" lon="100.5342486"/>
+  <node id="358218162" lat="13.7438861" lon="100.5333846"/>
+  <node id="358218263" lat="13.7444193" lon="100.5334752"/>
+  <node id="373084151" lat="13.7453305" lon="100.5361878"/>
+  <node id="373103626" lat="13.7450623" lon="100.5343291"/>
+  <node id="373103636" lat="13.7449314" lon="100.5350758"/>
+  <node id="373103639" lat="13.7450119" lon="100.5346236"/>
+  <node id="373103641" lat="13.7442474" lon="100.5344819"/>
+  <node id="444431853" lat="13.7455309" lon="100.5356758"/>
+  <node id="480774964" lat="13.7458801" lon="100.5333143"/>
+  <node id="480774965" lat="13.7456915" lon="100.5332792"/>
+  <node id="480774966" lat="13.7453672" lon="100.5351255"/>
+  <node id="480774967" lat="13.7455558" lon="100.5351606"/>
+  <node id="1589665573" lat="13.7432534" lon="100.5355576"/>
+  <node id="1692209232" lat="13.7453265" lon="100.5357592"/>
+  <node id="1692209248" lat="13.7452963" lon="100.5359235"/>
+  <node id="1694509152" lat="13.7413534" lon="100.5351090"/>
+  <node id="1696969138" lat="13.7456078" lon="100.5354017"/>
+  <node id="1696969140" lat="13.7460687" lon="100.5339939"/>
+  <node id="1696969142" lat="13.7461281" lon="100.5339621"/>
+  <node id="1696969143" lat="13.7461868" lon="100.5356667"/>
+  <node id="1696969154" lat="13.7461796" lon="100.5339508"/>
+  <node id="1696969156" lat="13.7456771" lon="100.5354264"/>
+  <node id="1696969157" lat="13.7456625" lon="100.5350316"/>
+  <node id="1696969158" lat="13.7457866" lon="100.5350715"/>
+  <node id="1696969164" lat="13.7460031" lon="100.5343697"/>
+  <node id="1697017181" lat="13.7454324" lon="100.5348889"/>
+  <node id="1697017186" lat="13.7455102" lon="100.5352787"/>
+  <node id="1697017190" lat="13.7455724" lon="100.5349169"/>
+  <node id="1697017196" lat="13.7457304" lon="100.5340000"/>
+  <node id="1697017201" lat="13.7452036" lon="100.5356479"/>
+  <node id="1697017206" lat="13.7455931" lon="100.5339752"/>
+  <node id="1697017210" lat="13.7457387" lon="100.5331545"/>
+  <node id="1697017212" lat="13.7454707" lon="100.5346700"/>
+  <node id="1697017221" lat="13.7458722" lon="100.5331754"/>
+  <node id="1697017224" lat="13.7458070" lon="100.5335574"/>
+  <node id="1697017226" lat="13.7453726" lon="100.5350112"/>
+  <node id="1697017229" lat="13.7456708" lon="100.5335355"/>
+  <node id="1697030008" lat="13.7461252" lon="100.5335912"/>
+  <node id="1697030016" lat="13.7457133" lon="100.5342638"/>
+  <node id="1697030021" lat="13.7456472" lon="100.5351350"/>
+  <node id="1697030023" lat="13.7458693" lon="100.5333760"/>
+  <node id="1697030035" lat="13.7460401" lon="100.5335759"/>
+  <node id="1697030040" lat="13.7458437" lon="100.5339789"/>
+  <node id="1697030043" lat="13.7458025" lon="100.5342380"/>
+  <node id="1697030047" lat="13.7458944" lon="100.5339874"/>
+  <node id="1697030051" lat="13.7457172" lon="100.5350101"/>
+  <node id="1697065975" lat="13.7456765" lon="100.5338562"/>
+  <node id="1697066003" lat="13.7441993" lon="100.5343929"/>
+  <node id="1697066014" lat="13.7440490" lon="100.5353243"/>
+  <node id="1697066016" lat="13.7459175" lon="100.5333833"/>
+  <node id="1697066029" lat="13.7436133" lon="100.5352498"/>
+  <node id="1697066043" lat="13.7437636" lon="100.5343184"/>
+  <node id="1697233660" lat="13.7453646" lon="100.5355558"/>
+  <node id="1697479120" lat="13.7451200" lon="100.5359868"/>
+  <node id="1697479127" lat="13.7451231" lon="100.5356333"/>
+  <node id="1697479163" lat="13.7452025" lon="100.5356536"/>
+  <node id="1697479169" lat="13.7451761" lon="100.5360944"/>
+  <node id="1697479205" lat="13.7452166" lon="100.5356564"/>
+  <node id="1697479207" lat="13.7449785" lon="100.5359620"/>
+  <node id="1697479213" lat="13.7452011" lon="100.5356613"/>
+  <node id="1697479247" lat="13.7451393" lon="100.5362481"/>
+  <node id="1697479253" lat="13.7452496" lon="100.5356041"/>
+  <node id="1697479259" lat="13.7451192" lon="100.5356514"/>
+  <node id="1697479262" lat="13.7451609" lon="100.5356586"/>
+  <node id="1697479279" lat="13.7453814" lon="100.5362796"/>
+  <node id="1697479285" lat="13.7452836" lon="100.5355737"/>
+  <node id="1697479312" lat="13.7451773" lon="100.5356570"/>
+  <node id="1697479315" lat="13.7454073" lon="100.5361296"/>
+  <node id="1697479320" lat="13.7448083" lon="100.5387035"/>
+  <node id="1697479337" lat="13.7452781" lon="100.5361119"/>
+  <node id="1698367042" lat="13.7455263" lon="100.5330327"/>
+  <node id="1698367046" lat="13.7454942" lon="100.5332107"/>
+  <node id="1698367050" lat="13.7455615" lon="100.5335255"/>
+  <node id="1698367053" lat="13.7445598" lon="100.5331882"/>
+  <node id="1698367059" lat="13.7456010" lon="100.5333065"/>
+  <node id="1698367064" lat="13.7456463" lon="100.5330557"/>
+  <node id="1698367068" lat="13.7445858" lon="100.5330445"/>
+  <node id="1698367093" lat="13.7454419" lon="100.5335026"/>
+  <node id="1698367098" lat="13.7454724" lon="100.5333499"/>
+  <node id="1699259271" lat="13.7457963" lon="100.5342781"/>
+  <node id="1699259282" lat="13.7458396" lon="100.5343439"/>
+  <node id="1699259284" lat="13.7455877" lon="100.5343420"/>
+  <node id="1699259287" lat="13.7457301" lon="100.5344620"/>
+  <node id="1699259291" lat="13.7456598" lon="100.5349930"/>
+  <node id="1699259292" lat="13.7456468" lon="100.5349179"/>
+  <node id="1699259295" lat="13.7454752" lon="100.5349573"/>
+  <node id="1699259323" lat="13.7459073" lon="100.5343546"/>
+  <node id="1700279731" lat="13.7456427" lon="100.5354141"/>
+  <node id="1700279740" lat="13.7451187" lon="100.5350500"/>
+  <node id="1700279746" lat="13.7441348" lon="100.5354225"/>
+  <node id="1700279770" lat="13.7441036" lon="100.5353323"/>
+  <node id="1700279774" lat="13.7452468" lon="100.5351341"/>
+  <node id="1700279781" lat="13.7439660" lon="100.5340638"/>
+  <node id="1700279789" lat="13.7454236" lon="100.5345216"/>
+  <node id="1700279800" lat="13.7441679" lon="100.5352336"/>
+  <node id="1700279804" lat="13.7453962" lon="100.5335854"/>
+  <node id="1700279812" lat="13.7443443" lon="100.5334899"/>
+  <node id="1700279815" lat="13.7445869" lon="100.5351098"/>
+  <node id="1700279818" lat="13.7438673" lon="100.5342694"/>
+  <node id="1700279844" lat="13.7438853" lon="100.5335886"/>
+  <node id="1700279863" lat="13.7440370" lon="100.5336140"/>
+  <node id="1700279865" lat="13.7449805" lon="100.5345548"/>
+  <node id="1700279869" lat="13.7447220" lon="100.5322642"/>
+  <node id="1700279872" lat="13.7454383" lon="100.5331587"/>
+  <node id="1700279875" lat="13.7439208" lon="100.5334162"/>
+  <node id="1700279879" lat="13.7451756" lon="100.5350566"/>
+  <node id="1700279886" lat="13.7444639" lon="100.5327115"/>
+  <node id="1700279896" lat="13.7460901" lon="100.5323677"/>
+  <node id="1700279930" lat="13.7437774" lon="100.5342153"/>
+  <node id="1700279935" lat="13.7438947" lon="100.5335754"/>
+  <node id="1700279936" lat="13.7450048" lon="100.5344012"/>
+  <node id="1700279938" lat="13.7459564" lon="100.5331549"/>
+  <node id="1700279953" lat="13.7452356" lon="100.5356061"/>
+  <node id="1700279958" lat="13.7441277" lon="100.5351937"/>
+  <node id="1700279968" lat="13.7453854" lon="100.5354439"/>
+  <node id="1700279971" lat="13.7443206" lon="100.5344445"/>
+  <node id="1700279974" lat="13.7449798" lon="100.5350263"/>
+  <node id="1700279995" lat="13.7443449" lon="100.5342909"/>
+  <node id="1700280014" lat="13.7448892" lon="100.5330631"/>
+  <node id="1700280019" lat="13.7444824" lon="100.5356195"/>
+  <node id="1700280020" lat="13.7460242" lon="100.5327560"/>
+  <node id="1700280047" lat="13.7445853" lon="100.5350138"/>
+  <node id="1700280052" lat="13.7449133" lon="100.5329163"/>
+  <node id="1700280056" lat="13.7445272" lon="100.5354712"/>
+  <node id="1700280059" lat="13.7453312" lon="100.5350842"/>
+  <node id="1700280061" lat="13.7452642" lon="100.5354464"/>
+  <node id="1700280094" lat="13.7445559" lon="100.5353115"/>
+  <node id="1700280101" lat="13.7440557" lon="100.5342649"/>
+  <node id="1700280103" lat="13.7444919" lon="100.5325469"/>
+  <node id="1700280125" lat="13.7441881" lon="100.5351890"/>
+  <node id="1700280136" lat="13.7443181" lon="100.5336492"/>
+  <node id="1700280141" lat="13.7445583" lon="100.5352673"/>
+  <node id="1700280173" lat="13.7454624" lon="100.5330119"/>
+  <node id="1700280179" lat="13.7452728" lon="100.5354047"/>
+  <node id="1700280203" lat="13.7440824" lon="100.5341083"/>
+  <node id="1700280205" lat="13.7452200" lon="100.5344192"/>
+  <node id="1700280210" lat="13.7444853" lon="100.5330866"/>
+  <node id="1700280237" lat="13.7451917" lon="100.5348194"/>
+  <node id="1700280245" lat="13.7438143" lon="100.5340384"/>
+  <node id="1700280249" lat="13.7446839" lon="100.5324937"/>
+  <node id="1700280253" lat="13.7452148" lon="100.5348228"/>
+  <node id="1700280278" lat="13.7455097" lon="100.5329348"/>
+  <node id="1700280316" lat="13.7453014" lon="100.5352472"/>
+  <node id="1700280346" lat="13.7449106" lon="100.5350195"/>
+  <node id="1700280362" lat="13.7442363" lon="100.5348932"/>
+  <node id="1700280401" lat="13.7446291" lon="100.5322408"/>
+  <node id="1700280410" lat="13.7445564" lon="100.5350999"/>
+  <node id="1700280427" lat="13.7456946" lon="100.5350419"/>
+  <node id="1700280484" lat="13.7443806" lon="100.5352731"/>
+  <node id="1700280486" lat="13.7453703" lon="100.5348505"/>
+  <node id="1700280505" lat="13.7436868" lon="100.5347941"/>
+  <node id="1700280514" lat="13.7443476" lon="100.5354620"/>
+  <node id="1700280518" lat="13.7438551" lon="100.5343340"/>
+  <node id="1700280526" lat="13.7452542" lon="100.5344412"/>
+  <node id="1700280530" lat="13.7438045" lon="100.5340571"/>
+  <node id="1700280539" lat="13.7450811" lon="100.5343956"/>
+  <node id="1700280554" lat="13.7442989" lon="100.5345390"/>
+  <node id="1700280576" lat="13.7443623" lon="100.5338102"/>
+  <node id="1700280584" lat="13.7449665" lon="100.5346674"/>
+  <node id="1700280589" lat="13.7442152" lon="100.5350359"/>
+  <node id="1700280594" lat="13.7453819" lon="100.5344599"/>
+  <node id="1700280596" lat="13.7455299" lon="100.5336096"/>
+  <node id="1700280622" lat="13.7445293" lon="100.5352529"/>
+  <node id="1756129244" lat="13.7445826" lon="100.5325137"/>
+  <node id="1756129247" lat="13.7446271" lon="100.5327129"/>
+  <node id="1756129249" lat="13.7446319" lon="100.5322242"/>
+  <node id="1756129251" lat="13.7446509" lon="100.5325519"/>
+  <node id="1756930116" lat="13.7448635" lon="100.5330590"/>
+  <node id="1756930117" lat="13.7448842" lon="100.5329195"/>
+  <node id="1756930119" lat="13.7446107" lon="100.5328764"/>
+  <node id="1756930120" lat="13.7445899" lon="100.5330159"/>
+  <node id="1843014895" lat="13.7450487" lon="100.5377796"/>
+  <node id="1843014916" lat="13.7449047" lon="100.5386160"/>
+  <node id="1843015077" lat="13.7450758" lon="100.5376220"/>
+  <node id="2118593027" lat="13.7445421" lon="100.5352787"/>
+  <node id="2460247729" lat="13.7453473" lon="100.5353235"/>
+  <node id="2460247730" lat="13.7453670" lon="100.5350423"/>
+  <node id="2460247731" lat="13.7453813" lon="100.5350450"/>
+  <node id="2460247732" lat="13.7453897" lon="100.5351297"/>
+  <node id="2460247733" lat="13.7453954" lon="100.5351005"/>
+  <node id="2460247734" lat="13.7454047" lon="100.5350494"/>
+  <node id="2460247735" lat="13.7454142" lon="100.5351040"/>
+  <node id="2460247736" lat="13.7454188" lon="100.5350784"/>
+  <node id="2460247737" lat="13.7454233" lon="100.5350529"/>
+  <node id="2460247738" lat="13.7455045" lon="100.5344761"/>
+  <node id="2460247739" lat="13.7455170" lon="100.5351219"/>
+  <node id="2460247740" lat="13.7455215" lon="100.5350964"/>
+  <node id="2460247741" lat="13.7455260" lon="100.5350707"/>
+  <node id="2460247742" lat="13.7455313" lon="100.5351561"/>
+  <node id="2460247743" lat="13.7455366" lon="100.5351255"/>
+  <node id="2460247744" lat="13.7455452" lon="100.5350742"/>
+  <node id="2460247745" lat="13.7455478" lon="100.5342318"/>
+  <node id="2460247746" lat="13.7455585" lon="100.5341760"/>
+  <node id="2460247747" lat="13.7455612" lon="100.5351301"/>
+  <node id="2460247748" lat="13.7455636" lon="100.5342347"/>
+  <node id="2460247749" lat="13.7455657" lon="100.5351309"/>
+  <node id="2460247750" lat="13.7455676" lon="100.5351200"/>
+  <node id="2460247751" lat="13.7455680" lon="100.5342094"/>
+  <node id="2460247752" lat="13.7455701" lon="100.5350789"/>
+  <node id="2460247754" lat="13.7455735" lon="100.5341787"/>
+  <node id="2460247756" lat="13.7455746" lon="100.5350797"/>
+  <node id="2460247758" lat="13.7456679" lon="100.5342559"/>
+  <node id="2460247760" lat="13.7456726" lon="100.5342290"/>
+  <node id="2460247761" lat="13.7456731" lon="100.5333457"/>
+  <node id="2460247762" lat="13.7456776" lon="100.5333203"/>
+  <node id="2460247763" lat="13.7456782" lon="100.5341976"/>
+  <node id="2460247764" lat="13.7456796" lon="100.5333469"/>
+  <node id="2460247765" lat="13.7456821" lon="100.5332945"/>
+  <node id="2460247766" lat="13.7456886" lon="100.5332957"/>
+  <node id="2460247767" lat="13.7456961" lon="100.5342009"/>
+  <node id="2460247768" lat="13.7457029" lon="100.5333512"/>
+  <node id="2460247769" lat="13.7457122" lon="100.5333000"/>
+  <node id="2460247770" lat="13.7457151" lon="100.5332836"/>
+  <node id="2460247771" lat="13.7457217" lon="100.5333547"/>
+  <node id="2460247772" lat="13.7457263" lon="100.5333290"/>
+  <node id="2460247773" lat="13.7457308" lon="100.5333035"/>
+  <node id="2460247774" lat="13.7457871" lon="100.5343356"/>
+  <node id="2460247775" lat="13.7458190" lon="100.5333684"/>
+  <node id="2460247776" lat="13.7458227" lon="100.5333470"/>
+  <node id="2460247777" lat="13.7458270" lon="100.5333215"/>
+  <node id="2460247778" lat="13.7458378" lon="100.5333713"/>
+  <node id="2460247779" lat="13.7458466" lon="100.5333250"/>
+  <node id="2460247780" lat="13.7458494" lon="100.5333086"/>
+  <node id="2460270193" lat="13.7454071" lon="100.5350355"/>
+  <node id="2460270195" lat="13.7455458" lon="100.5342432"/>
+  <node id="2460270197" lat="13.7455474" lon="100.5350616"/>
+  <node id="2460270199" lat="13.7455605" lon="100.5341642"/>
+  <node id="2460270201" lat="13.7456984" lon="100.5341876"/>
+  <node id="2460270203" lat="13.7457002" lon="100.5333665"/>
+  <node id="2494606503" lat="13.7458344" lon="100.5367578"/>
+  <node id="2494606504" lat="13.7458421" lon="100.5364958"/>
+  <node id="2494606505" lat="13.7458459" lon="100.5369789"/>
+  <node id="2494606506" lat="13.7458477" lon="100.5368367"/>
+  <node id="2494606509" lat="13.7458815" lon="100.5364130"/>
+  <node id="2494606510" lat="13.7458844" lon="100.5362972"/>
+  <node id="2494606513" lat="13.7459931" lon="100.5369807"/>
+  <node id="2494606514" lat="13.7459948" lon="100.5368386"/>
+  <node id="2494606515" lat="13.7460213" lon="100.5364168"/>
+  <node id="2494606516" lat="13.7460242" lon="100.5363010"/>
+  <node id="2494606517" lat="13.7460146" lon="100.5367635"/>
+  <node id="2494606518" lat="13.7460224" lon="100.5365015"/>
+  <node id="2511013595" lat="13.7457281" lon="100.5368146"/>
+  <node id="2511013596" lat="13.7457323" lon="100.5367278"/>
+  <node id="2511013598" lat="13.7457699" lon="100.5368140"/>
+  <node id="2511013599" lat="13.7457730" lon="100.5367260"/>
+  <node id="2511013602" lat="13.7460665" lon="100.5364543"/>
+  <node id="2511013603" lat="13.7460735" lon="100.5362701"/>
+  <node id="2511013607" lat="13.7461420" lon="100.5364573"/>
+  <node id="2511013608" lat="13.7461490" lon="100.5362731"/>
+  <node id="2666981111" lat="13.7399721" lon="100.5350509"/>
+  <node id="2666981208" lat="13.7438326" lon="100.5333035"/>
+  <node id="2666981210" lat="13.7439221" lon="100.5327878"/>
+  <node id="3398165039" lat="13.7437943" lon="100.5362691"/>
+  <node id="3398165040" lat="13.7438151" lon="100.5361296"/>
+  <node id="3398165042" lat="13.7438386" lon="100.5360123"/>
+  <node id="3398165045" lat="13.7438646" lon="100.5358596"/>
+  <node id="3398165053" lat="13.7440679" lon="100.5363125"/>
+  <node id="3398165055" lat="13.7440888" lon="100.5361730"/>
+  <node id="3398165060" lat="13.7443140" lon="100.5360978"/>
+  <node id="3398165061" lat="13.7443399" lon="100.5359451"/>
+  <node id="3398165064" lat="13.7444890" lon="100.5364848"/>
+  <node id="3398165065" lat="13.7445102" lon="100.5363784"/>
+  <node id="3398165068" lat="13.7445235" lon="100.5360493"/>
+  <node id="3398165069" lat="13.7445493" lon="100.5359022"/>
+  <node id="3398165072" lat="13.7448274" lon="100.5365565"/>
+  <node id="3398165073" lat="13.7448487" lon="100.5364501"/>
+  <node id="3398165074" lat="13.7449046" lon="100.5361202"/>
+  <node id="3398165075" lat="13.7449304" lon="100.5359731"/>
+  <node id="3699928227" lat="13.7444031" lon="100.5341346"/>
+  <node id="3699928228" lat="13.7444821" lon="100.5339658"/>
+  <node id="3699928229" lat="13.7445013" lon="100.5334620"/>
+  <node id="3699928230" lat="13.7444789" lon="100.5336486"/>
+  <node id="3699928231" lat="13.7445317" lon="100.5337305"/>
+  <node id="3699928232" lat="13.7445448" lon="100.5339144"/>
+  <node id="3699928233" lat="13.7445904" lon="100.5339835"/>
+  <node id="3699928234" lat="13.7445123" lon="100.5336804"/>
+  <node id="3699928235" lat="13.7445964" lon="100.5339228"/>
+  <node id="3699928236" lat="13.7445972" lon="100.5337268"/>
+  <node id="3699928237" lat="13.7453798" lon="100.5337927"/>
+  <node id="3699928238" lat="13.7453841" lon="100.5340517"/>
+  <node id="3699928239" lat="13.7453865" lon="100.5338704"/>
+  <node id="3699928240" lat="13.7453878" lon="100.5341140"/>
+  <node id="3699928241" lat="13.7454088" lon="100.5342991"/>
+  <node id="3699928242" lat="13.7454192" lon="100.5341191"/>
+  <node id="3699928243" lat="13.7454410" lon="100.5340610"/>
+  <node id="3699928244" lat="13.7454700" lon="100.5338075"/>
+  <node id="3699928245" lat="13.7455011" lon="100.5338892"/>
+  <node id="3699928246" lat="13.7455165" lon="100.5336334"/>
+  <node id="4410699244" lat="13.7449545" lon="100.5378972"/>
+  <node id="4488521373" lat="13.7453409" lon="100.5343694"/>
+  <node id="5185444384" lat="13.7442655" lon="100.5347278"/>
+  <node id="5185444385" lat="13.7445478" lon="100.5347870"/>
+  <node id="5185444386" lat="13.7445773" lon="100.5345912"/>
+  <node id="5185444387" lat="13.7449437" lon="100.5348323"/>
+  <node id="5185444388" lat="13.7447589" lon="100.5347951"/>
+  <node id="5185444389" lat="13.7447274" lon="100.5349852"/>
+  <node id="5216447283" lat="13.7439498" lon="100.5363698"/>
+  <node id="5216447284" lat="13.7442797" lon="100.5364300"/>
+  <node id="5216447285" lat="13.7441871" lon="100.5369680"/>
+  <node id="5216447286" lat="13.7438571" lon="100.5369078"/>
+  <node id="5216447295" lat="13.7444409" lon="100.5364582"/>
+  <node id="5216447296" lat="13.7443483" lon="100.5369962"/>
+  <node id="5216447297" lat="13.7441897" lon="100.5369720"/>
+  <node id="5216447298" lat="13.7442859" lon="100.5364261"/>
+  <node id="5216447299" lat="13.7450885" lon="100.5360802"/>
+  <node id="5216447300" lat="13.7449959" lon="100.5366182"/>
+  <node id="5216447301" lat="13.7448372" lon="100.5365940"/>
+  <node id="5216447302" lat="13.7449334" lon="100.5360481"/>
+  <node id="5216447303" lat="13.7449778" lon="100.5373865"/>
+  <node id="5216447304" lat="13.7443742" lon="100.5372725"/>
+  <node id="5216447306" lat="13.7449437" lon="100.5375825"/>
+  <node id="5216447313" lat="13.7447869" lon="100.5384870"/>
+  <node id="5216447314" lat="13.7444609" lon="100.5364799"/>
+  <node id="5216447315" lat="13.7445213" lon="100.5361054"/>
+  <node id="5216450723" lat="13.7446191" lon="100.5373205"/>
+  <node id="5216450724" lat="13.7446457" lon="100.5365180"/>
+  <node id="5216450725" lat="13.7445991" lon="100.5370298"/>
+  <node id="5216450726" lat="13.7444054" lon="100.5369872"/>
+  <node id="5216450756" lat="13.7444000" lon="100.5370368"/>
+  <node id="5216450757" lat="13.7444536" lon="100.5383606"/>
+  <node id="5216450758" lat="13.7447443" lon="100.5365377"/>
+  <node id="5218427463" lat="13.7457327" lon="100.5363983"/>
+  <node id="5218427464" lat="13.7457348" lon="100.5362333"/>
+  <node id="5218427465" lat="13.7458163" lon="100.5362344"/>
+  <node id="5218427466" lat="13.7458142" lon="100.5363994"/>
+  <node id="5218427511" lat="13.7454842" lon="100.5357875"/>
+  <node id="5218427512" lat="13.7456131" lon="100.5358028"/>
+  <node id="5218427513" lat="13.7456061" lon="100.5358661"/>
+  <node id="5218427514" lat="13.7454771" lon="100.5358507"/>
+  <node id="5218427515" lat="13.7460652" lon="100.5360045"/>
+  <node id="5218427516" lat="13.7460687" lon="100.5359168"/>
+  <node id="5218427517" lat="13.7461498" lon="100.5359202"/>
+  <node id="5218427518" lat="13.7461462" lon="100.5360079"/>
+  <node id="5909883629" lat="13.7459284" lon="100.5359976"/>
+  <node id="5909883630" lat="13.7458359" lon="100.5359976"/>
+  <node id="5909883631" lat="13.7458359" lon="100.5361572"/>
+  <node id="5909883632" lat="13.7459284" lon="100.5361572"/>
+  <node id="5909883633" lat="13.7459294" lon="100.5359022"/>
+  <node id="5909883634" lat="13.7456884" lon="100.5358924"/>
+  <node id="5909883635" lat="13.7456804" lon="100.5361633"/>
+  <node id="5909883636" lat="13.7457542" lon="100.5361598"/>
+  <node id="5909883637" lat="13.7457602" lon="100.5359672"/>
+  <node id="5909883638" lat="13.7459269" lon="100.5359733"/>
+  <node id="5909883639" lat="13.7457457" lon="100.5358078"/>
+  <node id="5909883640" lat="13.7458746" lon="100.5358231"/>
+  <node id="5909883641" lat="13.7458676" lon="100.5358864"/>
+  <node id="5909883642" lat="13.7457386" lon="100.5358710"/>
+  <node id="5909883643" lat="13.7456488" lon="100.5359934"/>
+  <node id="5909883644" lat="13.7455563" lon="100.5359934"/>
+  <node id="5909883645" lat="13.7455563" lon="100.5361530"/>
+  <node id="5909883646" lat="13.7456488" lon="100.5361530"/>
+  <node id="5936117948" lat="13.7443882" lon="100.5357705"/>
+  <node id="5936117950" lat="13.7438803" lon="100.5356757"/>
+  <node id="5936117956" lat="13.7458231" lon="100.5346562"/>
+  <node id="5936118201" lat="13.7428028" lon="100.5353461"/>
+  <node id="5936137328" lat="13.7451554" lon="100.5371594"/>
+  <node id="5936230889" lat="13.7445896" lon="100.5375153"/>
+  <node id="5936230908" lat="13.7440488" lon="100.5369911"/>
+  <node id="5936230909" lat="13.7436674" lon="100.5369064"/>
+  <node id="5936230920" lat="13.7439615" lon="100.5363393"/>
+  <node id="5936230921" lat="13.7443046" lon="100.5364043"/>
+  <node id="5936230922" lat="13.7444978" lon="100.5362509"/>
+  <node id="5936230923" lat="13.7445556" lon="100.5362615"/>
+  <node id="5936230924" lat="13.7445855" lon="100.5362602"/>
+  <node id="5936230925" lat="13.7446103" lon="100.5362494"/>
+  <node id="5936230926" lat="13.7446402" lon="100.5361073"/>
+  <node id="5936230927" lat="13.7446233" lon="100.5360791"/>
+  <node id="5936230928" lat="13.7445842" lon="100.5360778"/>
+  <node id="5936230929" lat="13.7445478" lon="100.5360778"/>
+  <node id="5936230930" lat="13.7445465" lon="100.5377773"/>
+  <node id="5941680893" lat="13.7447241" lon="100.5366685"/>
+  <node id="5941968385" lat="13.7427819" lon="100.5354824"/>
+  <node id="5941994875" lat="13.7401173" lon="100.5349241"/>
+  <node id="6102277108" lat="13.7444692" lon="100.5364286"/>
+  <node id="6209816185" lat="13.7418472" lon="100.5351920"/>
+  <node id="6375832663" lat="13.7444985" lon="100.5330086"/>
+  <node id="6375832664" lat="13.7444677" lon="100.5331901"/>
+  <node id="6375832665" lat="13.7448618" lon="100.5330702"/>
+  <node id="6375832666" lat="13.7448707" lon="100.5330966"/>
+  <node id="6375832667" lat="13.7448745" lon="100.5330724"/>
+  <node id="6375832668" lat="13.7448833" lon="100.5330989"/>
+  <node id="6375832669" lat="13.7448873" lon="100.5330745"/>
+  <node id="6375832671" lat="13.7454047" lon="100.5335381"/>
+  <node id="6375832672" lat="13.7454316" lon="100.5331993"/>
+  <node id="6375832673" lat="13.7454344" lon="100.5333653"/>
+  <node id="6375832674" lat="13.7454377" lon="100.5333438"/>
+  <node id="6375832675" lat="13.7454616" lon="100.5332047"/>
+  <node id="6375832676" lat="13.7454671" lon="100.5331728"/>
+  <node id="6436020989" lat="13.7449201" lon="100.5385266"/>
+  <node id="6436020999" lat="13.7450054" lon="100.5380313"/>
+  <node id="6437928414" lat="13.7443832" lon="100.5358413"/>
+  <node id="6437928415" lat="13.7443779" lon="100.5358799"/>
+  <node id="7051240348" lat="13.7442423" lon="100.5345125"/>
+  <node id="7051240349" lat="13.7443147" lon="100.5345821"/>
+  <node id="7051240350" lat="13.7442678" lon="100.5348799"/>
+  <node id="7051240351" lat="13.7441760" lon="100.5349146"/>
+  <node id="7293288966" lat="13.7460466" lon="100.5340149"/>
+  <node id="7314493782" lat="13.7458276" lon="100.5330299"/>
+  <node id="7314493783" lat="13.7458174" lon="100.5330857"/>
+  <node id="7314496289" lat="13.7457712" lon="100.5333374"/>
+  <node id="7314496290" lat="13.7456105" lon="100.5342174"/>
+  <node id="7314496291" lat="13.7454520" lon="100.5350842"/>
+  <node id="7975317635" lat="13.7443181" lon="100.5340702"/>
+  <node id="7975317644" lat="13.7443916" lon="100.5336381"/>
+  <node id="7975317645" lat="13.7445866" lon="100.5324904"/>
+  <node id="8037369054" lat="13.7453528" lon="100.5335960"/>
+  <node id="8037369055" lat="13.7453884" lon="100.5335582"/>
+  <node id="8037369056" lat="13.7453571" lon="100.5335569"/>
+  <node id="8037369057" lat="13.7446448" lon="100.5334838"/>
+  <node id="8037369058" lat="13.7447055" lon="100.5334147"/>
+  <node id="8037369059" lat="13.7454026" lon="100.5333765"/>
+  <node id="8037369060" lat="13.7445623" lon="100.5332222"/>
+  <node id="8037369061" lat="13.7444983" lon="100.5333846"/>
+  <node id="8609458517" lat="13.7461680" lon="100.5371858"/>
+  <node id="8609458518" lat="13.7461400" lon="100.5374344"/>
+  <node id="8609458519" lat="13.7460816" lon="100.5375050"/>
+  <node id="8609458520" lat="13.7457139" lon="100.5374794"/>
+  <node id="8609458521" lat="13.7451224" lon="100.5373510"/>
+  <node id="8666394908" lat="13.7451957" lon="100.5361690"/>
+  <node id="8918460559" lat="13.7437732" lon="100.5362972"/>
+  <node id="9163944892" lat="13.7451812" lon="100.5335979"/>
+  <node id="9163944893" lat="13.7449311" lon="100.5335571"/>
+  <node id="9163944894" lat="13.7449030" lon="100.5336923"/>
+  <node id="9163944895" lat="13.7451614" lon="100.5337427"/>
+  <node id="9343065295" lat="13.7446744" lon="100.5366079"/>
+  <node id="9363513513" lat="13.7452635" lon="100.5356457"/>
+  <node id="9363513514" lat="13.7453520" lon="100.5356237"/>
+  <node id="9363513515" lat="13.7451237" lon="100.5357239"/>
+  <node id="9363513516" lat="13.7450960" lon="100.5358837"/>
+  <node id="9723431169" lat="13.7457669" lon="100.5372277"/>
+  <node id="9723431170" lat="13.7460009" lon="100.5373524"/>
+  <node id="9723431171" lat="13.7458122" lon="100.5373451"/>
+  <node id="9723431172" lat="13.7460827" lon="100.5366421"/>
+  <node id="9723431173" lat="13.7460567" lon="100.5371789"/>
+  <node id="9723431174" lat="13.7460444" lon="100.5362663"/>
+  <node id="9723431176" lat="13.7460878" lon="100.5365044"/>
+  <node id="9723431177" lat="13.7459460" lon="100.5362583"/>
+  <node id="9723431178" lat="13.7461375" lon="100.5366447"/>
+  <node id="9723431180" lat="13.7457731" lon="100.5371178"/>
+  <node id="9723431181" lat="13.7459491" lon="100.5361995"/>
+  <node id="9723431182" lat="13.7460517" lon="100.5372801"/>
+  <node id="9723431183" lat="13.7459482" lon="100.5362265"/>
+  <node id="9723431185" lat="13.7460437" lon="100.5364670"/>
+  <node id="9723431186" lat="13.7458000" lon="100.5364893"/>
+  <node id="9723431375" lat="13.7458937" lon="100.5373483"/>
+  <node id="9723431376" lat="13.7458858" lon="100.5374914"/>
+  <node id="9723452733" lat="13.7453370" lon="100.5373981"/>
+  <node id="9723452735" lat="13.7453808" lon="100.5369056"/>
+  <node id="9870593356" lat="13.7444964" lon="100.5325025"/>
+  <node id="9870593361" lat="13.7441922" lon="100.5344366"/>
+  <node id="9963653756" lat="13.7442945" lon="100.5345638"/>
+  <node id="9963653760" lat="13.7444632" lon="100.5327346"/>
+  <node id="9963653761" lat="13.7443626" lon="100.5334656"/>
+  <node id="9963653763" lat="13.7442640" lon="100.5340562"/>
+  <node id="9963653764" lat="13.7442532" lon="100.5344485"/>
+  <node id="9963653765" lat="13.7442189" lon="100.5343262"/>
+  <node id="9963653766" lat="13.7442921" lon="100.5347334"/>
+  <node id="10035511615" lat="13.7447136" lon="100.5322404"/>
+  <node id="10035511616" lat="13.7446546" lon="100.5325278"/>
+  <node id="10035526817" lat="13.7446210" lon="100.5327850"/>
+  <node id="10035526818" lat="13.7445885" lon="100.5330319"/>
+  <node id="10035526819" lat="13.7443652" lon="100.5342188"/>
+  <node id="10206797047" lat="13.7449075" lon="100.5329093"/>
+  <node id="10206797049" lat="13.7453538" lon="100.5335737"/>
+  <node id="10867019665" lat="13.7459425" lon="100.5336801"/>
+  <node id="10867019671" lat="13.7458091" lon="100.5338766"/>
+  <node id="10867019672" lat="13.7459096" lon="100.5338926"/>
+  <node id="10872902320" lat="13.7443604" lon="100.5334495"/>
+  <node id="10872902321" lat="13.7443286" lon="100.5334343"/>
+  <node id="10872902322" lat="13.7444794" lon="100.5327380"/>
+  <node id="10872902329" lat="13.7445183" lon="100.5325239"/>
+  <node id="10872902330" lat="13.7444945" lon="100.5325211"/>
+  <node id="10872902337" lat="13.7443529" lon="100.5333961"/>
+  <node id="10872902342" lat="13.7444428" lon="100.5327511"/>
+  <node id="10872902349" lat="13.7443133" lon="100.5340984"/>
+  <node id="10872902350" lat="13.7441080" lon="100.5340412"/>
+  <node id="10872902351" lat="13.7441614" lon="100.5336751"/>
+  <node id="10872902352" lat="13.7443809" lon="100.5337012"/>
+  <node id="10872902353" lat="13.7442271" lon="100.5336718"/>
+  <node id="10872902354" lat="13.7441385" lon="100.5337056"/>
+  <node id="10872902355" lat="13.7441718" lon="100.5340719"/>
+  <node id="10872902356" lat="13.7440940" lon="100.5340091"/>
+  <node id="10872902357" lat="13.7443288" lon="100.5336581"/>
+  <node id="10872902358" lat="13.7440610" lon="100.5336114"/>
+  <node id="10872902359" lat="13.7439849" lon="100.5340738"/>
+  <node id="10872902360" lat="13.7442527" lon="100.5341205"/>
+  <node id="10872902371" lat="13.7445559" lon="100.5332043"/>
+  <node id="10872902372" lat="13.7443235" lon="100.5336902"/>
+  <node id="10872902373" lat="13.7442580" lon="100.5340880"/>
+  <node id="10970063007" lat="13.7458514" lon="100.5324373"/>
+  <node id="10970063008" lat="13.7458024" lon="100.5327453"/>
+  <node id="10970063009" lat="13.7457547" lon="100.5329728"/>
+  <node id="10970063010" lat="13.7456220" lon="100.5336262"/>
+  <node id="10970063011" lat="13.7454907" lon="100.5343914"/>
+  <node id="10970063012" lat="13.7453440" lon="100.5351516"/>
+  <node id="10970063013" lat="13.7452984" lon="100.5354269"/>
+  <node id="10970063014" lat="13.7451923" lon="100.5356762"/>
+  <node id="10970063015" lat="13.7450769" lon="100.5356509"/>
+  <node id="10970063016" lat="13.7447299" lon="100.5355802"/>
+  <node id="10970063017" lat="13.7445010" lon="100.5355372"/>
+  <node id="10970063018" lat="13.7440781" lon="100.5354679"/>
+  <node id="10970063019" lat="13.7456869" lon="100.5332875"/>
+  <node id="10970063020" lat="13.7453740" lon="100.5349961"/>
+  <node id="10970063021" lat="13.7451594" lon="100.5356705"/>
+  <node id="11083758431" lat="13.7458533" lon="100.5364059"/>
+  <node id="11083758432" lat="13.7458637" lon="100.5362530"/>
+  <node id="11362417904" lat="13.7443869" lon="100.5352608"/>
+  <node id="11362417905" lat="13.7441590" lon="100.5352201"/>
+  <node id="11362417906" lat="13.7441206" lon="100.5354469"/>
+  <node id="11362417907" lat="13.7443496" lon="100.5354855"/>
+  <node id="11362417908" lat="13.7445172" lon="100.5352980"/>
+  <node id="11362417909" lat="13.7444296" lon="100.5354773"/>
+  <node id="11362417910" lat="13.7444596" lon="100.5354728"/>
+  <node id="11362417911" lat="13.7444822" lon="100.5354636"/>
+  <node id="11362417912" lat="13.7444931" lon="100.5354423"/>
+  <node id="11362417913" lat="13.7445070" lon="100.5353589"/>
+  <node id="11676312726" lat="13.7450223" lon="100.5359544"/>
+  <node id="11676312727" lat="13.7450450" lon="100.5359570"/>
+  <node id="11676312728" lat="13.7451012" lon="100.5360148"/>
+  <node id="11676312729" lat="13.7451448" lon="100.5360813"/>
+  <node id="11676312730" lat="13.7449805" lon="100.5359477"/>
+  <node id="11676312748" lat="13.7399715" lon="100.5351034"/>
+  <node id="11676312759" lat="13.7418559" lon="100.5351307"/>
+  <node id="11676312760" lat="13.7419701" lon="100.5351481"/>
+  <node id="11676312761" lat="13.7428149" lon="100.5352762"/>
+  <node id="11676312762" lat="13.7435369" lon="100.5353858"/>
+  <node id="11676312788" lat="13.7418189" lon="100.5353958"/>
+  <node id="11676312790" lat="13.7432459" lon="100.5356240"/>
+  <node id="11676312791" lat="13.7438729" lon="100.5357383"/>
+  <node id="11676312792" lat="13.7418696" lon="100.5351328"/>
+  <node id="11676312793" lat="13.7418269" lon="100.5353971"/>
+  <node id="11676312794" lat="13.7418597" lon="100.5351939"/>
+  <node id="11676312795" lat="13.7418300" lon="100.5353429"/>
+  <node id="11676312796" lat="13.7434438" lon="100.5353717"/>
+  <node id="11676312797" lat="13.7433954" lon="100.5356512"/>
+  <node id="11676312798" lat="13.7434306" lon="100.5354483"/>
+  <node id="11676312799" lat="13.7434058" lon="100.5355823"/>
+  <node id="11873201042" lat="13.7457103" lon="100.5336713"/>
+  <node id="11873201048" lat="13.7459387" lon="100.5337049"/>
+  <node id="11986731985" lat="13.7445206" lon="100.5336542"/>
+  <node id="11986731986" lat="13.7444681" lon="100.5337495"/>
+  <node id="11986731987" lat="13.7444397" lon="100.5338899"/>
+  <node id="11986731988" lat="13.7444749" lon="100.5339812"/>
+  <node id="11986731989" lat="13.7440508" lon="100.5342880"/>
+  <node id="11986731990" lat="13.7440869" lon="100.5340916"/>
+  <node id="11986732030" lat="13.7445939" lon="100.5328275"/>
+  <node id="11986732031" lat="13.7444219" lon="100.5338507"/>
+  <node id="11986732032" lat="13.7443522" lon="100.5342165"/>
+  <node id="11986732035" lat="13.7445981" lon="100.5327819"/>
+  <node id="11986732036" lat="13.7445607" lon="100.5330247"/>
+  <node id="11986732037" lat="13.7445312" lon="100.5332004"/>
+  <node id="11986732038" lat="13.7444954" lon="100.5333836"/>
+  <node id="11986732039" lat="13.7442335" lon="100.5343286"/>
+  <node id="11986732040" lat="13.7443648" lon="100.5335107"/>
+  <node id="11986732041" lat="13.7443350" lon="100.5336924"/>
+  <node id="11986732042" lat="13.7442697" lon="100.5340902"/>
+  <node id="11986732052" lat="13.7443108" lon="100.5344334"/>
+  <node id="11986732053" lat="13.7443142" lon="100.5344559"/>
+  <node id="11986732054" lat="13.7443396" lon="100.5344654"/>
+  <node id="11986732055" lat="13.7450194" lon="100.5345795"/>
+  <node id="11986732056" lat="13.7454862" lon="100.5343165"/>
+  <node id="11986732057" lat="13.7454533" lon="100.5344985"/>
+  <node id="11986732058" lat="13.7454413" lon="100.5344956"/>
+  <node id="11986732059" lat="13.7453986" lon="100.5344286"/>
+  <node id="11986732060" lat="13.7450824" lon="100.5343703"/>
+  <node id="11986732061" lat="13.7450449" lon="100.5346210"/>
+  <node id="11986732062" lat="13.7449775" lon="100.5346016"/>
+  <node id="11986732063" lat="13.7442531" lon="100.5341995"/>
+  <node id="11986732064" lat="13.7454731" lon="100.5343888"/>
+  <node id="11986732065" lat="13.7449794" lon="100.5345728"/>
+  <node id="11986732066" lat="13.7450139" lon="100.5346121"/>
+  <node id="11986732081" lat="13.7458846" lon="100.5322471"/>
+  <node id="11986732089" lat="13.7444862" lon="100.5327005"/>
+  <node id="11986732091" lat="13.7457652" lon="100.5329226"/>
+  <node id="11986732092" lat="13.7445489" lon="100.5327125"/>
+  <node id="11986732093" lat="13.7446261" lon="100.5327269"/>
+  <node id="11986732094" lat="13.7455196" lon="100.5328804"/>
+  <node id="11986732095" lat="13.7457388" lon="100.5330465"/>
+  <node id="11986732096" lat="13.7445890" lon="100.5328567"/>
+  <node id="11986732097" lat="13.7444605" lon="100.5328363"/>
+  <node id="11986732098" lat="13.7445262" lon="100.5328468"/>
+  <node id="11986732099" lat="13.7446125" lon="100.5328606"/>
+  <node id="11986732100" lat="13.7454965" lon="100.5330065"/>
+  <node id="11986732102" lat="13.7443125" lon="100.5344450"/>
+  <node id="12094002578" lat="13.7459991" lon="100.5329039"/>
+  <node id="12299671291" lat="13.7447138" lon="100.5342740"/>
+  <node id="12695904080" lat="13.7452013" lon="100.5369046"/>
+  <node id="12695904081" lat="13.7456373" lon="100.5368962"/>
+  <node id="12695904082" lat="13.7456493" lon="100.5363254"/>
+  <node id="12695904083" lat="13.7455690" lon="100.5362247"/>
+  <node id="12695904084" lat="13.7454484" lon="100.5362440"/>
+  <node id="12695904085" lat="13.7454216" lon="100.5363460"/>
+  <node id="12695904086" lat="13.7456096" lon="100.5374569"/>
+  <node id="12695918099" lat="13.7452699" lon="100.5369065"/>
+  <node id="13049402871" lat="13.7454708" lon="100.5356657"/>
+  <node id="13527824417" lat="13.7451547" lon="100.5361526"/>
+  <node id="13527824418" lat="13.7450706" lon="100.5366725"/>
+  <node id="13527824419" lat="13.7451278" lon="100.5360554"/>
+  <node id="13527824420" lat="13.7451824" lon="100.5357341"/>
+  <node id="13527824421" lat="13.7451550" lon="100.5358954"/>
+  <node id="13527824422" lat="13.7451599" lon="100.5358719"/>
+  <node id="13527824423" lat="13.7451676" lon="100.5358213"/>
+  <node id="13527824424" lat="13.7441502" lon="100.5356874"/>
+  <node id="13527824425" lat="13.7441351" lon="100.5356674"/>
+  <node id="13527824426" lat="13.7441500" lon="100.5356337"/>
+  <node id="13527824427" lat="13.7447318" lon="100.5357332"/>
+  <node id="13527824428" lat="13.7451274" lon="100.5358054"/>
+  <node id="13527824429" lat="13.7451302" lon="100.5358660"/>
+  <node id="13569024281" lat="13.7439510" lon="100.5330007"/>
+  <node id="13569024282" lat="13.7445487" lon="100.5330961"/>
+  <node id="13569024283" lat="13.7443832" lon="100.5330710"/>
+  <node id="13569024284" lat="13.7444146" lon="100.5330752"/>
+  <node id="13569828985" lat="13.7440165" lon="100.5330109"/>
+  <node id="13672341326" lat="13.7454370" lon="100.5331667"/>
+  <node id="359242801" lat="13.7446402" lon="100.5401936"/>
+  <node id="1697479160" lat="13.7444547" lon="100.5409849"/>
+  <node id="1697479170" lat="13.7445593" lon="100.5400912"/>
+  <node id="1697479172" lat="13.7445630" lon="100.5403706"/>
+  <node id="1697479228" lat="13.7446416" lon="100.5396325"/>
+  <node id="1697479239" lat="13.7443118" lon="100.5418272"/>
+  <node id="1697479277" lat="13.7443995" lon="100.5412979"/>
+  <node id="1697495932" lat="13.7444772" lon="100.5408572"/>
+  <node id="1726159692" lat="13.7442572" lon="100.5421443"/>
+  <node id="2999801337" lat="13.7445679" lon="100.5397465"/>
+  <node id="3246252674" lat="13.7446484" lon="100.5401462"/>
+  <node id="4410699242" lat="13.7448731" lon="100.5388048"/>
+  <node id="5936230903" lat="13.7446646" lon="100.5391894"/>
+  <node id="6497135326" lat="13.7446859" lon="100.5399365"/>
+  <node id="9363513681" lat="13.7445391" lon="100.5399125"/>
+  <node id="12352011073" lat="13.7445221" lon="100.5400143"/>
+  <node id="13626551443" lat="13.7442126" lon="100.5423930"/>
+  <node id="280205295" lat="13.7478158" lon="100.5358097"/>
+  <node id="280205297" lat="13.7474284" lon="100.5342573"/>
+  <node id="280205405" lat="13.7477747" lon="100.5358710"/>
+  <node id="280205406" lat="13.7479935" lon="100.5346842"/>
+  <node id="280205407" lat="13.7466635" lon="100.5341153"/>
+  <node id="280205444" lat="13.7463934" lon="100.5336395"/>
+  <node id="280757441" lat="13.7479160" lon="100.5346597"/>
+  <node id="280757442" lat="13.7477593" lon="100.5344965"/>
+  <node id="358218687" lat="13.7476677" lon="100.5360458"/>
+  <node id="358218688" lat="13.7486820" lon="100.5343345"/>
+  <node id="358218689" lat="13.7467335" lon="100.5339444"/>
+  <node id="373097787" lat="13.7467146" lon="100.5336919"/>
+  <node id="373097788" lat="13.7464377" lon="100.5336426"/>
+  <node id="1359716959" lat="13.7491912" lon="100.5352094"/>
+  <node id="1359716961" lat="13.7493898" lon="100.5358509"/>
+  <node id="1359716963" lat="13.7487490" lon="100.5362373"/>
+  <node id="1359716975" lat="13.7488193" lon="100.5347165"/>
+  <node id="1685237086" lat="13.7466762" lon="100.5340541"/>
+  <node id="1685237087" lat="13.7469459" lon="100.5341017"/>
+  <node id="1685237089" lat="13.7478324" lon="100.5360383"/>
+  <node id="1685237090" lat="13.7478445" lon="100.5379336"/>
+  <node id="1685237091" lat="13.7478918" lon="100.5367778"/>
+  <node id="1685237092" lat="13.7478948" lon="100.5365263"/>
+  <node id="1685237095" lat="13.7478851" lon="100.5342843"/>
+  <node id="1685237096" lat="13.7480773" lon="100.5345221"/>
+  <node id="1696969145" lat="13.7475298" lon="100.5342832"/>
+  <node id="1696969146" lat="13.7476848" lon="100.5344022"/>
+  <node id="1696969148" lat="13.7478449" lon="100.5346133"/>
+  <node id="1696969150" lat="13.7462456" lon="100.5336129"/>
+  <node id="1696969151" lat="13.7476432" lon="100.5359243"/>
+  <node id="1696969152" lat="13.7463419" lon="100.5340029"/>
+  <node id="1696969153" lat="13.7476137" lon="100.5343228"/>
+  <node id="1696969155" lat="13.7462975" lon="100.5339733"/>
+  <node id="1696969162" lat="13.7462411" lon="100.5339539"/>
+  <node id="1696969163" lat="13.7477082" lon="100.5359188"/>
+  <node id="1696969165" lat="13.7463910" lon="100.5340624"/>
+  <node id="1696969166" lat="13.7464936" lon="100.5340823"/>
+  <node id="1697065982" lat="13.7464376" lon="100.5339251"/>
+  <node id="1697065985" lat="13.7463511" lon="100.5337458"/>
+  <node id="1697065988" lat="13.7462001" lon="100.5339353"/>
+  <node id="1697066006" lat="13.7467341" lon="100.5337138"/>
+  <node id="1697066008" lat="13.7465275" lon="100.5340230"/>
+  <node id="1697066010" lat="13.7464362" lon="100.5337741"/>
+  <node id="1697066017" lat="13.7464597" lon="100.5336465"/>
+  <node id="1697066018" lat="13.7462617" lon="100.5339801"/>
+  <node id="1697066034" lat="13.7463699" lon="100.5336353"/>
+  <node id="1697066039" lat="13.7462748" lon="100.5339010"/>
+  <node id="1697066041" lat="13.7465562" lon="100.5337950"/>
+  <node id="1697066044" lat="13.7463964" lon="100.5337387"/>
+  <node id="1697147543" lat="13.7466265" lon="100.5338084"/>
+  <node id="1697233610" lat="13.7478556" lon="100.5358798"/>
+  <node id="1697233611" lat="13.7473664" lon="100.5364719"/>
+  <node id="1697233612" lat="13.7477411" lon="100.5360219"/>
+  <node id="1697233613" lat="13.7477255" lon="100.5361572"/>
+  <node id="1697233614" lat="13.7478223" lon="100.5366003"/>
+  <node id="1697233616" lat="13.7469039" lon="100.5357936"/>
+  <node id="1697233622" lat="13.7473809" lon="100.5359533"/>
+  <node id="1697233623" lat="13.7479034" lon="100.5352525"/>
+  <node id="1697233625" lat="13.7473944" lon="100.5358803"/>
+  <node id="1697233626" lat="13.7463901" lon="100.5357027"/>
+  <node id="1697233629" lat="13.7479683" lon="100.5352629"/>
+  <node id="1697233630" lat="13.7463194" lon="100.5357445"/>
+  <node id="1697233646" lat="13.7478218" lon="100.5365166"/>
+  <node id="1697233649" lat="13.7468873" lon="100.5358572"/>
+  <node id="1697233653" lat="13.7478934" lon="100.5343203"/>
+  <node id="1697233656" lat="13.7478180" lon="100.5361700"/>
+  <node id="1697233658" lat="13.7478833" lon="100.5364307"/>
+  <node id="1697233662" lat="13.7477500" lon="100.5362733"/>
+  <node id="1697233666" lat="13.7478083" lon="100.5364528"/>
+  <node id="1700165374" lat="13.7468934" lon="100.5341580"/>
+  <node id="1714885684" lat="13.7464634" lon="100.5332273"/>
+  <node id="1714885687" lat="13.7465063" lon="100.5332335"/>
+  <node id="1714885688" lat="13.7465334" lon="100.5328154"/>
+  <node id="1714885690" lat="13.7465759" lon="100.5328187"/>
+  <node id="1714885691" lat="13.7465945" lon="100.5324561"/>
+  <node id="1714885692" lat="13.7466362" lon="100.5324594"/>
+  <node id="1715021972" lat="13.7482020" lon="100.5343302"/>
+  <node id="1843014969" lat="13.7477531" lon="100.5381463"/>
+  <node id="1843015030" lat="13.7477581" lon="100.5379684"/>
+  <node id="2494606522" lat="13.7466074" lon="100.5372693"/>
+  <node id="2494606523" lat="13.7466220" lon="100.5368291"/>
+  <node id="2494606524" lat="13.7467018" lon="100.5367934"/>
+  <node id="2494606525" lat="13.7467048" lon="100.5364693"/>
+  <node id="2494606527" lat="13.7468226" lon="100.5372769"/>
+  <node id="2494606528" lat="13.7468372" lon="100.5368367"/>
+  <node id="2494606529" lat="13.7468968" lon="100.5367953"/>
+  <node id="2494606530" lat="13.7468998" lon="100.5364712"/>
+  <node id="4332679735" lat="13.7493055" lon="100.5356190"/>
+  <node id="4694328120" lat="13.7474322" lon="100.5327941"/>
+  <node id="4694328121" lat="13.7473723" lon="100.5331830"/>
+  <node id="4694328122" lat="13.7474985" lon="100.5332037"/>
+  <node id="4694328123" lat="13.7475584" lon="100.5328147"/>
+  <node id="4694328124" lat="13.7471751" lon="100.5326380"/>
+  <node id="4694328125" lat="13.7471152" lon="100.5330323"/>
+  <node id="4694328126" lat="13.7472392" lon="100.5330522"/>
+  <node id="4694328127" lat="13.7472991" lon="100.5326580"/>
+  <node id="4694328132" lat="13.7490593" lon="100.5350572"/>
+  <node id="4694328133" lat="13.7491825" lon="100.5350660"/>
+  <node id="4694328135" lat="13.7495332" lon="100.5363714"/>
+  <node id="4694328151" lat="13.7473191" lon="100.5365798"/>
+  <node id="4694328152" lat="13.7472875" lon="100.5372690"/>
+  <node id="4694328153" lat="13.7474228" lon="100.5372755"/>
+  <node id="4694328154" lat="13.7474517" lon="100.5365863"/>
+  <node id="4694335220" lat="13.7477267" lon="100.5361922"/>
+  <node id="5185440682" lat="13.7480845" lon="100.5360151"/>
+  <node id="5185440683" lat="13.7479353" lon="100.5359981"/>
+  <node id="5185440684" lat="13.7481471" lon="100.5347008"/>
+  <node id="5185440685" lat="13.7482282" lon="100.5347198"/>
+  <node id="5185440686" lat="13.7482650" lon="100.5345415"/>
+  <node id="5185440687" lat="13.7483129" lon="100.5345358"/>
+  <node id="5185440688" lat="13.7483479" lon="100.5344163"/>
+  <node id="5185440689" lat="13.7486095" lon="100.5344542"/>
+  <node id="5185440690" lat="13.7485948" lon="100.5345870"/>
+  <node id="5185440691" lat="13.7486482" lon="100.5345946"/>
+  <node id="5185440692" lat="13.7486169" lon="100.5347918"/>
+  <node id="5185440693" lat="13.7487090" lon="100.5348070"/>
+  <node id="5185440694" lat="13.7487035" lon="100.5348411"/>
+  <node id="5185440695" lat="13.7487735" lon="100.5348601"/>
+  <node id="5185440696" lat="13.7491291" lon="100.5353836"/>
+  <node id="5185440697" lat="13.7491235" lon="100.5354139"/>
+  <node id="5185440698" lat="13.7491512" lon="100.5354253"/>
+  <node id="5185440699" lat="13.7491051" lon="100.5356529"/>
+  <node id="5185440700" lat="13.7490535" lon="100.5356529"/>
+  <node id="5185440701" lat="13.7490314" lon="100.5357629"/>
+  <node id="5185440702" lat="13.7490720" lon="100.5357705"/>
+  <node id="5185440703" lat="13.7490443" lon="100.5359089"/>
+  <node id="5185440704" lat="13.7490075" lon="100.5359032"/>
+  <node id="5185440705" lat="13.7490001" lon="100.5359545"/>
+  <node id="5185440706" lat="13.7488067" lon="100.5360815"/>
+  <node id="5185440707" lat="13.7487551" lon="100.5360986"/>
+  <node id="5185440708" lat="13.7486169" lon="100.5360758"/>
+  <node id="5185440709" lat="13.7486114" lon="100.5361195"/>
+  <node id="5185440710" lat="13.7483166" lon="100.5360701"/>
+  <node id="5185440711" lat="13.7482816" lon="100.5360284"/>
+  <node id="5185440712" lat="13.7482835" lon="100.5359867"/>
+  <node id="5185440713" lat="13.7483443" lon="100.5359526"/>
+  <node id="5185440714" lat="13.7485009" lon="100.5359943"/>
+  <node id="5185440715" lat="13.7485488" lon="100.5359715"/>
+  <node id="5185440716" lat="13.7485524" lon="100.5359488"/>
+  <node id="5185440717" lat="13.7487717" lon="100.5359943"/>
+  <node id="5185440718" lat="13.7488656" lon="100.5359279"/>
+  <node id="5185440719" lat="13.7488951" lon="100.5357363"/>
+  <node id="5185440720" lat="13.7487993" lon="100.5355922"/>
+  <node id="5185444363" lat="13.7487680" lon="100.5356150"/>
+  <node id="5185444364" lat="13.7485230" lon="100.5352508"/>
+  <node id="5185444365" lat="13.7485561" lon="100.5352224"/>
+  <node id="5185444366" lat="13.7484530" lon="100.5350763"/>
+  <node id="5185444367" lat="13.7482393" lon="100.5350384"/>
+  <node id="5185444368" lat="13.7480677" lon="100.5351870"/>
+  <node id="5185444369" lat="13.7482117" lon="100.5352125"/>
+  <node id="5185444372" lat="13.7481823" lon="100.5353980"/>
+  <node id="5185444373" lat="13.7480376" lon="100.5353716"/>
+  <node id="5185444376" lat="13.7480112" lon="100.5355302"/>
+  <node id="5185444377" lat="13.7481551" lon="100.5355557"/>
+  <node id="5185444378" lat="13.7481831" lon="100.5355849"/>
+  <node id="5185444379" lat="13.7481630" lon="100.5357125"/>
+  <node id="5185444380" lat="13.7481257" lon="100.5357412"/>
+  <node id="5185444381" lat="13.7479810" lon="100.5357148"/>
+  <node id="5185444382" lat="13.7479554" lon="100.5356806"/>
+  <node id="5185444383" lat="13.7479786" lon="100.5355498"/>
+  <node id="5218427119" lat="13.7476642" lon="100.5364008"/>
+  <node id="5218427120" lat="13.7474033" lon="100.5363626"/>
+  <node id="5218427421" lat="13.7474402" lon="100.5360951"/>
+  <node id="5218427422" lat="13.7476391" lon="100.5361242"/>
+  <node id="5218427423" lat="13.7476276" lon="100.5362075"/>
+  <node id="5218427424" lat="13.7475904" lon="100.5362020"/>
+  <node id="5218427425" lat="13.7475782" lon="100.5362907"/>
+  <node id="5218427426" lat="13.7476774" lon="100.5363052"/>
+  <node id="5218427439" lat="13.7462402" lon="100.5367561"/>
+  <node id="5218427440" lat="13.7462437" lon="100.5366684"/>
+  <node id="5218427441" lat="13.7463247" lon="100.5366718"/>
+  <node id="5218427442" lat="13.7463212" lon="100.5367596"/>
+  <node id="5218427443" lat="13.7462407" lon="100.5366599"/>
+  <node id="5218427444" lat="13.7462442" lon="100.5365722"/>
+  <node id="5218427445" lat="13.7463252" lon="100.5365757"/>
+  <node id="5218427446" lat="13.7463217" lon="100.5366634"/>
+  <node id="5218427451" lat="13.7462284" lon="100.5368592"/>
+  <node id="5218427452" lat="13.7462320" lon="100.5367715"/>
+  <node id="5218427453" lat="13.7463130" lon="100.5367751"/>
+  <node id="5218427454" lat="13.7463094" lon="100.5368628"/>
+  <node id="5218427455" lat="13.7462394" lon="100.5364207"/>
+  <node id="5218427456" lat="13.7462430" lon="100.5363330"/>
+  <node id="5218427457" lat="13.7463240" lon="100.5363364"/>
+  <node id="5218427458" lat="13.7463204" lon="100.5364241"/>
+  <node id="5218427459" lat="13.7462424" lon="100.5363108"/>
+  <node id="5218427460" lat="13.7462459" lon="100.5362231"/>
+  <node id="5218427461" lat="13.7463269" lon="100.5362265"/>
+  <node id="5218427462" lat="13.7463234" lon="100.5363142"/>
+  <node id="5218427499" lat="13.7469049" lon="100.5365340"/>
+  <node id="5218427500" lat="13.7469085" lon="100.5364462"/>
+  <node id="5218427501" lat="13.7469895" lon="100.5364497"/>
+  <node id="5218427502" lat="13.7469860" lon="100.5365374"/>
+  <node id="5218427503" lat="13.7466141" lon="100.5361278"/>
+  <node id="5218427504" lat="13.7467259" lon="100.5361483"/>
+  <node id="5218427505" lat="13.7467008" lon="100.5362936"/>
+  <node id="5218427506" lat="13.7465890" lon="100.5362732"/>
+  <node id="5218427507" lat="13.7465152" lon="100.5360984"/>
+  <node id="5218427508" lat="13.7465354" lon="100.5359728"/>
+  <node id="5218427509" lat="13.7467480" lon="100.5360090"/>
+  <node id="5218427510" lat="13.7467279" lon="100.5361346"/>
+  <node id="5218427519" lat="13.7462742" lon="100.5360490"/>
+  <node id="5218427520" lat="13.7464032" lon="100.5360644"/>
+  <node id="5218427621" lat="13.7463962" lon="100.5361276"/>
+  <node id="5218427622" lat="13.7462672" lon="100.5361123"/>
+  <node id="5218427623" lat="13.7462093" lon="100.5370363"/>
+  <node id="5218427624" lat="13.7462128" lon="100.5369486"/>
+  <node id="5218427625" lat="13.7462938" lon="100.5369521"/>
+  <node id="5218427626" lat="13.7462903" lon="100.5370398"/>
+  <node id="5218427627" lat="13.7462960" lon="100.5370427"/>
+  <node id="5218427628" lat="13.7462996" lon="100.5369550"/>
+  <node id="5218427629" lat="13.7463806" lon="100.5369585"/>
+  <node id="5218427630" lat="13.7463770" lon="100.5370462"/>
+  <node id="5909883617" lat="13.7462716" lon="100.5365552"/>
+  <node id="5909883618" lat="13.7462751" lon="100.5364675"/>
+  <node id="5909883619" lat="13.7463561" lon="100.5364710"/>
+  <node id="5909883620" lat="13.7463526" lon="100.5365587"/>
+  <node id="5909883621" lat="13.7463261" lon="100.5366644"/>
+  <node id="5909883622" lat="13.7463296" lon="100.5365767"/>
+  <node id="5909883623" lat="13.7464106" lon="100.5365802"/>
+  <node id="5909883624" lat="13.7464071" lon="100.5366679"/>
+  <node id="5909883625" lat="13.7463187" lon="100.5368641"/>
+  <node id="5909883626" lat="13.7463222" lon="100.5367764"/>
+  <node id="5909883627" lat="13.7464032" lon="100.5367799"/>
+  <node id="5909883628" lat="13.7463997" lon="100.5368676"/>
+  <node id="5933551085" lat="13.7492609" lon="100.5356285"/>
+  <node id="5933551086" lat="13.7492635" lon="100.5357841"/>
+  <node id="5933551087" lat="13.7492192" lon="100.5359074"/>
+  <node id="5933551088" lat="13.7490889" lon="100.5359866"/>
+  <node id="5933551089" lat="13.7486955" lon="100.5361649"/>
+  <node id="5933551090" lat="13.7482787" lon="100.5361193"/>
+  <node id="5933586917" lat="13.7478957" lon="100.5365967"/>
+  <node id="5933586924" lat="13.7482327" lon="100.5364636"/>
+  <node id="7051197949" lat="13.7490767" lon="100.5351133"/>
+  <node id="7051197950" lat="13.7492210" lon="100.5354169"/>
+  <node id="8146587833" lat="13.7478349" lon="100.5362726"/>
+  <node id="8146587834" lat="13.7477366" lon="100.5360614"/>
+  <node id="8146587835" lat="13.7477270" lon="100.5361443"/>
+  <node id="8146587836" lat="13.7478184" lon="100.5361593"/>
+  <node id="8146587837" lat="13.7478280" lon="100.5360763"/>
+  <node id="8609439716" lat="13.7462128" lon="100.5362437"/>
+  <node id="8609464418" lat="13.7470971" lon="100.5364358"/>
+  <node id="9723431175" lat="13.7461946" lon="100.5366489"/>
+  <node id="10867019666" lat="13.7463585" lon="100.5337088"/>
+  <node id="10867019667" lat="13.7464003" lon="100.5337159"/>
+  <node id="10867019668" lat="13.7464466" lon="100.5337264"/>
+  <node id="10867019669" lat="13.7465297" lon="100.5337896"/>
+  <node id="10867019670" lat="13.7465016" lon="100.5340176"/>
+  <node id="11140763370" lat="13.7479764" lon="100.5365644"/>
+  <node id="11140763371" lat="13.7489375" lon="100.5367209"/>
+  <node id="11140763372" lat="13.7491420" lon="100.5367692"/>
+  <node id="11140763373" lat="13.7492697" lon="100.5367846"/>
+  <node id="11140763374" lat="13.7494762" lon="100.5368214"/>
+  <node id="11140763375" lat="13.7493454" lon="100.5367981"/>
+  <node id="11140776309" lat="13.7479038" lon="100.5360989"/>
+  <node id="11873201041" lat="13.7463113" lon="100.5337597"/>
+  <node id="11873201043" lat="13.7464083" lon="100.5337717"/>
+  <node id="11873201044" lat="13.7463718" lon="100.5337495"/>
+  <node id="11873201045" lat="13.7463870" lon="100.5337495"/>
+  <node id="11873201046" lat="13.7463983" lon="100.5337614"/>
+  <node id="11873201047" lat="13.7463967" lon="100.5337533"/>
+  <node id="11873842746" lat="13.7467259" lon="100.5337621"/>
+  <node id="12098413764" lat="13.7479995" lon="100.5342940"/>
+  <node id="12098413765" lat="13.7479009" lon="100.5343555"/>
+  <node id="12098413766" lat="13.7480726" lon="100.5344336"/>
+  <node id="12098413767" lat="13.7480762" lon="100.5344659"/>
+  <node id="12098413769" lat="13.7479080" lon="100.5343817"/>
+  <node id="12098413770" lat="13.7480668" lon="100.5344028"/>
+  <node id="12098413771" lat="13.7480567" lon="100.5343716"/>
+  <node id="12098413772" lat="13.7480431" lon="100.5343432"/>
+  <node id="12098413773" lat="13.7480236" lon="100.5343174"/>
+  <node id="12098413774" lat="13.7479226" lon="100.5344257"/>
+  <node id="12098413775" lat="13.7479416" lon="100.5344554"/>
+  <node id="12098413776" lat="13.7479588" lon="100.5344773"/>
+  <node id="12098413777" lat="13.7479898" lon="100.5345043"/>
+  <node id="12098413778" lat="13.7480041" lon="100.5345080"/>
+  <node id="13049389221" lat="13.7475472" lon="100.5339604"/>
+  <node id="13049389237" lat="13.7477783" lon="100.5324878"/>
+  <node id="13049389238" lat="13.7476551" lon="100.5332726"/>
+  <node id="13049389239" lat="13.7470109" lon="100.5331653"/>
+  <node id="13049389240" lat="13.7479853" lon="100.5335392"/>
+  <node id="13049389241" lat="13.7479521" lon="100.5334829"/>
+  <node id="13049389242" lat="13.7479381" lon="100.5334210"/>
+  <node id="13049389243" lat="13.7478941" lon="100.5333591"/>
+  <node id="13049389244" lat="13.7478265" lon="100.5332796"/>
+  <node id="13049389245" lat="13.7477632" lon="100.5332365"/>
+  <node id="13049389246" lat="13.7477214" lon="100.5332221"/>
+  <node id="13049389247" lat="13.7476654" lon="100.5332072"/>
+  <node id="13049389293" lat="13.7481210" lon="100.5335568"/>
+  <node id="13049389294" lat="13.7480698" lon="100.5335503"/>
+  <node id="13049389295" lat="13.7480673" lon="100.5335712"/>
+  <node id="13049389296" lat="13.7480276" lon="100.5335662"/>
+  <node id="13049389297" lat="13.7480259" lon="100.5335805"/>
+  <node id="13049389298" lat="13.7480128" lon="100.5335697"/>
+  <node id="13049389299" lat="13.7479874" lon="100.5335697"/>
+  <node id="13049389300" lat="13.7479769" lon="100.5335805"/>
+  <node id="13049402801" lat="13.7479690" lon="100.5335994"/>
+  <node id="13049402802" lat="13.7479690" lon="100.5336147"/>
+  <node id="13049402803" lat="13.7479725" lon="100.5336255"/>
+  <node id="13049402804" lat="13.7479795" lon="100.5336327"/>
+  <node id="13049402805" lat="13.7479718" lon="100.5336767"/>
+  <node id="13049402806" lat="13.7479589" lon="100.5336743"/>
+  <node id="13049402807" lat="13.7479443" lon="100.5337575"/>
+  <node id="13049402808" lat="13.7479591" lon="100.5337602"/>
+  <node id="13049402809" lat="13.7479507" lon="100.5338084"/>
+  <node id="13049402810" lat="13.7479161" lon="100.5338350"/>
+  <node id="13049402811" lat="13.7479533" lon="100.5338860"/>
+  <node id="13049402812" lat="13.7479734" lon="100.5338705"/>
+  <node id="13049402813" lat="13.7479699" lon="100.5338941"/>
+  <node id="13049402814" lat="13.7480768" lon="100.5339107"/>
+  <node id="13049402815" lat="13.7480801" lon="100.5338887"/>
+  <node id="13049402816" lat="13.7480924" lon="100.5338907"/>
+  <node id="13049402817" lat="13.7481025" lon="100.5338217"/>
+  <node id="13049402818" lat="13.7480732" lon="100.5338172"/>
+  <node id="13049402819" lat="13.7480778" lon="100.5337857"/>
+  <node id="13049402820" lat="13.7480938" lon="100.5337882"/>
+  <node id="13049402821" lat="13.7481066" lon="100.5337010"/>
+  <node id="13049402822" lat="13.7480899" lon="100.5336984"/>
+  <node id="13049402823" lat="13.7480942" lon="100.5336689"/>
+  <node id="13049402824" lat="13.7481221" lon="100.5336733"/>
+  <node id="13049402825" lat="13.7481387" lon="100.5336580"/>
+  <node id="13049402826" lat="13.7481484" lon="100.5336102"/>
+  <node id="13049402827" lat="13.7481352" lon="100.5335814"/>
+  <node id="13049402828" lat="13.7481184" lon="100.5335793"/>
+  <node id="13049402845" lat="13.7474818" lon="100.5334739"/>
+  <node id="13049402846" lat="13.7472132" lon="100.5334283"/>
+  <node id="13049402847" lat="13.7471515" lon="100.5338136"/>
+  <node id="13049402848" lat="13.7474202" lon="100.5338592"/>
+  <node id="13049402849" lat="13.7474854" lon="100.5333433"/>
+  <node id="13049402850" lat="13.7471255" lon="100.5332816"/>
+  <node id="13049402851" lat="13.7471174" lon="100.5333313"/>
+  <node id="13049402852" lat="13.7474773" lon="100.5333931"/>
+  <node id="13049402853" lat="13.7471577" lon="100.5334394"/>
+  <node id="13049402854" lat="13.7470388" lon="100.5334195"/>
+  <node id="13049402855" lat="13.7470039" lon="100.5336408"/>
+  <node id="13049402856" lat="13.7469894" lon="100.5336384"/>
+  <node id="13049402857" lat="13.7469758" lon="100.5337249"/>
+  <node id="13049402858" lat="13.7470067" lon="100.5337301"/>
+  <node id="13049402859" lat="13.7469972" lon="100.5337905"/>
+  <node id="13049402860" lat="13.7470988" lon="100.5338074"/>
+  <node id="13049402861" lat="13.7471272" lon="100.5336271"/>
+  <node id="13049402862" lat="13.7471568" lon="100.5336320"/>
+  <node id="13049402863" lat="13.7471602" lon="100.5336107"/>
+  <node id="13049402864" lat="13.7471778" lon="100.5335998"/>
+  <node id="13049402865" lat="13.7471848" lon="100.5335672"/>
+  <node id="13049402866" lat="13.7471707" lon="100.5335476"/>
+  <node id="13049402867" lat="13.7471754" lon="100.5335180"/>
+  <node id="13049402868" lat="13.7471461" lon="100.5335131"/>
+  <node id="13049402869" lat="13.7486230" lon="100.5362167"/>
+  <node id="13049402870" lat="13.7465615" lon="100.5358543"/>
+  <node id="13049402873" lat="13.7473824" lon="100.5360899"/>
+  <node id="13049402874" lat="13.7467597" lon="100.5359883"/>
+  <node id="13049402875" lat="13.7467046" lon="100.5363334"/>
+  <node id="13049402876" lat="13.7469644" lon="100.5363753"/>
+  <node id="13049402877" lat="13.7469600" lon="100.5364156"/>
+  <node id="13049402878" lat="13.7470544" lon="100.5364276"/>
+  <node id="13049402879" lat="13.7470616" lon="100.5363947"/>
+  <node id="13049402880" lat="13.7473301" lon="100.5364410"/>
+  <node id="13179512600" lat="13.7478544" lon="100.5360423"/>
+  <node id="13233874488" lat="13.7477909" lon="100.5365136"/>
+  <node id="13253986362" lat="13.7474480" lon="100.5366677"/>
+  <node id="13253986363" lat="13.7474280" lon="100.5366667"/>
+  <node id="13253986364" lat="13.7474187" lon="100.5368714"/>
+  <node id="13253986365" lat="13.7474317" lon="100.5368720"/>
+  <node id="13253986366" lat="13.7474268" lon="100.5369792"/>
+  <node id="13253986367" lat="13.7474165" lon="100.5369787"/>
+  <node id="13253986368" lat="13.7474066" lon="100.5371949"/>
+  <node id="13253986369" lat="13.7474264" lon="100.5371959"/>
+  <node id="13295854172" lat="13.7466887" lon="100.5340048"/>
+  <node id="13295854173" lat="13.7478907" lon="100.5342371"/>
+  <node id="13439032840" lat="13.7479221" lon="100.5344242"/>
+
+</osm>

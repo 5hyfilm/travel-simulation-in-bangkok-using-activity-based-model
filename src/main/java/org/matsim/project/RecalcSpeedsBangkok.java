@@ -15,23 +15,23 @@ import java.util.Map;
 public class RecalcSpeedsBangkok {
     // km/h defaults by OSM highway=* (tune to your liking)
     static final Map<String, Double> HWY_KMH = new HashMap<>() {{
-        put("motorway",       80.0);
-        put("trunk",          55.0);
-        put("primary",        50.0);
-        put("secondary",      40.0);
-        put("tertiary",       30.0);
-        put("unclassified",   25.0);
-        put("residential",    20.0);
-        put("service",        15.0);
+        put("motorway",       90.0);
+        put("trunk",          50.0);
+        put("primary",        35.0);
+        put("secondary",      30.0);
+        put("tertiary",       25.0);
+        put("unclassified",   20.0);
+        put("residential",    15.0);
+        put("service",        12.0);
         put("living_street",  10.0);
     }};
 
     // default lanes by highway=* if OSM lanes not present
     static final Map<String, Double> HWY_LANES = new HashMap<>() {{
-        put("motorway",      3.0);
-        put("trunk",         2.5);
-        put("primary",       2.0);
-        put("secondary",     1.5);
+        put("motorway",      3.5);
+        put("trunk",         3.0);
+        put("primary",       2.5);
+        put("secondary",     2.0);
         put("tertiary",      1.5);
         put("unclassified",  1.0);
         put("residential",   1.0);

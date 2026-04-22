@@ -1,0 +1,26 @@
+{
+  "corridor_id": "RAMA1_SIAM_MBK",
+  "name": "Rama I Rd: Siam Square to MBK (straight short)",
+  "origin_lat": 13.746,
+  "origin_lng": 100.5342,
+  "destination_lat": 13.7422,
+  "destination_lng": 100.5302,
+  "link_ids": [
+    "9634",
+    "8265",
+    "15587",
+    "15588",
+    "17855",
+    "14635",
+    "14629",
+    "14624",
+    "14636",
+    "2815",
+    "17851",
+    "17820",
+    "17821",
+    "17822",
+    "8061",
+    "13017"
+  ]
+}

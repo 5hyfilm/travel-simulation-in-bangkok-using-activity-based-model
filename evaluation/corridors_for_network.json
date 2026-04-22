@@ -1,0 +1,36 @@
+{
+  "corridors": [
+    {
+      "corridor_id": "RAMA1_SIAM_MBK",
+      "name": "Rama I Rd: Siam Square to MBK (straight short)",
+      "origin_lat": 13.7460,
+      "origin_lng": 100.5342,
+      "destination_lat": 13.7422,
+      "destination_lng": 100.5302
+    },
+    {
+      "corridor_id": "PHAYA_THAI_SHORT",
+      "name": "Phaya Thai Rd: Victory Monument short straight",
+      "origin_lat": 13.7645,
+      "origin_lng": 100.5380,
+      "destination_lat": 13.7708,
+      "destination_lng": 100.5418
+    },
+    {
+      "corridor_id": "SUKHUMVIT_NANA_SHORT",
+      "name": "Sukhumvit Rd: Nana to Asoke short straight",
+      "origin_lat": 13.7308,
+      "origin_lng": 100.5545,
+      "destination_lat": 13.7372,
+      "destination_lng": 100.5605
+    },
+    {
+      "corridor_id": "LATPHRAO_SHORT",
+      "name": "Lat Phrao Rd short straight segment",
+      "origin_lat": 13.8095,
+      "origin_lng": 100.5595,
+      "destination_lat": 13.8152,
+      "destination_lng": 100.5652
+    }
+  ]
+}

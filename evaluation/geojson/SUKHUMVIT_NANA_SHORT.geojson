@@ -1,0 +1,1387 @@
+{
+  "type": "FeatureCollection",
+  "name": "SUKHUMVIT_NANA_SHORT",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:32647"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 0,
+        "link_id": "678",
+        "from_node": "11715742547",
+        "to_node": "11013801165",
+        "origid": "185059750"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667785.3109739807,
+            1518540.97547716
+          ],
+          [
+            667698.1199546453,
+            1519297.5015534568
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 1,
+        "link_id": "10434",
+        "from_node": "11013801165",
+        "to_node": "283030412",
+        "origid": "1185687266"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667698.1199546453,
+            1519297.5015534568
+          ],
+          [
+            667665.1581966737,
+            1519571.2290906676
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 2,
+        "link_id": "18304",
+        "from_node": "283030412",
+        "to_node": "11013801164",
+        "origid": "27768724"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667665.1581966737,
+            1519571.2290906676
+          ],
+          [
+            667637.3648985232,
+            1519769.4936078265
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 3,
+        "link_id": "10433",
+        "from_node": "11013801164",
+        "to_node": "304918768",
+        "origid": "1185687265"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667637.3648985232,
+            1519769.4936078265
+          ],
+          [
+            667629.8961837104,
+            1519820.945459079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 4,
+        "link_id": "19436",
+        "from_node": "304918768",
+        "to_node": "283031303",
+        "origid": "27768951"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667629.8961837104,
+            1519820.945459079
+          ],
+          [
+            667589.3265148783,
+            1520058.5686722938
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 5,
+        "link_id": "19886",
+        "from_node": "283031303",
+        "to_node": "283031204",
+        "origid": "829639200"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667589.3265148783,
+            1520058.5686722938
+          ],
+          [
+            667564.8122185731,
+            1520278.4720786056
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 6,
+        "link_id": "12666",
+        "from_node": "283031204",
+        "to_node": "1691763915",
+        "origid": "25945217"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667564.8122185731,
+            1520278.4720786056
+          ],
+          [
+            667543.696372065,
+            1520471.0819434798
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 7,
+        "link_id": "11711",
+        "from_node": "1691763915",
+        "to_node": "304918791",
+        "origid": "156936799"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667543.696372065,
+            1520471.0819434798
+          ],
+          [
+            667533.0882367131,
+            1520590.3430027124
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 8,
+        "link_id": "4999",
+        "from_node": "304918791",
+        "to_node": "1691771590",
+        "origid": "241729938"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667533.0882367131,
+            1520590.3430027124
+          ],
+          [
+            667547.3224183898,
+            1520591.6957480677
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 9,
+        "link_id": "5001",
+        "from_node": "1691771590",
+        "to_node": "61713460",
+        "origid": "241729939"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667547.3224183898,
+            1520591.6957480677
+          ],
+          [
+            667557.6337511064,
+            1520592.6028678124
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 10,
+        "link_id": "9009",
+        "from_node": "61713460",
+        "to_node": "283030240",
+        "origid": "1180408537"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667557.6337511064,
+            1520592.6028678124
+          ],
+          [
+            667566.6510800049,
+            1520592.9263759416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 11,
+        "link_id": "15707",
+        "from_node": "283030240",
+        "to_node": "3246224309",
+        "origid": "666814831"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667566.6510800049,
+            1520592.9263759416
+          ],
+          [
+            667577.20217453,
+            1520593.5473983411
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 12,
+        "link_id": "4997",
+        "from_node": "3246224309",
+        "to_node": "2493233990",
+        "origid": "241729937"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667577.20217453,
+            1520593.5473983411
+          ],
+          [
+            667657.6293192015,
+            1520597.1182578385
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 13,
+        "link_id": "6461",
+        "from_node": "2493233990",
+        "to_node": "4783716652",
+        "origid": "453709724"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667657.6293192015,
+            1520597.1182578385
+          ],
+          [
+            667829.5016953623,
+            1520607.9383496044
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 14,
+        "link_id": "6459",
+        "from_node": "4783716652",
+        "to_node": "4504082665",
+        "origid": "453709724"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667829.5016953623,
+            1520607.9383496044
+          ],
+          [
+            667922.6501768092,
+            1520612.676186948
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 15,
+        "link_id": "5123",
+        "from_node": "4504082665",
+        "to_node": "4504071957",
+        "origid": "453708612"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667922.6501768092,
+            1520612.676186948
+          ],
+          [
+            667962.3810979072,
+            1520614.68028013
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 16,
+        "link_id": "7921",
+        "from_node": "4504071957",
+        "to_node": "4504059966",
+        "origid": "453706742"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667962.3810979072,
+            1520614.68028013
+          ],
+          [
+            667990.6136262177,
+            1520615.3822649792
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 17,
+        "link_id": "1258",
+        "from_node": "4504059966",
+        "to_node": "7907247463",
+        "origid": "453695740"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667990.6136262177,
+            1520615.3822649792
+          ],
+          [
+            667998.8531210504,
+            1520615.5792120798
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 18,
+        "link_id": "1256",
+        "from_node": "7907247463",
+        "to_node": "4503981799",
+        "origid": "453695740"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            667998.8531210504,
+            1520615.5792120798
+          ],
+          [
+            668003.135545218,
+            1520615.6068235957
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 19,
+        "link_id": "6763",
+        "from_node": "4503981799",
+        "to_node": "61713461",
+        "origid": "453692981"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668003.135545218,
+            1520615.6068235957
+          ],
+          [
+            668064.9998948395,
+            1520616.5810764355
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 20,
+        "link_id": "7606",
+        "from_node": "61713461",
+        "to_node": "4503956687",
+        "origid": "453692575"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668064.9998948395,
+            1520616.5810764355
+          ],
+          [
+            668116.4467123945,
+            1520612.9965290204
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 21,
+        "link_id": "7913",
+        "from_node": "4503956687",
+        "to_node": "4504059976",
+        "origid": "453706743"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668116.4467123945,
+            1520612.9965290204
+          ],
+          [
+            668125.8092834695,
+            1520611.773586835
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 22,
+        "link_id": "7626",
+        "from_node": "4504059976",
+        "to_node": "2560010601",
+        "origid": "453692577"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668125.8092834695,
+            1520611.773586835
+          ],
+          [
+            668133.5006137541,
+            1520611.4470607557
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 23,
+        "link_id": "16080",
+        "from_node": "2560010601",
+        "to_node": "4503902101",
+        "origid": "453686498"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668133.5006137541,
+            1520611.4470607557
+          ],
+          [
+            668202.2543614211,
+            1520603.9804820134
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 24,
+        "link_id": "17789",
+        "from_node": "4503902101",
+        "to_node": "4503903062",
+        "origid": "453685084"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668202.2543614211,
+            1520603.9804820134
+          ],
+          [
+            668268.377455306,
+            1520596.9396269326
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 25,
+        "link_id": "14425",
+        "from_node": "4503903062",
+        "to_node": "4503906905",
+        "origid": "453685553"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668268.377455306,
+            1520596.9396269326
+          ],
+          [
+            668273.8321814794,
+            1520596.2999866938
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 26,
+        "link_id": "14418",
+        "from_node": "4503906905",
+        "to_node": "4503906908",
+        "origid": "453685554"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668273.8321814794,
+            1520596.2999866938
+          ],
+          [
+            668334.9672595849,
+            1520589.647492593
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 27,
+        "link_id": "16779",
+        "from_node": "4503906908",
+        "to_node": "4503896073",
+        "origid": "453683947"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668334.9672595849,
+            1520589.647492593
+          ],
+          [
+            668407.252271771,
+            1520581.3302464697
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 28,
+        "link_id": "7443",
+        "from_node": "4503896073",
+        "to_node": "5887026867",
+        "origid": "1385612381"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668407.252271771,
+            1520581.3302464697
+          ],
+          [
+            668420.2390788543,
+            1520579.9095632182
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 29,
+        "link_id": "7441",
+        "from_node": "5887026867",
+        "to_node": "9391785597",
+        "origid": "1385612381"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668420.2390788543,
+            1520579.9095632182
+          ],
+          [
+            668471.1716497601,
+            1520573.9326847498
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 30,
+        "link_id": "15814",
+        "from_node": "9391785597",
+        "to_node": "5887026839",
+        "origid": "150890453"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668471.1716497601,
+            1520573.9326847498
+          ],
+          [
+            668515.5895005562,
+            1520568.6218277586
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 31,
+        "link_id": "15812",
+        "from_node": "5887026839",
+        "to_node": "1892287819",
+        "origid": "150890453"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668515.5895005562,
+            1520568.6218277586
+          ],
+          [
+            668695.2888086142,
+            1520548.2330826353
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 32,
+        "link_id": "6028",
+        "from_node": "1892287819",
+        "to_node": "6425367517",
+        "origid": "156261347"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668695.2888086142,
+            1520548.2330826353
+          ],
+          [
+            668955.6110212937,
+            1520526.3878153844
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 33,
+        "link_id": "1699",
+        "from_node": "6425367517",
+        "to_node": "283331097",
+        "origid": "1156891109"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668955.6110212937,
+            1520526.3878153844
+          ],
+          [
+            668984.3697532519,
+            1520522.6910392558
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 34,
+        "link_id": "1700",
+        "from_node": "283331097",
+        "to_node": "3497293207",
+        "origid": "1156891109"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668984.3697532519,
+            1520522.6910392558
+          ],
+          [
+            668998.7198995878,
+            1520521.1799074898
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 35,
+        "link_id": "6172",
+        "from_node": "3497293207",
+        "to_node": "1690602740",
+        "origid": "1029189123"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668998.7198995878,
+            1520521.1799074898
+          ],
+          [
+            669026.9996626078,
+            1520517.9668611335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 36,
+        "link_id": "3410",
+        "from_node": "1690602740",
+        "to_node": "61711106",
+        "origid": "453939262"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669026.9996626078,
+            1520517.9668611335
+          ],
+          [
+            669038.8860243716,
+            1520516.1521205895
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 37,
+        "link_id": "7772",
+        "from_node": "61711106",
+        "to_node": "3497295405",
+        "origid": "468353997"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669038.8860243716,
+            1520516.1521205895
+          ],
+          [
+            669036.0820425763,
+            1520499.93708415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 38,
+        "link_id": "5658",
+        "from_node": "3497295405",
+        "to_node": "4628856901",
+        "origid": "1103794214"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669036.0820425763,
+            1520499.93708415
+          ],
+          [
+            669030.1913506903,
+            1520476.0793302478
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 39,
+        "link_id": "7779",
+        "from_node": "4628856901",
+        "to_node": "6778731821",
+        "origid": "468354001"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669030.1913506903,
+            1520476.0793302478
+          ],
+          [
+            669020.8119580589,
+            1520431.5214214253
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 40,
+        "link_id": "447",
+        "from_node": "6778731821",
+        "to_node": "6778731819",
+        "origid": "722659601"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            669020.8119580589,
+            1520431.5214214253
+          ],
+          [
+            668998.3628630575,
+            1520327.755861656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 41,
+        "link_id": "13262",
+        "from_node": "6778731819",
+        "to_node": "4503767921",
+        "origid": "689884689"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668998.3628630575,
+            1520327.755861656
+          ],
+          [
+            668971.1230788918,
+            1520197.2190181408
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 42,
+        "link_id": "13263",
+        "from_node": "4503767921",
+        "to_node": "3393178594",
+        "origid": "689884689"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668971.1230788918,
+            1520197.2190181408
+          ],
+          [
+            668898.6981959811,
+            1519812.9599226958
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 43,
+        "link_id": "10381",
+        "from_node": "3393178594",
+        "to_node": "6472163692",
+        "origid": "920983283"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668898.6981959811,
+            1519812.9599226958
+          ],
+          [
+            668896.233159472,
+            1519787.7968280588
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 44,
+        "link_id": "10380",
+        "from_node": "6472163692",
+        "to_node": "6472163702",
+        "origid": "920983280"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668896.233159472,
+            1519787.7968280588
+          ],
+          [
+            668883.2299113481,
+            1519569.6196752796
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 45,
+        "link_id": "19201",
+        "from_node": "6472163702",
+        "to_node": "6472163696",
+        "origid": "933777166"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668883.2299113481,
+            1519569.6196752796
+          ],
+          [
+            668875.8868132491,
+            1519484.3949681378
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 46,
+        "link_id": "19977",
+        "from_node": "6472163696",
+        "to_node": "4503499100",
+        "origid": "766072322"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668875.8868132491,
+            1519484.3949681378
+          ],
+          [
+            668865.5536153553,
+            1519393.2651816793
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 47,
+        "link_id": "21292",
+        "from_node": "4503499100",
+        "to_node": "7138447620",
+        "origid": "1156512271"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668865.5536153553,
+            1519393.2651816793
+          ],
+          [
+            668857.8363992453,
+            1519317.3534649792
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 48,
+        "link_id": "17999",
+        "from_node": "7138447620",
+        "to_node": "3071845489",
+        "origid": "453635649"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668857.8363992453,
+            1519317.3534649792
+          ],
+          [
+            668833.6759167413,
+            1519195.2783776934
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 49,
+        "link_id": "9141",
+        "from_node": "3071845489",
+        "to_node": "10760975290",
+        "origid": "1359531506"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668833.6759167413,
+            1519195.2783776934
+          ],
+          [
+            668821.5865850395,
+            1519139.8056868874
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 50,
+        "link_id": "15862",
+        "from_node": "10760975290",
+        "to_node": "61709729",
+        "origid": "272531304"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668821.5865850395,
+            1519139.8056868874
+          ],
+          [
+            668819.2575736187,
+            1519125.341814482
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 51,
+        "link_id": "4742",
+        "from_node": "61709729",
+        "to_node": "272487196",
+        "origid": "8671143"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668819.2575736187,
+            1519125.341814482
+          ],
+          [
+            668818.6079329931,
+            1519105.401366859
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 52,
+        "link_id": "17555",
+        "from_node": "272487196",
+        "to_node": "275514982",
+        "origid": "25047595"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668818.6079329931,
+            1519105.401366859
+          ],
+          [
+            668805.6925708542,
+            1519115.71737105
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 53,
+        "link_id": "12671",
+        "from_node": "275514982",
+        "to_node": "1892287709",
+        "origid": "1156866552"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668805.6925708542,
+            1519115.71737105
+          ],
+          [
+            668779.3138947769,
+            1519134.1221069202
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "SUKHUMVIT_NANA_SHORT",
+        "corridor_name": "Sukhumvit Rd: Nana to Asoke short straight",
+        "sequence": 54,
+        "link_id": "12673",
+        "from_node": "1892287709",
+        "to_node": "272488054",
+        "origid": "1156866553"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            668779.3138947769,
+            1519134.1221069202
+          ],
+          [
+            668694.7889827777,
+            1519194.8332908584
+          ]
+        ]
+      }
+    }
+  ]
+}

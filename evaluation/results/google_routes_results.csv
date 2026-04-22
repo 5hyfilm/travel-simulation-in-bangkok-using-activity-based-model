@@ -1,0 +1,5 @@
+corridor_id,corridor_name,time_label,google_duration_sec,google_static_duration_sec,google_distance_m,google_ci,google_speed_kph
+RAMA1_SIAM_MBK,Rama I Rd: Siam Square to MBK (straight short),PM_PEAK,166.0,230.0,918.0,0.7217391304347827,19.90843373493976
+PHAYA_THAI_SHORT,Phaya Thai Rd: Victory Monument short straight,PM_PEAK,99.0,134.0,862.0,0.7388059701492538,31.345454545454547
+SUKHUMVIT_NANA_SHORT,Sukhumvit Rd: Nana to Asoke short straight,PM_PEAK,616.0,793.0,4745.0,0.776796973518285,27.73051948051948
+LATPHRAO_SHORT,Lat Phrao Rd short straight segment,PM_PEAK,207.0,237.0,1818.0,0.8734177215189873,31.617391304347827
