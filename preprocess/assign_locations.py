@@ -40,7 +40,7 @@ def _normalize_mode(raw_mode):
     return "other"
 
 
-def assign_facility_locations(trips_path, facilities_path, output_path):
+def assign_facility_locations(trips_path, facilities_path, output_path, target_size=None):
     """
     Assign facility locations to trips based on purpose and TAZ zone.
 
@@ -50,6 +50,10 @@ def assign_facility_locations(trips_path, facilities_path, output_path):
 
     Falls back to a city-wide random pick when no facility of the required type
     exists inside the target TAZ.
+
+    If target_size is set, car-mode agents are cloned to reach that count.
+    Each clone independently re-draws facility locations from the same TAZs,
+    eliminating the spatial clustering caused by shared coordinates.
     """
     random.seed(42)
 
@@ -92,7 +96,7 @@ def assign_facility_locations(trips_path, facilities_path, output_path):
         """Pick a random facility matching purpose, preferring the given TAZ.
         Maps ActivitySim purpose strings to facility activity_type before lookup.
         """
-        fac_type = _PURPOSE_MAP.get(purpose, purpose)  # fallback to raw value if not in map
+        fac_type = _PURPOSE_MAP.get(purpose, purpose)
         if taz_id is not None and not pd.isna(taz_id):
             subset = facility_groups.get((fac_type, int(taz_id)))
             if subset:
@@ -117,6 +121,9 @@ def assign_facility_locations(trips_path, facilities_path, output_path):
     # SORT (ensure trip chain order)
     # ==============================
     trips = trips.sort_values(["person_id", "tour_id", "trip_num"]).reset_index(drop=True)
+
+    # Group by person for later use in cloning
+    trips_grouped = trips.groupby("person_id")
 
     # ==============================
     # MAIN LOOP
@@ -180,6 +187,86 @@ def assign_facility_locations(trips_path, facilities_path, output_path):
         })
 
     # ==============================
+    # CLONE CAR AGENTS
+    # Each clone re-draws facility locations independently from the same TAZs,
+    # so clones get unique coordinates instead of sharing the original's location.
+    # ==============================
+    if target_size is not None and target_size > 0:
+        result_df_temp = pd.DataFrame(results)
+        car_person_ids = result_df_temp[result_df_temp["mode"] == "car"]["person_id"].unique().tolist()
+        n_car = len(car_person_ids)
+
+        if n_car < target_size:
+            needed = target_size - n_car
+            print(f"\nCloning {needed:,} agents from {n_car:,} car persons to reach target {target_size:,}...")
+            clones_to_make = random.choices(car_person_ids, k=needed)
+            clone_id_map = {}
+
+            for pid in tqdm(clones_to_make, desc="Cloning agents"):
+                clone_id_map[pid] = clone_id_map.get(pid, 0) + 1
+                new_id = f"{pid}_clone{clone_id_map[pid]}"
+
+                try:
+                    person_rows = trips_grouped.get_group(pid)
+                except KeyError:
+                    continue
+
+                clone_fixed = {}
+                clone_current = None
+
+                for row in person_rows.itertuples():
+                    purpose    = row.purpose
+                    origin_taz = getattr(row, "origin", None)
+                    dest_taz   = getattr(row, "destination", None)
+
+                    # Initialize home for this clone (fresh pick)
+                    if clone_current is None:
+                        home_fac = pick_facility("home", origin_taz)
+                        if home_fac is None:
+                            break
+                        clone_fixed["home"] = home_fac
+                        clone_current = home_fac
+
+                    origin_fac = clone_current
+
+                    if purpose in fixed_purpose:
+                        if purpose not in clone_fixed:
+                            fac = pick_facility(purpose, dest_taz)
+                            if fac is None:
+                                continue
+                            clone_fixed[purpose] = fac
+                        dest_fac = clone_fixed[purpose]
+                    else:
+                        dest_fac = pick_facility(purpose, dest_taz)
+                        if dest_fac is None:
+                            continue
+
+                    clone_current = dest_fac
+
+                    raw_mode = getattr(row, "trip_mode", None) or getattr(row, "mode", None)
+                    mode = _normalize_mode(raw_mode)
+
+                    results.append({
+                        "person_id": new_id,
+                        "tour_id":   row.tour_id,
+                        "trip_id":   row.trip_id,
+                        "trip_num":  row.trip_num,
+                        "depart":    row.depart,
+                        "purpose":   purpose,
+                        "mode":      mode,
+                        "origin_osmid": origin_fac["osmid"],
+                        "origin_name":  origin_fac["name"],
+                        "origin_lat":   origin_fac["latitude"],
+                        "origin_lon":   origin_fac["longitude"],
+                        "dest_osmid": dest_fac["osmid"],
+                        "dest_name":  dest_fac["name"],
+                        "dest_lat":   dest_fac["latitude"],
+                        "dest_lon":   dest_fac["longitude"],
+                    })
+        else:
+            print(f"\n{n_car:,} car persons already >= target {target_size:,}, no cloning needed.")
+
+    # ==============================
     # SAVE OUTPUT
     # ==============================
     result_df = pd.DataFrame(results)
@@ -192,5 +279,6 @@ if __name__ == "__main__":
     assign_facility_locations(
         "data/final_trips.csv",
         "output/facilities_cleaned.csv",
-        "output/assigned_trips.csv"
+        "output/assigned_trips.csv",
+        target_size=300000,
     )

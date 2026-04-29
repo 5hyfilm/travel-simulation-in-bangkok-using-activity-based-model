@@ -57,7 +57,7 @@ def main():
     # Step 4: Assign Locations
     print(f"\n[Step 4/5] Assigning locations to trips: {final_trips_path}")
     if os.path.exists(trips_path):
-        assign_facility_locations(trips_path, clean_csv_path, final_trips_path)
+        assign_facility_locations(trips_path, clean_csv_path, final_trips_path, target_size=input_config["sample_size"])
     else:
         print(f"[Note] {trips_path} not found. Skipping Step 4 & 5.")
         print(f"Please provide {input_config['trips_filename']} in the data/ folder.")
@@ -96,7 +96,14 @@ def main():
         env["MAVEN_OPTS"] = maven_opts
         
         # Detect OS for Maven Wrapper command
-        maven_cmd = "mvnw.cmd" if platform.system() == "Windows" else "./mvnw"
+        if platform.system() == "Windows":
+            maven_cmd = os.path.join(project_root, "mvnw.cmd")
+        else:
+            maven_cmd = os.path.join(project_root, "mvnw")
+
+        if not os.path.exists(maven_cmd):
+            print(f"[ERROR] ไม่พบ Maven Wrapper: {maven_cmd}")
+            return
 
         # Step 6: Convert OSM
         print("\n[Step 6] Converting OSM to MATSim Network...")

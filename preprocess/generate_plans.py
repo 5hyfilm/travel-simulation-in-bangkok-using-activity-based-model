@@ -45,57 +45,18 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
     df = df[df["mode"] == "car"]
 
     # ==============================
-    # BBOX FILTER (INNER BANGKOK)
-    # ==============================
-    # ==============================
-    # SAMPLE OR UPSCALE (CLONE)
+    # DOWNSAMPLE IF NEEDED
+    # Cloning is handled upstream in assign_locations.py, so the input already
+    # contains the target number of agents with independently assigned locations.
     # ==============================
     unique_persons = df["person_id"].unique()
-    
-    if sample_size is not None and sample_size != -1:
-        if len(unique_persons) < sample_size:
-            # --- UPSCALING (CLONE) ---
-            needed = sample_size - len(unique_persons)
-            
-            # Identify "CBD Persons" to use as cloning candidates
-            # (People who have at least one activity inside the BBox)
-            # Use all unique agents as cloning candidates (Global Random Scaling)
-            cloning_pool = unique_persons
-            print(f"Upscaling: Cloning {needed} agents from the entire population pool to reach target of {sample_size}...")
-            
-            # Draw random samples from the CBD pool to clone
-            clones_to_make = random.choices(cloning_pool, k=needed)
-            
-            # We will create a list of dataframes to concat later
-            upscaled_dfs = [df]
-            
-            # Group by person to make duplication easier
-            grouped = df.groupby("person_id")
-            
-            # Simple clone counter
-            clone_id_map = {} # person_id -> count
-            
-            for pid in tqdm(clones_to_make, desc="Cloning agents"):
-                clone_df = grouped.get_group(pid).copy()
-                
-                # Assign new ID
-                clone_id_map[pid] = clone_id_map.get(pid, 0) + 1
-                new_id = f"{pid}_clone{clone_id_map[pid]}"
-                clone_df["person_id"] = new_id
-                
-                # Use to_hhmmss logic later or apply jitter here? 
-                # Note: Jitter is now handled in to_hhmmss function
-                
-                upscaled_dfs.append(clone_df)
-                
-            df = pd.concat(upscaled_dfs)
-        else:
-            # --- DOWN-SAMPLING ---
-            selected_persons = random.sample(list(unique_persons), sample_size)
-            df = df[df["person_id"].isin(selected_persons)]
-            print(f"Sampling: Selected {sample_size} agents out of {len(unique_persons)}.")
-    
-    print(f"Final plan generation for {df['person_id'].nunique()} agents...")
+
+    if sample_size is not None and sample_size != -1 and len(unique_persons) > sample_size:
+        selected_persons = random.sample(list(unique_persons), sample_size)
+        df = df[df["person_id"].isin(selected_persons)]
+        print(f"Downsampled to {sample_size:,} agents from {len(unique_persons):,}.")
+
+    print(f"Final plan generation for {df['person_id'].nunique():,} agents...")
 
     # ==============================
     # TIME FORMATTER
@@ -173,4 +134,4 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
     print(f"✅ {output_file} generated successfully.")
 
 if __name__ == "__main__":
-    generate_matsim_plans("final_trips.csv", "plan_50k.xml", SAMPLE_SIZE=50000)
+    generate_matsim_plans("preprocess/output/final_trips.csv", "preprocess/output/plan_300k.xml", sample_size=300000)
