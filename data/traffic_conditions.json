@@ -1,0 +1,15 @@
+{
+  "paths": {
+    "input_network":  "data/processed/network.cleaned.xml.gz",
+    "output_network": "data/processed/network_traffic.xml.gz"
+  },
+
+  "conditions": [
+    {
+      "name": "ฝนตกหนัก (Heavy Rain)",
+      "road_types": ["motorway", "trunk", "primary", "secondary", "tertiary"],
+      "speed_factor": 0.65,
+      "capacity_factor": 0.75
+    }
+  ]
+}
