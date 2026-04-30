@@ -8,9 +8,9 @@ def get_base_id(full_id):
 
 def generate_full_retention_report():
     files = {
-        "Source (ActivitySim)": "../preprocess/data/final_trips.csv",
-        "Assigned (Locations)": "../preprocess/output/final_trips.csv",
-        "Final XML (MATSim)":   "../preprocess/output/plan.xml"
+        "Source (ActivitySim)": "preprocess/data/final_trips.csv",
+        "Assigned (Locations)": "preprocess/output/final_trips.csv",
+        "Final XML (MATSim)":   "preprocess/output/plan_300k_cut.xml"
     }
 
     print("="*60)
@@ -24,19 +24,37 @@ def generate_full_retention_report():
         'xml': set()
     }
 
-    # 1. Collect Source IDs
+    # Car modes used in ActivitySim Bangkok
+    CAR_MODES = {
+        "DRIVEALONEFREE", "DRIVEALONEPAY",
+        "SHARED2FREE", "SHARED2PAY",
+        "SHARED3FREE", "SHARED3PAY",
+        "DRIVE_HVY_RAIL", "DRIVE_LOC", "DRIVE_EXP",
+    }
+
+    # 1. Collect Source IDs — car-mode persons only
     if os.path.exists(files["Source (ActivitySim)"]):
         print(f"Reading {files['Source (ActivitySim)']}...")
-        df = pd.read_csv(files["Source (ActivitySim)"], usecols=['person_id'], low_memory=False)
-        ids['source'] = set(df['person_id'].astype(str).unique())
+        df = pd.read_csv(files["Source (ActivitySim)"],
+                         usecols=['person_id', 'trip_mode'], low_memory=False)
+        total_persons = df['person_id'].nunique()
+        car_df = df[df['trip_mode'].isin(CAR_MODES)]
+        ids['source'] = set(car_df['person_id'].astype(str).unique())
+        print(f"  → All modes: {total_persons:,} persons | "
+              f"Car-mode only: {len(ids['source']):,} persons")
     else:
         print(f"Error: {files['Source (ActivitySim)']} not found.")
 
-    # 2. Collect Assigned IDs
+    # 2. Collect Assigned IDs — car-mode persons only
     if os.path.exists(files["Assigned (Locations)"]):
         print(f"Reading {files['Assigned (Locations)']}...")
-        df = pd.read_csv(files["Assigned (Locations)"], usecols=['person_id'], dtype={'person_id': str})
-        ids['assigned'] = set(df['person_id'].unique())
+        df = pd.read_csv(files["Assigned (Locations)"],
+                         usecols=['person_id', 'mode'], dtype={'person_id': str})
+        total_assigned = df['person_id'].nunique()
+        car_assigned = df[df['mode'] == 'car']
+        ids['assigned'] = set(car_assigned['person_id'].unique())
+        print(f"  → All modes: {total_assigned:,} persons | "
+              f"Car-mode only: {len(ids['assigned']):,} persons")
     else:
         print(f"Error: {files['Assigned (Locations)']} not found.")
 
@@ -55,8 +73,8 @@ def generate_full_retention_report():
     print("\n" + "-"*60)
     print(f"{'Pipeline Stage':<25} | {'Unique Agents':<15}")
     print("-"*60)
-    print(f"{'1. Source Trip Data':<25} | {len(ids['source']):,}")
-    print(f"{'2. Location Assigned':<25} | {len(ids['assigned']):,}")
+    print(f"{'1. Source (car-mode only)':<25} | {len(ids['source']):,}")
+    print(f"{'2. Assigned (car only)':<25} | {len(ids['assigned']):,}")
     print(f"{'3. Final MATSim Plans':<25} | {len(ids['xml']):,}")
     print("-"*60)
 
