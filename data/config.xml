@@ -27,7 +27,7 @@
          NETWORK
          ============================================================ -->
     <module name="network">
-        <param name="inputNetworkFile" value="processed/network.xml.gz"/>
+        <param name="inputNetworkFile" value="processed/network_condition.xml.gz"/>
     </module>
 
     <!-- ============================================================

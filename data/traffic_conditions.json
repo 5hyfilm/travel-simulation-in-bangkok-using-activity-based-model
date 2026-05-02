@@ -1,15 +1,35 @@
 {
   "paths": {
-    "input_network":  "data/processed/network.cleaned.xml.gz",
-    "output_network": "data/processed/network_traffic.xml.gz"
+    "input_network":  "data/processed/network.xml.gz",
+    "output_network": "data/processed/network_condition.xml.gz"
   },
 
   "conditions": [
     {
       "name": "ฝนตกหนัก (Heavy Rain)",
-      "road_types": ["motorway", "trunk", "primary", "secondary", "tertiary"],
+      "road_types": [
+        "motorway", "motorway_link",
+        "trunk", "trunk_link",
+        "primary", "primary_link",
+        "secondary", "secondary_link",
+        "tertiary", "tertiary_link",
+        "unclassified", "residential",
+        "service", "living_street", "road"
+      ],
       "speed_factor": 0.65,
       "capacity_factor": 0.75
+    },
+    {
+      "name": "Road repair — link 757301 (no usage)",
+      "link_id": "757301",
+      "speed_factor": 0.01,
+      "capacity_factor": 0.0
+    },
+    {
+      "name": "Road repair — link 365675 (no usage)",
+      "link_id": "365675",
+      "speed_factor": 0.01,
+      "capacity_factor": 0.0
     }
   ]
 }
