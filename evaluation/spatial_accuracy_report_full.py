@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Files
 SOURCE_CSV = os.path.join(BASE_DIR, "preprocess/data/final_trips.csv")
-PLANS_XML = os.path.join(BASE_DIR, "preprocess/output/plan.xml")
+PLANS_XML = os.path.join(BASE_DIR, "preprocess/output/plan_300k_cut.xml")
 GEOJSON = os.path.join(BASE_DIR, "preprocess/data/subdistricts_180.geojson")
 
 def get_base_id(full_id):

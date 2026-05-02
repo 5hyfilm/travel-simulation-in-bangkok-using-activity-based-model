@@ -40,3 +40,4 @@ __pycache__/
 preprocess/output/
 preprocess/trips.csv
 data/processed/
+output.zip

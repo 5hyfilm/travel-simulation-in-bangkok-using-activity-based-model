@@ -2,11 +2,14 @@ import os
 import time
 import json
 import subprocess
+import platform
 from get_osm_network import download_osm_for_matsim
 from get_facilities import extract_poi_to_csv
 from process_facilities import classify_facilities
 from assign_locations import assign_facility_locations
 from generate_plans import generate_matsim_plans
+from fix_plan_home_end import process_file as fix_plan_home_end
+from apply_traffic_conditions import load_conditions, apply_conditions
 
 def main():
     print("=== Starting MATSim data preparation process ===")
@@ -74,16 +77,32 @@ def main():
         bbox=(input_config["north"], input_config["south"], input_config["east"], input_config["west"])
     )
 
+    # Step 6: Cut / fix agents (always runs — trims plans that don't end with home)
+    cut_output_path = os.path.join(output_config["output_folder"], "plan_300k_cut.xml")
+    print(f"\n[Step 6/6] Cutting & fixing agent plans: {cut_output_path}")
+    fix_plan_home_end(plans_path, cut_output_path, dry_run=False)
+
+    # Step 6b: Apply traffic conditions to network (optional)
+    exec_config = config.get("execution", {})
+    if exec_config.get("apply_traffic_conditions", False):
+        conditions_file = exec_config.get("traffic_conditions_file", "data/traffic_conditions.json")
+        print(f"\n[Step 6b] Applying traffic conditions from: {conditions_file}")
+        result = load_conditions(conditions_file)
+        if result is not None:
+            input_network, output_network, conditions = result
+            apply_conditions(input_network, output_network, conditions)
+        else:
+            print("[Step 6b] Skipped — could not load traffic conditions.")
+    else:
+        print("\n[Step 6b] Traffic conditions: skipped (set execution.apply_traffic_conditions=true to enable)")
+
     end_time = time.time()
     print(f"\n=== Preprocessing Completed! Total time: {end_time - start_time:.2f} seconds ===")
-    print(f"Final output file: {plans_path}")
+    print(f"Final output file: {cut_output_path}")
 
     # ==========================================
     # AUTO-EXECUTION MODULE (MATSim)
     # ==========================================
-    import platform
-    
-    exec_config = config.get("execution", {})
     if exec_config.get("run_simulation_automatically", False):
         print("\n=== Starting Automatic MATSim Execution ===")
         
