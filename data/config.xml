@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE config SYSTEM "https://www.matsim.org/files/dtd/config_v2.dtd">
 <config>
 
@@ -34,7 +34,7 @@
          PLANS
          ============================================================ -->
     <module name="plans">
-        <param name="inputPlansFile" value="../preprocess/output/plan_300k_cut.xml"/>
+        <param name="inputPlansFile" value="../pipeline/output/plan.xml"/>
     </module>
 
     <!-- ============================================================

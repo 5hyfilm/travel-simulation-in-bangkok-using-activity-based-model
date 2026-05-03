@@ -1,4 +1,4 @@
-"""
+﻿"""
 realism_check.py
 ================
 Compare simulation output against real-world Bangkok benchmarks to assess
@@ -15,7 +15,7 @@ Reads:
   output/output_trips.csv.gz
 
 Run from project root:
-  python preprocess/analysis/realism_check.py
+  python pipeline/analysis/realism_check.py
 """
 
 import pandas as pd

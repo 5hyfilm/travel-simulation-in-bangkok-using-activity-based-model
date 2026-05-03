@@ -1,10 +1,10 @@
-"""
+﻿"""
 fix_plan_home_end.py — แก้ไข agent plan ที่ไม่จบด้วย home
 โดยตัด activity และ leg ส่วนท้ายออกจนกว่า activity สุดท้ายจะเป็น home
 
 Usage:
-    python preprocess/fix_plan_home_end.py <input_plan.xml> <output_plan.xml>
-    python preprocess/fix_plan_home_end.py <input_plan.xml> <output_plan.xml> --dry-run
+    python pipeline/fix_plan_home_end.py <input_plan.xml> <output_plan.xml>
+    python pipeline/fix_plan_home_end.py <input_plan.xml> <output_plan.xml> --dry-run
 """
 
 import sys

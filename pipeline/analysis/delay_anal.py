@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 from lxml import etree
 
 # โหลด output legs
@@ -21,7 +21,7 @@ print(f"Late agents: {len(late_agents):,}")
 # อ่าน input plan XML เฉพาะ late agents
 planned = []
 
-for event, elem in etree.iterparse("preprocess/output/plan_300k_cut.xml", tag="person"):
+for event, elem in etree.iterparse("pipeline/output/plan_300k_cut.xml", tag="person"):
     pid = str(elem.get("id"))
     if pid in late_agents:
         plan = elem.find(".//plan[@selected='yes']")

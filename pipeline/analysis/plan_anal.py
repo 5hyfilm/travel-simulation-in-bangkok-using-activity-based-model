@@ -1,11 +1,11 @@
-import xml.etree.ElementTree as ET
+﻿import xml.etree.ElementTree as ET
 from collections import defaultdict
 
 hour_trips = defaultdict(int)
 hour_agents = defaultdict(set)
 total_agents = set()
 
-for event, elem in ET.iterparse("preprocess/output/plan_300k_cut.xml", events=["end"]):
+for event, elem in ET.iterparse("pipeline/output/plan_300k_cut.xml", events=["end"]):
     if elem.tag == "person":
         person_id = elem.get("id")
         total_agents.add(person_id)

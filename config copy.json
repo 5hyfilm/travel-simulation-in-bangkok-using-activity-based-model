@@ -1,0 +1,27 @@
+{
+    "input": {
+        "north": 13.96,
+        "south": 13.49,
+        "east": 100.96,
+        "west": 100.33,
+        "trips_filename": "data/final_trips.csv",
+        "subdistricts_filename": "data/subdistricts_180.geojson",
+        "sample_size": 300000
+    },
+    "output": {
+        "output_folder": "output",
+        "osm_filename": "network.osm",
+        "raw_csv_filename": "facilities_raw.csv",
+        "clean_csv_filename": "facilities_cleaned.csv",
+        "final_trips_filename": "final_trips.csv",
+        "plans_filename": "plan_all.xml"
+    },
+    "execution": {
+        "run_simulation_automatically": false,
+        "maven_opts": "-Xmx22G",
+        "matsim_config_file": "data/config.xml"
+    },
+    "api_keys": {
+        "google_maps": "AIzaSyA0Bc-5gf2Tayq7-XUA-HHH-Tm1I0SI_lM"
+    }
+}

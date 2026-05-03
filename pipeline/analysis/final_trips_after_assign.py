@@ -1,14 +1,12 @@
-import pandas as pd
+﻿import pandas as pd
 
-df = pd.read_csv("preprocess/data/final_trips.csv")
-
-car_modes = ["DRIVEALONEFREE", "DRIVEALONEPAY", "SHARED2FREE", "SHARED2PAY", "SHARED3FREE", "SHARED3PAY"]
-df_car = df[df["trip_mode"].isin(car_modes)]
+df = pd.read_csv("pipeline/output/final_trips.csv")
+df_car = df[df["mode"] == "car"]
 
 total = len(df_car)
 total_agents = df_car["person_id"].nunique()
 
-print(f"=== Input car trip distribution (ทีละ 1 ชม.) ===")
+print(f"=== final_trips.csv car trip distribution ===")
 print(f"Total car trips : {total:,}")
 print(f"Total agents    : {total_agents:,}\n")
 

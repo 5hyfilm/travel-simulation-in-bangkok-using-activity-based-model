@@ -1,4 +1,4 @@
-# 🚗 Bangkok MATSim Simulation Manual (Adaptive Signals)
+﻿# 🚗 Bangkok MATSim Simulation Manual (Adaptive Signals)
 
 This guide provides a complete walk-through for preparing and running the **Bangkok Activity-Based Model** simulation using **Lämmer's adaptive traffic signal control**.
 
@@ -7,11 +7,11 @@ This guide provides a complete walk-through for preparing and running the **Bang
 ## 🛠️ Phase 1: Data Preprocessing (Python)
 This step prepares the road network, activity locations (POIs), and populates 20,000 car agents into a MATSim plan file.
 
-1.  **Navigate to the preprocess folder**:
+1.  **Navigate to the pipeline folder**:
     ```bash
-    cd preprocess
+    cd pipeline
     ```
-2.  **Ensure you have `trips.csv`** in the `preprocess/` folder.
+2.  **Ensure you have `trips.csv`** in the `pipeline/` folder.
 3.  **Run the automated pipeline**:
     ```bash
     python3 main.py
@@ -73,7 +73,7 @@ Outputs are located in `output/laemmer_simulation/`.
     - > When using **SimWrapper**, ensure you set the coordinate system to **`EPSG:32647`** (WGS 84 / UTM zone 47N) to correctly align the simulation results with the map of Bangkok.
 
 ## 🗺️ Visualizing Signal Locations
-After running Phase 2 and re-running `main.py`, signal junction locations are exported to `preprocess/output/`:
+After running Phase 2 and re-running `main.py`, signal junction locations are exported to `pipeline/output/`:
 - **`signal_locations.csv`** — node ID, UTM coordinates, lat/lon, and number of signals per junction.
 - **`signal_locations.geojson`** — open in QGIS by dragging the file into the Layers panel, then add an OpenStreetMap basemap via XYZ Tiles for context.
 

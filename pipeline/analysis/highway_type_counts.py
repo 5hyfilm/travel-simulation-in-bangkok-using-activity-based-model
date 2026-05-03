@@ -1,10 +1,10 @@
-import xml.etree.ElementTree as ET
+﻿import xml.etree.ElementTree as ET
 from collections import Counter
 
 # parse เฉพาะ way elements ไม่โหลดทั้งไฟล์
 highway_types = Counter()
 
-for event, elem in ET.iterparse("preprocess/output/network.osm", events=["end"]):
+for event, elem in ET.iterparse("pipeline/output/network.osm", events=["end"]):
     if elem.tag == "way":
         for tag in elem.iter("tag"):
             if tag.get("k") == "highway":

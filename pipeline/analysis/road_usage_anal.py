@@ -1,4 +1,4 @@
-"""
+﻿"""
 road_usage_anal.py
 ==================
 Analyse which road types agents actually used during the simulation.
@@ -7,7 +7,7 @@ Reads:
   output/output_links.csv.gz  — MATSim link-level output (volume, speed, capacity, type)
 
 Run from project root:
-  python preprocess/analysis/road_usage_anal.py
+  python pipeline/analysis/road_usage_anal.py
 """
 
 import pandas as pd

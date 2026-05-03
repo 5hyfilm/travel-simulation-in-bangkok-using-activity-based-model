@@ -1,14 +1,14 @@
-"""
+﻿"""
 apply_traffic_conditions.py
 ===========================
 Read traffic_conditions.json and adjust freespeed and capacity of links
 in a MATSim network file according to the defined conditions.
 
 Run from project root:
-    python preprocess/apply_traffic_conditions.py
+    python pipeline/apply_traffic_conditions.py
 
 Or specify a custom config path:
-    python preprocess/apply_traffic_conditions.py data/traffic_conditions.json
+    python pipeline/apply_traffic_conditions.py data/traffic_conditions.json
 
 See setup guide at: data/traffic_conditions_guide.txt
 """
@@ -23,11 +23,31 @@ from lxml import etree
 # ================================================================
 # DEFAULT CONFIG PATH
 # ================================================================
-DEFAULT_CONDITIONS_FILE = "data/traffic_conditions.json"
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DEFAULT_CONDITIONS_FILE = os.path.join(_PROJECT_ROOT, "data/traffic_conditions.json")
 
 
-def load_conditions(conditions_file):
-    """Load and validate traffic_conditions.json."""
+def _resolve(path, root):
+    """Resolve a path relative to project root if it is not absolute."""
+    if os.path.isabs(path):
+        return path
+    return os.path.join(root, path)
+
+
+def load_conditions(conditions_file, project_root=None):
+    """Load and validate traffic_conditions.json.
+
+    Parameters
+    ----------
+    conditions_file : str
+        Path to the JSON file (absolute or relative to project root).
+    project_root : str, optional
+        Project root directory used to resolve relative paths inside the JSON.
+        Defaults to the parent of this script's directory.
+    """
+    if project_root is None:
+        project_root = _PROJECT_ROOT
+
     if not os.path.exists(conditions_file):
         print(f"!!! File not found: {conditions_file}")
         print(f"    Please create the file or see example at data/traffic_conditions_guide.txt")
@@ -36,10 +56,10 @@ def load_conditions(conditions_file):
     with open(conditions_file, encoding="utf-8") as f:
         data = json.load(f)
 
-    # Read paths
+    # Read paths — resolve relative paths against the project root
     paths = data.get("paths", {})
-    input_network  = paths.get("input_network",  "data/processed/network.xml.gz")
-    output_network = paths.get("output_network", "data/processed/network_condition.xml.gz")
+    input_network  = _resolve(paths.get("input_network",  "data/processed/network.xml.gz"),  project_root)
+    output_network = _resolve(paths.get("output_network", "data/processed/network_condition.xml.gz"), project_root)
 
     # Read conditions
     conditions = data.get("conditions", [])
@@ -78,6 +98,21 @@ def apply_conditions(input_network, output_network, conditions):
         print(f"!!! Network file not found: {input_network}")
         return
 
+    # Check the gzip file is not truncated before parsing
+    try:
+        with gzip.open(input_network, "rb") as _test:
+            while _test.read(65536):
+                pass
+    except EOFError:
+        print(f"!!! Network file is corrupted (truncated gzip): {input_network}")
+        print(f"    This usually means a previous write was interrupted.")
+        print(f"    Fix: re-run the OSM → MATSim network conversion to regenerate the file.")
+        print(f"    (ConvertOSM step in Maven, or delete the file and run main.py again)")
+        return
+    except Exception as e:
+        print(f"!!! Could not read network file: {e}")
+        return
+
     print(f"\nReading network: {input_network}")
 
     # Parse gzipped XML
@@ -112,11 +147,19 @@ def apply_conditions(input_network, output_network, conditions):
             found = False
             for link in all_links:
                 if link.get("id") == str(link_id_target):
-                    orig_speed = float(link.get("freespeed", 0))
-                    orig_cap   = float(link.get("capacity", 0))
-                    link.set("freespeed", f"{orig_speed * speed_factor:.4f}")
-                    link.set("capacity",  f"{orig_cap   * cap_factor:.4f}")
-                    modified = 1
+                    if cap_factor == 0.0:
+                        # Remove the link entirely — Hermes ignores capacity=0
+                        # and still lets vehicles through; removal is the only
+                        # way to prevent routing + traversal completely.
+                        links_elem.remove(link)
+                        modified = 1
+                        print(f"  🚫 [{name}] link '{link_id_target}' REMOVED from network (road closure)")
+                    else:
+                        orig_speed = float(link.get("freespeed", 0))
+                        orig_cap   = float(link.get("capacity", 0))
+                        link.set("freespeed", f"{orig_speed * speed_factor:.4f}")
+                        link.set("capacity",  f"{orig_cap   * cap_factor:.4f}")
+                        modified = 1
                     found = True
                     break
             if not found:
@@ -124,7 +167,8 @@ def apply_conditions(input_network, output_network, conditions):
 
         # --- Case 2: target by road_types ---
         elif road_types:
-            for link in all_links:
+            # Refresh list after possible removals above
+            for link in list(links_elem.findall("link")):
                 # Find type attribute inside <attributes> block
                 link_type  = None
                 attrs_elem = link.find("attributes")
@@ -135,14 +179,22 @@ def apply_conditions(input_network, output_network, conditions):
                             break
 
                 if link_type in road_types:
-                    orig_speed = float(link.get("freespeed", 0))
-                    orig_cap   = float(link.get("capacity", 0))
-                    link.set("freespeed", f"{orig_speed * speed_factor:.4f}")
-                    link.set("capacity",  f"{orig_cap   * cap_factor:.4f}")
+                    if cap_factor == 0.0:
+                        links_elem.remove(link)
+                    else:
+                        orig_speed = float(link.get("freespeed", 0))
+                        orig_cap   = float(link.get("capacity", 0))
+                        link.set("freespeed", f"{orig_speed * speed_factor:.4f}")
+                        link.set("capacity",  f"{orig_cap   * cap_factor:.4f}")
                     modified += 1
 
         total_modified += modified
-        print(f"  ✅ [{name}] speed×{speed_factor}, capacity×{cap_factor} → {modified:,} links modified")
+        if cap_factor == 0.0 and link_id_target:
+            pass  # already printed inside the removal block
+        elif cap_factor == 0.0:
+            print(f"  🚫 [{name}] speed×{speed_factor}, capacity×{cap_factor} → {modified:,} links REMOVED")
+        else:
+            print(f"  ✅ [{name}] speed×{speed_factor}, capacity×{cap_factor} → {modified:,} links modified")
 
     print(f"\nTotal links modified: {total_modified:,} / {len(all_links):,}")
 
@@ -166,7 +218,7 @@ def main():
     print(f"  (See guide: data/traffic_conditions_guide.txt)")
     print("=" * 60)
 
-    result = load_conditions(conditions_file)
+    result = load_conditions(conditions_file, project_root=_PROJECT_ROOT)
     if result is None:
         return
 

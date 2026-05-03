@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 echo "=========================================="
 echo "   Bangkok MATSim One-Click Runner"
@@ -19,7 +19,7 @@ fi
 
 # 2. Run the main pipeline (which now handles both preprocessing and MATSim)
 echo ">>> Starting the simulation pipeline..."
-cd "$PROJECT_ROOT/preprocess" || exit
+cd "$PROJECT_ROOT/pipeline" || exit
 python main.py
 
 echo "=========================================="

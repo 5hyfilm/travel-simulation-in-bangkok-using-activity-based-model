@@ -24,7 +24,8 @@ try:
 except ImportError:
     MAP_AVAILABLE = False
 
-CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config.json")
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+CONFIG_PATH  = os.path.join(PROJECT_ROOT, "config.json")
 BANGKOK_LAT = 13.75
 BANGKOK_LON = 100.52
 
@@ -59,6 +60,22 @@ def labeled_entry(parent, label, value="", width=200):
     ctk.CTkEntry(frame, textvariable=var, width=width).pack(side="left")
     return var
 
+def _smart_path(path):
+    """Return a relative path if inside the project, otherwise absolute.
+
+    os.path.relpath raises ValueError on Windows when path and PROJECT_ROOT
+    are on different drives, so we always fall back to the absolute path.
+    """
+    try:
+        rel = os.path.relpath(path, PROJECT_ROOT)
+        # Paths that start with '..' are outside the project root — use absolute
+        if rel.startswith(".."):
+            return os.path.abspath(path)
+        return rel
+    except ValueError:
+        # Different drive on Windows
+        return os.path.abspath(path)
+
 def labeled_file(parent, label, value="", filetypes=None, width=260):
     frame = ctk.CTkFrame(parent, fg_color="transparent")
     frame.pack(fill="x", padx=4, pady=3)
@@ -70,7 +87,7 @@ def labeled_file(parent, label, value="", filetypes=None, width=260):
     def browse():
         path = filedialog.askopenfilename(filetypes=filetypes or [("All files", "*.*")])
         if path:
-            var.set(os.path.relpath(path))
+            var.set(_smart_path(path))
     ctk.CTkButton(frame, text="Browse", width=70, command=browse).pack(side="left")
     return var
 
@@ -85,7 +102,7 @@ def labeled_dir(parent, label, value="", width=260):
     def browse():
         path = filedialog.askdirectory()
         if path:
-            var.set(os.path.relpath(path))
+            var.set(_smart_path(path))
     ctk.CTkButton(frame, text="Browse", width=70, command=browse).pack(side="left")
     return var
 
@@ -323,14 +340,14 @@ def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
 
 def build_gui(config):
     root = ctk.CTk()
-    root.title("Bangkok MATSim — Configuration")
+    root.title("A2M Pipeline — Configuration & Simulation Run")
     root.geometry("640x580")
     root.resizable(False, False)
 
     # Header
     header = ctk.CTkFrame(root, fg_color=("#1a73e8", "#1558b0"), corner_radius=0)
     header.pack(fill="x")
-    ctk.CTkLabel(header, text="Bangkok MATSim",
+    ctk.CTkLabel(header, text="A2M Pipeline",
                  font=ctk.CTkFont(size=18, weight="bold"),
                  text_color="white").pack(side="left", padx=16, pady=10)
     ctk.CTkLabel(header, text="Configuration Editor",
@@ -340,7 +357,7 @@ def build_gui(config):
     # Tabview
     tabs = ctk.CTkTabview(root, anchor="nw")
     tabs.pack(fill="both", expand=True, padx=12, pady=(8, 4))
-    for name in ["Input", "Output", "Execution", "API Keys"]:
+    for name in ["Input", "Execution", "API Keys"]:
         tabs.add(name)
 
     # ── Input tab ─────────────────────────────────────────────────
@@ -365,29 +382,23 @@ def build_gui(config):
         ctk.CTkLabel(map_row, text="pip install pywebview  to enable map picker",
                      font=ctk.CTkFont(size=11), text_color="gray").pack(side="left")
 
-    section_title(t, "Files")
-    v_trips  = labeled_file(t, "Trips CSV",    inp["trips_filename"],
+    section_title(t, "Input Files")
+    v_trips  = labeled_file(t, "ActivitySim Trips (.csv)",    inp["trips_filename"],
                             [("CSV", "*.csv"), ("All", "*.*")])
-    v_subdis = labeled_file(t, "Subdistricts", inp["subdistricts_filename"],
+    v_subdis = labeled_file(t, "Subdistricts Shapefile (.geojson)", inp["subdistricts_filename"],
                             [("GeoJSON", "*.geojson"), ("All", "*.*")])
 
     section_title(t, "Simulation")
     v_sample = labeled_entry(t, "Sample Size", inp["sample_size"])
-
-    # ── Output tab ────────────────────────────────────────────────
-    t = tabs.tab("Output")
-    out = config["output"]
-    section_title(t, "Output Directory")
-    v_outdir = labeled_dir(t, "Output Folder", out["output_folder"])
 
     # ── Execution tab ─────────────────────────────────────────────
     t = tabs.tab("Execution")
     exc = config.get("execution", {})
 
     section_title(t, "MATSim")
-    v_auto    = labeled_switch(t, "Run Simulation Automatically",
+    v_auto    = labeled_switch(t, "Run Full Pipeline",
                                exc.get("run_simulation_automatically", False))
-    v_mvnopts = labeled_entry(t, "Maven Opts", exc.get("maven_opts", "-Xmx10G"))
+    v_mvnopts = labeled_entry(t, "Maven Opts (Memory Option)", exc.get("maven_opts", "-Xmx10G"))
     v_mscfg   = labeled_file(t, "MATSim Config File", exc.get("matsim_config_file", ""),
                               [("XML", "*.xml"), ("All", "*.*")])
 
@@ -419,14 +430,6 @@ def build_gui(config):
                     "trips_filename":        v_trips.get().strip(),
                     "subdistricts_filename": v_subdis.get().strip(),
                     "sample_size":           int(v_sample.get()),
-                },
-                "output": {
-                    "output_folder":        v_outdir.get().strip(),
-                    "osm_filename":         config["output"]["osm_filename"],
-                    "raw_csv_filename":     config["output"]["raw_csv_filename"],
-                    "clean_csv_filename":   config["output"]["clean_csv_filename"],
-                    "final_trips_filename": config["output"]["final_trips_filename"],
-                    "plans_filename":       config["output"]["plans_filename"],
                 },
                 "execution": {
                     "run_simulation_automatically": v_auto.get(),
@@ -482,7 +485,7 @@ def build_gui(config):
 
     ctk.CTkButton(bar, text="Save & Run 🚀", width=140, fg_color="#28a745", 
                   hover_color="#218838", command=on_save_and_run).pack(side="right", padx=4)
-    ctk.CTkButton(bar, text="Save",   width=90, command=lambda: on_save()).pack(side="right", padx=4)
+    ctk.CTkButton(bar, text="Apply Config",   width=90, command=lambda: on_save()).pack(side="right", padx=4)
     ctk.CTkButton(bar, text="Cancel", width=90, fg_color="#555",
                   hover_color="#666", command=root.destroy).pack(side="right", padx=4)
 

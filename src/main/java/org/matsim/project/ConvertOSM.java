@@ -22,7 +22,7 @@ public class ConvertOSM {
                         "EPSG:32647"
                 );
 
-        String in  = "preprocess/output/network.osm";
+        String in  = "pipeline/output/network.osm";
         String out = "data/processed/network.xml.gz";
 
         OsmNetworkReader onr = new OsmNetworkReader(network, ct);

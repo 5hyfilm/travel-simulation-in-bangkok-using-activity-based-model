@@ -1,4 +1,4 @@
-"""
+﻿"""
 convergence_anal.py
 ===================
 Check whether the MATSim simulation converged properly by analysing
@@ -9,7 +9,7 @@ Reads:
   output/traveldistancestats.csv — avg trip distance per iteration
 
 Run from project root:
-  python preprocess/analysis/convergence_anal.py
+  python pipeline/analysis/convergence_anal.py
 """
 
 import pandas as pd

@@ -1,7 +1,7 @@
-"""Quick check: what tags does OSM way 153265299 have?"""
+﻿"""Quick check: what tags does OSM way 153265299 have?"""
 from lxml import etree
 
-OSM_FILE = "preprocess/output/network.osm"
+OSM_FILE = "pipeline/output/network.osm"
 targets = {"153265299", "680482041", "90423215"}  # top 3 congested ways
 found = {}
 

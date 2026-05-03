@@ -1,9 +1,9 @@
-================================================================
+﻿================================================================
   TRAFFIC CONDITIONS GUIDE — Bangkok MATSim Simulation
 ================================================================
 
 วิธีใช้: แก้ไฟล์ traffic_conditions.json แล้วรัน
-  python preprocess/apply_traffic_conditions.py
+  python pipeline/apply_traffic_conditions.py
 
 ----------------------------------------------------------------
   โครงสร้าง traffic_conditions.json

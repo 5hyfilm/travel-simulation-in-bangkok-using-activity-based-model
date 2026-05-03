@@ -1,7 +1,7 @@
-import pandas as pd, os
+﻿import pandas as pd, os
 
-for p in ["preprocess/data/final_trips.csv", "data/final_trips.csv",
-          "preprocess/output/final_trips.csv"]:
+for p in ["pipeline/data/final_trips.csv", "data/final_trips.csv",
+          "pipeline/output/final_trips.csv"]:
     if os.path.exists(p):
         df = pd.read_csv(p, nrows=30)
         print(f"=== {p} ===")

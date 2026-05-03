@@ -1,4 +1,4 @@
-# Installation & Setup
+﻿# Installation & Setup
 
 ## 1. Prerequisites
 
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 # How to Run
 
 1. **Prepare Inputs**: 
-   - Place your **`trips.csv`** file in the `preprocess/` directory (This is required for Step 4 & 5).
+   - Place your **`trips.csv`** file in the `pipeline/` directory (This is required for Step 4 & 5).
    - The script will automatically detect and process it.
 
 2. **Configure (Optional)**: Open `config.json` in the root directory to adjust coordinates or sample size. The current default is a wide area of Greater Bangkok:
@@ -57,14 +57,14 @@ pip install -r requirements.txt
 3. Run the pipeline:
 
    **Option A: One-Click Runner (Recommended)**
-   Run the full pipeline (Environment Activation -> Preprocess -> MATSim Java Simulation) from the project root:
+   Run the full pipeline (Environment Activation -> pipeline -> MATSim Java Simulation) from the project root:
    ```bash
    ./run.sh
    ```
 
    **Option B: Manual Python Execution**
    ```bash
-   cd preprocess
+   cd pipeline
    python main.py
    ```
 
@@ -80,7 +80,7 @@ Signal location export is a separate post-processing step. It is **not** part of
 
 Run the full flow in this order:
 
-1. Run the Python preprocess pipeline:
+1. Run the Python pipeline pipeline:
 
    ```bash
    python main.py

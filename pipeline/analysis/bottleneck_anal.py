@@ -1,4 +1,4 @@
-"""
+﻿"""
 bottleneck_anal.py
 ==================
 Identify the actual Bangkok road names behind the most congested
@@ -7,17 +7,17 @@ OSM network file.
 
 Reads:
   output/output_links.csv.gz   — MATSim link output (vol_car, capacity, type, origid)
-  preprocess/output/network.osm — raw OSM from which the network was built
+  pipeline/output/network.osm — raw OSM from which the network was built
 
 Run from project root:
-  python preprocess/analysis/bottleneck_anal.py
+  python pipeline/analysis/bottleneck_anal.py
 """
 
 import pandas as pd
 from lxml import etree
 
 LINKS_FILE = "output/output_links.csv.gz"
-OSM_FILE   = "preprocess/output/network.osm"
+OSM_FILE   = "pipeline/output/network.osm"
 TOP_N      = 30   # number of top links to name
 
 # ── Load link stats ────────────────────────────────────────────────────────

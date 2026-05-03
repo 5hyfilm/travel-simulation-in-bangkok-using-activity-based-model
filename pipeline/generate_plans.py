@@ -1,4 +1,4 @@
-import random
+﻿import random
 import pandas as pd
 from pyproj import Transformer
 from lxml import etree
@@ -134,4 +134,4 @@ def generate_matsim_plans(input_file, output_file, sample_size=50000, bbox=None)
     print(f"✅ {output_file} generated successfully.")
 
 if __name__ == "__main__":
-    generate_matsim_plans("preprocess/output/final_trips.csv", "preprocess/output/plan_300k.xml", sample_size=300000)
+    generate_matsim_plans("pipeline/output/final_trips.csv", "pipeline/output/plan_300k.xml", sample_size=300000)

@@ -1,4 +1,4 @@
-"""
+﻿"""
 export_signal_locations.py
 --------------------------
 Reads signalSystems.xml and network.cleaned.xml.gz to extract
@@ -15,7 +15,7 @@ import csv
 import xml.etree.ElementTree as ET
 from pyproj import Transformer
 
-# --- Paths (run from preprocess/ folder) ---
+# --- Paths (run from pipeline/ folder) ---
 SIGNAL_SYSTEMS_FILE = "../data/processed/signalSystems.xml"
 NETWORK_FILE        = "../data/processed/network.cleaned.xml.gz"
 OUT_CSV             = "output/signal_locations.csv"

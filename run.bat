@@ -23,8 +23,12 @@ if %ERRORLEVEL%==0 (
     goto :found_python
 )
 
-REM 3. ค้นหา conda Python โดยตรงจาก common install paths
+REM 3. ค้นหา conda Python โดยตรงจาก common install paths (named envs first)
 for %%P in (
+    "%USERPROFILE%\miniconda3\envs\capstone\python.exe"
+    "%USERPROFILE%\anaconda3\envs\capstone\python.exe"
+    "%USERPROFILE%\AppData\Local\miniconda3\envs\capstone\python.exe"
+    "%USERPROFILE%\AppData\Local\anaconda3\envs\capstone\python.exe"
     "%USERPROFILE%\anaconda3\python.exe"
     "%USERPROFILE%\miniconda3\python.exe"
     "%USERPROFILE%\AppData\Local\anaconda3\python.exe"
@@ -69,7 +73,7 @@ if not exist "%PROJECT_ROOT%venv\Scripts\python.exe" (
     )
     echo [INFO] ติดตั้ง dependencies...
     "%PROJECT_ROOT%venv\Scripts\python.exe" -m pip install --upgrade pip >nul
-    "%PROJECT_ROOT%venv\Scripts\python.exe" -m pip install -r "%PROJECT_ROOT%preprocess\requirements.txt"
+    "%PROJECT_ROOT%venv\Scripts\python.exe" -m pip install -r "%PROJECT_ROOT%pipeline\requirements.txt"
     if errorlevel 1 (
         echo [ERROR] ติดตั้ง dependencies ไม่สำเร็จ
         pause
@@ -84,7 +88,7 @@ set VENV_PYTHON="%PROJECT_ROOT%venv\Scripts\python.exe"
 REM ─── Run pipeline ─────────────────────────────────────────────
 echo.
 echo ^>^>^> Starting simulation pipeline...
-cd /d "%PROJECT_ROOT%preprocess"
+cd /d "%PROJECT_ROOT%pipeline"
 %VENV_PYTHON% main.py
 if errorlevel 1 (
     echo.

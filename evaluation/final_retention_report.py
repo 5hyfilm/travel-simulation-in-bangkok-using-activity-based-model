@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 import xml.etree.ElementTree as ET
 import os
 
@@ -8,9 +8,9 @@ def get_base_id(full_id):
 
 def generate_full_retention_report():
     files = {
-        "Source (ActivitySim)": "preprocess/data/final_trips.csv",
-        "Assigned (Locations)": "preprocess/output/final_trips.csv",
-        "Final XML (MATSim)":   "preprocess/output/plan_300k_cut.xml"
+        "Source (ActivitySim)": "pipeline/data/final_trips.csv",
+        "Assigned (Locations)": "pipeline/output/final_trips.csv",
+        "Final XML (MATSim)":   "pipeline/output/plan_300k_cut.xml"
     }
 
     print("="*60)

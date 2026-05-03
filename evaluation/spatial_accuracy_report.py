@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 import xml.etree.ElementTree as ET
 import geopandas as gpd
 from shapely.geometry import Point
@@ -8,9 +8,9 @@ import random
 from tqdm import tqdm
 
 # Files
-SOURCE_CSV = "../preprocess/data/final_trips.csv"
-PLANS_XML = "../preprocess/output/plan.xml"
-GEOJSON = "../preprocess/data/subdistricts_180.geojson"
+SOURCE_CSV = "../pipeline/data/final_trips.csv"
+PLANS_XML = "../pipeline/output/plan.xml"
+GEOJSON = "../pipeline/data/subdistricts_180.geojson"
 
 SAMPLE_SIZE = 2000 # Increased sample for higher statistical confidence
 

@@ -1,4 +1,4 @@
-from lxml import etree
+﻿from lxml import etree
 import gzip
 
 toll_links = []
@@ -14,7 +14,7 @@ with gzip.open("data/processed/network.xml.gz", "rb") as f:
 print(f"Toll links found: {len(toll_links):,}")
 
 # เขียน toll_links.xml (format ถูกต้อง)
-with open("preprocess/output/toll_links.xml", "w") as f:
+with open("pipeline/output/toll_links.xml", "w") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
     f.write('<!DOCTYPE roadpricing SYSTEM "http://www.matsim.org/files/dtd/roadpricing_v1.dtd">\n')
     f.write('<roadpricing type="distance" name="Bangkok Expressway Toll">\n')
