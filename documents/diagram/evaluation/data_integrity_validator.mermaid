@@ -1,0 +1,53 @@
+graph TD
+    %% -------------------------
+    %% Define Styles
+    %% -------------------------
+    classDef file fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#000;
+    classDef script fill:#FFF3E0,stroke:#E65100,stroke-width:3px,color:#000;
+    classDef check fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,stroke-dasharray: 5 5,color:#000;
+    classDef metric fill:#F3E5F5,stroke:#6A1B9A,stroke-width:2px,color:#000;
+    classDef report fill:#212121,stroke:#000,stroke-width:2px,color:#FFF;
+
+    %% -------------------------
+    %% Data Sources
+    %% -------------------------
+    F1[("1. Source Data\n(ActivitySim CSV)")]:::file
+    F2[("2. Assigned Data\n(Locations CSV)")]:::file
+    F3[("3. Final XML\n(MATSim Input)")]:::file
+
+    %% -------------------------
+    %% Python Script
+    %% -------------------------
+    Script{{"data_integrity_validator.py\n(Data Collector)"}}:::script
+
+    F1 -- "Extract 'Car' IDs" --> Script
+    F2 -- "Extract 'Car' IDs" --> Script
+    F3 -- "Parse <person id>" --> Script
+
+    %% -------------------------
+    %% Integrity Checks & Analytics
+    %% -------------------------
+    subgraph "Internal Processing & Analysis"
+        direction TB
+        
+        C1["✔️ Check A: Integrity\nAssigned IDs must exist in Source\n(Checks for Foreign/Fake IDs)"]:::check
+        C2["✔️ Check B: Integrity\nXML IDs must exist in Assigned\n(Checks for Ghost IDs)"]:::check
+        
+        M1["📈 Volume: Population Growth\nCalculates Scaling/Cloning %"]:::metric
+        M2["📉 Volume: Process Retention\nCalculates Final Sampling %"]:::metric
+    end
+
+    Script ==> C1
+    Script ==> C2
+    Script ==> M1
+    Script ==> M2
+
+    %% -------------------------
+    %% Final Output
+    %% -------------------------
+    C1 -.-> Report
+    C2 -.-> Report
+    M1 -.-> Report
+    M2 -.-> Report
+    
+    Report[["📊 Generate Final Console Report\n(Print Summary Table)"]]:::report

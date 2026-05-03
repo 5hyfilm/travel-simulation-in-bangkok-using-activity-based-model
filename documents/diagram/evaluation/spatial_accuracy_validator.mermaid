@@ -1,0 +1,26 @@
+graph TD
+    %% Define Styles
+    classDef file fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#000;
+    classDef script fill:#FFF3E0,stroke:#E65100,stroke-width:3px,color:#000;
+    classDef check fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#000;
+    classDef report fill:#212121,stroke:#000,stroke-width:2px,color:#FFF;
+
+    %% Data Inputs
+    A[("Source Demand\n(Original TAZ Baseline)")]:::file
+    B[("MATSim Plans\n(XML X,Y Coordinates)")]:::file
+    C[("TAZ Boundaries\n(GeoJSON Polygons)")]:::file
+
+    %% Python Script
+    Script{{"spatial_accuracy_validator.py"}}:::script
+
+    %% Process Flow
+    B -->|"1. Extract X,Y\nConvert UTM ➔ Lat/Lon"| Script
+    C -->|"2. Load Map Polygons"| Script
+    
+    Script ==> Join["📍 Spatial Join Process\n(Check if Point falls inside Polygon)"]:::check
+    
+    Join ==> Compare{"Match Verification:\nDoes Joined TAZ == Original TAZ?"}:::check
+    
+    A -.->|"3. Provide Truth Baseline"| Compare
+    
+    Compare -.->|"Output Success / Fail"| Result[["📊 Final Accuracy Rate %"]]:::report
