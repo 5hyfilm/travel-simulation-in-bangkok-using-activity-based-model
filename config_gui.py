@@ -202,6 +202,13 @@ MAP_HTML = """
     });
   });
 
+  // REAL-TIME UPDATES: Listen for move and resize during the drag action
+  map.on('draw:editmove draw:editresize', function(e) {
+    var layer = e.layer;
+    var b = layer.getBounds();
+    updateCoords(b.getNorth(), b.getSouth(), b.getEast(), b.getWest());
+  });
+
   map.on(L.Draw.Event.DELETED, function() {
     currentBbox = null;
     document.getElementById('cn').textContent = '—';
