@@ -251,7 +251,7 @@ MAP_HTML = """
 import multiprocessing
 
 def _map_process_wrapper(queue, init_n, init_s, init_e, init_w):
-    \"\"\"Worker function that runs in a separate process to avoid GUI conflicts.\"\"\"
+    """Worker function that runs in a separate process to avoid GUI conflicts."""
     try:
         import webview
         
@@ -278,7 +278,7 @@ def _map_process_wrapper(queue, init_n, init_s, init_e, init_w):
         print(f"Map Process Error: {e}")
 
 def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
-    \"\"\"Open the map picker in a separate process to avoid GIL/Cocoa crashes on macOS.\"\"\"
+    """Open the map picker in a separate process to avoid GIL/Cocoa crashes on macOS."""
     
     try:
         init_n, init_s = float(v_north.get()), float(v_south.get())
