@@ -177,30 +177,28 @@ MAP_HTML = """
   });
   map.addControl(drawControl);
 
+  var currentBbox = null;
+
   // Show existing bbox if provided
   var initBbox = INIT_BBOX;
   if (initBbox) {
     var rect = L.rectangle([[initBbox.s, initBbox.w],[initBbox.n, initBbox.e]],
-                           {color:'#5ea4ff', fillOpacity:0.06, weight:2, dashArray:'6'});
+                           {color:'#1a73e8', fillOpacity:0.08, weight:2});
     drawnItems.addLayer(rect);
     updateCoords(initBbox.n, initBbox.s, initBbox.e, initBbox.w);
   }
-
-  var currentBbox = initBbox || null;
 
   map.on(L.Draw.Event.CREATED, function(e) {
     drawnItems.clearLayers();
     drawnItems.addLayer(e.layer);
     var b = e.layer.getBounds();
-    currentBbox = { n: b.getNorth(), s: b.getSouth(), e: b.getEast(), w: b.getWest() };
-    updateCoords(currentBbox.n, currentBbox.s, currentBbox.e, currentBbox.w);
+    updateCoords(b.getNorth(), b.getSouth(), b.getEast(), b.getWest());
   });
 
   map.on(L.Draw.Event.EDITED, function(e) {
     e.layers.eachLayer(function(layer) {
       var b = layer.getBounds();
-      currentBbox = { n: b.getNorth(), s: b.getSouth(), e: b.getEast(), w: b.getWest() };
-      updateCoords(currentBbox.n, currentBbox.s, currentBbox.e, currentBbox.w);
+      updateCoords(b.getNorth(), b.getSouth(), b.getEast(), b.getWest());
     });
   });
 
@@ -214,6 +212,7 @@ MAP_HTML = """
   });
 
   function updateCoords(n, s, e, w) {
+    currentBbox = { n: n, s: s, e: e, w: w };
     document.getElementById('cn').textContent = n.toFixed(5);
     document.getElementById('cs').textContent = s.toFixed(5);
     document.getElementById('ce').textContent = e.toFixed(5);
@@ -247,6 +246,8 @@ def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
 
     result = {"confirmed": False}
 
+    import threading
+
     class BboxAPI:
         def confirm_bbox(self, n, s, e, w):
             result["n"] = n
@@ -254,7 +255,9 @@ def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
             result["e"] = e
             result["w"] = w
             result["confirmed"] = True
-            win.destroy()
+            # Use a tiny delay to allow the JS call to finish before destroying
+            # This prevents a Cocoa bridge crash on macOS
+            threading.Timer(0.1, win.destroy).start()
 
     # Inject initial values into HTML
     try:
@@ -280,12 +283,12 @@ def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
         resizable=True,
     )
 
-    # Block parent while map is open (Windows only)
+    # Block parent while map is open (Windows only, causes error on macOS)
     if platform.system() == "Windows":
         parent_root.attributes("-disabled", True)
     
     webview.start()
-    
+
     if platform.system() == "Windows":
         parent_root.attributes("-disabled", False)
     parent_root.lift()
