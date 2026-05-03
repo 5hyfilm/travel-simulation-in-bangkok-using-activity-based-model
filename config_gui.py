@@ -248,64 +248,75 @@ MAP_HTML = """
 </html>
 """
 
-def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
-    """Open a Leaflet.js map in a pywebview window for smooth bbox selection."""
+import multiprocessing
 
-    result = {"confirmed": False}
-
-    import threading
-
-    class BboxAPI:
-        def confirm_bbox(self, n, s, e, w):
-            result["n"] = n
-            result["s"] = s
-            result["e"] = e
-            result["w"] = w
-            result["confirmed"] = True
-            # Use a tiny delay to allow the JS call to finish before destroying
-            # This prevents a Cocoa bridge crash on macOS
-            threading.Timer(0.1, win.destroy).start()
-
-    # Inject initial values into HTML
+def _map_process_wrapper(queue, init_n, init_s, init_e, init_w):
+    \"\"\"Worker function that runs in a separate process to avoid GUI conflicts.\"\"\"
     try:
-        init_n = float(v_north.get())
-        init_s = float(v_south.get())
-        init_e = float(v_east.get())
-        init_w = float(v_west.get())
-        bbox_js = f"{{n:{init_n},s:{init_s},e:{init_e},w:{init_w}}}"
-    except (ValueError, TypeError):
-        bbox_js = "null"
+        import webview
+        
+        result = {"n": 0, "s": 0, "e": 0, "w": 0, "confirmed": False}
 
-    html = (MAP_HTML
-            .replace("INIT_LAT", str(BANGKOK_LAT))
-            .replace("INIT_LON", str(BANGKOK_LON))
-            .replace("INIT_BBOX", bbox_js))
+        class BboxAPI:
+            def confirm_bbox(self, n, s, e, w):
+                result.update({"n": n, "s": s, "e": e, "w": w, "confirmed": True})
+                win.destroy()
 
-    api = BboxAPI()
-    win = webview.create_window(
-        "Pick Bounding Box — Bangkok MATSim",
-        html=html,
-        js_api=api,
-        width=900, height=680,
-        resizable=True,
+        bbox_js = f"{{n:{init_n},s:{init_s},e:{init_e},w:{init_w}}}" if init_n is not None else "null"
+        html = (MAP_HTML
+                .replace("INIT_LAT", str(BANGKOK_LAT))
+                .replace("INIT_LON", str(BANGKOK_LON))
+                .replace("INIT_BBOX", bbox_js))
+
+        api = BboxAPI()
+        win = webview.create_window("Pick Bounding Box — Bangkok MATSim", html=html, js_api=api, width=900, height=680)
+        webview.start()
+        
+        if result["confirmed"]:
+            queue.put(result)
+    except Exception as e:
+        print(f"Map Process Error: {e}")
+
+def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
+    \"\"\"Open the map picker in a separate process to avoid GIL/Cocoa crashes on macOS.\"\"\"
+    
+    try:
+        init_n, init_s = float(v_north.get()), float(v_south.get())
+        init_e, init_w = float(v_east.get()), float(v_west.get())
+    except:
+        init_n = init_s = init_e = init_w = None
+
+    # Use a Queue to get the result back from the process
+    queue = multiprocessing.Queue()
+    p = multiprocessing.Process(
+        target=_map_process_wrapper, 
+        args=(queue, init_n, init_s, init_e, init_w)
     )
-
-    # Block parent while map is open (Windows only, causes error on macOS)
+    
+    # Disable parent while map is open
     if platform.system() == "Windows":
         parent_root.attributes("-disabled", True)
     
-    webview.start()
+    p.start()
+    
+    # Poll the queue or wait for process
+    def check_process():
+        if not p.is_alive():
+            if not queue.empty():
+                res = queue.get()
+                v_north.set(str(round(res["n"], 6)))
+                v_south.set(str(round(res["s"], 6)))
+                v_east.set(str(round(res["e"], 6)))
+                v_west.set(str(round(res["w"], 6)))
+            
+            if platform.system() == "Windows":
+                parent_root.attributes("-disabled", False)
+            parent_root.lift()
+            parent_root.focus_force()
+        else:
+            parent_root.after(200, check_process)
 
-    if platform.system() == "Windows":
-        parent_root.attributes("-disabled", False)
-    parent_root.lift()
-    parent_root.focus_force()
-
-    if result["confirmed"]:
-        v_north.set(str(round(result["n"], 6)))
-        v_south.set(str(round(result["s"], 6)))
-        v_east.set(str(round(result["e"], 6)))
-        v_west.set(str(round(result["w"], 6)))
+    parent_root.after(200, check_process)
 
 
 # ── Main GUI ───────────────────────────────────────────────────────────────────
@@ -479,5 +490,6 @@ def build_gui(config):
 
 
 if __name__ == "__main__":
+    multiprocessing.freeze_support()
     cfg = load_config()
     build_gui(cfg)
