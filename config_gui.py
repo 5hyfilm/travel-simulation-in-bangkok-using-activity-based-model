@@ -280,10 +280,14 @@ def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
         resizable=True,
     )
 
-    # Block parent while map is open
-    parent_root.attributes("-disabled", True)
+    # Block parent while map is open (Windows only)
+    if platform.system() == "Windows":
+        parent_root.attributes("-disabled", True)
+    
     webview.start()
-    parent_root.attributes("-disabled", False)
+    
+    if platform.system() == "Windows":
+        parent_root.attributes("-disabled", False)
     parent_root.lift()
     parent_root.focus_force()
 
