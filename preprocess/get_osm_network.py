@@ -31,8 +31,11 @@ def download_osm_for_matsim(north, south, east, west, filename="map_data.osm"):
     print("Querying for: Highway, Building, Landuse...")
 
     try:
-        # Send Request to API
-        response = requests.post(api_url, data={'data': query})
+        # Send Request to API with User-Agent header to avoid 406 error
+        headers = {
+            'User-Agent': 'BangkokMATSimSimulation/1.0 (Contact: travel-simulation-bangkok)'
+        }
+        response = requests.post(api_url, data={'data': query}, headers=headers)
         
         # Check if successful (Status 200 = OK)
         if response.status_code == 200:

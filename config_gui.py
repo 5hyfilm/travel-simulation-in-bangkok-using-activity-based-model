@@ -12,6 +12,8 @@ Requirements:
 
 import json
 import os
+import platform
+import subprocess
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import customtkinter as ctk
@@ -366,7 +368,7 @@ def build_gui(config):
 
     section_title(t, "Traffic Conditions")
     v_tc     = labeled_switch(t, "Apply Traffic Conditions",
-                              exc.get("apply_traffic_conditions", False))
+                               exc.get("apply_traffic_conditions", False))
     v_tcfile = labeled_file(t, "Conditions File",
                             exc.get("traffic_conditions_file", "data/traffic_conditions.json"),
                             [("JSON", "*.json"), ("All", "*.*")])
@@ -381,7 +383,7 @@ def build_gui(config):
     bar = ctk.CTkFrame(root, fg_color="transparent")
     bar.pack(fill="x", padx=12, pady=(0, 10))
 
-    def on_save():
+    def on_save(run_after=False):
         try:
             new_cfg = {
                 "input": {
@@ -413,12 +415,50 @@ def build_gui(config):
                 },
             }
             save_config(new_cfg)
-            messagebox.showinfo("Saved", f"Configuration saved to:\n{CONFIG_PATH}")
+            if not run_after:
+                messagebox.showinfo("Saved", f"Configuration saved to:\n{CONFIG_PATH}")
+            return True
         except ValueError as e:
             messagebox.showerror("Invalid Input", str(e))
+            return False
 
-    ctk.CTkButton(bar, text="Save",   width=110, command=on_save).pack(side="right", padx=4)
-    ctk.CTkButton(bar, text="Cancel", width=110, fg_color="#555",
+    def on_run():
+        project_root = os.path.dirname(os.path.abspath(__file__))
+        system = platform.system()
+        
+        try:
+            if system == "Windows":
+                script_path = os.path.join(project_root, "run.bat")
+                # Start a new CMD window and keep it open (/k) if it fails, or just run it
+                subprocess.Popen(["start", "cmd", "/c", script_path], shell=True)
+            elif system == "Darwin": # macOS
+                script_path = os.path.join(project_root, "run.sh")
+                # Use osascript to open a new Terminal window for visibility
+                cmd = f'tell application "Terminal" to do script "cd \'{project_root}\' && chmod +x run.sh && ./run.sh"'
+                subprocess.Popen(["osascript", "-e", cmd])
+            else: # Linux
+                script_path = os.path.join(project_root, "run.sh")
+                # Try to find a terminal emulator
+                terminals = ["gnome-terminal", "xterm", "konsole"]
+                success = False
+                for term in terminals:
+                    if subprocess.run(["which", term], capture_output=True).returncode == 0:
+                        subprocess.Popen([term, "-e", f"bash -c 'cd {project_root} && chmod +x run.sh && ./run.sh; exec bash'"])
+                        success = True
+                        break
+                if not success:
+                    subprocess.Popen(["bash", script_path], cwd=project_root)
+        except Exception as e:
+            messagebox.showerror("Run Error", f"Could not start the simulation:\n{str(e)}")
+
+    def on_save_and_run():
+        if on_save(run_after=True):
+            on_run()
+
+    ctk.CTkButton(bar, text="Save & Run 🚀", width=140, fg_color="#28a745", 
+                  hover_color="#218838", command=on_save_and_run).pack(side="right", padx=4)
+    ctk.CTkButton(bar, text="Save",   width=90, command=lambda: on_save()).pack(side="right", padx=4)
+    ctk.CTkButton(bar, text="Cancel", width=90, fg_color="#555",
                   hover_color="#666", command=root.destroy).pack(side="right", padx=4)
 
     root.mainloop()
