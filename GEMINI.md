@@ -4,9 +4,10 @@ This project implements a multi-agent transport simulation (MATSim) for Bangkok,
 
 ## 🏗️ Project Overview
 - **Purpose**: Simulate urban travel patterns in Bangkok (primarily Pathum Wan district) to evaluate traffic conditions and signal control strategies.
+- **Spatial Logic**: Uses a **Subdistrict-based Traffic Analysis Zone (TAZ)** system (180 subdistricts) for activity location assignment, replacing the legacy H3 indexing approach.
 - **Main Technologies**:
     - **Java (21+)**: Core simulation using the [MATSim](https://matsim.org/) framework (version 2025.0).
-    - **Python (3.x)**: Data preprocessing pipeline (OSM data extraction, POI classification, population generation) and post-simulation analysis.
+    - **Python (3.x)**: Data preprocessing pipeline (OSM data extraction, POI classification, subdistrict-based population generation).
     - **Maven**: Java dependency management and build system.
     - **Coordinate System**: `EPSG:32647` (WGS 84 / UTM zone 47N).
 
