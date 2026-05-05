@@ -10,7 +10,7 @@ def generate_full_retention_report():
     files = {
         "Source (ActivitySim)": "pipeline/data/final_trips.csv",
         "Assigned (Locations)": "pipeline/output/final_trips.csv",
-        "Final XML (MATSim)":   "pipeline/output/plan_300k_cut.xml"
+        "Final XML (MATSim)":   "pipeline/output/plan.xml"
     }
 
     print("="*60)

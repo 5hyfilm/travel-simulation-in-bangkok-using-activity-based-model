@@ -41,6 +41,7 @@ pipeline/output/
 pipeline/trips.csv
 data/processed/
 output.zip
+pipeline/data/final_trips.csv
 
 # Simulation output folders
 normal_output.zip

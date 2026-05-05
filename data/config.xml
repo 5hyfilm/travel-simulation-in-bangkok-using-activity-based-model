@@ -45,8 +45,8 @@
          ============================================================ -->
     <module name="hermes">
         <param name="mainMode" value="car"/>
-        <param name="flowCapacityFactor" value="0.10"/>
-        <param name="storageCapacityFactor" value="0.10"/>
+        <param name="flowCapacityFactor" value="0.09"/>
+        <param name="storageCapacityFactor" value="0.09"/>
         <param name="stuckTime" value="600"/>
     </module>
 
@@ -170,7 +170,7 @@
         <parameterset type="strategysettings">
             <param name="strategyName" value="ReRoute"/>
             <param name="weight" value="0.10"/>
-            <param name="disableAfterIteration" value="120"/>
+            <param name="disableAfterIteration" value="40"/>
         </parameterset>
     </module>
 
