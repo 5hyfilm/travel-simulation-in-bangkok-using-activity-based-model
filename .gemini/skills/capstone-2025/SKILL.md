@@ -12,7 +12,8 @@ This skill enforces the official standards for the Chulalongkorn University (CP)
 1.  **Identify Section**: Determine which section of the report to draft (e.g., System Design, Ethics).
 2.  **Apply Guidelines**: Consult [guidelines.md](references/guidelines.md) for rules on English, figures, and citations.
 3.  **Use Findings**: Consult [project-findings.md](references/project-findings.md) for the specific stats, MAPE/MAE scores, and algorithm details from the presentation.
-4.  **Follow Structure**: Use [structure.md](references/structure.md) to ensure the content meets the specific requirements and page limits for that section.
+4.  **Validate against Scoring**: Cross-reference all drafted content with [scoring-criteria.md](references/scoring-criteria.md) to ensure high marks for each evaluation section (Problem Definition, Implementation, etc.).
+5.  **Follow Structure**: Use [structure.md](references/structure.md) to ensure the content meets the specific requirements and page limits for that section.
 
 ## Core Rules
 
