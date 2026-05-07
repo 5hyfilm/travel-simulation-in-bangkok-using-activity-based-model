@@ -6,7 +6,7 @@
 
   "conditions": [
     {
-      "name": "ฝนตกหนัก (Heavy Rain)",
+      "name": "Heavy Rain",
       "road_types": [
         "motorway", "motorway_link",
         "trunk", "trunk_link",

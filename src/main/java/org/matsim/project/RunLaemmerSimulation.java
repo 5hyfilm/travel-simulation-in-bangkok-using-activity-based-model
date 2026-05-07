@@ -52,7 +52,7 @@ public class RunLaemmerSimulation {
         config.routing().setNetworkRouteConsistencyCheck(RoutingConfigGroup.NetworkRouteConsistencyCheck.disable);
         config.qsim().setTrafficDynamics(org.matsim.core.config.groups.QSimConfigGroup.TrafficDynamics.queue);
         config.qsim().setUsingFastCapacityUpdate(false);
-        config.qsim().setNumberOfThreads(8);      // parallel QSim (8 จาก 24 cores)
+        config.qsim().setNumberOfThreads(8);      // parallel QSim (8 of 24 cores)
         config.global().setNumberOfThreads(16);   // routing + scoring threads
         
         // Register activity types and set basic replanning to allow future iterations

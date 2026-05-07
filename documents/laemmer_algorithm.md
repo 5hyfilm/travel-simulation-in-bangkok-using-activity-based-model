@@ -1,169 +1,169 @@
-# หลักการทำงานของ Lämmer Adaptive Signal Control
+# How Lämmer Adaptive Signal Control Works
 
-อ้างอิงจาก: *Lämmer, S. & Helbing, D. (2008). Self-control of traffic lights and vehicle flows in urban road networks.*
-
----
-
-## 1. ไฟจราจรทั่วไป vs Lämmer
-
-### ไฟจราจรแบบ Fixed-time (ทั่วไป)
-ไฟจราจรส่วนใหญ่ในโลกทำงานแบบ **รอบตายตัว (fixed cycle)**
-
-```
-เขียว 30 วิ → แดง 30 วิ → เขียว 30 วิ → แดง 30 วิ → ...
-```
-
-ปัญหาคือมันไม่สนใจว่าตอนนี้มีรถรออยู่จริงแค่ไหน — ถ้าถนนว่างก็ยังนับเวลาไปเรื่อยๆ
-
-### ไฟจราจรแบบ Lämmer (Adaptive)
-Lämmer ทำงานแบบ **ไม่มีรอบตายตัว** แต่ละสี่แยกตัดสินใจเองว่าจะเปิดไฟเขียวให้ทิศทางไหน และนานแค่ไหน โดยดูจากจำนวนรถที่รออยู่จริงๆ ณ ขณะนั้น
+Reference: *Lämmer, S. & Helbing, D. (2008). Self-control of traffic lights and vehicle flows in urban road networks.*
 
 ---
 
-## 2. แนวคิดหลัก: "แรงดัน" ของรถ (Queue Pressure)
+## 1. Fixed-time Signals vs Lämmer
 
-Lämmer มองแต่ละ incoming link (ถนนที่รถวิ่งเข้าหาสี่แยก) เหมือนท่อที่มีน้ำสะสมอยู่
-
-**แรงดัน (pressure)** ของแต่ละ incoming link คือสัดส่วนของ:
-- **อัตราการมาถึง** λ (lambda) — รถมาถึงกี่คันต่อวินาที
-- **ความจุของถนน** (saturation flow) s — รถผ่านได้กี่คันต่อวินาทีเมื่อเปิดไฟเขียว
+### Fixed-time Signals (conventional)
+Most traffic lights in the world operate on a **fixed cycle**:
 
 ```
-แรงดัน ∝ λ / s
+Green 30s → Red 30s → Green 30s → Red 30s → ...
 ```
 
-ถ้าถนนเส้นหนึ่งมีรถวิ่งเข้าเร็วมาก แต่ระบายออกได้ช้า → แรงดันสูง → ควรได้ไฟเขียวก่อน
+The problem is that timing ignores how many vehicles are actually waiting — the clock keeps running even when the road is empty.
+
+### Lämmer Signals (Adaptive)
+Lämmer operates with **no fixed cycle**. Each intersection independently decides which direction gets a green phase and for how long, based on the actual number of waiting vehicles at that moment.
 
 ---
 
-## 3. สองโหมดของ Lämmer
+## 2. Core Concept: Queue Pressure
 
-Lämmer มีสองโหมดทำงานที่สลับกันไปตามสถานการณ์:
+Lämmer treats each incoming link (a road leading toward an intersection) like a pipe accumulating fluid.
 
-### โหมด 1: Spontaneous (ตอบสนองตามความต้องการ)
-
-ในสภาวะปกติ Lämmer จะ **เปิดไฟเขียวให้ทิศทางที่มีแรงดันสูงสุด** อยู่เสมอ
-
-```
-ทุกรอบการคำนวณ:
-  → คำนวณแรงดันของทุก incoming link
-  → เลือก link ที่มีแรงดันสูงสุด
-  → เปิดไฟเขียวให้ link นั้น
-  → รอจนกว่าแรงดันลดลง หรือ link อื่นมีความเร่งด่วนกว่า
-```
-
-ข้อดีคือมันตอบสนองได้ทันทีเมื่อมีรถหนาแน่นที่ทิศทางใดทิศทางหนึ่ง
-
-### โหมด 2: Stabilizing (ป้องกันการอดอาหาร)
-
-ปัญหาของโหมด 1 คือถ้าถนนสายหลักมีรถมากตลอด ถนนสายรองอาจไม่ได้ไฟเขียวเลย → **รถติดนิ่ง (starvation)**
-
-Lämmer แก้ปัญหานี้ด้วย **Stabilizing Mode**: เมื่อ link ใด link หนึ่งรอนานเกินเวลาที่กำหนด (`regulationTime`) ระบบจะบังคับให้ link นั้นได้ไฟเขียวก่อน แม้จะไม่ใช่ทิศทางที่มีแรงดันสูงสุดในขณะนั้น
+The **pressure** of each incoming link is proportional to:
+- **Arrival rate** λ (lambda) — vehicles arriving per second
+- **Road capacity** (saturation flow) s — vehicles that can pass per second when green
 
 ```
-ถ้า link ใดรอนานเกิน regulationTime:
-  → เข้าโหมด Stabilizing
-  → บังคับให้ link นั้นได้ไฟเขียวก่อน
-  → หลังจบแล้วกลับไปโหมด Spontaneous
+Pressure ∝ λ / s
+```
+
+If a road has a high arrival rate but slow discharge → high pressure → it should receive green first.
+
+---
+
+## 3. Two Modes of Lämmer
+
+Lämmer alternates between two operating modes depending on conditions:
+
+### Mode 1: Spontaneous (demand-responsive)
+
+Under normal conditions Lämmer always **opens the green phase for the direction with the highest pressure**.
+
+```
+Every calculation cycle:
+  → Compute pressure for every incoming link
+  → Select the link with the highest pressure
+  → Open green for that link
+  → Wait until pressure drops or another link becomes more urgent
+```
+
+Advantage: responds immediately when traffic is dense in any one direction.
+
+### Mode 2: Stabilizing (starvation prevention)
+
+The problem with Mode 1 is that if a major road is always busy, minor roads may never receive a green phase → **deadlock (starvation)**.
+
+Lämmer addresses this with **Stabilizing Mode**: when any link has been waiting longer than a defined threshold (`regulationTime`), the system forces that link to receive a green phase first, even if it does not have the highest pressure at that moment.
+
+```
+If any link has waited longer than regulationTime:
+  → Enter Stabilizing mode
+  → Force that link to receive green first
+  → Return to Spontaneous mode afterwards
 ```
 
 ---
 
-## 4. สิ่งที่เกิดขึ้นจริงในแต่ละ Cycle
+## 4. What Happens Each Cycle
 
 ```
 ┌─────────────────────────────────────────────┐
-│           สี่แยกหนึ่งแห่ง                    │
+│              One intersection               │
 │                                             │
-│  ทุก N วินาที (default: 5 วินาที):          │
+│  Every N seconds (default: 5 seconds):      │
 │                                             │
-│  1. นับรถที่รออยู่แต่ละทิศทาง               │
-│  2. คำนวณแรงดัน (λ/s) แต่ละ link           │
-│  3. ตรวจว่ามี link ไหนรอนานเกิน limit ไหม  │
-│     → ใช่: Stabilizing mode                 │
-│     → ไม่: Spontaneous mode                 │
-│  4. เลือก link ที่ควรได้ไฟเขียว             │
-│  5. เปิดไฟเขียว, รอ interGreenTime แล้วสลับ │
+│  1. Count queued vehicles per direction     │
+│  2. Compute pressure (λ/s) per link         │
+│  3. Check if any link has waited too long   │
+│     → Yes: Stabilizing mode                 │
+│     → No:  Spontaneous mode                 │
+│  4. Select link to receive green            │
+│  5. Open green, wait interGreenTime, switch │
 └─────────────────────────────────────────────┘
 ```
 
-### interGreenTime คืออะไร?
+### What is interGreenTime?
 
-เวลาที่ทุกทิศทาง "หยุด" พร้อมกัน (ไฟเหลือง/แดงทุกทาง) ก่อนสลับเฟส เพื่อความปลอดภัย ป้องกันรถชนกันตรงทางแยก
-
----
-
-## 5. พารามิเตอร์หลักของ Lämmer
-
-| พารามิเตอร์ | ความหมาย | ค่า default ทั่วไป |
-|------------|----------|-----------------|
-| `desiredCycleTime` | เวลาเป้าหมายของ "รอบ" เฉลี่ย ใช้เป็น reference ในการคำนวณ | ~90 วินาที |
-| `regulationTime` | รอนานสุดสำหรับ link หนึ่งก่อนเข้า stabilizing mode | ~X วินาที |
-| `interGreenTime` | เวลา all-red ระหว่างการสลับเฟส | ~5 วินาที |
-| `minGreenTime` | เวลาไฟเขียวขั้นต่ำ ป้องกันไฟกระพริบถี่เกินไป | ~5 วินาที |
-
-ในโปรเจกต์นี้ใช้ค่า default ของ MATSim 2025.0 ทั้งหมด (ไม่ได้ตั้งค่าเอง)
+The period during which all directions are stopped simultaneously (all-red / amber) before switching phases — a safety buffer to prevent vehicles from colliding in the intersection.
 
 ---
 
-## 6. ทำไมถึงเรียกว่า "Self-organizing"?
+## 5. Key Lämmer Parameters
 
-Lämmer เป็น **decentralized algorithm** — แต่ละสี่แยกตัดสินใจเองโดยดูเฉพาะรถที่อยู่ใกล้ตัวเอง ไม่มีศูนย์กลางควบคุม
+| Parameter | Meaning | Typical default |
+|-----------|---------|----------------|
+| `desiredCycleTime` | Target average cycle length used as a reference in calculations | ~90 seconds |
+| `regulationTime` | Maximum wait time for a link before entering stabilizing mode | ~X seconds |
+| `interGreenTime` | All-red time between phase switches | ~5 seconds |
+| `minGreenTime` | Minimum green duration to prevent rapid flickering | ~5 seconds |
 
-ผลที่เกิดขึ้นโดยธรรมชาติ (emergent behavior) คือเมื่อหลายสี่แยกทำแบบนี้พร้อมกัน จะเกิด **Green Wave** — ไฟเขียวต่อเนื่องหลายสี่แยกโดยอัตโนมัติ ไม่ต้องโปรแกรมไว้ล่วงหน้า
+This project uses all MATSim 2025.0 defaults (no custom values set).
+
+---
+
+## 6. Why Is It Called "Self-organizing"?
+
+Lämmer is a **decentralised algorithm** — each intersection makes its own decisions based solely on the vehicles near it; there is no central controller.
+
+The emergent result is that when many intersections operate this way simultaneously, a **Green Wave** forms — consecutive green phases across multiple intersections arise automatically without any pre-programming.
 
 ```
-สี่แยก A → เปิดไฟเขียว ทิศเหนือ
-รถแล่นต่อมา สี่แยก B ตรวจพบรถมา → เปิดไฟเขียว ทิศเหนือพอดี
-รถแล่นต่อมา สี่แยก C ... (เกิดขึ้นเอง)
+Intersection A → opens green northbound
+Vehicles arrive at intersection B → B opens green northbound just in time
+Vehicles arrive at intersection C → ... (emerges on its own)
 ```
 
 ---
 
-## 7. การทำงานร่วมกับ MATSim ในโปรเจกต์นี้
+## 7. Integration with MATSim in This Project
 
 ```
 MATSim QSim (simulation engine)
          │
-         │  ทุก 5 วินาที (ThrottledSignalEngine)
+         │  Every 5 seconds (ThrottledSignalEngine)
          ▼
 LaemmerSignalController.updateState()
          │
-         ├── อ่านจำนวนรถใน queue จาก QSim
-         ├── คำนวณแรงดันแต่ละ SignalGroup
-         ├── ตัดสินใจ (Spontaneous หรือ Stabilizing)
-         └── สั่ง setSignalState(GREEN/RED) กลับไปยัง QSim
+         ├── Read queue counts from QSim
+         ├── Compute pressure per SignalGroup
+         ├── Decide (Spontaneous or Stabilizing)
+         └── Call setSignalState(GREEN/RED) back to QSim
 ```
 
 ### ThrottledSignalEngine
 
-Lämmer คำนวณทุก simulation step (ทุกวินาที) จะหนักมากกับ simulation ขนาดใหญ่ โปรเจกต์นี้จึงเพิ่ม `ThrottledSignalEngine` มาคั่น ให้ Lämmer คำนวณแค่ **ทุก 5 วินาที** แทน
+If Lämmer recalculates every simulation step (every second) it becomes too costly for large simulations. This project adds `ThrottledSignalEngine` as a throttle so Lämmer only recalculates **every 5 seconds**.
 
 ```java
-ThrottledSignalEngine.setUpdateInterval(5); // ปรับได้ใน RunLaemmerSimulation.java
+ThrottledSignalEngine.setUpdateInterval(5); // adjustable in RunLaemmerSimulation.java
 ```
 
-ค่ายิ่งน้อย → แม่นยำกว่า แต่ช้ากว่า
-ค่ายิ่งมาก → เร็วกว่า แต่ไฟตอบสนองช้าขึ้น
+Lower value → more accurate, but slower  
+Higher value → faster, but signals respond more slowly
 
 ---
 
-## 8. ข้อจำกัดของ Lämmer
+## 8. Limitations of Lämmer
 
-1. **ต้องการข้อมูล capacity ที่แม่นยำ** — ถ้า capacity ของถนนใน network ไม่ตรงกับความเป็นจริง การคำนวณแรงดันจะคลาดเคลื่อน
+1. **Requires accurate capacity data** — if road capacities in the network do not match reality, pressure calculations will be inaccurate.
 
-2. **ไม่รู้จักทิศทาง** — ในโปรเจกต์นี้แต่ละ SignalGroup ควบคุมหนึ่ง incoming link ทั้งเส้น Lämmer จึงไม่แยกว่ารถจะเลี้ยวซ้ายหรือตรงไป (ไม่มี `lanes.xml`)
+2. **Direction-unaware** — in this project each SignalGroup controls one full incoming link. Lämmer cannot distinguish left-turning from straight-ahead vehicles (no `lanes.xml`).
 
-3. **Simulation time ≠ Real time** — ใน simulation รถวิ่งได้สมบูรณ์แบบตาม shortest path ไม่มีพฤติกรรมเสี่ยง ผลลัพธ์จึงดีกว่าความเป็นจริง
+3. **Simulation time ≠ real time** — vehicles in simulation follow shortest paths perfectly with no risky behaviour, so results will be better than real-world conditions.
 
-4. **ใช้ได้กับ QSim เท่านั้น** — `LaemmerSignalController` อ่านข้อมูล queue จาก `QSimSignalEngine` โดยตรง และ `ThrottledSignalEngine` ก็ wrap `QSimSignalEngine` อยู่ ดังนั้น **ไม่สามารถใช้ร่วมกับ Hermes** (simulation engine ทางเลือกที่เร็วกว่า) ได้ เพราะ MATSim signals contrib ทั้งหมดถูก design มาสำหรับ QSim เท่านั้น หากต้องการใช้ Hermes จะต้องปิดระบบสัญญาณไฟออกไปด้วย
+4. **QSim only** — `LaemmerSignalController` reads queue data directly from `QSimSignalEngine`, and `ThrottledSignalEngine` wraps `QSimSignalEngine`. Therefore **Hermes cannot be used** (the faster alternative engine), because the entire MATSim signals contrib is designed for QSim only. Using Hermes requires disabling the signal system.
 
 ---
 
-## 9. อ่านเพิ่มเติม
+## 9. Further Reading
 
-- Paper ต้นฉบับ: `paper/Implementing an adaptive traffic signal.pdf`
-- โค้ดวางสัญญาณ: `docs/signal_placement.md`
-- คู่มือการรัน: `MANUAL.md`
+- Original paper: `paper/Implementing an adaptive traffic signal.pdf`
+- Signal placement code: `docs/signal_placement.md`
+- Run guide: `MANUAL.md`
 - MATSim Signals contrib: `org.matsim.contrib.signals.controller.laemmerFix`
-- เปรียบเทียบ engine: `documents/qsim_vs_hermes.md`
+- Engine comparison: `documents/qsim_vs_hermes.md`

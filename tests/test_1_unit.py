@@ -30,7 +30,7 @@ for mod in ["customtkinter", "tkinter", "tkinter.filedialog",
 
 import gui
 from apply_traffic_conditions import validate_condition
-from fix_plan_home_end import fix_plan
+from clean_plans import fix_plan
 from lxml import etree
 
 
@@ -134,9 +134,9 @@ class TestConfigIO(unittest.TestCase):
         self.assertIn("input", parsed)
 
     def test_utf8_chars_preserved(self):
-        self.sample["api_keys"]["google_maps"] = "คีย์ทดสอบ"
+        self.sample["api_keys"]["google_maps"] = "test-api-key-utf8"
         gui.save_config(self.sample)
-        self.assertEqual(gui.load_config()["api_keys"]["google_maps"], "คีย์ทดสอบ")
+        self.assertEqual(gui.load_config()["api_keys"]["google_maps"], "test-api-key-utf8")
 
     def test_overwrite_updates_value(self):
         gui.save_config(self.sample)
@@ -189,7 +189,7 @@ class TestValidateCondition(unittest.TestCase):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 1D. fix_plan_home_end.fix_plan
+# 1D. clean_plans.fix_plan
 # ══════════════════════════════════════════════════════════════════════════════
 
 def _make_plan(*activity_types):

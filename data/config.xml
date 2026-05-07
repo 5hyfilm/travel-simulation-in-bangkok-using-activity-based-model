@@ -39,9 +39,9 @@
 
     <!-- ============================================================
          HERMES
-         - flowCapacityFactor เพิ่มจาก 0.1 → 0.15 (รถติดเกินจริง)
-         - storageCapacityFactor เพิ่มจาก 0.1 → 0.15
-         - stuckTime คงไว้ที่ 1200
+         - flowCapacityFactor increased from 0.1 → 0.15 (was causing excessive congestion)
+         - storageCapacityFactor increased from 0.1 → 0.15
+         - stuckTime kept at 1200
          ============================================================ -->
     <module name="hermes">
         <param name="mainMode" value="car"/>
@@ -69,7 +69,7 @@
 
     <!-- ============================================================
          SCORING
-         - marginalUtilityOfMoney = 0.062 → VTTS ≈ 97 บาท/ชั่วโมง
+         - marginalUtilityOfMoney = 0.062 → VTTS ≈ 97 THB/hour
          - modeParams car: distance cost + travel time cost
          ============================================================ -->
     <module name="scoring">
@@ -155,9 +155,9 @@
 
     <!-- ============================================================
          REPLANNING
-         - maxAgentPlanMemorySize = 3 (ประหยัด RAM)
-         - ReRoute weight เพิ่มจาก 0.10 → 0.15
-         - disableAfterIteration เพิ่มจาก 20 → 40
+         - maxAgentPlanMemorySize = 3 (saves RAM)
+         - ReRoute weight increased from 0.10 → 0.15
+         - disableAfterIteration increased from 20 → 40
          ============================================================ -->
     <module name="replanning">
         <param name="maxAgentPlanMemorySize" value="3"/>
