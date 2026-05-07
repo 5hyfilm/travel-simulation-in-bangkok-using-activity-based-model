@@ -1,6 +1,6 @@
 """
-validate_google_maps.py
-=======================
+travel_time_realism_validator.py
+==============================
 Validate the MATSim Bangkok simulation against real-world travel times
 fetched from the Google Maps Distance Matrix API.
 
@@ -30,7 +30,7 @@ References
   [5] Waze Driver Satisfaction Index 2023
 
 Run from project root:
-  python evaluation/validate_google_maps.py
+  python evaluation/travel_time_realism_validator.py
 """
 
 import os

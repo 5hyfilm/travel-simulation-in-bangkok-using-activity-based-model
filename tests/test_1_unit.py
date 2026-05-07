@@ -237,7 +237,7 @@ class TestFixPlanHomeEnd(unittest.TestCase):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 1E. haversine & time helpers (from validate_google_maps)
+# 1E. haversine & time helpers (from travel_time_realism_validator)
 # ══════════════════════════════════════════════════════════════════════════════
 
 # Import helpers directly without triggering the full script
