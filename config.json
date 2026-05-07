@@ -1,12 +1,12 @@
 {
     "input": {
-        "north": 13.754573,
-        "south": 13.731201,
-        "east": 100.545115,
-        "west": 100.52031,
+        "north": 13.96,
+        "south": 13.49,
+        "east": 100.96,
+        "west": 100.33,
         "trips_filename": "pipeline\\data\\final_trips.csv",
         "subdistricts_filename": "pipeline\\data\\subdistricts_180.geojson",
-        "sample_size": 25000
+        "sample_size": 300000
     },
     "execution": {
         "run_simulation_automatically": true,
