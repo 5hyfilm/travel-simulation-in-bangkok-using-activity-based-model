@@ -1,48 +1,48 @@
 # Signal Placement in the Bangkok Lämmer Simulation
 
-อธิบายวิธีที่โปรเจกต์นี้กำหนดตำแหน่งและโครงสร้างของสัญญาณไฟจราจร เพื่อใช้กับ Lämmer adaptive signal controller ใน MATSim
+Describes how this project determines the location and structure of traffic signals for use with the Lämmer adaptive signal controller in MATSim.
 
 ---
 
-## ภาพรวม
+## Overview
 
-ระบบสัญญาณไฟจราจรถูกสร้างขึ้นโดยอัตโนมัติจากโครงสร้างเครือข่ายถนน (topology) ระหว่างขั้นตอน `ConvertOSM` โดยไม่ได้ใช้แท็ก `highway=traffic_signals` จาก OSM โดยตรง แต่ใช้เกณฑ์เชิง topology แทน
+Traffic signals are generated automatically from the road network topology during the `ConvertOSM` step. The project does not use the `highway=traffic_signals` OSM tag directly — instead it applies a topology-based criterion.
 
 ---
 
-## เกณฑ์การเลือก Junction
+## Junction Selection Criteria
 
-Junction ใดก็ตามที่ผ่านเงื่อนไขต่อไปนี้จะได้รับการติดตั้งระบบสัญญาณไฟ:
+Any junction that meets the following condition receives a traffic signal:
 
 ```
-(จำนวน incoming links) + (จำนวน outgoing links) > 3
-และมี incoming links อย่างน้อย 1 เส้น
+(number of incoming links) + (number of outgoing links) > 3
+and has at least 1 incoming link
 ```
 
-**เหตุผล:** junction ที่มี degree รวมมากกว่า 3 มักเป็นสี่แยกหรือทางแยกจริงที่มีการตัดกันของกระแสจราจร ซึ่งเหมาะสมกับการติดตั้งไฟจราจร ส่วน node ที่มี degree ≤ 3 มักเป็นจุดเลี้ยวธรรมดาหรือจุดเชื่อมต่อถนนที่ไม่ซับซ้อน
+**Rationale:** junctions with a combined degree greater than 3 are typically real intersections where traffic flows cross, making signal control appropriate. Nodes with degree ≤ 3 are usually simple turns or straightforward road connections.
 
-**ข้อจำกัด:** วิธีนี้อาจวางไฟจราจรที่ junction บางจุดที่ไม่มีไฟจราจรในความเป็นจริง และอาจพลาด junction ที่มีไฟจราจรจริงแต่มี degree ≤ 3 ได้
+**Limitation:** this approach may place signals at junctions that have none in reality, and may miss junctions that do have signals but have degree ≤ 3.
 
 ---
 
-## โครงสร้างสัญญาณ
+## Signal Structure
 
-สำหรับ junction แต่ละจุดที่ผ่านเกณฑ์ ระบบจะสร้างข้อมูลใน 3 ระดับดังนี้:
+For each qualifying junction, the system creates data at 3 levels:
 
-### 1. Signal System (ระดับ Junction)
+### 1. Signal System (Junction level)
 - 1 junction → 1 `SignalSystem`
-- ใช้ **Node ID** ของ junction เป็น System ID
+- Uses the junction's **Node ID** as the System ID
 
-### 2. Signal (ระดับ Link)
-- แต่ละ **incoming link** → 1 `Signal`
-- Signal อ้างอิงถึง link ที่รถวิ่งเข้ามาหา junction นั้น
-- ใช้ **Link ID** เป็น Signal ID
+### 2. Signal (Link level)
+- Each **incoming link** → 1 `Signal`
+- The Signal references the link that vehicles travel to reach that junction
+- Uses the **Link ID** as the Signal ID
 
-### 3. Signal Group (ระดับเฟส)
-- แต่ละ Signal → 1 `SignalGroup` แยกกัน (1 group ต่อ 1 incoming direction)
-- ทำให้ Lämmer สามารถควบคุมแต่ละทิศทางเข้าอย่างอิสระ
+### 3. Signal Group (Phase level)
+- Each Signal → 1 separate `SignalGroup` (1 group per incoming direction)
+- Allows Lämmer to control each incoming direction independently
 
-**ตัวอย่าง:** junction ที่มี 3 incoming links จะได้รับ 1 SignalSystem, 3 Signals, และ 3 SignalGroups
+**Example:** a junction with 3 incoming links receives 1 SignalSystem, 3 Signals, and 3 SignalGroups
 
 ```
 Junction Node (id: 12345)
@@ -54,53 +54,53 @@ Junction Node (id: 12345)
 
 ---
 
-## ไฟล์ที่สร้างขึ้น
+## Generated Files
 
-`ConvertOSM.java` สร้างไฟล์ 3 ไฟล์ใน `data/processed/`:
+`ConvertOSM.java` creates 3 files in `data/processed/`:
 
-| ไฟล์ | เนื้อหา |
+| File | Content |
 |------|---------|
-| `signalSystems.xml` | ระบุว่ามี SignalSystem ที่ junction ไหน และมี Signal บน link ใดบ้าง |
-| `signalGroups.xml` | จัดกลุ่ม Signal เข้าเป็น SignalGroup แต่ละเฟส |
-| `signalControl.xml` | กำหนด controller เป็น `LaemmerSignalController` สำหรับทุก system |
+| `signalSystems.xml` | Defines which SignalSystem exists at each junction and which Signals are on which links |
+| `signalGroups.xml` | Groups Signals into SignalGroups by phase |
+| `signalControl.xml` | Sets the controller to `LaemmerSignalController` for every system |
 
 ---
 
-## การทำความสะอาด Signal ก่อนรัน Simulation
+## Cleaning Signals Before Running Simulation
 
-เมื่อ `RunNetworkCleaner` ลบ link ที่ไม่ connected ออกจาก network แล้ว อาจเกิดสถานการณ์ที่ Signal อ้างถึง link ที่ไม่มีอยู่ใน cleaned network อีกต่อไป
+When `RunNetworkCleaner` removes disconnected links from the network, some Signals may still reference links that no longer exist in the cleaned network.
 
-`RunLaemmerSimulation.java` จึงเรียกฟังก์ชัน `cleanSignals()` โดยอัตโนมัติก่อนรัน simulation โดยทำ 3 ขั้นตอน:
+`RunLaemmerSimulation.java` therefore calls `cleanSignals()` automatically before running the simulation, in 3 steps:
 
-1. **ลบ Signal** ที่อ้างถึง link ที่หายไปจาก network
-2. **ลบ SignalSystem** ที่ไม่มี Signal เหลืออยู่เลย
-3. **ลบ SignalGroup** ที่ว่างเปล่า หรือของ system ที่ถูกลบ
+1. **Remove Signals** that reference links missing from the network
+2. **Remove SignalSystems** that have no Signals remaining
+3. **Remove SignalGroups** that are empty or belong to a removed system
 
-> **หมายเหตุ:** ถ้ามีการสร้างหรือแก้ไข network ใหม่ ต้องรัน `ConvertOSM` และ `RunNetworkCleaner` ใหม่ทุกครั้ง เพราะ signal XML จะยังอ้างถึง link ชุดเก่าอยู่
+> **Note:** whenever the network is rebuilt or modified, `ConvertOSM` and `RunNetworkCleaner` must be re-run, because the signal XML files will still reference the old set of links.
 
 ---
 
 ## Lämmer Controller
 
-ทุก SignalSystem ใช้ `LaemmerSignalController` ซึ่งเป็น adaptive algorithm ที่:
-- คำนวณ "แรงดัน" ของรถที่รอในแต่ละ incoming link แบบ real-time
-- ตัดสินใจเปิดไฟเขียวให้ทิศทางที่มีแรงดันสูงสุดก่อน
-- ปรับเวลาไฟเขียวโดยอัตโนมัติ ไม่ใช้ตารางเวลาตายตัว
+Every SignalSystem uses `LaemmerSignalController`, an adaptive algorithm that:
+- Calculates the "pressure" of queued vehicles on each incoming link in real-time
+- Opens the green phase for the direction with the highest pressure first
+- Adjusts green time automatically — no fixed schedule
 
-ความถี่ในการคำนวณสามารถปรับได้ใน `RunLaemmerSimulation.java`:
+The calculation frequency can be configured in `RunLaemmerSimulation.java`:
 ```java
-ThrottledSignalEngine.setUpdateInterval(5); // อัปเดตทุก 5 วินาที (default)
+ThrottledSignalEngine.setUpdateInterval(5); // update every 5 seconds (default)
 ```
 
 ---
 
-## ไฟล์ที่เกี่ยวข้อง
+## Related Files
 
-| ไฟล์ | บทบาท |
-|------|-------|
-| `src/main/java/org/matsim/project/ConvertOSM.java` | สร้าง signal XML จาก OSM topology |
-| `src/main/java/org/matsim/project/RunLaemmerSimulation.java` | โหลด, clean, และรัน simulation |
-| `src/main/java/org/matsim/contrib/signals/builder/ThrottledSignalEngine.java` | ควบคุมความถี่การอัปเดต signal |
-| `data/processed/signalSystems.xml` | ตำแหน่ง signal ที่ junction แต่ละจุด |
-| `data/processed/signalGroups.xml` | การจัดกลุ่ม signal เป็นเฟส |
-| `data/processed/signalControl.xml` | กำหนด controller เป็น Lämmer |
+| File | Role |
+|------|------|
+| `src/main/java/org/matsim/project/ConvertOSM.java` | Generates signal XML from OSM topology |
+| `src/main/java/org/matsim/project/RunLaemmerSimulation.java` | Loads, cleans, and runs the simulation |
+| `src/main/java/org/matsim/contrib/signals/builder/ThrottledSignalEngine.java` | Controls the signal update frequency |
+| `data/processed/signalSystems.xml` | Signal positions at each junction |
+| `data/processed/signalGroups.xml` | Signal groupings by phase |
+| `data/processed/signalControl.xml` | Sets the controller to Lämmer |

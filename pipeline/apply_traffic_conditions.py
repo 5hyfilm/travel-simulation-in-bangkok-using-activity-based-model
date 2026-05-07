@@ -91,12 +91,45 @@ def validate_condition(cond):
     return True
 
 
+def validate_link_ids(conditions, network_file):
+    """Check which link_id conditions exist in the network.
+
+    Returns
+    -------
+    dict with keys:
+        found   : list of link_id strings that exist in the network
+        missing : list of link_id strings that do NOT exist in the network
+    """
+    import gzip
+    target_ids = {str(c["link_id"]) for c in conditions if "link_id" in c}
+    if not target_ids or not os.path.exists(network_file):
+        return {"found": [], "missing": list(target_ids)}
+
+    with gzip.open(network_file, "rb") as f:
+        tree = etree.parse(f)
+    net_ids = {link.get("id") for link in tree.getroot().find("links").findall("link")}
+
+    return {
+        "found":   sorted(target_ids & net_ids),
+        "missing": sorted(target_ids - net_ids),
+    }
+
+
 def apply_conditions(input_network, output_network, conditions):
-    """Read network XML, apply conditions, write output."""
+    """Read network XML, apply conditions, write output.
+
+    Returns
+    -------
+    dict with keys:
+        removed   : list of link_id strings that were removed (cap_factor=0)
+        not_found : list of link_id strings that were not in the network
+        modified  : total number of links modified (speed/capacity changed)
+    """
+    stats = {"removed": [], "not_found": [], "modified": 0}
 
     if not os.path.exists(input_network):
         print(f"!!! Network file not found: {input_network}")
-        return
+        return stats
 
     # Check the gzip file is not truncated before parsing
     try:
@@ -108,10 +141,10 @@ def apply_conditions(input_network, output_network, conditions):
         print(f"    This usually means a previous write was interrupted.")
         print(f"    Fix: re-run the OSM → MATSim network conversion to regenerate the file.")
         print(f"    (ConvertOSM step in Maven, or delete the file and run main.py again)")
-        return
+        return stats
     except Exception as e:
         print(f"!!! Could not read network file: {e}")
-        return
+        return stats
 
     print(f"\nReading network: {input_network}")
 
@@ -128,8 +161,6 @@ def apply_conditions(input_network, output_network, conditions):
     all_links = links_elem.findall("link")
     print(f"Total links found: {len(all_links):,}")
 
-    total_modified = 0
-
     for cond in conditions:
         name           = cond.get("name", "unnamed")
         speed_factor   = cond.get("speed_factor", 1.0)
@@ -145,14 +176,12 @@ def apply_conditions(input_network, output_network, conditions):
         # --- Case 1: target a specific link_id ---
         if link_id_target:
             found = False
-            for link in all_links:
+            for link in links_elem.findall("link"):
                 if link.get("id") == str(link_id_target):
                     if cap_factor == 0.0:
-                        # Remove the link entirely — Hermes ignores capacity=0
-                        # and still lets vehicles through; removal is the only
-                        # way to prevent routing + traversal completely.
                         links_elem.remove(link)
                         modified = 1
+                        stats["removed"].append(str(link_id_target))
                         print(f"  🚫 [{name}] link '{link_id_target}' REMOVED from network (road closure)")
                     else:
                         orig_speed = float(link.get("freespeed", 0))
@@ -163,13 +192,12 @@ def apply_conditions(input_network, output_network, conditions):
                     found = True
                     break
             if not found:
-                print(f"  ⚠️  [{name}] link_id '{link_id_target}' not found in network")
+                stats["not_found"].append(str(link_id_target))
+                print(f"  ⚠️  [{name}] link_id '{link_id_target}' not found in network — skipped")
 
         # --- Case 2: target by road_types ---
         elif road_types:
-            # Refresh list after possible removals above
             for link in list(links_elem.findall("link")):
-                # Find type attribute inside <attributes> block
                 link_type  = None
                 attrs_elem = link.find("attributes")
                 if attrs_elem is not None:
@@ -177,7 +205,6 @@ def apply_conditions(input_network, output_network, conditions):
                         if attr.get("name") == "type":
                             link_type = attr.text
                             break
-
                 if link_type in road_types:
                     if cap_factor == 0.0:
                         links_elem.remove(link)
@@ -188,7 +215,7 @@ def apply_conditions(input_network, output_network, conditions):
                         link.set("capacity",  f"{orig_cap   * cap_factor:.4f}")
                     modified += 1
 
-        total_modified += modified
+        stats["modified"] += modified
         if cap_factor == 0.0 and link_id_target:
             pass  # already printed inside the removal block
         elif cap_factor == 0.0:
@@ -196,7 +223,13 @@ def apply_conditions(input_network, output_network, conditions):
         else:
             print(f"  ✅ [{name}] speed×{speed_factor}, capacity×{cap_factor} → {modified:,} links modified")
 
-    print(f"\nTotal links modified: {total_modified:,} / {len(all_links):,}")
+    # Print summary of any missing link IDs so users know to fix their JSON
+    if stats["not_found"]:
+        print(f"\n  ⚠️  {len(stats['not_found'])} link_id(s) were not found in the network:")
+        for lid in stats["not_found"]:
+            print(f"      link_id '{lid}' — check traffic_conditions.json or regenerate the network")
+
+    print(f"\nTotal links affected: {stats['modified']:,} / {len(all_links):,}")
 
     # Write output
     os.makedirs(os.path.dirname(output_network), exist_ok=True)
@@ -206,6 +239,7 @@ def apply_conditions(input_network, output_network, conditions):
     print(f"✅ New network saved at: {output_network}")
     print(f"\n👉 Remember to update config.xml to point to the new network:")
     print(f'   <param name="inputNetworkFile" value="processed/network_condition.xml.gz"/>')
+    return stats
 
 
 def main():

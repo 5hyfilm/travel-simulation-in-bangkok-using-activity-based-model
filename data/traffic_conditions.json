@@ -6,7 +6,7 @@
 
   "conditions": [
     {
-      "name": "ฝนตกหนัก (Heavy Rain)",
+      "name": "Heavy Rain",
       "road_types": [
         "motorway", "motorway_link",
         "trunk", "trunk_link",
@@ -20,20 +20,20 @@
       "capacity_factor": 0.75
     },
     {
-      "name": "Road repair — link 6235 (no usage)",
-      "link_id": "6234",
+      "name": "Road repair — link 808 (no usage)",
+      "link_id": "808",
       "speed_factor": 0.01,
       "capacity_factor": 0.0
     },
     {
-      "name": "Road repair — link 6235 (no usage)",
-      "link_id": "6235",
+      "name": "Road repair — link 258 (no usage)",
+      "link_id": "258",
       "speed_factor": 0.01,
       "capacity_factor": 0.0
     },
     {
-      "name": "Road repair — link 200 (no usage)",
-      "link_id": "200",
+      "name": "Road repair — link 807 (no usage)",
+      "link_id": "807",
       "speed_factor": 0.01,
       "capacity_factor": 0.0
     }

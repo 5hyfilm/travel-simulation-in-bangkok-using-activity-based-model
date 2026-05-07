@@ -48,7 +48,7 @@ with open(_cfg_path, encoding="utf-8") as _f:
     _cfg = json.load(_f)
 GOOGLE_MAPS_API_KEY = _cfg.get("api_keys", {}).get("google_maps", "YOUR_API_KEY_HERE")
 
-TRIPS_FILE        = "normal_output/output/output_trips.csv.gz"
+TRIPS_FILE        = os.path.join(os.path.dirname(__file__), "..", "normal_output", "output", "output_trips.csv.gz")
 GRID_DEG          = 0.015    # ~1.7 km cell side (kept for coord snapping only)
 MIN_AGENTS        = 10       # minimum agents per window to report
 MAX_DIST_KM       = 60
@@ -311,72 +311,124 @@ else:
     rmse = float(np.sqrt(np.mean((df["sim"] - df["gm"])**2)))
     mae  = float(np.mean(np.abs(df["sim"] - df["gm"])))
 
+    # Bias — systematic over/under-estimation
+    bias     = float(np.mean(df["sim"] - df["gm"]))
+    bias_pct = float(np.mean((df["sim"] - df["gm"]) / df["gm"]) * 100)
+
+    # R² — does the simulation rank routes in the same order as Google Maps?
+    ss_res = float(np.sum((df["sim"] - df["gm"])**2))
+    ss_tot = float(np.sum((df["gm"]  - df["gm"].mean())**2))
+    r2 = 1 - ss_res / ss_tot if ss_tot > 0 else float("nan")
+
+    # Pearson correlation
+    corr = float(df["sim"].corr(df["gm"]))
+
+    # Per time-window accuracy
+    window_acc = {}
+    for win in df["window"].unique():
+        sub = df[df["window"] == win]
+        n_p = ((sub["ratio"] >= 0.65) & (sub["ratio"] <= 1.35)).sum()
+        window_acc[win.strip()] = (n_p, len(sub))
+
+    accuracy_pct = n_pass / len(df) * 100
+
     print(f"  Comparable windows  : {len(df)}")
+    print()
+    print(f"  ── Accuracy ────────────────────────────────────────")
+    print(f"  Accuracy (PASS rate): {n_pass}/{len(df)}  ({accuracy_pct:.0f}%)  "
+          f"← % of routes within ±35% of Google Maps")
     print(f"  ✅ PASS (0.65–1.35) : {n_pass}  ({n_pass/len(df)*100:.0f}%)")
     print(f"  ⚠️  WARN (0.50–1.50) : {n_warn}  ({n_warn/len(df)*100:.0f}%)")
     print(f"  ❌ FAIL (<0.50/>1.50): {n_fail}  ({n_fail/len(df)*100:.0f}%)")
     print()
-    print(f"  Median ratio : {df['ratio'].median():.2f}x  "
-          f"(sim is {abs(1-df['ratio'].median())*100:.0f}% "
-          f"{'faster' if df['ratio'].median() < 1 else 'slower'} than reality)")
-    print(f"  Mean ratio   : {df['ratio'].mean():.2f}x")
-    print(f"  MAPE         : {mape:.1f}%")
-    print(f"  MAE          : {mae:.1f} min")
-    print(f"  RMSE         : {rmse:.1f} min")
+    print(f"  Accuracy by time window:")
+    for win, (np_, nt) in window_acc.items():
+        bar = "✅" if np_/nt >= 0.60 else ("⚠️ " if np_/nt >= 0.40 else "❌")
+        print(f"    {bar} {win:<20}: {np_}/{nt}  ({np_/nt*100:.0f}%)")
     print()
+    print(f"  ── Average travel time ─────────────────────────────")
+    print(f"  Avg sim time    : {df['sim'].mean():.1f} min")
+    print(f"  Avg Google time : {df['gm'].mean():.1f} min")
+    print(f"  Difference      : {df['sim'].mean() - df['gm'].mean():+.1f} min")
+    print()
+    print(f"  ── Error metrics ───────────────────────────────────")
+    print(f"  MAPE  : {mape:.1f}%   ← avg % error per route-window")
+    print(f"  MAE   : {mae:.1f} min ← avg absolute error in minutes")
+    print(f"  RMSE  : {rmse:.1f} min ← penalises large errors more")
+    print()
+    print(f"  ── Bias (systematic error) ─────────────────────────")
+    direction = "slower" if bias > 0 else "faster"
+    print(f"  Bias  : {bias:+.1f} min  ({bias_pct:+.1f}%)  "
+          f"← simulation is systematically {direction} than reality")
+    print(f"  Median ratio : {df['ratio'].median():.2f}x")
+    print(f"  Mean ratio   : {df['ratio'].mean():.2f}x")
+    print()
+    # print(f"  ── Correlation ─────────────────────────────────────")
+    # print(f"  R²   : {r2:.3f}  ← how well sim captures variation across routes")
+    # print(f"  Corr : {corr:.3f} ← Pearson correlation with Google Maps")
+    # r2_interp = "excellent" if r2 >= 0.80 else ("good" if r2 >= 0.60 else ("moderate" if r2 >= 0.40 else "poor"))
+    # print(f"         ({r2_interp} fit — sim {'tracks' if r2 >= 0.60 else 'does not track'} "
+    #       f"real-world route difficulty pattern)")
+    # print()
 
-    if df["ratio"].median() < 0.70:
-        print("  Simulation is significantly faster than reality.")
-        print("  Sub-sampling effect: 7% demand → less congestion than real Bangkok.")
-        print(f"  Calibration factor: ~{1/df['ratio'].median():.1f}x to match real travel times.")
-    elif df["ratio"].median() > 1.40:
-        print("  Simulation is significantly slower than reality → over-congested.")
-        print("  Consider raising flowCapacityFactor in config.xml.")
-    else:
-        print("  ✅ Simulation travel times match real-world data well.")
+    # if bias_pct < -20:
+    #     print("  ⚠️  Simulation is systematically faster than reality.")
+    #     print("     Sub-sampling effect: low demand → less congestion than real Bangkok.")
+    #     print(f"     Calibration factor: ~{1/df['ratio'].median():.1f}x to match real travel times.")
+    # elif bias_pct > 20:
+    #     print("  ⚠️  Simulation is systematically slower than reality → over-congested.")
+    #     print("     Consider raising flowCapacityFactor in config.xml.")
+    # else:
+    #     print("  ✅ No significant systematic bias — simulation is well-calibrated.")
 
-    # Worst routes
-    worst = df.nlargest(5, "ratio")[["name", "window", "sim", "gm", "ratio"]]
-    if len(worst) > 0:
-        print()
-        print(f"  Top 5 worst windows (highest ratio):")
-        for _, row in worst.iterrows():
-            print(f"    {row['ratio']:.2f}x  {row['name'][:45]:<45}  [{row['window'].strip()}]  "
-                  f"sim={row['sim']:.0f} min  gm={row['gm']:.0f} min")
+    # Top 5 worst by absolute error
+    # df["abs_error"] = (df["sim"] - df["gm"]).abs()
+    # df["error_pct"] = (df["sim"] - df["gm"]) / df["gm"] * 100
+    # worst = df.nlargest(5, "abs_error")[["name", "window", "sim", "gm", "abs_error", "error_pct"]]
+    # if len(worst) > 0:
+    #     print()
+    #     print(f"  Top 5 worst windows (largest absolute error):")
+    #     print(f"  {'Route':<45} {'Window':<20} {'Sim':>6} {'Real':>6} {'Error':>8} {'Error%':>8}")
+    #     print(f"  {'─'*45} {'─'*20} {'─'*6} {'─'*6} {'─'*8} {'─'*8}")
+    #     for _, row in worst.iterrows():
+    #         sign = "+" if row["error_pct"] > 0 else ""
+    #         print(f"  {row['name'][:45]:<45} {row['window'].strip():<20} "
+    #               f"{row['sim']:>5.0f}m {row['gm']:>5.0f}m "
+    #               f"{row['abs_error']:>7.1f}m {sign}{row['error_pct']:>6.1f}%")
 
-print()
-print("─" * W)
-print("  References")
-print("─" * W)
-print("  [1] TomTom Traffic Index 2024 — Bangkok")
-print("      https://www.tomtom.com/traffic-index/bangkok-traffic/")
-print("      Bangkok average: 36% extra travel time vs free-flow.")
-print()
-print("  [2] INRIX 2023 Global Traffic Scorecard")
-print("      https://inrix.com/scorecard/")
-print("      Bangkok: 64.5 hours/year lost to congestion per driver.")
-print()
-print("  [3] ADB — Urban Transport Outlook for Southeast Asia (2023)")
-print("      https://www.adb.org/publications/urban-transport-outlook-southeast-asia")
-print("      Bangkok modal split: private car ~38% of motorised trips.")
-print()
-print("  [4] Thailand NESDC Household Travel Survey 2019")
-print("      Average car trip distance BMA: 11–14 km.")
-print("      AM peak accounts for ~18–22% of daily car trips.")
-print()
-print("  [5] Waze Driver Satisfaction Index 2023")
-print("      Bangkok ranked 2nd most congested city in Southeast Asia.")
-print()
-print("  [6] Cambridge Systematics (2010) — Travel Model Validation and")
-print("      Reasonableness Checking Manual, §4.3 (prepared for FHWA/TMIP).")
-print("      Recommends ±25–35% tolerance for corridor-level travel time")
-print("      validation in sub-area and sub-sampled demand models.")
-print("      → Basis for PASS band (ratio 0.65–1.35).")
-print()
-print("  [7] Horni, A., Nagel, K. & Axhausen, K.W. (eds.) (2016)")
-print("      The Multi-Agent Transport Simulation MATSim, Chapter 4.")
-print("      Ubiquity Press. https://doi.org/10.5334/baw")
-print("      Sub-sampled scenarios (< 10% population) require wider tolerances")
-print("      due to stochastic demand effects.")
-print("      → Basis for WARN band (ratio 0.50–1.50).")
-print("=" * W)
+# print()
+# print("─" * W)
+# print("  References")
+# print("─" * W)
+# print("  [1] TomTom Traffic Index 2024 — Bangkok")
+# print("      https://www.tomtom.com/traffic-index/bangkok-traffic/")
+# print("      Bangkok average: 36% extra travel time vs free-flow.")
+# print()
+# print("  [2] INRIX 2023 Global Traffic Scorecard")
+# print("      https://inrix.com/scorecard/")
+# print("      Bangkok: 64.5 hours/year lost to congestion per driver.")
+# print()
+# print("  [3] ADB — Urban Transport Outlook for Southeast Asia (2023)")
+# print("      https://www.adb.org/publications/urban-transport-outlook-southeast-asia")
+# print("      Bangkok modal split: private car ~38% of motorised trips.")
+# print()
+# print("  [4] Thailand NESDC Household Travel Survey 2019")
+# print("      Average car trip distance BMA: 11–14 km.")
+# print("      AM peak accounts for ~18–22% of daily car trips.")
+# print()
+# print("  [5] Waze Driver Satisfaction Index 2023")
+# print("      Bangkok ranked 2nd most congested city in Southeast Asia.")
+# print()
+# print("  [6] Cambridge Systematics (2010) — Travel Model Validation and")
+# print("      Reasonableness Checking Manual, §4.3 (prepared for FHWA/TMIP).")
+# print("      Recommends ±25–35% tolerance for corridor-level travel time")
+# print("      validation in sub-area and sub-sampled demand models.")
+# print("      → Basis for PASS band (ratio 0.65–1.35).")
+# print()
+# print("  [7] Horni, A., Nagel, K. & Axhausen, K.W. (eds.) (2016)")
+# print("      The Multi-Agent Transport Simulation MATSim, Chapter 4.")
+# print("      Ubiquity Press. https://doi.org/10.5334/baw")
+# print("      Sub-sampled scenarios (< 10% population) require wider tolerances")
+# print("      due to stochastic demand effects.")
+# print("      → Basis for WARN band (ratio 0.50–1.50).")
+# print("=" * W)

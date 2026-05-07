@@ -1,4 +1,5 @@
-﻿import pandas as pd
+﻿import gzip
+import pandas as pd
 import xml.etree.ElementTree as ET
 import geopandas as gpd
 from shapely.geometry import Point
@@ -11,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Files
 SOURCE_CSV = os.path.join(BASE_DIR, "pipeline/data/final_trips.csv")
-PLANS_XML = os.path.join(BASE_DIR, "pipeline/output/plan_300k_cut.xml")
+PLANS_XML = os.path.join(BASE_DIR, "normal_output", "output", "output_plans.xml.gz")
 GEOJSON = os.path.join(BASE_DIR, "pipeline/data/subdistricts_180.geojson")
 
 def get_base_id(full_id):
@@ -38,20 +39,21 @@ def validate_full_spatial_accuracy():
     agent_list = []
     
     try:
-        context = ET.iterparse(PLANS_XML, events=('end',))
-        for event, elem in context:
-            if elem.tag == 'person':
-                pid = elem.get('id')
-                plan = elem.find("plan")
-                if plan is not None:
-                    act = plan.find("activity")
-                    if act is not None:
-                        agent_list.append({
-                            "person_id": pid,
-                            "x": float(act.get("x")),
-                            "y": float(act.get("y"))
-                        })
-                elem.clear()
+        with gzip.open(PLANS_XML, 'rb') as gz_file:
+            context = ET.iterparse(gz_file, events=('end',))
+            for event, elem in context:
+                if elem.tag == 'person':
+                    pid = elem.get('id')
+                    plan = elem.find("plan")
+                    if plan is not None:
+                        act = plan.find("activity")
+                        if act is not None:
+                            agent_list.append({
+                                "person_id": pid,
+                                "x": float(act.get("x")),
+                                "y": float(act.get("y"))
+                            })
+                    elem.clear()
     except Exception as e:
         print(f"Error parsing XML: {e}")
         return

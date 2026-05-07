@@ -8,7 +8,7 @@ from get_facilities import extract_poi_to_csv
 from process_facilities import classify_facilities
 from assign_locations import assign_facility_locations
 from generate_plans import generate_matsim_plans
-from fix_plan_home_end import process_file as fix_plan_home_end
+from clean_plans import process_file as fix_plan_home_end
 from apply_traffic_conditions import load_conditions, apply_conditions
 
 # Fixed output directory — all pipeline outputs live here
