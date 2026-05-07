@@ -16,6 +16,6 @@
         "traffic_conditions_file": "data\\traffic_conditions.json"
     },
     "api_keys": {
-        "google_maps": "AIzaSyA0Bc-5gf2Tayq7-XUA-HHH-Tm1I0SI_lM"
+        "google_maps": ""
     }
 }
