@@ -20,20 +20,20 @@
       "capacity_factor": 0.75
     },
     {
-      "name": "Road repair — link 202 (no usage)",
-      "link_id": "202",
+      "name": "Road repair — link 808 (no usage)",
+      "link_id": "808",
       "speed_factor": 0.01,
       "capacity_factor": 0.0
     },
     {
-      "name": "Road repair — link 201 (no usage)",
-      "link_id": "201",
+      "name": "Road repair — link 258 (no usage)",
+      "link_id": "258",
       "speed_factor": 0.01,
       "capacity_factor": 0.0
     },
     {
-      "name": "Road repair — link 200 (no usage)",
-      "link_id": "200",
+      "name": "Road repair — link 807 (no usage)",
+      "link_id": "807",
       "speed_factor": 0.01,
       "capacity_factor": 0.0
     }
