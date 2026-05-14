@@ -1,21 +1,23 @@
 {
     "input": {
-        "north": 13.96,
-        "south": 13.49,
-        "east": 100.96,
-        "west": 100.33,
+        "north": 13.749981,
+        "south": 13.729982,
+        "east": 100.541296,
+        "west": 100.519753,
         "trips_filename": "pipeline\\data\\final_trips.csv",
         "subdistricts_filename": "pipeline\\data\\subdistricts_180.geojson",
-        "sample_size": 300000
+        "population_size": 30000,
+        "sample_size": 25000
     },
     "execution": {
         "run_simulation_automatically": true,
+        "iterations": 10,
         "maven_opts": "-Xmx12G",
         "matsim_config_file": "data\\config.xml",
         "apply_traffic_conditions": true,
         "traffic_conditions_file": "data\\traffic_conditions.json"
     },
     "api_keys": {
-        "google_maps": ""
+        "google_maps": "AIzaSyA0Bc-5gf2Tayq7-XUA-HHH-Tm1I0SI_lM"
     }
 }

@@ -147,19 +147,70 @@ def main():
             print("\n[Step 6b] Traffic conditions: disabled — using baseline network.")
             active_network = "processed/network.xml.gz"
 
-        # Update data/config.xml to point to the correct network for this run
+        # Update data/config.xml with network file, iteration count, and capacity factors
         matsim_config_path = os.path.join(project_root, "data", "config.xml")
         with open(matsim_config_path, encoding="utf-8") as f:
             cfg_xml = f.read()
         import re
+
+        # Network file
         cfg_xml = re.sub(
             r'(<param name="inputNetworkFile"\s+value=")[^"]*(")',
             rf'\g<1>{active_network}\g<2>',
             cfg_xml
         )
+
+        # Iteration count and derived write/reroute intervals
+        iterations      = exec_config.get("iterations", 0)
+        write_interval  = max(1, iterations)          # write at final iteration (min 1)
+        disable_reroute = int(iterations * 0.8)       # stop rerouting at 80% of iterations
+
+        cfg_xml = re.sub(
+            r'(<param name="lastIteration"\s+value=")[^"]*(")',
+            rf'\g<1>{iterations}\g<2>',
+            cfg_xml
+        )
+        cfg_xml = re.sub(
+            r'(<param name="writeEventsInterval"\s+value=")[^"]*(")',
+            rf'\g<1>{write_interval}\g<2>',
+            cfg_xml
+        )
+        cfg_xml = re.sub(
+            r'(<param name="writePlansInterval"\s+value=")[^"]*(")',
+            rf'\g<1>{write_interval}\g<2>',
+            cfg_xml
+        )
+        cfg_xml = re.sub(
+            r'(<param name="disableAfterIteration"\s+value=")[^"]*(")',
+            rf'\g<1>{disable_reroute}\g<2>',
+            cfg_xml
+        )
+
+        # Capacity factors — scale down road capacity proportionally to sample size
+        # flowCapacityFactor = storageCapacityFactor = sample_size / population_size
+        real_pop    = input_config.get("population_size", 10000000)
+        sample_size = input_config.get("sample_size", real_pop)
+        cap_factor  = round(sample_size / real_pop, 6) if real_pop > 0 else 1.0
+        cfg_xml = re.sub(
+            r'(<param name="flowCapacityFactor"\s+value=")[^"]*(")',
+            rf'\g<1>{cap_factor}\g<2>',
+            cfg_xml
+        )
+        cfg_xml = re.sub(
+            r'(<param name="storageCapacityFactor"\s+value=")[^"]*(")',
+            rf'\g<1>{cap_factor}\g<2>',
+            cfg_xml
+        )
+
         with open(matsim_config_path, "w", encoding="utf-8") as f:
             f.write(cfg_xml)
-        print(f"\n[Config] inputNetworkFile → {active_network}")
+        print(f"\n[Config] inputNetworkFile        → {active_network}")
+        print(f"[Config] lastIteration           → {iterations}")
+        print(f"[Config] writeEventsInterval     → {write_interval}")
+        print(f"[Config] writePlansInterval      → {write_interval}")
+        print(f"[Config] disableAfterIteration   → {disable_reroute}  (80% of {iterations})")
+        print(f"[Config] flowCapacityFactor      → {cap_factor}  ({sample_size:,} / {real_pop:,})")
+        print(f"[Config] storageCapacityFactor   → {cap_factor}")
 
         # Step 7: Run MATSim
         print(f"\n[Step 7] Running MATSim with config: {matsim_config}...")

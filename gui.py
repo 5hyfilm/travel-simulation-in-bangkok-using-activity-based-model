@@ -341,8 +341,8 @@ def open_map_picker(v_north, v_south, v_east, v_west, parent_root):
 def build_gui(config):
     root = ctk.CTk()
     root.title("A2M Pipeline — Configuration & Simulation Run")
-    root.geometry("640x580")
-    root.resizable(False, False)
+    root.geometry("640x660")
+    root.resizable(False, True)
 
     # Header
     header = ctk.CTkFrame(root, fg_color=("#1a73e8", "#1558b0"), corner_radius=0)
@@ -353,6 +353,11 @@ def build_gui(config):
     ctk.CTkLabel(header, text="Configuration Editor",
                  font=ctk.CTkFont(size=12),
                  text_color="#cce0ff").pack(side="left", pady=10)
+
+    # Bottom bar — packed BEFORE the tabview so tkinter reserves its
+    # height first; the expanding tabview then fills whatever remains.
+    bar = ctk.CTkFrame(root, fg_color="transparent")
+    bar.pack(side="bottom", fill="x", padx=12, pady=(0, 10))
 
     # Tabview
     tabs = ctk.CTkTabview(root, anchor="nw")
@@ -389,7 +394,28 @@ def build_gui(config):
                             [("GeoJSON", "*.geojson"), ("All", "*.*")])
 
     section_title(t, "Simulation")
-    v_sample = labeled_entry(t, "Sample Size", inp["sample_size"])
+    v_population = labeled_entry(t, "Total Population",  inp.get("population_size", 10000000))
+    v_sample     = labeled_entry(t, "Simulation Size",   inp.get("sample_size", 300000))
+
+    # Live scale-factor preview
+    _sf_row = ctk.CTkFrame(t, fg_color="transparent")
+    _sf_row.pack(fill="x", padx=4, pady=(0, 4))
+    ctk.CTkLabel(_sf_row, text="", width=188).pack(side="left")   # alignment spacer
+    _sf_var = ctk.StringVar()
+    ctk.CTkLabel(_sf_row, textvariable=_sf_var,
+                 font=ctk.CTkFont(size=11),
+                 text_color=("#1a73e8", "#5ea4ff")).pack(side="left")
+
+    def _update_sf(*_):
+        try:
+            f = int(v_sample.get()) / int(v_population.get())
+            _sf_var.set(f"Scale = {f:.5f}  →  flowCapacityFactor = storageCapacityFactor")
+        except (ValueError, ZeroDivisionError):
+            _sf_var.set("Scale = —")
+
+    v_population.trace_add("write", _update_sf)
+    v_sample.trace_add("write", _update_sf)
+    _update_sf()   # show initial value
 
     # ── Execution tab ─────────────────────────────────────────────
     t = tabs.tab("Execution")
@@ -398,6 +424,7 @@ def build_gui(config):
     section_title(t, "MATSim")
     v_auto    = labeled_switch(t, "Run Full Pipeline",
                                exc.get("run_simulation_automatically", False))
+    v_iter    = labeled_entry(t, "Iterations", exc.get("iterations", 0), width=100)
     v_mvnopts = labeled_entry(t, "Maven Opts (Memory Option)", exc.get("maven_opts", "-Xmx10G"))
     v_mscfg   = labeled_file(t, "MATSim Config File", exc.get("matsim_config_file", ""),
                               [("XML", "*.xml"), ("All", "*.*")])
@@ -415,10 +442,7 @@ def build_gui(config):
     section_title(t, "Google Maps")
     v_gmaps = labeled_entry(t, "API Key", api.get("google_maps", ""), width=320)
 
-    # ── Bottom bar ────────────────────────────────────────────────
-    bar = ctk.CTkFrame(root, fg_color="transparent")
-    bar.pack(fill="x", padx=12, pady=(0, 10))
-
+    # ── Bottom bar buttons (bar frame was already packed above tabview) ──
     def on_save(run_after=False):
         try:
             new_cfg = {
@@ -429,10 +453,12 @@ def build_gui(config):
                     "west":                  float(v_west.get()),
                     "trips_filename":        v_trips.get().strip(),
                     "subdistricts_filename": v_subdis.get().strip(),
+                    "population_size":       int(v_population.get()),
                     "sample_size":           int(v_sample.get()),
                 },
                 "execution": {
                     "run_simulation_automatically": v_auto.get(),
+                    "iterations":                   int(v_iter.get()),
                     "maven_opts":                   v_mvnopts.get().strip(),
                     "matsim_config_file":           v_mscfg.get().strip(),
                     "apply_traffic_conditions":     v_tc.get(),

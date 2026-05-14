@@ -82,10 +82,12 @@ class TestConfigIO(unittest.TestCase):
         gui.CONFIG_PATH = self.cfg
         self.sample = {
             "input":     {"north": 13.75, "south": 13.73, "east": 100.55,
-                          "west": 100.51, "sample_size": 5000,
+                          "west": 100.51, "population_size": 10000000,
+                          "sample_size": 5000,
                           "trips_filename": "trips.csv",
                           "subdistricts_filename": "sub.geojson"},
             "execution": {"run_simulation_automatically": False,
+                          "iterations": 0,
                           "maven_opts": "-Xmx8G",
                           "matsim_config_file": "data/config.xml",
                           "apply_traffic_conditions": False,
@@ -144,6 +146,26 @@ class TestConfigIO(unittest.TestCase):
         gui.save_config(self.sample)
         self.assertEqual(gui.load_config()["input"]["sample_size"], 999)
 
+    def test_roundtrip_preserves_population_size(self):
+        gui.save_config(self.sample)
+        self.assertEqual(gui.load_config()["input"]["population_size"], 10000000)
+
+    def test_roundtrip_preserves_iterations(self):
+        gui.save_config(self.sample)
+        self.assertEqual(gui.load_config()["execution"]["iterations"], 0)
+
+    def test_corrupted_json_raises_error(self):
+        with open(self.cfg, "w", encoding="utf-8") as f:
+            f.write("{ this is not valid json }")
+        with self.assertRaises(Exception):   # json.JSONDecodeError
+            gui.load_config()
+
+    def test_all_top_level_keys_present(self):
+        gui.save_config(self.sample)
+        loaded = gui.load_config()
+        for key in ("input", "execution", "api_keys"):
+            self.assertIn(key, loaded)
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # 1C. apply_traffic_conditions.validate_condition
@@ -186,6 +208,27 @@ class TestValidateCondition(unittest.TestCase):
     def test_no_road_types_or_link_id_fails(self):
         c = {"name": "x", "speed_factor": 0.5, "capacity_factor": 0.5}
         self.assertFalse(validate_condition(c))
+
+    def test_capacity_factor_above_one_fails(self):
+        self.assertFalse(validate_condition(self._cond(capacity_factor=1.5)))
+
+    def test_capacity_factor_at_one_valid(self):
+        self.assertTrue(validate_condition(self._cond(capacity_factor=1.0)))
+
+    def test_speed_factor_just_below_min_fails(self):
+        self.assertFalse(validate_condition(self._cond(speed_factor=0.009)))
+
+    def test_both_road_types_and_link_id_passes(self):
+        c = {"name": "x", "speed_factor": 0.5, "capacity_factor": 0.5,
+             "road_types": ["residential"], "link_id": "123"}
+        self.assertTrue(validate_condition(c))
+
+    def test_empty_road_types_list_passes(self):
+        # Key exists so the "no target" check is skipped — condition validates
+        # but will have no effect at runtime (matches no links)
+        c = {"name": "x", "speed_factor": 0.5, "capacity_factor": 0.5,
+             "road_types": []}
+        self.assertTrue(validate_condition(c))
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -234,6 +277,30 @@ class TestFixPlanHomeEnd(unittest.TestCase):
         fix_plan(plan)
         acts = [e.get("type") for e in plan if e.tag == "activity"]
         self.assertEqual(acts[-1], "home")
+
+    def test_legs_trimmed_correctly_after_fix(self):
+        # home → work → shopping  →  fix  →  [home]  (1 act, 0 legs)
+        plan = _make_plan("home", "work", "shopping")
+        fix_plan(plan)
+        acts = [e for e in plan if e.tag == "activity"]
+        legs = [e for e in plan if e.tag == "leg"]
+        self.assertEqual(len(acts), 1)
+        self.assertEqual(len(legs), 0)   # n activities → n-1 legs
+
+    def test_trims_to_last_home_when_multiple(self):
+        # home → work → home → shopping  →  fix  →  home, work, home (3 acts, 2 legs)
+        plan = _make_plan("home", "work", "home", "shopping")
+        fix_plan(plan)
+        acts = [e.get("type") for e in plan if e.tag == "activity"]
+        legs = [e for e in plan if e.tag == "leg"]
+        self.assertEqual(acts, ["home", "work", "home"])
+        self.assertEqual(len(legs), len(acts) - 1)
+
+    def test_plan_only_legs_no_activities_returns_none(self):
+        plan = etree.Element("plan")
+        for _ in range(3):
+            etree.SubElement(plan, "leg").set("mode", "car")
+        self.assertIsNone(fix_plan(plan))
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -334,6 +401,17 @@ class TestToSeconds(unittest.TestCase):
         result = to_seconds(s)
         self.assertEqual(list(result), [1800.0, 3600.0, 7200.0])
 
+    def test_none_value_is_nan(self):
+        s = pd.Series([None])
+        self.assertTrue(np.isnan(to_seconds(s).iloc[0]))
+
+    def test_mixed_valid_and_invalid(self):
+        s = pd.Series(["01:00:00", "bad", "00:30:00"])
+        result = to_seconds(s)
+        self.assertAlmostEqual(result.iloc[0], 3600.0)
+        self.assertTrue(np.isnan(result.iloc[1]))
+        self.assertAlmostEqual(result.iloc[2], 1800.0)
+
 class TestPctChange(unittest.TestCase):
 
     def test_increase(self):
@@ -350,6 +428,10 @@ class TestPctChange(unittest.TestCase):
 
     def test_negative_to_positive(self):
         self.assertAlmostEqual(pct_change(-50, 50), -200.0)
+
+    def test_both_zero_returns_inf(self):
+        self.assertEqual(pct_change(0, 0), float("inf"))
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────

@@ -17,9 +17,9 @@
          ============================================================ -->
     <module name="controller">
         <param name="outputDirectory" value="output"/>
-        <param name="lastIteration" value="50"/>
-        <param name="writeEventsInterval" value="50"/>
-        <param name="writePlansInterval" value="50"/>
+        <param name="lastIteration" value="10"/>
+        <param name="writeEventsInterval" value="10"/>
+        <param name="writePlansInterval" value="10"/>
         <param name="mobsim" value="hermes"/>
     </module>
 
@@ -45,8 +45,8 @@
          ============================================================ -->
     <module name="hermes">
         <param name="mainMode" value="car"/>
-        <param name="flowCapacityFactor" value="1"/>
-        <param name="storageCapacityFactor" value="1"/>
+        <param name="flowCapacityFactor" value="0.833333"/>
+        <param name="storageCapacityFactor" value="0.833333"/>
         <param name="stuckTime" value="600"/>
     </module>
 
@@ -170,7 +170,7 @@
         <parameterset type="strategysettings">
             <param name="strategyName" value="ReRoute"/>
             <param name="weight" value="0.10"/>
-            <param name="disableAfterIteration" value="40"/>
+            <param name="disableAfterIteration" value="8"/>
         </parameterset>
     </module>
 

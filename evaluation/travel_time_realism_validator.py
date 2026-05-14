@@ -53,7 +53,7 @@ GRID_DEG          = 0.015    # ~1.7 km cell side (kept for coord snapping only)
 MIN_AGENTS        = 10       # minimum agents per window to report
 MAX_DIST_KM       = 60
 MIN_DIST_KM       = 1.5
-SEARCH_RADIUS_KM  = 3.0      # radius around each route endpoint to collect agents
+SEARCH_RADIUS_KM  = 3      # radius around each route endpoint to collect agents
 
 QUERY_HOURS = {
     "AM peak  (07:00)": 7,
@@ -133,6 +133,18 @@ NEXT_TUE = next_tuesday()
 def gm_timestamp(hour):
     return datetime.datetime(NEXT_TUE.year, NEXT_TUE.month, NEXT_TUE.day, hour, 0, 0)
 
+# ── Google Maps response cache ────────────────────────────────────────────────
+# Shared with dashboard.py — both scripts read/write the same file so they
+# always use identical API values and produce the same PASS count.
+_CACHE_FILE = os.path.join(os.path.dirname(__file__), "gm_cache.json")
+_gm_cache: dict = {}
+if os.path.exists(_CACHE_FILE):
+    with open(_CACHE_FILE, encoding="utf-8") as _cf:
+        _gm_cache = json.load(_cf)
+
+def _cache_key(o_ll, d_ll, hour):
+    return f"{o_ll[0]:.6f},{o_ll[1]:.6f}_{d_ll[0]:.6f},{d_ll[1]:.6f}_{hour}_{NEXT_TUE}"
+
 def snap_cell(lat, lon):
     """Snap lat/lon to grid cell centre."""
     clat = (math.floor(lat / GRID_DEG) + 0.5) * GRID_DEG
@@ -180,6 +192,9 @@ if use_gmaps:
     gmaps = googlemaps.Client(key=GOOGLE_MAPS_API_KEY)
 
 def get_gm_time(origin_ll, dest_ll, hour):
+    key = _cache_key(origin_ll, dest_ll, hour)
+    if key in _gm_cache:
+        return _gm_cache[key]
     if not use_gmaps:
         return None
     try:
@@ -192,7 +207,11 @@ def get_gm_time(origin_ll, dest_ll, hour):
         el = r["rows"][0]["elements"][0]
         if el["status"] == "OK":
             dur = el.get("duration_in_traffic", el["duration"])
-            return round(dur["value"] / 60, 1)
+            result = round(dur["value"] / 60, 1)
+            _gm_cache[key] = result
+            with open(_CACHE_FILE, "w", encoding="utf-8") as _cf:
+                json.dump(_gm_cache, _cf, indent=2)
+            return result
     except:
         pass
     return None
@@ -275,11 +294,11 @@ for rank, (name, o_lat, o_lon, d_lat, d_lon) in enumerate(ROUTES, 1):
                              "n": n, "sim": None, "gm": None, "ratio": None})
             continue
 
-        sim_med = round(sample.median(), 1)
+        sim_med = round(float(sample.median()), 1)
         gm_time = get_gm_time((o_lat, o_lon), (d_lat, d_lon), gm_hour)
 
         if gm_time:
-            ratio = sim_med / gm_time
+            ratio = round(sim_med / gm_time, 3)
             ok    = "✅" if 0.65 <= ratio <= 1.35 else ("⚠️ " if 0.50 <= ratio <= 1.50 else "❌")
             r_str = f"{ratio:.2f}x"
         else:
@@ -313,7 +332,7 @@ else:
 
     # Bias — systematic over/under-estimation
     bias     = float(np.mean(df["sim"] - df["gm"]))
-    bias_pct = float(np.mean((df["sim"] - df["gm"]) / df["gm"]) * 100)
+    bias_pct = bias / float(df["gm"].mean()) * 100
 
     # R² — does the simulation rank routes in the same order as Google Maps?
     ss_res = float(np.sum((df["sim"] - df["gm"])**2))
